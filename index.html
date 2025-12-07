@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LMSY Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="avatar-circle">
+          <span>L</span><span>M</span><span>S</span><span>Y</span>
+        </div>
+        <h1>LMSY Schedule</h1>
+        <h2>Unofficial fan schedule for Lookmhee and Sonya</h2>
+        <p class="description">
+          All known public events, fan meetings, brand work and special nights collected in one place.
+        </p>
+        <p class="note">
+          Always check official channels for last minute changes.
+        </p>
+
+        <div class="lang-toggle" aria-label="Language switcher">
+          <button type="button" data-lang="en" class="active">EN</button>
+          <button type="button" data-lang="th">TH</button>
+          <button type="button" data-lang="zh">中文</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="filters" aria-label="Filters">
+          <div class="filter-group">
+            <label for="filter-year">Year</label>
+            <select id="filter-year"></select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-type">Type</label>
+            <select id="filter-type">
+              <option value="all">All</option>
+            </select>
+          </div>
+        </section>
+
+        <section id="schedule" aria-live="polite"></section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          Fan project built with 🩵 and 💛 for the LMSY family.
+        </p>
+        <p>
+          Hashtags:
+          <a href="https://x.com/search?q=%23LMSY" target="_blank" rel="noopener">#LMSY</a>
+          ·
+          <a href="https://x.com/search?q=%23Lookmhee" target="_blank" rel="noopener">#Lookmhee</a>
+          ·
+          <a href="https://x.com/search?q=%23SonyaSaranphat" target="_blank" rel="noopener">#SonyaSaranphat</a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
