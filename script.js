@@ -536,7 +536,7 @@ function getEventIcon(ev) {
 }
 
 function getMonthInfo(dateObj) {
-  const monthIndex = dateObj.getMonth(); // 0-11
+  const monthIndex = dateObj.getMonth();
   const monthLabel = dateObj.toLocaleString("en-GB", { month: "short" });
   const yearLabel = dateObj.getFullYear().toString();
   return { monthIndex, monthLabel, yearLabel };
@@ -723,7 +723,6 @@ function initFilters() {
     });
   }
 
-  // Default: current year and month if there are events, else fallback to last event month
   const now = new Date();
   const currentYear = now.getFullYear().toString();
   const currentMonthIndex = now.getMonth();
