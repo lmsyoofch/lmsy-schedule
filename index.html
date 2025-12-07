@@ -1,18 +1,76 @@
 <!DOCTYPE html>
-<html>
-<body>
-<footer>
-  <p class="hashtags">
-    Hashtags:
-    <a href="#">#ลูกหมีซอนญ่า</a>
-    <a href="#">#LMSY</a>
-    <br>
-    <span class="nowrap">
-      <a href="#">#LMlookmhee</a>
-      <a href="#">#SonyaSaranphat</a>
-      <a href="#">#Sonyasarann</a>
-    </span>
-  </p>
-</footer>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LMSY Schedule</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="avatar-circle">
+          <img src="lmsy_circle.png" alt="LMSY" class="avatar-photo" />
+        </div>
+        <h1>LMSY Schedule</h1>
+        <h2 class="header-subtitle">
+          Unofficial fan schedule for <span class="nowrap">Lookmhee and Sonya</span>
+        </h2>
+        <p class="description">
+          All known public events, fan meetings, brand work and special nights collected in one place.
+        </p>
+        <p class="note">
+          Always check official channels for last minute changes.
+        </p>
+
+        <div class="lang-toggle" aria-label="Language switcher">
+          <button type="button" data-lang="en" class="active">EN</button>
+          <button type="button" data-lang="th">TH</button>
+          <button type="button" data-lang="zh">中文</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="filters" aria-label="Filters">
+          <div class="filter-group">
+            <label for="filter-year">Year</label>
+            <select id="filter-year"></select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-type">Type</label>
+            <select id="filter-type">
+              <option value="all">All</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filter-month">Month</label>
+            <select id="filter-month">
+              <option value="all">All</option>
+            </select>
+          </div>
+        </section>
+
+        <section id="schedule" aria-live="polite"></section>
+      </main>
+
+      <footer class="footer">
+        <p>Fan project built with 💛🩵 for the LMSY family.</p>
+        <p class="hashtags">
+          Hashtags:<br>
+          <a href="https://x.com/search?q=%23%E0%B8%A5%E0%B8%B9%E0%B8%81%E0%B8%AB%E0%B8%A1%E0%B8%B5%E0%B8%8B%E0%B8%AD%E0%B8%99%E0%B8%8D%E0%B9%88%E0%B8%B2" target="_blank" rel="noopener noreferrer">#ลูกหมีซอนญ่า</a>
+          <a href="https://x.com/search?q=%23LMSY" target="_blank" rel="noopener noreferrer">#LMSY</a>
+          <br>
+          <span class="nowrap">
+            <a href="https://x.com/search?q=%23LMlookmhee" target="_blank" rel="noopener noreferrer">#LMlookmhee</a>
+            <a href="https://x.com/search?q=%23SonyaSaranphat" target="_blank" rel="noopener noreferrer">#SonyaSaranphat</a>
+            <a href="https://x.com/search?q=%23Sonyasarann" target="_blank" rel="noopener noreferrer">#Sonyasarann</a>
+          </span>
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
