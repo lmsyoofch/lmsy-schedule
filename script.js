@@ -59,7 +59,7 @@ const events = [
   {
     date: "2025-03-29",
     who: "LMSY",
-    category: "Special Event",
+    category: "Special event",
     title: "Buddy Besties × LMSY",
     location: "To be announced",
     notes: "Details to be announced",
@@ -68,7 +68,7 @@ const events = [
   {
     date: "2025-03-30",
     who: "LMSY",
-    category: "Special Event",
+    category: "Special event",
     title: "International Book Fair 2025",
     location: "Exhibition Hall 5–8, QSNCC, Bangkok",
     notes: "11:00 (GMT+8)",
@@ -106,7 +106,7 @@ const events = [
   {
     date: "2025-04-18",
     who: "SY",
-    category: "Special Event",
+    category: "Special event",
     title: "Sonya's Birthday Party",
     location: "Century The Movie Plaza, Bangkok",
     notes: "14:00–17:00 (GMT+8)",
@@ -144,7 +144,7 @@ const events = [
   {
     date: "2025-05-10",
     who: "LMSY",
-    category: "Special Event",
+    category: "Special event",
     title: "Buddy Besties Sweet Day Trip with LMSY",
     location: "To be announced",
     notes: "Details to be announced",
@@ -173,7 +173,7 @@ const events = [
   {
     date: "2025-06-07",
     who: "LMSY",
-    category: "Special Event",
+    category: "Special event",
     title: "Thai Pride Merge Ride",
     location: "To be announced",
     notes: "16:45 (GMT+8)",
@@ -262,12 +262,12 @@ const events = [
     title: "Spice It Up with Lookmhee",
     location: "To be announced",
     notes: "Details to be announced",
-    tags: ["Lookmhee", "Brand"]
+    tags: ["Lookmhee", "Event"]
   },
   {
     date: "2025-08-16",
     who: "LMSY",
-    category: "Special Event",
+    category: "Special event",
     title: "Weibo Cultural Exchange Night",
     location: "Queen Sirikit National Convention Center, QSNCC, Bangkok",
     notes: "19:30 (GMT+8)",
@@ -276,7 +276,7 @@ const events = [
   {
     date: "2025-08-24",
     who: "LMSY",
-    category: "Special Event",
+    category: "Special event",
     title: "Buddybesties with LMSY",
     location: "To be announced",
     notes: "Details to be announced",
@@ -296,7 +296,7 @@ const events = [
   {
     date: "2025-09-06",
     who: "LMSY",
-    category: "Special Event",
+    category: "Special event",
     title: "Praew Charity 2025",
     location: "Parc Paragon, Living Hall 3F, Bangkok",
     notes: "18:00 (GMT+8)",
@@ -352,7 +352,7 @@ const events = [
   {
     date: "2025-10-25",
     who: "SY",
-    category: "Special Event",
+    category: "Special event",
     title: "Candy Kiss Halloween with Sonya",
     location: "To be announced",
     notes: "Details to be announced",
@@ -367,7 +367,7 @@ const events = [
     title: "FOAMDREAM Party",
     location: "Hangzhou, China",
     notes: "12:00–19:00 (GMT+8)",
-    tags: ["LMSY", "Brand", "Event"]
+    tags: ["LMSY", "Event"]
   },
   {
     date: "2025-11-07",
@@ -381,7 +381,7 @@ const events = [
   {
     date: "2025-11-08",
     who: "LMSY",
-    category: "Special Event",
+    category: "Special event",
     title: "LMSY × BuddyBesties2DSY1Night (Day 1)",
     location: "Kanchanaburi Province, Thailand",
     notes: "Details to be announced",
@@ -390,7 +390,7 @@ const events = [
   {
     date: "2025-11-09",
     who: "LMSY",
-    category: "Special Event",
+    category: "Special event",
     title: "LMSY × BuddyBesties2DSY1Night (Day 2)",
     location: "Kanchanaburi Province, Thailand",
     notes: "Details to be announced",
@@ -421,7 +421,7 @@ const events = [
     title: "LMSY / Lookmhee Fan Meeting in Wuhan",
     location: "Wuhan, China",
     notes: "Details to be announced",
-    tags: ["LMSY", "Lookmhee", "Fanmeeting"]
+    tags: ["LMSY", "Fanmeeting"]
   },
   {
     date: "2025-11-30",
@@ -497,7 +497,7 @@ const events = [
   {
     date: "2025-12-27",
     who: "LM",
-    category: "Special Event",
+    category: "Special event",
     title: "Lookmhee in A Secret Christmas Night",
     title_th: "ลูกหมีในงาน A Secret Christmas Night",
     title_zh: "Lookmhee 的 Secret Christmas Night 活动",
@@ -520,6 +520,7 @@ function pickLang(ev, baseKey) {
 function getEventIcon(ev) {
   const tags = (ev.tags || []).map(t => t.toLowerCase());
   if (tags.some(t => t.includes("christmas"))) return "🎄";
+  if (tags.some(t => t.includes("halloween"))) return "🎃";
   if (ev.category === "Award") return "🏆";
   if (ev.category === "FanMeeting") {
     if (ev.who === "LM") return "💛";
@@ -535,7 +536,7 @@ function getEventIcon(ev) {
   }
   if (ev.category === "Livestream") return "📺";
   if (ev.category === "Drama") return "🎬";
-  if (ev.category === "Special Event") return "🌟";
+  if (ev.category === "Special event") return "⭐";
   return "⭐";
 }
 
@@ -558,7 +559,7 @@ function getTagClasses(tag) {
   if (t === "lmsy") classes.push("tag-lmsy");
   if (t.includes("fan")) classes.push("tag-fm");
   if (t.includes("award")) classes.push("tag-award");
-  if (t.includes("christmas") || t.includes("event") || t.includes("halloween") || t.includes("pride") || t.includes("charity")) classes.push("tag-event");
+  if (t.includes("christmas") || t.includes("event")) classes.push("tag-event");
   return classes.join(" ");
 }
 
@@ -695,12 +696,12 @@ function initFilters() {
 
   const categories = [...new Set(events.map(ev => ev.category))].sort();
   const labelMap = {
-    "FanMeeting": "FanMeeting",
+    "FanMeeting": "Fan meeting",
     "Brand": "Brand",
     "Livestream": "Livestream",
     "Drama": "Drama",
     "Award": "Award",
-    "Special Event": "Special Event"
+    "Special event": "Special event"
   };
   categories.forEach(cat => {
     const opt = document.createElement("option");
