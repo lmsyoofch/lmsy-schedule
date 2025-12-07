@@ -535,10 +535,11 @@ function getEventIcon(ev) {
   return "⭐";
 }
 
-function formatMonthInfo(dateObj) {
+function getMonthInfo(dateObj) {
+  const monthIndex = dateObj.getMonth(); // 0-11
   const monthLabel = dateObj.toLocaleString("en-GB", { month: "short" });
   const yearLabel = dateObj.getFullYear().toString();
-  return { monthLabel, yearLabel };
+  return { monthIndex, monthLabel, yearLabel };
 }
 
 function formatDay(dateObj) {
@@ -557,17 +558,20 @@ function getTagClasses(tag) {
   return classes.join(" ");
 }
 
-function renderSchedule(selectedYear, selectedType) {
+function renderSchedule(selectedYear, selectedType, selectedMonth) {
   const container = document.getElementById("schedule");
   container.innerHTML = "";
 
   const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
 
   const filtered = sorted.filter(ev => {
-    const year = ev.date.substring(0, 4);
+    const d = new Date(ev.date);
+    const year = d.getFullYear().toString();
+    const monthIndex = d.getMonth();
     const matchYear = selectedYear === "all" || year === selectedYear;
     const matchType = selectedType === "all" || ev.category === selectedType;
-    return matchYear && matchType;
+    const matchMonth = selectedMonth === "all" || monthIndex === Number(selectedMonth);
+    return matchYear && matchType && matchMonth;
   });
 
   if (filtered.length === 0) {
@@ -582,7 +586,7 @@ function renderSchedule(selectedYear, selectedType) {
 
   filtered.forEach(ev => {
     const dateObj = new Date(ev.date);
-    const info = formatMonthInfo(dateObj);
+    const info = getMonthInfo(dateObj);
     const monthKey = info.monthLabel + " " + info.yearLabel;
 
     if (monthKey !== currentMonthKey) {
@@ -617,7 +621,7 @@ function renderSchedule(selectedYear, selectedType) {
     dateEl.className = "event-date";
     dateEl.innerHTML = `
       <div class="event-date-circle">${formatDay(dateObj)}</div>
-      <div class="event-date-month">${formatMonthInfo(dateObj).monthLabel.toUpperCase()}</div>
+      <div class="event-date-month">${getMonthInfo(dateObj).monthLabel.toUpperCase()}</div>
     `;
 
     const main = document.createElement("div");
@@ -668,6 +672,7 @@ function renderSchedule(selectedYear, selectedType) {
 function initFilters() {
   const yearSelect = document.getElementById("filter-year");
   const typeSelect = document.getElementById("filter-type");
+  const monthSelect = document.getElementById("filter-month");
 
   const years = [...new Set(events.map(ev => ev.date.substring(0, 4)))].sort();
 
@@ -692,15 +697,67 @@ function initFilters() {
     typeSelect.appendChild(opt);
   });
 
+  function populateMonths(year) {
+    monthSelect.innerHTML = "";
+    const allM = document.createElement("option");
+    allM.value = "all";
+    allM.textContent = "All";
+    monthSelect.appendChild(allM);
+
+    const monthsForYear = [...new Set(
+      events
+        .filter(ev => ev.date.substring(0,4) === year)
+        .map(ev => {
+          const d = new Date(ev.date);
+          return d.getMonth();
+        })
+    )].sort((a,b)=>a-b);
+
+    monthsForYear.forEach(mIdx => {
+      const d = new Date(Number(year), mIdx, 1);
+      const label = d.toLocaleString("en-GB", { month: "short" });
+      const opt = document.createElement("option");
+      opt.value = String(mIdx);
+      opt.textContent = label;
+      monthSelect.appendChild(opt);
+    });
+  }
+
+  // Default: current year and month if there are events, else fallback to last event month
+  const now = new Date();
+  const currentYear = now.getFullYear().toString();
+  const currentMonthIndex = now.getMonth();
+
+  let defaultYear = years.includes(currentYear) ? currentYear : years[years.length - 1];
+  populateMonths(defaultYear);
+
+  let availableMonths = [...monthSelect.options].map(o => o.value).filter(v => v !== "all").map(v => Number(v));
+  let defaultMonth = "all";
+  if (availableMonths.includes(currentMonthIndex) && defaultYear === currentYear) {
+    defaultMonth = String(currentMonthIndex);
+  } else if (availableMonths.length) {
+    defaultMonth = String(availableMonths[availableMonths.length - 1]);
+  }
+
+  yearSelect.value = defaultYear;
+  monthSelect.value = defaultMonth;
+
   yearSelect.addEventListener("change", () => {
-    renderSchedule(yearSelect.value, typeSelect.value);
+    const y = yearSelect.value === "all" ? currentYear : yearSelect.value;
+    populateMonths(y);
+    monthSelect.value = "all";
+    renderSchedule(yearSelect.value, typeSelect.value, monthSelect.value);
   });
 
   typeSelect.addEventListener("change", () => {
-    renderSchedule(yearSelect.value, typeSelect.value);
+    renderSchedule(yearSelect.value, typeSelect.value, monthSelect.value);
   });
 
-  renderSchedule(yearSelect.value, typeSelect.value);
+  monthSelect.addEventListener("change", () => {
+    renderSchedule(yearSelect.value, typeSelect.value, monthSelect.value);
+  });
+
+  renderSchedule(yearSelect.value, typeSelect.value, monthSelect.value);
 }
 
 function initLanguageToggle() {
@@ -716,7 +773,8 @@ function initLanguageToggle() {
 
       const yearSelect = document.getElementById("filter-year");
       const typeSelect = document.getElementById("filter-type");
-      renderSchedule(yearSelect.value, typeSelect.value);
+      const monthSelect = document.getElementById("filter-month");
+      renderSchedule(yearSelect.value, typeSelect.value, monthSelect.value);
     });
   });
 }
