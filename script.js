@@ -5,7 +5,7 @@ const events = [
   {
     date: "2025-03-01",
     who: "LMSY",
-    category: "Event",
+    category: "Brand",
     title: "DCASH Tops of Beauty 2025",
     location: "Central Westgate, Bangkok",
     notes: "15:00–16:00 (GMT+8)",
@@ -14,7 +14,7 @@ const events = [
   {
     date: "2025-03-05",
     who: "LMSY",
-    category: "Event",
+    category: "Brand",
     title: "Siam Center The Summer Runway curated by Mint",
     location: "Siam Center, Bangkok",
     notes: "18:45 (GMT+8)",
@@ -32,7 +32,7 @@ const events = [
   {
     date: "2025-03-13",
     who: "LMSY",
-    category: "Event",
+    category: "Livestream",
     title: "LMSY × Taixiaoxiang Live",
     location: "Taobao Live",
     notes: "20:00 (GMT+8)",
@@ -50,7 +50,7 @@ const events = [
   {
     date: "2025-03-22",
     who: "LMSY",
-    category: "Event",
+    category: "Brand",
     title: "Arousar × LMSY",
     location: "Guangzhou, China",
     notes: "13:30 (GMT+8)",
@@ -59,7 +59,7 @@ const events = [
   {
     date: "2025-03-29",
     who: "LMSY",
-    category: "Event",
+    category: "Special Event",
     title: "Buddy Besties × LMSY",
     location: "To be announced",
     notes: "Details to be announced",
@@ -68,7 +68,7 @@ const events = [
   {
     date: "2025-03-30",
     who: "LMSY",
-    category: "Event",
+    category: "Special Event",
     title: "International Book Fair 2025",
     location: "Exhibition Hall 5–8, QSNCC, Bangkok",
     notes: "11:00 (GMT+8)",
@@ -79,7 +79,7 @@ const events = [
   {
     date: "2025-04-03",
     who: "LMSY",
-    category: "Event",
+    category: "Livestream",
     title: "LMSY PandaThaiHouse Live",
     location: "Taobao Live",
     notes: "20:00–21:00 (GMT+8)",
@@ -97,7 +97,7 @@ const events = [
   {
     date: "2025-04-12",
     who: "LMSY",
-    category: "Event",
+    category: "Brand",
     title: "Shop & Snap with Celebrities at Lotus's",
     location: "Lotus's Rama 1, Bangkok",
     notes: "14:30 (GMT+8)",
@@ -106,7 +106,7 @@ const events = [
   {
     date: "2025-04-18",
     who: "SY",
-    category: "Event",
+    category: "Special Event",
     title: "Sonya's Birthday Party",
     location: "Century The Movie Plaza, Bangkok",
     notes: "14:00–17:00 (GMT+8)",
@@ -126,7 +126,7 @@ const events = [
   {
     date: "2025-05-02",
     who: "LMSY",
-    category: "Event",
+    category: "Livestream",
     title: "LMSY Taixiaoxiang Live",
     location: "Taobao Live",
     notes: "20:00–21:00 (GMT+8)",
@@ -144,7 +144,7 @@ const events = [
   {
     date: "2025-05-10",
     who: "LMSY",
-    category: "Event",
+    category: "Special Event",
     title: "Buddy Besties Sweet Day Trip with LMSY",
     location: "To be announced",
     notes: "Details to be announced",
@@ -173,7 +173,7 @@ const events = [
   {
     date: "2025-06-07",
     who: "LMSY",
-    category: "Event",
+    category: "Special Event",
     title: "Thai Pride Merge Ride",
     location: "To be announced",
     notes: "16:45 (GMT+8)",
@@ -182,7 +182,7 @@ const events = [
   {
     date: "2025-06-11",
     who: "LMSY",
-    category: "Event",
+    category: "Drama",
     title: "Harmony Secret special event",
     location: "GMM Grammy Place, Bangkok",
     notes: "10:09 (GMT+8)",
@@ -191,7 +191,7 @@ const events = [
   {
     date: "2025-06-13",
     who: "LMSY",
-    category: "Event",
+    category: "Livestream",
     title: "MIDATO × LMSY Live",
     location: "Weidian Live",
     notes: "20:00 (GMT+8)",
@@ -200,7 +200,7 @@ const events = [
   {
     date: "2025-06-28",
     who: "LMSY",
-    category: "Event",
+    category: "Brand",
     title: "Babi Blushing Brand Sharing Event",
     location: "Shanghai, China",
     notes: "Details to be announced",
@@ -211,7 +211,7 @@ const events = [
   {
     date: "2025-07-05",
     who: "LMSY",
-    category: "Event",
+    category: "Livestream",
     title: "LMSY × Coconut Live",
     location: "Weidian Live",
     notes: "20:00 (GMT+8)",
@@ -220,7 +220,7 @@ const events = [
   {
     date: "2025-07-25",
     who: "LMSY",
-    category: "Event",
+    category: "Livestream",
     title: "LMSY × Clouvia Live",
     location: "Taobao Live",
     notes: "20:00 (GMT+8)",
@@ -229,7 +229,7 @@ const events = [
   {
     date: "2025-07-26",
     who: "LMSY",
-    category: "Event",
+    category: "Drama",
     title: "Harmony Secret First Premiere",
     location: "Siam Paragon 6F, Bangkok",
     notes: "Details to be announced",
@@ -238,7 +238,7 @@ const events = [
   {
     date: "2025-07-27",
     who: "LMSY",
-    category: "Event",
+    category: "Drama",
     title: "Harmony Secret Episode 1 on air",
     location: "on iQIYI",
     notes: "00:30 (GMT+8)",
@@ -249,7 +249,7 @@ const events = [
   {
     date: "2025-08-07",
     who: "LMSY",
-    category: "Event",
+    category: "Livestream",
     title: "EFM Fandom Live Lookmhee Sonya",
     location: "EFM Station Live",
     notes: "21:30 (GMT+8)",
@@ -258,16 +258,16 @@ const events = [
   {
     date: "2025-08-09",
     who: "LM",
-    category: "Event",
+    category: "Brand",
     title: "Spice It Up with Lookmhee",
     location: "To be announced",
     notes: "Details to be announced",
-    tags: ["Lookmhee", "Event"]
+    tags: ["Lookmhee", "Brand"]
   },
   {
     date: "2025-08-16",
     who: "LMSY",
-    category: "Event",
+    category: "Special Event",
     title: "Weibo Cultural Exchange Night",
     location: "Queen Sirikit National Convention Center, QSNCC, Bangkok",
     notes: "19:30 (GMT+8)",
@@ -276,7 +276,7 @@ const events = [
   {
     date: "2025-08-24",
     who: "LMSY",
-    category: "Event",
+    category: "Special Event",
     title: "Buddybesties with LMSY",
     location: "To be announced",
     notes: "Details to be announced",
@@ -287,7 +287,7 @@ const events = [
   {
     date: "2025-09-05",
     who: "LMSY",
-    category: "Event",
+    category: "Drama",
     title: "Harmony Secret Press Tour",
     location: "Live broadcast",
     notes: "12:00, 15:00, 17:00, 20:00 (GMT+8)",
@@ -296,7 +296,7 @@ const events = [
   {
     date: "2025-09-06",
     who: "LMSY",
-    category: "Event",
+    category: "Special Event",
     title: "Praew Charity 2025",
     location: "Parc Paragon, Living Hall 3F, Bangkok",
     notes: "18:00 (GMT+8)",
@@ -305,7 +305,7 @@ const events = [
   {
     date: "2025-09-13",
     who: "LMSY",
-    category: "Event",
+    category: "Drama",
     title: "Harmony Secret Final Episode",
     location: "Siam Pavalai Royal Grand Theatre 6F, Bangkok",
     notes: "Details to be announced",
@@ -352,7 +352,7 @@ const events = [
   {
     date: "2025-10-25",
     who: "SY",
-    category: "Event",
+    category: "Special Event",
     title: "Candy Kiss Halloween with Sonya",
     location: "To be announced",
     notes: "Details to be announced",
@@ -363,16 +363,16 @@ const events = [
   {
     date: "2025-11-01",
     who: "LMSY",
-    category: "Event",
+    category: "Brand",
     title: "FOAMDREAM Party",
     location: "Hangzhou, China",
     notes: "12:00–19:00 (GMT+8)",
-    tags: ["LMSY", "Event"]
+    tags: ["LMSY", "Brand", "Event"]
   },
   {
     date: "2025-11-07",
     who: "LMSY",
-    category: "Event",
+    category: "Drama",
     title: "iQIYI 2026 Event",
     location: "Sphere Hall, 5M Floor, EmSphere, Bangkok",
     notes: "Details to be announced",
@@ -381,7 +381,7 @@ const events = [
   {
     date: "2025-11-08",
     who: "LMSY",
-    category: "Event",
+    category: "Special Event",
     title: "LMSY × BuddyBesties2DSY1Night (Day 1)",
     location: "Kanchanaburi Province, Thailand",
     notes: "Details to be announced",
@@ -390,7 +390,7 @@ const events = [
   {
     date: "2025-11-09",
     who: "LMSY",
-    category: "Event",
+    category: "Special Event",
     title: "LMSY × BuddyBesties2DSY1Night (Day 2)",
     location: "Kanchanaburi Province, Thailand",
     notes: "Details to be announced",
@@ -408,7 +408,7 @@ const events = [
   {
     date: "2025-11-23",
     who: "LMSY",
-    category: "Event",
+    category: "Livestream",
     title: "Chun Xiangji Weidian Live",
     location: "Weidian Live",
     notes: "20:00 (GMT+8)",
@@ -421,7 +421,7 @@ const events = [
     title: "LMSY / Lookmhee Fan Meeting in Wuhan",
     location: "Wuhan, China",
     notes: "Details to be announced",
-    tags: ["LMSY", "Fanmeeting"]
+    tags: ["LMSY", "Lookmhee", "Fanmeeting"]
   },
   {
     date: "2025-11-30",
@@ -497,7 +497,7 @@ const events = [
   {
     date: "2025-12-27",
     who: "LM",
-    category: "Event",
+    category: "Special Event",
     title: "Lookmhee in A Secret Christmas Night",
     title_th: "ลูกหมีในงาน A Secret Christmas Night",
     title_zh: "Lookmhee 的 Secret Christmas Night 活动",
@@ -527,11 +527,15 @@ function getEventIcon(ev) {
     if (ev.who === "LMSY") return "💛🩵";
     return "⭐";
   }
-  if (ev.category === "Event") {
+  if (ev.category === "Brand") {
     if (ev.who === "LM") return "💛✨";
     if (ev.who === "SY") return "🩵✨";
     if (ev.who === "LMSY") return "💛🩵✨";
+    return "✨";
   }
+  if (ev.category === "Livestream") return "📺";
+  if (ev.category === "Drama") return "🎬";
+  if (ev.category === "Special Event") return "🌟";
   return "⭐";
 }
 
@@ -554,7 +558,7 @@ function getTagClasses(tag) {
   if (t === "lmsy") classes.push("tag-lmsy");
   if (t.includes("fan")) classes.push("tag-fm");
   if (t.includes("award")) classes.push("tag-award");
-  if (t.includes("christmas") || t.includes("event")) classes.push("tag-event");
+  if (t.includes("christmas") || t.includes("event") || t.includes("halloween") || t.includes("pride") || t.includes("charity")) classes.push("tag-event");
   return classes.join(" ");
 }
 
@@ -690,10 +694,18 @@ function initFilters() {
   });
 
   const categories = [...new Set(events.map(ev => ev.category))].sort();
+  const labelMap = {
+    "FanMeeting": "FanMeeting",
+    "Brand": "Brand",
+    "Livestream": "Livestream",
+    "Drama": "Drama",
+    "Award": "Award",
+    "Special Event": "Special Event"
+  };
   categories.forEach(cat => {
     const opt = document.createElement("option");
     opt.value = cat;
-    opt.textContent = cat;
+    opt.textContent = labelMap[cat] || cat;
     typeSelect.appendChild(opt);
   });
 
