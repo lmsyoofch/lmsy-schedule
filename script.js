@@ -1,6 +1,439 @@
 let currentLang = "en";
 
 const events = [
+  // MARCH 2025
+  {
+    date: "2025-03-01",
+    who: "LMSY",
+    category: "Event",
+    title: "DCASH Tops of Beauty 2025",
+    location: "Central Westgate, Bangkok",
+    notes: "15:00–16:00 (GMT+8)",
+    tags: ["LMSY", "Brand"]
+  },
+  {
+    date: "2025-03-05",
+    who: "LMSY",
+    category: "Event",
+    title: "Siam Center The Summer Runway curated by Mint",
+    location: "Siam Center, Bangkok",
+    notes: "18:45 (GMT+8)",
+    tags: ["LMSY", "Runway", "Brand"]
+  },
+  {
+    date: "2025-03-08",
+    who: "LMSY",
+    category: "FanMeeting",
+    title: "1st Fan Meeting in Vietnam",
+    location: "Ben Thanh Theater, Vietnam",
+    notes: "19:00 (GMT+8)",
+    tags: ["LMSY", "Fanmeeting"]
+  },
+  {
+    date: "2025-03-13",
+    who: "LMSY",
+    category: "Event",
+    title: "LMSY × Taixiaoxiang Live",
+    location: "Taobao Live",
+    notes: "20:00 (GMT+8)",
+    tags: ["LMSY", "Live", "Brand"]
+  },
+  {
+    date: "2025-03-15",
+    who: "LMSY",
+    category: "FanMeeting",
+    title: "1st Fan Meeting in Manila with Lookmhee & Sonya",
+    location: "SM Skydome, Philippines",
+    notes: "14:00 (GMT+8)",
+    tags: ["LMSY", "Fanmeeting"]
+  },
+  {
+    date: "2025-03-22",
+    who: "LMSY",
+    category: "Event",
+    title: "Arousar × LMSY",
+    location: "Guangzhou, China",
+    notes: "13:30 (GMT+8)",
+    tags: ["LMSY", "Brand", "Event"]
+  },
+  {
+    date: "2025-03-29",
+    who: "LMSY",
+    category: "Event",
+    title: "Buddy Besties × LMSY",
+    location: "To be announced",
+    notes: "Details to be announced",
+    tags: ["LMSY", "BuddyBesties"]
+  },
+  {
+    date: "2025-03-30",
+    who: "LMSY",
+    category: "Event",
+    title: "International Book Fair 2025",
+    location: "Exhibition Hall 5–8, QSNCC, Bangkok",
+    notes: "11:00 (GMT+8)",
+    tags: ["LMSY", "Event"]
+  },
+
+  // APRIL 2025
+  {
+    date: "2025-04-03",
+    who: "LMSY",
+    category: "Event",
+    title: "LMSY PandaThaiHouse Live",
+    location: "Taobao Live",
+    notes: "20:00–21:00 (GMT+8)",
+    tags: ["LMSY", "Live", "Brand"]
+  },
+  {
+    date: "2025-04-05",
+    who: "LMSY",
+    category: "FanMeeting",
+    title: "LMSY 1st Fan Meeting in Taipei",
+    location: "Legacy Tera, Taipei, Taiwan",
+    notes: "17:00 (GMT+8)",
+    tags: ["LMSY", "Fanmeeting"]
+  },
+  {
+    date: "2025-04-12",
+    who: "LMSY",
+    category: "Event",
+    title: "Shop & Snap with Celebrities at Lotus's",
+    location: "Lotus's Rama 1, Bangkok",
+    notes: "14:30 (GMT+8)",
+    tags: ["LMSY", "Brand", "Event"]
+  },
+  {
+    date: "2025-04-18",
+    who: "SY",
+    category: "Event",
+    title: "Sonya's Birthday Party",
+    location: "Century The Movie Plaza, Bangkok",
+    notes: "14:00–17:00 (GMT+8)",
+    tags: ["Sonya", "Birthday"]
+  },
+  {
+    date: "2025-04-26",
+    who: "LMSY",
+    category: "FanMeeting",
+    title: "LMSY 1st Fan Sing in Chongqing",
+    location: "Chongqing, China",
+    notes: "13:00 (GMT+8)",
+    tags: ["LMSY", "Fanmeeting", "Concert"]
+  },
+
+  // MAY 2025
+  {
+    date: "2025-05-02",
+    who: "LMSY",
+    category: "Event",
+    title: "LMSY Taixiaoxiang Live",
+    location: "Taobao Live",
+    notes: "20:00–21:00 (GMT+8)",
+    tags: ["LMSY", "Live", "Brand"]
+  },
+  {
+    date: "2025-05-03",
+    who: "LMSY",
+    category: "Award",
+    title: "Award Ceremony",
+    location: "Airforce Convention Hall, Bangkok",
+    notes: "14:00 (GMT+8)",
+    tags: ["LMSY", "Awards"]
+  },
+  {
+    date: "2025-05-10",
+    who: "LMSY",
+    category: "Event",
+    title: "Buddy Besties Sweet Day Trip with LMSY",
+    location: "To be announced",
+    notes: "Details to be announced",
+    tags: ["LMSY", "BuddyBesties"]
+  },
+  {
+    date: "2025-05-17",
+    who: "LMSY",
+    category: "FanMeeting",
+    title: "LMSY Fan Meeting in Macao",
+    location: "Macao",
+    notes: "16:00 (GMT+8)",
+    tags: ["LMSY", "Fanmeeting"]
+  },
+  {
+    date: "2025-05-24",
+    who: "LMSY",
+    category: "FanMeeting",
+    title: "LMSY 1st Fan Meeting in Phnom Penh",
+    location: "Phnom Penh, Cambodia",
+    notes: "Details to be announced",
+    tags: ["LMSY", "Fanmeeting"]
+  },
+
+  // JUNE 2025
+  {
+    date: "2025-06-07",
+    who: "LMSY",
+    category: "Event",
+    title: "Thai Pride Merge Ride",
+    location: "To be announced",
+    notes: "16:45 (GMT+8)",
+    tags: ["LMSY", "Pride", "Event"]
+  },
+  {
+    date: "2025-06-11",
+    who: "LMSY",
+    category: "Event",
+    title: "Harmony Secret special event",
+    location: "GMM Grammy Place, Bangkok",
+    notes: "10:09 (GMT+8)",
+    tags: ["LMSY", "Harmony Secret"]
+  },
+  {
+    date: "2025-06-13",
+    who: "LMSY",
+    category: "Event",
+    title: "MIDATO × LMSY Live",
+    location: "Weidian Live",
+    notes: "20:00 (GMT+8)",
+    tags: ["LMSY", "Live", "Brand"]
+  },
+  {
+    date: "2025-06-28",
+    who: "LMSY",
+    category: "Event",
+    title: "Babi Blushing Brand Sharing Event",
+    location: "Shanghai, China",
+    notes: "Details to be announced",
+    tags: ["LMSY", "Brand", "Event"]
+  },
+
+  // JULY 2025
+  {
+    date: "2025-07-05",
+    who: "LMSY",
+    category: "Event",
+    title: "LMSY × Coconut Live",
+    location: "Weidian Live",
+    notes: "20:00 (GMT+8)",
+    tags: ["LMSY", "Live", "Brand"]
+  },
+  {
+    date: "2025-07-25",
+    who: "LMSY",
+    category: "Event",
+    title: "LMSY × Clouvia Live",
+    location: "Taobao Live",
+    notes: "20:00 (GMT+8)",
+    tags: ["LMSY", "Live", "Brand"]
+  },
+  {
+    date: "2025-07-26",
+    who: "LMSY",
+    category: "Event",
+    title: "Harmony Secret First Premiere",
+    location: "Siam Paragon 6F, Bangkok",
+    notes: "Details to be announced",
+    tags: ["LMSY", "Harmony Secret"]
+  },
+  {
+    date: "2025-07-27",
+    who: "LMSY",
+    category: "Event",
+    title: "Harmony Secret Episode 1 on air",
+    location: "on iQIYI",
+    notes: "00:30 (GMT+8)",
+    tags: ["LMSY", "Harmony Secret", "Streaming"]
+  },
+
+  // AUGUST 2025
+  {
+    date: "2025-08-07",
+    who: "LMSY",
+    category: "Event",
+    title: "EFM Fandom Live Lookmhee Sonya",
+    location: "EFM Station Live",
+    notes: "21:30 (GMT+8)",
+    tags: ["LMSY", "Live"]
+  },
+  {
+    date: "2025-08-09",
+    who: "LM",
+    category: "Event",
+    title: "Spice It Up with Lookmhee",
+    location: "To be announced",
+    notes: "Details to be announced",
+    tags: ["Lookmhee", "Event"]
+  },
+  {
+    date: "2025-08-16",
+    who: "LMSY",
+    category: "Event",
+    title: "Weibo Cultural Exchange Night",
+    location: "Queen Sirikit National Convention Center, QSNCC, Bangkok",
+    notes: "19:30 (GMT+8)",
+    tags: ["LMSY", "Event"]
+  },
+  {
+    date: "2025-08-24",
+    who: "LMSY",
+    category: "Event",
+    title: "Buddybesties with LMSY",
+    location: "To be announced",
+    notes: "Details to be announced",
+    tags: ["LMSY", "BuddyBesties"]
+  },
+
+  // SEPTEMBER 2025
+  {
+    date: "2025-09-05",
+    who: "LMSY",
+    category: "Event",
+    title: "Harmony Secret Press Tour",
+    location: "Live broadcast",
+    notes: "12:00, 15:00, 17:00, 20:00 (GMT+8)",
+    tags: ["LMSY", "Harmony Secret"]
+  },
+  {
+    date: "2025-09-06",
+    who: "LMSY",
+    category: "Event",
+    title: "Praew Charity 2025",
+    location: "Parc Paragon, Living Hall 3F, Bangkok",
+    notes: "18:00 (GMT+8)",
+    tags: ["LMSY", "Charity", "Event"]
+  },
+  {
+    date: "2025-09-13",
+    who: "LMSY",
+    category: "Event",
+    title: "Harmony Secret Final Episode",
+    location: "Siam Pavalai Royal Grand Theatre 6F, Bangkok",
+    notes: "Details to be announced",
+    tags: ["LMSY", "Harmony Secret"]
+  },
+  {
+    date: "2025-09-21",
+    who: "LMSY",
+    category: "FanMeeting",
+    title: "LMSY Fan Meeting in Macau",
+    location: "Macau",
+    notes: "15:00 (GMT+8)",
+    tags: ["LMSY", "Fanmeeting"]
+  },
+
+  // OCTOBER 2025
+  {
+    date: "2025-10-04",
+    who: "LM",
+    category: "FanMeeting",
+    title: "Lookmhee Nanning 2nd Fan Meeting",
+    location: "Nanning, China",
+    notes: "12:00 (GMT+8)",
+    tags: ["Lookmhee", "Fanmeeting"]
+  },
+  {
+    date: "2025-10-04",
+    who: "SY",
+    category: "FanMeeting",
+    title: "Sonya 2nd Fan Meeting in Nanning",
+    location: "Nanning, China",
+    notes: "19:00 (GMT+8)",
+    tags: ["Sonya", "Fanmeeting"]
+  },
+  {
+    date: "2025-10-11",
+    who: "LMSY",
+    category: "FanMeeting",
+    title: "LMSY in Hong Kong 2025",
+    location: "Hong Kong, AXA Dreamland",
+    notes: "16:00 (GMT+8)",
+    tags: ["LMSY", "Fanmeeting"]
+  },
+  {
+    date: "2025-10-25",
+    who: "SY",
+    category: "Event",
+    title: "Candy Kiss Halloween with Sonya",
+    location: "To be announced",
+    notes: "Details to be announced",
+    tags: ["Sonya", "Event", "Halloween"]
+  },
+
+  // NOVEMBER 2025
+  {
+    date: "2025-11-01",
+    who: "LMSY",
+    category: "Event",
+    title: "FOAMDREAM Party",
+    location: "Hangzhou, China",
+    notes: "12:00–19:00 (GMT+8)",
+    tags: ["LMSY", "Event"]
+  },
+  {
+    date: "2025-11-07",
+    who: "LMSY",
+    category: "Event",
+    title: "iQIYI 2026 Event",
+    location: "Sphere Hall, 5M Floor, EmSphere, Bangkok",
+    notes: "Details to be announced",
+    tags: ["LMSY", "Event"]
+  },
+  {
+    date: "2025-11-08",
+    who: "LMSY",
+    category: "Event",
+    title: "LMSY × BuddyBesties2DSY1Night (Day 1)",
+    location: "Kanchanaburi Province, Thailand",
+    notes: "Details to be announced",
+    tags: ["LMSY", "BuddyBesties"]
+  },
+  {
+    date: "2025-11-09",
+    who: "LMSY",
+    category: "Event",
+    title: "LMSY × BuddyBesties2DSY1Night (Day 2)",
+    location: "Kanchanaburi Province, Thailand",
+    notes: "Details to be announced",
+    tags: ["LMSY", "BuddyBesties"]
+  },
+  {
+    date: "2025-11-12",
+    who: "LMSY",
+    category: "Award",
+    title: "HOWE Awards 2025",
+    location: "BITEC Bangna 2F Grand Hall 201–203, Bangkok",
+    notes: "Details to be announced",
+    tags: ["LMSY", "Awards"]
+  },
+  {
+    date: "2025-11-23",
+    who: "LMSY",
+    category: "Event",
+    title: "Chun Xiangji Weidian Live",
+    location: "Weidian Live",
+    notes: "20:00 (GMT+8)",
+    tags: ["LMSY", "Live", "Brand"]
+  },
+  {
+    date: "2025-11-29",
+    who: "LMSY",
+    category: "FanMeeting",
+    title: "LMSY / Lookmhee Fan Meeting in Wuhan",
+    location: "Wuhan, China",
+    notes: "Details to be announced",
+    tags: ["LMSY", "Fanmeeting"]
+  },
+  {
+    date: "2025-11-30",
+    who: "SY",
+    category: "FanMeeting",
+    title: "Sonya Fan Meeting in Wuhan",
+    location: "Wuhan, China",
+    notes: "Details to be announced",
+    tags: ["Sonya", "Fanmeeting"]
+  },
+
+  // DECEMBER 2025
   {
     date: "2025-12-14",
     who: "LMSY",
@@ -149,8 +582,8 @@ function renderSchedule(selectedYear, selectedType) {
 
   filtered.forEach(ev => {
     const dateObj = new Date(ev.date);
-    const { monthLabel, yearLabel } = formatMonthInfo(dateObj);
-    const monthKey = monthLabel + " " + yearLabel;
+    const info = formatMonthInfo(dateObj);
+    const monthKey = info.monthLabel + " " + info.yearLabel;
 
     if (monthKey !== currentMonthKey) {
       currentMonthKey = monthKey;
@@ -167,7 +600,7 @@ function renderSchedule(selectedYear, selectedType) {
 
       const title = document.createElement("div");
       title.className = "month-title";
-      title.textContent = monthLabel;
+      title.textContent = info.monthLabel;
 
       header.appendChild(box);
       header.appendChild(title);
@@ -184,7 +617,7 @@ function renderSchedule(selectedYear, selectedType) {
     dateEl.className = "event-date";
     dateEl.innerHTML = `
       <div class="event-date-circle">${formatDay(dateObj)}</div>
-      <div class="event-date-month">${monthLabel.toUpperCase()}</div>
+      <div class="event-date-month">${formatMonthInfo(dateObj).monthLabel.toUpperCase()}</div>
     `;
 
     const main = document.createElement("div");
