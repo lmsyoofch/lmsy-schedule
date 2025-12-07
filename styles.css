@@ -336,3 +336,14 @@ h2 {
     margin-top: 0;
   }
 }
+
+
+.footer .hashtags a {
+  color: #A7D8FF;
+  text-decoration: none;
+  margin-left: 0.2rem;
+}
+
+.footer .hashtags a:hover {
+  text-decoration: underline;
+}
