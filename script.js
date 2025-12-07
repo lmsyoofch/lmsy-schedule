@@ -1,11 +1,6 @@
-// LMSY schedule app with icons, colour tags, language toggle and templates
+let currentLang = "en";
 
-let currentLang = "en"; // 'en', 'th', 'zh'
-
-// Events data
-// Add new events in this array
 const events = [
-  // December LMSY schedule from image
   {
     date: "2025-12-14",
     who: "LMSY",
@@ -80,82 +75,55 @@ const events = [
     notes_th: "รายละเอียดรอประกาศ",
     notes_zh: "详情待公布",
     tags: ["Lookmhee", "Christmas Event"]
-  },
-
-  // Template example for January, ready to update
-  {
-    date: "2026-01-05",
-    who: "LMSY",
-    category: "Template",
-    title: "To be announced LMSY event",
-    title_th: "กิจกรรม LMSY รอประกาศ",
-    title_zh: "LMSY 活动待公布",
-    location: "To be announced",
-    location_th: "สถานที่รอประกาศ",
-    location_zh: "地点待公布",
-    notes: "Replace this placeholder once January schedule is confirmed.",
-    notes_th: "ลบตัวอย่างนี้เมื่อมีตารางเดือนมกราคมจริงแล้ว",
-    notes_zh: "一旦一月行程确认后可以删除此示例",
-    tags: ["Template"]
   }
 ];
 
-// Language helper
 function pickLang(ev, baseKey) {
-  if (currentLang === "en") {
-    return ev[baseKey] || "";
-  }
-  const langKey = baseKey + "_" + currentLang;
-  return ev[langKey] || ev[baseKey] || "";
+  if (currentLang === "en") return ev[baseKey] || "";
+  const key = baseKey + "_" + currentLang;
+  return ev[key] || ev[baseKey] || "";
 }
 
-// Icons helper
 function getEventIcon(ev) {
-  const isChristmas = (ev.tags || []).some(t => t.toLowerCase().includes("christmas"));
-  if (isChristmas) return "🎄";
-
+  const tags = (ev.tags || []).map(t => t.toLowerCase());
+  if (tags.some(t => t.includes("christmas"))) return "🎄";
   if (ev.category === "Award") return "🏆";
   if (ev.category === "FanMeeting") {
     if (ev.who === "LM") return "💛";
     if (ev.who === "SY") return "🩵";
-    if (ev.who === "LMSY") return "🩵💛";
+    if (ev.who === "LMSY") return "💛🩵";
     return "⭐";
   }
-
   if (ev.category === "Event") {
     if (ev.who === "LM") return "💛✨";
     if (ev.who === "SY") return "🩵✨";
-    if (ev.who === "LMSY") return "🩵💛✨";
+    if (ev.who === "LMSY") return "💛🩵✨";
   }
-
   return "⭐";
 }
 
-// Month helpers
-function formatMonthYear(dateObj) {
-  const month = dateObj.toLocaleString("en-GB", { month: "short" });
-  const year = dateObj.getFullYear();
-  return { monthLabel: month, yearLabel: year.toString() };
+function formatMonthInfo(dateObj) {
+  const monthLabel = dateObj.toLocaleString("en-GB", { month: "short" });
+  const yearLabel = dateObj.getFullYear().toString();
+  return { monthLabel, yearLabel };
 }
 
 function formatDay(dateObj) {
   return dateObj.getDate().toString().padStart(2, "0");
 }
 
-// Tag class helper
-function getTagClasses(tagText) {
-  const t = tagText.toLowerCase();
+function getTagClasses(tag) {
+  const t = tag.toLowerCase();
   const classes = ["tag"];
-  if (t.includes("lookmhee") || t === "lm") classes.push("tag-lm");
-  if (t.includes("sonya") || t === "sy") classes.push("tag-sy");
+  if (t.includes("lookmhee")) classes.push("tag-lm");
+  if (t.includes("sonya")) classes.push("tag-sy");
   if (t === "lmsy") classes.push("tag-lmsy");
-  if (t.includes("fanmeet")) classes.push("tag-fm");
+  if (t.includes("fan")) classes.push("tag-fm");
   if (t.includes("award")) classes.push("tag-award");
-  if (t.includes("event") || t.includes("night")) classes.push("tag-event");
+  if (t.includes("christmas") || t.includes("event")) classes.push("tag-event");
   return classes.join(" ");
 }
 
-// Render schedule
 function renderSchedule(selectedYear, selectedType) {
   const container = document.getElementById("schedule");
   container.innerHTML = "";
@@ -163,7 +131,7 @@ function renderSchedule(selectedYear, selectedType) {
   const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
 
   const filtered = sorted.filter(ev => {
-    const year = new Date(ev.date).getFullYear().toString();
+    const year = ev.date.substring(0, 4);
     const matchYear = selectedYear === "all" || year === selectedYear;
     const matchType = selectedType === "all" || ev.category === selectedType;
     return matchYear && matchType;
@@ -177,15 +145,15 @@ function renderSchedule(selectedYear, selectedType) {
     return;
   }
 
-  let currentMonthYearKey = "";
+  let currentMonthKey = "";
 
   filtered.forEach(ev => {
     const dateObj = new Date(ev.date);
-    const { monthLabel, yearLabel } = formatMonthYear(dateObj);
-    const monthYearKey = monthLabel + " " + yearLabel;
+    const { monthLabel, yearLabel } = formatMonthInfo(dateObj);
+    const monthKey = monthLabel + " " + yearLabel;
 
-    if (monthYearKey !== currentMonthYearKey) {
-      currentMonthYearKey = monthYearKey;
+    if (monthKey !== currentMonthKey) {
+      currentMonthKey = monthKey;
 
       const group = document.createElement("div");
       group.className = "month-group";
@@ -203,7 +171,6 @@ function renderSchedule(selectedYear, selectedType) {
 
       header.appendChild(box);
       header.appendChild(title);
-
       group.appendChild(header);
       container.appendChild(group);
     }
@@ -257,7 +224,7 @@ function renderSchedule(selectedYear, selectedType) {
     main.appendChild(titleRow);
     main.appendChild(metaEl);
     if (ev.notes) main.appendChild(notesEl);
-    if (ev.tags && ev.tags.length > 0) main.appendChild(tagsEl);
+    if (ev.tags && ev.tags.length) main.appendChild(tagsEl);
 
     card.appendChild(dateEl);
     card.appendChild(main);
@@ -265,14 +232,11 @@ function renderSchedule(selectedYear, selectedType) {
   });
 }
 
-// Filters initialisation
 function initFilters() {
   const yearSelect = document.getElementById("filter-year");
   const typeSelect = document.getElementById("filter-type");
 
-  const years = Array.from(
-    new Set(events.map(ev => new Date(ev.date).getFullYear().toString()))
-  ).sort();
+  const years = [...new Set(events.map(ev => ev.date.substring(0, 4)))].sort();
 
   yearSelect.innerHTML = "";
   const allOption = document.createElement("option");
@@ -287,7 +251,7 @@ function initFilters() {
     yearSelect.appendChild(opt);
   });
 
-  const categories = Array.from(new Set(events.map(ev => ev.category))).sort();
+  const categories = [...new Set(events.map(ev => ev.category))].sort();
   categories.forEach(cat => {
     const opt = document.createElement("option");
     opt.value = cat;
@@ -306,7 +270,6 @@ function initFilters() {
   renderSchedule(yearSelect.value, typeSelect.value);
 }
 
-// Language toggle initialisation
 function initLanguageToggle() {
   const buttons = document.querySelectorAll(".lang-toggle button");
   buttons.forEach(btn => {

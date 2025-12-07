@@ -6,23 +6,15 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #F6F9FF;
-
-  /* Animated LMSY gradient background 🩵💛 */
   background: linear-gradient(135deg, #07121F, #0B1C30, #A7D8FF, #FFE89C);
   background-size: 300% 300%;
   animation: lmsyGradient 18s ease-in-out infinite;
 }
 
 @keyframes lmsyGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .page {
@@ -31,14 +23,12 @@ body {
   padding: 1.5rem;
 }
 
-/* Header */
-
 .header {
   text-align: center;
   margin-bottom: 2rem;
   padding: 1rem 1rem 1.5rem;
   border-radius: 1.5rem;
-  background: rgba(7, 18, 31, 0.7);
+  background: rgba(7, 18, 31, 0.75);
   backdrop-filter: blur(16px);
   border: 1px solid rgba(167, 216, 255, 0.45);
 }
@@ -46,20 +36,21 @@ body {
 .avatar-circle {
   width: 96px;
   height: 96px;
-  border-radius: 999px;
   margin: 0 auto 1rem;
+  border-radius: 999px;
+  padding: 3px;
+  background: conic-gradient(from 140deg, #FFE89C, #A7D8FF, #FFE89C);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: radial-gradient(circle at 20% 20%, #FFE89C, #A7D8FF 55%, #0B1C30 100%);
-  color: #07121F;
-  font-weight: 700;
-  gap: 2px;
 }
 
-.avatar-circle span {
-  font-size: 1rem;
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  display: block;
+  object-fit: cover;
 }
 
 h1 {
@@ -86,8 +77,6 @@ h2 {
   color: #FFE89C;
 }
 
-/* Language toggle */
-
 .lang-toggle {
   display: inline-flex;
   gap: 0.4rem;
@@ -113,17 +102,14 @@ h2 {
   font-weight: 600;
 }
 
-/* Filters */
-
 .filters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  align-items: centre;
+  align-items: center;
   margin: 1.5rem 0;
   padding: 0.7rem 1rem;
   border-radius: 999px;
-
   background: rgba(7, 18, 31, 0.8);
   border: 1px solid rgba(167, 216, 255, 0.5);
   backdrop-filter: blur(10px);
@@ -131,7 +117,7 @@ h2 {
 
 .filter-group {
   display: flex;
-  align-items: centre;
+  align-items: center;
   gap: 0.4rem;
 }
 
@@ -149,15 +135,13 @@ h2 {
   font-size: 0.85rem;
 }
 
-/* Month group title similar to the graphic */
-
 .month-group {
   margin-bottom: 1.8rem;
 }
 
 .month-header {
   display: flex;
-  align-items: centre;
+  align-items: center;
   justify-content: space-between;
   margin-bottom: 0.7rem;
 }
@@ -178,14 +162,11 @@ h2 {
   letter-spacing: 0.08em;
 }
 
-/* Event card, more like schedule image */
-
 .event-card {
   background: rgba(248, 249, 252, 0.07);
   border-radius: 1rem;
   padding: 0.75rem 0.9rem;
   margin-bottom: 0.6rem;
-
   border: 1px solid rgba(214, 219, 235, 0.9);
   display: grid;
   grid-template-columns: auto 1fr;
@@ -193,12 +174,12 @@ h2 {
 }
 
 .event-date {
-  text-align: centre;
+  text-align: center;
   min-width: 52px;
   display: flex;
   flex-direction: column;
-  align-items: centre;
-  justify-content: centre;
+  align-items: center;
+  justify-content: center;
 }
 
 .event-date-circle {
@@ -207,8 +188,8 @@ h2 {
   border-radius: 999px;
   border: 2px solid #FFE89C;
   display: flex;
-  align-items: centre;
-  justify-content: centre;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
   font-size: 1rem;
   background: rgba(7, 18, 31, 0.8);
@@ -230,7 +211,7 @@ h2 {
 
 .event-title-row {
   display: flex;
-  align-items: centre;
+  align-items: center;
   gap: 0.4rem;
 }
 
@@ -270,8 +251,6 @@ h2 {
   color: #DCEBFF;
 }
 
-/* Colour coded tags */
-
 .tag-lm {
   border-color: rgba(255, 232, 156, 0.7);
   background: rgba(255, 232, 156, 0.16);
@@ -286,7 +265,6 @@ h2 {
 
 .tag-lmsy {
   border-image: linear-gradient(135deg, #A7D8FF, #FFE89C) 1;
-  border-style: solid;
   border-width: 1px;
 }
 
@@ -305,38 +283,29 @@ h2 {
   background: rgba(49, 51, 89, 0.9);
 }
 
-.event-link {
-  margin-top: 0.25rem;
-  font-size: 0.78rem;
-}
-
-.event-link a {
-  color: #FFE89C;
-  text-decoration: underline;
-}
-
-/* Empty state */
-
 .empty {
   font-size: 0.9rem;
   color: #DCEBFF;
   margin-top: 1rem;
 }
 
-/* Footer */
-
 .footer {
   margin-top: 1.8rem;
   font-size: 0.78rem;
-  color: #DCEBFF;
-  text-align: centre;
+  color: #F6F9FF;
+  text-align: center;
+  background: rgba(7, 18, 31, 0.72);
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(167, 216, 255, 0.25);
 }
 
-.footer a {
-  color: #FFE89C;
+.footer .hashtags {
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  opacity: 0.9;
+  word-spacing: 0.25rem;
 }
-
-/* Mobile */
 
 @media (max-width: 600px) {
   .page {
@@ -354,7 +323,7 @@ h2 {
 
   .event-date {
     flex-direction: row;
-    align-items: centre;
+    align-items: center;
     justify-content: flex-start;
     gap: 0.4rem;
   }
