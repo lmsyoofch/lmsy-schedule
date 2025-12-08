@@ -450,8 +450,8 @@ const events = [
     location_th: "The Theatre at Mediacorp สิงคโปร์",
     location_zh: "新加坡 Mediacorp 剧场",
     notes: "Start time 15:00 (GMT+7)",
-    notes_th: "เริ่ม 16:00 น. (GMT+7)",
-    notes_zh: "开始时间 16:00（GMT+7）",
+    notes_th: "เริ่ม 15:00 น. (GMT+7)",
+    notes_zh: "开始时间 15:00（GMT+7）",
     tags: ["LMSY", "Fanmeeting"]
   },
   {
@@ -465,8 +465,8 @@ const events = [
     location_th: "ไบเทค ไลฟ์ กรุงเทพฯ",
     location_zh: "曼谷 Bitec Live",
     notes: "Start time 18:30 (GMT+7)",
-    notes_th: "เริ่ม 19:30 น. (GMT+7)",
-    notes_zh: "开始时间 19:30（GMT+7）",
+    notes_th: "เริ่ม 18:30 น. (GMT+7)",
+    notes_zh: "开始时间 18:30（GMT+7）",
     tags: ["Awards", "Appearance"]
   },
   {
