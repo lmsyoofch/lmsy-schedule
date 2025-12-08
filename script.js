@@ -32,7 +32,7 @@ const events = [
   {
     date: "2025-03-13",
     who: "LMSY",
-    category: "Livestream",
+    category: "Brand",
     title: "LMSY × Taixiaoxiang Live",
     location: "Taobao Live",
     notes: "20:00 (GMT+8)",
@@ -79,7 +79,7 @@ const events = [
   {
     date: "2025-04-03",
     who: "LMSY",
-    category: "Livestream",
+    category: "Brand",
     title: "LMSY PandaThaiHouse Live",
     location: "Taobao Live",
     notes: "20:00–21:00 (GMT+8)",
@@ -126,7 +126,7 @@ const events = [
   {
     date: "2025-05-02",
     who: "LMSY",
-    category: "Livestream",
+    category: "Brand",
     title: "LMSY Taixiaoxiang Live",
     location: "Taobao Live",
     notes: "20:00–21:00 (GMT+8)",
@@ -191,7 +191,7 @@ const events = [
   {
     date: "2025-06-13",
     who: "LMSY",
-    category: "Livestream",
+    category: "Brand",
     title: "MIDATO × LMSY Live",
     location: "Weidian Live",
     notes: "20:00 (GMT+8)",
@@ -211,7 +211,7 @@ const events = [
   {
     date: "2025-07-05",
     who: "LMSY",
-    category: "Livestream",
+    category: "Brand",
     title: "LMSY × Coconut Live",
     location: "Weidian Live",
     notes: "20:00 (GMT+8)",
@@ -220,7 +220,7 @@ const events = [
   {
     date: "2025-07-25",
     who: "LMSY",
-    category: "Livestream",
+    category: "Brand",
     title: "LMSY × Clouvia Live",
     location: "Taobao Live",
     notes: "20:00 (GMT+8)",
@@ -258,7 +258,7 @@ const events = [
   {
     date: "2025-08-09",
     who: "LM",
-    category: "Brand",
+    category: "Special event",
     title: "Spice It Up with Lookmhee",
     location: "To be announced",
     notes: "Details to be announced",
@@ -372,7 +372,7 @@ const events = [
   {
     date: "2025-11-07",
     who: "LMSY",
-    category: "Drama",
+    category: "Special event",
     title: "iQIYI 2026 Event",
     location: "Sphere Hall, 5M Floor, EmSphere, Bangkok",
     notes: "Details to be announced",
@@ -408,7 +408,7 @@ const events = [
   {
     date: "2025-11-23",
     who: "LMSY",
-    category: "Livestream",
+    category: "Brand",
     title: "Chun Xiangji Weidian Live",
     location: "Weidian Live",
     notes: "20:00 (GMT+8)",
@@ -520,23 +520,17 @@ function pickLang(ev, baseKey) {
 function getEventIcon(ev) {
   const tags = (ev.tags || []).map(t => t.toLowerCase());
   if (tags.some(t => t.includes("christmas"))) return "🎄";
-  if (tags.some(t => t.includes("halloween"))) return "🎃";
   if (ev.category === "Award") return "🏆";
+  if (ev.category === "Drama") return "🎬";
+  if (ev.category === "Brand") return "💼";
+  if (ev.category === "Livestream") return "📺";
+  if (ev.category === "Special event") return "✨";
   if (ev.category === "FanMeeting") {
     if (ev.who === "LM") return "💛";
     if (ev.who === "SY") return "🩵";
     if (ev.who === "LMSY") return "💛🩵";
     return "⭐";
   }
-  if (ev.category === "Brand") {
-    if (ev.who === "LM") return "💛✨";
-    if (ev.who === "SY") return "🩵✨";
-    if (ev.who === "LMSY") return "💛🩵✨";
-    return "✨";
-  }
-  if (ev.category === "Livestream") return "📺";
-  if (ev.category === "Drama") return "🎬";
-  if (ev.category === "Special event") return "⭐";
   return "⭐";
 }
 
@@ -549,6 +543,10 @@ function getMonthInfo(dateObj) {
 
 function formatDay(dateObj) {
   return dateObj.getDate().toString().padStart(2, "0");
+}
+
+function formatWeekday(dateObj) {
+  return dateObj.toLocaleDateString("en-GB", { weekday: "short" }).toUpperCase();
 }
 
 function getTagClasses(tag) {
@@ -624,9 +622,14 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
 
     const dateEl = document.createElement("div");
     dateEl.className = "event-date";
+
+    const weekdayLabel = formatWeekday(dateObj);
+    const monthLabel = getMonthInfo(dateObj).monthLabel.toUpperCase();
+
     dateEl.innerHTML = `
       <div class="event-date-circle">${formatDay(dateObj)}</div>
-      <div class="event-date-month">${getMonthInfo(dateObj).monthLabel.toUpperCase()}</div>
+      <div class="event-date-month">${monthLabel}</div>
+      <div class="event-date-weekday">${weekdayLabel}</div>
     `;
 
     const main = document.createElement("div");
@@ -694,7 +697,9 @@ function initFilters() {
     yearSelect.appendChild(opt);
   });
 
-  const categories = [...new Set(events.map(ev => ev.category))].sort();
+  const categories = [...new Set(events.map(ev => ev.category))];
+
+  const typeOrder = ["FanMeeting", "Brand", "Livestream", "Drama", "Award", "Special event"];
   const labelMap = {
     "FanMeeting": "Fan meeting",
     "Brand": "Brand",
@@ -703,11 +708,14 @@ function initFilters() {
     "Award": "Award",
     "Special event": "Special event"
   };
-  categories.forEach(cat => {
-    const opt = document.createElement("option");
-    opt.value = cat;
-    opt.textContent = labelMap[cat] || cat;
-    typeSelect.appendChild(opt);
+
+  typeOrder.forEach(cat => {
+    if (categories.includes(cat)) {
+      const opt = document.createElement("option");
+      opt.value = cat;
+      opt.textContent = labelMap[cat] || cat;
+      typeSelect.appendChild(opt);
+    }
   });
 
   function populateMonths(year) {
