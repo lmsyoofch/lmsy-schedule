@@ -438,7 +438,21 @@ const events = [
     tags: ["Sonya", "Fanmeeting"]
   },
 
-  // DECEMBER 2025
+  
+// DECEMBER 2025
+  {
+    date: "2025-12-11",
+    who: "LMSY",
+    category: "Brand",
+    title: "MIRROR All Voices, Empowering Ones",
+    location: "EM Skye, FL.14, Emsphere, Bangkok",
+    location_th: "EM Skye ชั้น 14 เอ็มสเฟียร์ กรุงเทพฯ",
+    location_zh: "曼谷 Emsphere EM Skye 14楼",
+    notes: "Start time 18:00 (GMT+7)",
+    notes_th: "เริ่ม 18:00 น. (GMT+7)",
+    notes_zh: "开始时间 18:00（GMT+7）",
+    tags: ["LMSY", "Brand", "Appearance"]
+  },
   {
     date: "2025-12-14",
     who: "LMSY",
@@ -464,9 +478,9 @@ const events = [
     location: "Bitec Live, Bangkok",
     location_th: "ไบเทค ไลฟ์ กรุงเทพฯ",
     location_zh: "曼谷 Bitec Live",
-    notes: "Start time 18:30 (GMT+7)",
-    notes_th: "เริ่ม 18:30 น. (GMT+7)",
-    notes_zh: "开始时间 18:30（GMT+7）",
+    notes: "Start time 15:00 (GMT+7)",
+    notes_th: "เริ่ม 15:00 น. (GMT+7)",
+    notes_zh: "开始时间 15:00（GMT+7）",
     tags: ["Awards", "Appearance"]
   },
   {
@@ -479,9 +493,9 @@ const events = [
     location: "Fuzhou, China",
     location_th: "ฝูโจว ประเทศจีน",
     location_zh: "中国福州",
-    notes: "Details to be announced",
-    notes_th: "รายละเอียดรอประกาศ",
-    notes_zh: "详情待公布",
+    notes: "Time to be announced · MOLI Jasmine Space, Fuzhou, China",
+    notes_th: "เวลาจะแจ้งอีกครั้ง · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
+    notes_zh: "时间待定 · 中国福州 MOLI茉莉空间",
     tags: ["Lookmhee", "Fanmeeting"]
   },
   {
@@ -494,9 +508,9 @@ const events = [
     location: "Fuzhou, China",
     location_th: "ฝูโจว ประเทศจีน",
     location_zh: "中国福州",
-    notes: "Details to be announced",
-    notes_th: "รายละเอียดรอประกาศ",
-    notes_zh: "详情待公布",
+    notes: "Time to be announced · MOLI Jasmine Space, Fuzhou, China",
+    notes_th: "เวลาจะแจ้งอีกครั้ง · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
+    notes_zh: "时间待定 · 中国福州 MOLI茉莉空间",
     tags: ["Sonya", "Fanmeeting"]
   },
   {
@@ -515,6 +529,7 @@ const events = [
     tags: ["Lookmhee", "Christmas Event"]
   }
 ];
+
 
 function pickLang(ev, baseKey) {
   if (currentLang === "en") return ev[baseKey] || "";
