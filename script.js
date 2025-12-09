@@ -1,10 +1,5 @@
 let currentLang = "en";
 
-function toBangkokDate(dateString) {
-  return new Date(dateString + "T00:00:00+07:00");
-}
-
-
 const events = [
   // MARCH 2025
   {
@@ -13,7 +8,7 @@ const events = [
     category: "Brand",
     title: "DCASH Tops of Beauty 2025",
     location: "Central Westgate, Bangkok",
-    notes: "14:00–15:00 (GMT+7)",
+    notes: "15:00–16:00 (GMT+8)",
     tags: ["LMSY", "Brand"]
   },
   {
@@ -22,7 +17,7 @@ const events = [
     category: "Brand",
     title: "Siam Center The Summer Runway curated by Mint",
     location: "Siam Center, Bangkok",
-    notes: "17:45 (GMT+7)",
+    notes: "18:45 (GMT+8)",
     tags: ["LMSY", "Runway", "Brand"]
   },
   {
@@ -31,7 +26,7 @@ const events = [
     category: "FanMeeting",
     title: "1st Fan Meeting in Vietnam",
     location: "Ben Thanh Theater, Vietnam",
-    notes: "18:00 (GMT+7)",
+    notes: "19:00 (GMT+8)",
     tags: ["LMSY", "Fanmeeting"]
   },
   {
@@ -40,7 +35,7 @@ const events = [
     category: "Brand",
     title: "LMSY × Taixiaoxiang Live",
     location: "Taobao Live",
-    notes: "19:00 (GMT+7)",
+    notes: "20:00 (GMT+8)",
     tags: ["LMSY", "Live", "Brand"]
   },
   {
@@ -49,7 +44,7 @@ const events = [
     category: "FanMeeting",
     title: "1st Fan Meeting in Manila with Lookmhee & Sonya",
     location: "SM Skydome, Philippines",
-    notes: "13:00 (GMT+7)",
+    notes: "14:00 (GMT+8)",
     tags: ["LMSY", "Fanmeeting"]
   },
   {
@@ -58,7 +53,7 @@ const events = [
     category: "Brand",
     title: "Arousar × LMSY",
     location: "Guangzhou, China",
-    notes: "12:30 (GMT+7)",
+    notes: "13:30 (GMT+8)",
     tags: ["LMSY", "Brand", "Event"]
   },
   {
@@ -76,7 +71,7 @@ const events = [
     category: "Special event",
     title: "International Book Fair 2025",
     location: "Exhibition Hall 5–8, QSNCC, Bangkok",
-    notes: "10:00 (GMT+7)",
+    notes: "11:00 (GMT+8)",
     tags: ["LMSY", "Event"]
   },
 
@@ -87,7 +82,7 @@ const events = [
     category: "Brand",
     title: "LMSY PandaThaiHouse Live",
     location: "Taobao Live",
-    notes: "19:00–20:00 (GMT+7)",
+    notes: "20:00–21:00 (GMT+8)",
     tags: ["LMSY", "Live", "Brand"]
   },
   {
@@ -96,7 +91,7 @@ const events = [
     category: "FanMeeting",
     title: "LMSY 1st Fan Meeting in Taipei",
     location: "Legacy Tera, Taipei, Taiwan",
-    notes: "16:00 (GMT+7)",
+    notes: "17:00 (GMT+8)",
     tags: ["LMSY", "Fanmeeting"]
   },
   {
@@ -105,7 +100,7 @@ const events = [
     category: "Brand",
     title: "Shop & Snap with Celebrities at Lotus's",
     location: "Lotus's Rama 1, Bangkok",
-    notes: "13:30 (GMT+7)",
+    notes: "14:30 (GMT+8)",
     tags: ["LMSY", "Brand", "Event"]
   },
   {
@@ -114,7 +109,7 @@ const events = [
     category: "Special event",
     title: "Sonya's Birthday Party",
     location: "Century The Movie Plaza, Bangkok",
-    notes: "13:00–16:00 (GMT+7)",
+    notes: "14:00–17:00 (GMT+8)",
     tags: ["Sonya", "Birthday"]
   },
   {
@@ -123,7 +118,7 @@ const events = [
     category: "FanMeeting",
     title: "LMSY 1st Fan Sing in Chongqing",
     location: "Chongqing, China",
-    notes: "12:00 (GMT+7)",
+    notes: "13:00 (GMT+8)",
     tags: ["LMSY", "Fanmeeting", "Concert"]
   },
 
@@ -134,7 +129,7 @@ const events = [
     category: "Brand",
     title: "LMSY Taixiaoxiang Live",
     location: "Taobao Live",
-    notes: "19:00–20:00 (GMT+7)",
+    notes: "20:00–21:00 (GMT+8)",
     tags: ["LMSY", "Live", "Brand"]
   },
   {
@@ -143,7 +138,7 @@ const events = [
     category: "Award",
     title: "Award Ceremony",
     location: "Airforce Convention Hall, Bangkok",
-    notes: "13:00 (GMT+7)",
+    notes: "14:00 (GMT+8)",
     tags: ["LMSY", "Awards"]
   },
   {
@@ -161,7 +156,7 @@ const events = [
     category: "FanMeeting",
     title: "LMSY Fan Meeting in Macao",
     location: "Macao",
-    notes: "15:00 (GMT+7)",
+    notes: "16:00 (GMT+8)",
     tags: ["LMSY", "Fanmeeting"]
   },
   {
@@ -181,7 +176,7 @@ const events = [
     category: "Special event",
     title: "Thai Pride Merge Ride",
     location: "To be announced",
-    notes: "15:45 (GMT+7)",
+    notes: "16:45 (GMT+8)",
     tags: ["LMSY", "Pride", "Event"]
   },
   {
@@ -190,7 +185,7 @@ const events = [
     category: "Drama",
     title: "Harmony Secret special event",
     location: "GMM Grammy Place, Bangkok",
-    notes: "09:09 (GMT+7)",
+    notes: "10:09 (GMT+8)",
     tags: ["LMSY", "Harmony Secret"]
   },
   {
@@ -199,7 +194,7 @@ const events = [
     category: "Brand",
     title: "MIDATO × LMSY Live",
     location: "Weidian Live",
-    notes: "19:00 (GMT+7)",
+    notes: "20:00 (GMT+8)",
     tags: ["LMSY", "Live", "Brand"]
   },
   {
@@ -219,7 +214,7 @@ const events = [
     category: "Brand",
     title: "LMSY × Coconut Live",
     location: "Weidian Live",
-    notes: "19:00 (GMT+7)",
+    notes: "20:00 (GMT+8)",
     tags: ["LMSY", "Live", "Brand"]
   },
   {
@@ -228,7 +223,7 @@ const events = [
     category: "Brand",
     title: "LMSY × Clouvia Live",
     location: "Taobao Live",
-    notes: "19:00 (GMT+7)",
+    notes: "20:00 (GMT+8)",
     tags: ["LMSY", "Live", "Brand"]
   },
   {
@@ -246,7 +241,7 @@ const events = [
     category: "Drama",
     title: "Harmony Secret Episode 1 on air",
     location: "on iQIYI",
-    notes: "23:30 (GMT+7)",
+    notes: "00:30 (GMT+8)",
     tags: ["LMSY", "Harmony Secret", "Streaming"]
   },
 
@@ -257,7 +252,7 @@ const events = [
     category: "Livestream",
     title: "EFM Fandom Live Lookmhee Sonya",
     location: "EFM Station Live",
-    notes: "20:30 (GMT+7)",
+    notes: "21:30 (GMT+8)",
     tags: ["LMSY", "Live"]
   },
   {
@@ -275,7 +270,7 @@ const events = [
     category: "Special event",
     title: "Weibo Cultural Exchange Night",
     location: "Queen Sirikit National Convention Center, QSNCC, Bangkok",
-    notes: "18:30 (GMT+7)",
+    notes: "19:30 (GMT+8)",
     tags: ["LMSY", "Event"]
   },
   {
@@ -295,7 +290,7 @@ const events = [
     category: "Drama",
     title: "Harmony Secret Press Tour",
     location: "Live broadcast",
-    notes: "11:00, 14:00, 16:00, 19:00 (GMT+7)",
+    notes: "12:00, 15:00, 17:00, 20:00 (GMT+8)",
     tags: ["LMSY", "Harmony Secret"]
   },
   {
@@ -304,7 +299,7 @@ const events = [
     category: "Special event",
     title: "Praew Charity 2025",
     location: "Parc Paragon, Living Hall 3F, Bangkok",
-    notes: "17:00 (GMT+7)",
+    notes: "18:00 (GMT+8)",
     tags: ["LMSY", "Charity", "Event"]
   },
   {
@@ -322,7 +317,7 @@ const events = [
     category: "FanMeeting",
     title: "LMSY Fan Meeting in Macau",
     location: "Macau",
-    notes: "14:00 (GMT+7)",
+    notes: "15:00 (GMT+8)",
     tags: ["LMSY", "Fanmeeting"]
   },
 
@@ -333,7 +328,7 @@ const events = [
     category: "FanMeeting",
     title: "Lookmhee Nanning 2nd Fan Meeting",
     location: "Nanning, China",
-    notes: "11:00 (GMT+7)",
+    notes: "12:00 (GMT+8)",
     tags: ["Lookmhee", "Fanmeeting"]
   },
   {
@@ -342,7 +337,7 @@ const events = [
     category: "FanMeeting",
     title: "Sonya 2nd Fan Meeting in Nanning",
     location: "Nanning, China",
-    notes: "18:00 (GMT+7)",
+    notes: "19:00 (GMT+8)",
     tags: ["Sonya", "Fanmeeting"]
   },
   {
@@ -351,7 +346,7 @@ const events = [
     category: "FanMeeting",
     title: "LMSY in Hong Kong 2025",
     location: "Hong Kong, AXA Dreamland",
-    notes: "15:00 (GMT+7)",
+    notes: "16:00 (GMT+8)",
     tags: ["LMSY", "Fanmeeting"]
   },
   {
@@ -371,7 +366,7 @@ const events = [
     category: "Brand",
     title: "FOAMDREAM Party",
     location: "Hangzhou, China",
-    notes: "11:00–18:00 (GMT+7)",
+    notes: "12:00–19:00 (GMT+8)",
     tags: ["LMSY", "Event"]
   },
   {
@@ -416,7 +411,7 @@ const events = [
     category: "Brand",
     title: "Chun Xiangji Weidian Live",
     location: "Weidian Live",
-    notes: "19:00 (GMT+7)",
+    notes: "20:00 (GMT+8)",
     tags: ["LMSY", "Live", "Brand"]
   },
   {
@@ -438,22 +433,7 @@ const events = [
     tags: ["Sonya", "Fanmeeting"]
   },
 
-  
-// DECEMBER 2025
-  {
-    date: "2025-12-11",
-    who: "LMSY",
-    category: "Brand",
-    title: "MIRROR All Voices, Empowering Ones",
-    location: "EM Skye, FL.14, Emsphere, Bangkok",
-    location_th: "EM Skye ชั้น 14 เอ็มสเฟียร์ กรุงเทพฯ",
-    location_zh: "曼谷 Emsphere EM Skye 14楼",
-    notes: "Start time 18:00 (GMT+7)",
-    notes_th: "เริ่ม 18:00 น. (GMT+7)",
-    notes_zh: "开始时间 18:00（GMT+7）",
-    hashtags: ["#MIRROR50xLMSY", "#AllVoicesEmpoweringOnes"],
-    tags: ["LMSY", "Brand", "Appearance"]
-  },
+  // DECEMBER 2025
   {
     date: "2025-12-14",
     who: "LMSY",
@@ -464,10 +444,9 @@ const events = [
     location: "The Theatre at Mediacorp, Singapore",
     location_th: "The Theatre at Mediacorp สิงคโปร์",
     location_zh: "新加坡 Mediacorp 剧场",
-    notes: "Start time 15:00 (GMT+7)",
-    notes_th: "เริ่ม 15:00 น. (GMT+7)",
-    notes_zh: "开始时间 15:00（GMT+7）",
-    hashtags: ["#LMSY1stFMinSINGAPORE"],
+    notes: "Start time 16:00 (GMT+8)",
+    notes_th: "เริ่ม 16:00 น. (GMT+8)",
+    notes_zh: "开始时间 16:00（GMT+8）",
     tags: ["LMSY", "Fanmeeting"]
   },
   {
@@ -480,10 +459,9 @@ const events = [
     location: "Bitec Live, Bangkok",
     location_th: "ไบเทค ไลฟ์ กรุงเทพฯ",
     location_zh: "曼谷 Bitec Live",
-    notes: "Start time 15:00 (GMT+7)",
-    notes_th: "เริ่ม 15:00 น. (GMT+7)",
-    notes_zh: "开始时间 15:00（GMT+7）",
-    hashtags: ["#PersonOfTheYearAwards2025xLMSY"],
+    notes: "Start time 19:30 (GMT+8)",
+    notes_th: "เริ่ม 19:30 น. (GMT+8)",
+    notes_zh: "开始时间 19:30（GMT+8）",
     tags: ["Awards", "Appearance"]
   },
   {
@@ -496,9 +474,9 @@ const events = [
     location: "Fuzhou, China",
     location_th: "ฝูโจว ประเทศจีน",
     location_zh: "中国福州",
-    notes: "Time to be announced · MOLI Jasmine Space, Fuzhou, China",
-    notes_th: "เวลาจะแจ้งอีกครั้ง · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
-    notes_zh: "时间待定 · 中国福州 MOLI茉莉空间",
+    notes: "Details to be announced",
+    notes_th: "รายละเอียดรอประกาศ",
+    notes_zh: "详情待公布",
     tags: ["Lookmhee", "Fanmeeting"]
   },
   {
@@ -511,9 +489,9 @@ const events = [
     location: "Fuzhou, China",
     location_th: "ฝูโจว ประเทศจีน",
     location_zh: "中国福州",
-    notes: "Time to be announced · MOLI Jasmine Space, Fuzhou, China",
-    notes_th: "เวลาจะแจ้งอีกครั้ง · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
-    notes_zh: "时间待定 · 中国福州 MOLI茉莉空间",
+    notes: "Details to be announced",
+    notes_th: "รายละเอียดรอประกาศ",
+    notes_zh: "详情待公布",
     tags: ["Sonya", "Fanmeeting"]
   },
   {
@@ -532,7 +510,6 @@ const events = [
     tags: ["Lookmhee", "Christmas Event"]
   }
 ];
-
 
 function pickLang(ev, baseKey) {
   if (currentLang === "en") return ev[baseKey] || "";
@@ -591,7 +568,7 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
   const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
 
   const filtered = sorted.filter(ev => {
-    const d = toBangkokDate(ev.date);
+    const d = new Date(ev.date);
     const year = d.getFullYear().toString();
     const monthIndex = d.getMonth();
     const matchYear = selectedYear === "all" || year === selectedYear;
@@ -611,7 +588,7 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
   let currentMonthKey = "";
 
   filtered.forEach(ev => {
-    const dateObj = toBangkokDate(ev.date);
+    const dateObj = new Date(ev.date);
     const info = getMonthInfo(dateObj);
     const monthKey = info.monthLabel + " " + info.yearLabel;
 
@@ -689,24 +666,10 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
       tagsEl.appendChild(span);
     });
 
-    const hashtagsEl = document.createElement("div");
-    hashtagsEl.className = "event-hashtags";
-    if (ev.hashtags && ev.hashtags.length) {
-      const link = document.createElement("a");
-      const text = ev.hashtags.join(" ");
-      const encoded = encodeURIComponent(text);
-      link.href = "https://x.com/intent/tweet?text=" + encoded;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.textContent = text;
-      hashtagsEl.appendChild(link);
-    }
-
     main.appendChild(titleRow);
     main.appendChild(metaEl);
     if (ev.notes) main.appendChild(notesEl);
     if (ev.tags && ev.tags.length) main.appendChild(tagsEl);
-    if (ev.hashtags && ev.hashtags.length) main.appendChild(hashtagsEl);
 
     card.appendChild(dateEl);
     card.appendChild(main);
@@ -766,7 +729,7 @@ function initFilters() {
       events
         .filter(ev => ev.date.substring(0,4) === year)
         .map(ev => {
-          const d = toBangkokDate(ev.date);
+          const d = new Date(ev.date);
           return d.getMonth();
         })
     )].sort((a,b)=>a-b);
