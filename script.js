@@ -691,15 +691,16 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
 
     const hashtagsEl = document.createElement("div");
     hashtagsEl.className = "event-hashtags";
-    (ev.hashtags || []).forEach(h => {
+    if (ev.hashtags && ev.hashtags.length) {
       const link = document.createElement("a");
-      const encoded = encodeURIComponent(h);
-      link.href = "https://x.com/search?q=" + encoded;
+      const text = ev.hashtags.join(" ");
+      const encoded = encodeURIComponent(text);
+      link.href = "https://x.com/intent/tweet?text=" + encoded;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
-      link.textContent = h;
+      link.textContent = text;
       hashtagsEl.appendChild(link);
-    });
+    }
 
     main.appendChild(titleRow);
     main.appendChild(metaEl);
