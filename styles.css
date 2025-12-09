@@ -309,6 +309,23 @@ h2 {
   margin-top: 1rem;
 }
 
+
+.event-hashtags {
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  opacity: 0.98;
+}
+
+.event-hashtags a {
+  color: #A7D8FF;
+  text-decoration: none;
+  margin-right: 0.35rem;
+}
+
+.event-hashtags a:hover {
+  text-decoration: underline;
+}
+
 .footer {
   margin-top: 1.8rem;
   font-size: 0.78rem;
