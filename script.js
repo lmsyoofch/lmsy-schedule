@@ -451,6 +451,7 @@ const events = [
     notes: "Start time 18:00 (GMT+7)",
     notes_th: "เริ่ม 18:00 น. (GMT+7)",
     notes_zh: "开始时间 18:00（GMT+7）",
+    hashtags: ["#MIRROR50xLMSY", "#AllVoicesEmpoweringOnes"],
     tags: ["LMSY", "Brand", "Appearance"]
   },
   {
@@ -466,6 +467,7 @@ const events = [
     notes: "Start time 15:00 (GMT+7)",
     notes_th: "เริ่ม 15:00 น. (GMT+7)",
     notes_zh: "开始时间 15:00（GMT+7）",
+    hashtags: ["#LMSY1stFMinSINGAPORE"],
     tags: ["LMSY", "Fanmeeting"]
   },
   {
@@ -481,6 +483,7 @@ const events = [
     notes: "Start time 15:00 (GMT+7)",
     notes_th: "เริ่ม 15:00 น. (GMT+7)",
     notes_zh: "开始时间 15:00（GMT+7）",
+    hashtags: ["#PersonOfTheYearAwards2025xLMSY"],
     tags: ["Awards", "Appearance"]
   },
   {
@@ -686,10 +689,23 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
       tagsEl.appendChild(span);
     });
 
+    const hashtagsEl = document.createElement("div");
+    hashtagsEl.className = "event-hashtags";
+    (ev.hashtags || []).forEach(h => {
+      const link = document.createElement("a");
+      const encoded = encodeURIComponent(h);
+      link.href = "https://x.com/search?q=" + encoded;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = h;
+      hashtagsEl.appendChild(link);
+    });
+
     main.appendChild(titleRow);
     main.appendChild(metaEl);
     if (ev.notes) main.appendChild(notesEl);
     if (ev.tags && ev.tags.length) main.appendChild(tagsEl);
+    if (ev.hashtags && ev.hashtags.length) main.appendChild(hashtagsEl);
 
     card.appendChild(dateEl);
     card.appendChild(main);
