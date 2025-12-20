@@ -496,9 +496,10 @@ const events = [
     location: "Fuzhou, China",
     location_th: "ฝูโจว ประเทศจีน",
     location_zh: "中国福州",
-    notes: "Time to be announced · MOLI Jasmine Space, Fuzhou, China",
-    notes_th: "เวลาจะแจ้งอีกครั้ง · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
-    notes_zh: "时间待定 · 中国福州 MOLI茉莉空间",
+    notes: "10:00 AM (GMT+7)",
+    notes_th: "10:00 น. (GMT+7)",
+    notes_zh: "10:00（GMT+7）",
+    hashtags: ["#LOOKMHEExFirstFanMeetinFuzhou", "#LookmheePunyapat", "#LOOKMHEE"],
     tags: ["Lookmhee", "Fanmeeting"]
   },
   {
@@ -511,9 +512,10 @@ const events = [
     location: "Fuzhou, China",
     location_th: "ฝูโจว ประเทศจีน",
     location_zh: "中国福州",
-    notes: "Time to be announced · MOLI Jasmine Space, Fuzhou, China",
-    notes_th: "เวลาจะแจ้งอีกครั้ง · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
-    notes_zh: "时间待定 · 中国福州 MOLI茉莉空间",
+    notes: "10:00 AM (GMT+7)",
+    notes_th: "10:00 น. (GMT+7)",
+    notes_zh: "10:00（GMT+7）",
+    hashtags: ["#SONYAxFirstFanMeetinFuzhou", "#SonyaSaranphat", "#SONYA"],
     tags: ["Sonya", "Fanmeeting"]
   },
   {
@@ -531,24 +533,8 @@ const events = [
     notes_zh: "详情待公布",
     tags: ["Lookmhee", "Christmas Event"]
   },
-  {
-    date: "2025-12-20",
-    who: "Lookmhee",
-    category: "FanMeeting",
-    title: "Lookmhee 1st Fanmeet in Fuzhou",
-    location: "Fuzhou, China",
-    notes: "10:00 AM (GMT+7)",
-    tags: ["LOOKMHEE", "LookmheePunyapat", "LOOKMHEExFirstFanMeetinFuzhou"]
-  },
-  {
-    date: "2025-12-21",
-    who: "Sonya",
-    category: "FanMeeting",
-    title: "Sonya 1st Fanmeet in Fuzhou",
-    location: "Fuzhou, China",
-    notes: "10:00 AM (GMT+7)",
-    tags: ["SONYA", "SonyaSaranphat", "SONYAxFirstFanMeetinFuzhou"]
-  }
+  ,
+  
 
 ];
 
