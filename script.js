@@ -496,9 +496,9 @@ const events = [
     location: "Fuzhou, China",
     location_th: "ฝูโจว ประเทศจีน",
     location_zh: "中国福州",
-    notes: "Time to be announced · MOLI Jasmine Space, Fuzhou, China",
-    notes_th: "เวลาจะแจ้งอีกครั้ง · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
-    notes_zh: "时间待定 · 中国福州 MOLI茉莉空间",
+    notes: "Start time 10:00 (GMT+7) · MOLI Jasmine Space, Fuzhou, China",
+    notes_th: "เริ่ม 10:00 น. (GMT+7) · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
+    notes_zh: "开始时间 10:00（GMT+7) · 中国福州 MOLI茉莉空间",
     tags: ["Lookmhee", "Fanmeeting"]
   },
   {
@@ -511,9 +511,9 @@ const events = [
     location: "Fuzhou, China",
     location_th: "ฝูโจว ประเทศจีน",
     location_zh: "中国福州",
-    notes: "Time to be announced · MOLI Jasmine Space, Fuzhou, China",
-    notes_th: "เวลาจะแจ้งอีกครั้ง · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
-    notes_zh: "时间待定 · 中国福州 MOLI茉莉空间",
+    notes: "Start time 10:00 (GMT+7) · MOLI Jasmine Space, Fuzhou, China",
+    notes_th: "เริ่ม 10:00 น. (GMT+7) · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
+    notes_zh: "开始时间 10:00（GMT+7) · 中国福州 MOLI茉莉空间",
     tags: ["Sonya", "Fanmeeting"]
   },
   {
