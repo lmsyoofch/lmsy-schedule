@@ -538,7 +538,7 @@ const events = [
     category: "FanMeeting",
     title: "Lookmhee 1st Fanmeet in Fuzhou",
     location: "Fuzhou, China",
-    notes: "10:00 AM (GMT+7)",
+    notes: "10.00 AM (GMT+7)",
     tags: ["LOOKMHEExFirstFanMeetinFuzhou"]
   },
   {
@@ -547,7 +547,7 @@ const events = [
     category: "FanMeeting",
     title: "Sonya 1st Fanmeet in Fuzhou",
     location: "Fuzhou, China",
-    notes: "10:00 AM (GMT+7)",
+    notes: "10.00 AM (GMT+7)",
     tags: ["SONYAxFirstFanMeetinFuzhou"]
   },
 
