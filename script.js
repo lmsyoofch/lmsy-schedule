@@ -530,15 +530,14 @@ const events = [
     notes_th: "รายละเอียดรอประกาศ",
     notes_zh: "详情待公布",
     tags: ["Lookmhee", "Christmas Event"]
-  }
-
+  },
   {
     date: "2025-12-20",
     who: "Lookmhee",
     category: "FanMeeting",
     title: "Lookmhee 1st Fanmeet in Fuzhou",
     location: "Fuzhou, China",
-    notes: "10:00 (GMT+7)",
+    notes: "10:00 AM (GMT+7)",
     tags: ["LOOKMHEE", "LookmheePunyapat", "LOOKMHEExFirstFanMeetinFuzhou"]
   },
   {
@@ -547,9 +546,9 @@ const events = [
     category: "FanMeeting",
     title: "Sonya 1st Fanmeet in Fuzhou",
     location: "Fuzhou, China",
-    notes: "10:00 (GMT+7)",
+    notes: "10:00 AM (GMT+7)",
     tags: ["SONYA", "SonyaSaranphat", "SONYAxFirstFanMeetinFuzhou"]
-  },
+  }
 
 ];
 
