@@ -499,6 +499,7 @@ const events = [
     notes: "Start time 10:00 (GMT+7) · MOLI Jasmine Space, Fuzhou, China",
     notes_th: "เริ่ม 10:00 น. (GMT+7) · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
     notes_zh: "开始时间 10:00（GMT+7) · 中国福州 MOLI茉莉空间",
+    hashtags: ["LOOKMHEExFirstFanMeetinFuzhou"],
     tags: ["Lookmhee", "Fanmeeting"]
   },
   {
@@ -514,6 +515,7 @@ const events = [
     notes: "Start time 10:00 (GMT+7) · MOLI Jasmine Space, Fuzhou, China",
     notes_th: "เริ่ม 10:00 น. (GMT+7) · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
     notes_zh: "开始时间 10:00（GMT+7) · 中国福州 MOLI茉莉空间",
+    hashtags: ["SONYAxFirstFanMeetinFuzhou"],
     tags: ["Sonya", "Fanmeeting"]
   },
   {
