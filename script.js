@@ -496,10 +496,9 @@ const events = [
     location: "Fuzhou, China",
     location_th: "ฝูโจว ประเทศจีน",
     location_zh: "中国福州",
-    notes: "10:00 AM (GMT+7)",
-    notes_th: "10:00 น. (GMT+7)",
-    notes_zh: "10:00（GMT+7）",
-    hashtags: ["#LOOKMHEExFirstFanMeetinFuzhou"],
+    notes: "Time to be announced · MOLI Jasmine Space, Fuzhou, China",
+    notes_th: "เวลาจะแจ้งอีกครั้ง · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
+    notes_zh: "时间待定 · 中国福州 MOLI茉莉空间",
     tags: ["Lookmhee", "Fanmeeting"]
   },
   {
@@ -512,10 +511,9 @@ const events = [
     location: "Fuzhou, China",
     location_th: "ฝูโจว ประเทศจีน",
     location_zh: "中国福州",
-    notes: "10:00 AM (GMT+7)",
-    notes_th: "10:00 น. (GMT+7)",
-    notes_zh: "10:00（GMT+7）",
-    hashtags: ["#SONYAxFirstFanMeetinFuzhou"],
+    notes: "Time to be announced · MOLI Jasmine Space, Fuzhou, China",
+    notes_th: "เวลาจะแจ้งอีกครั้ง · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
+    notes_zh: "时间待定 · 中国福州 MOLI茉莉空间",
     tags: ["Sonya", "Fanmeeting"]
   },
   {
@@ -532,10 +530,7 @@ const events = [
     notes_th: "รายละเอียดรอประกาศ",
     notes_zh: "详情待公布",
     tags: ["Lookmhee", "Christmas Event"]
-  },
-  ,
-  
-
+  }
 ];
 
 
