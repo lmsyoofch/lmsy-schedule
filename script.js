@@ -499,7 +499,7 @@ const events = [
     notes: "10:00 AM (GMT+7)",
     notes_th: "10:00 น. (GMT+7)",
     notes_zh: "10:00（GMT+7）",
-    hashtags: ["#LOOKMHEExFirstFanMeetinFuzhou", "#LookmheePunyapat", "#LOOKMHEE"],
+    hashtags: ["#LOOKMHEExFirstFanMeetinFuzhou"],
     tags: ["Lookmhee", "Fanmeeting"]
   },
   {
@@ -515,7 +515,7 @@ const events = [
     notes: "10:00 AM (GMT+7)",
     notes_th: "10:00 น. (GMT+7)",
     notes_zh: "10:00（GMT+7）",
-    hashtags: ["#SONYAxFirstFanMeetinFuzhou", "#SonyaSaranphat", "#SONYA"],
+    hashtags: ["#SONYAxFirstFanMeetinFuzhou"],
     tags: ["Sonya", "Fanmeeting"]
   },
   {
