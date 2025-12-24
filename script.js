@@ -1014,6 +1014,55 @@ const events = [
     notes_zh: "详情待公布",
     tags: ["Lookmhee", "Christmas Event"]
   }
+  ,
+  {
+    date: "2026-01-17",
+    who: "SY",
+    category: "FanMeeting",
+    title: "Sonya Sweet Party (Chengdu)",
+    title_th: "Sonya Sweet Party (เฉิงตู)",
+    title_zh: "SONYA 甜心派对（成都）",
+    location: "Chengdu, China",
+    location_th: "เฉิงตู ประเทศจีน",
+    location_zh: "中国·成都",
+    notes: "Details to be announced",
+    notes_th: "รายละเอียดรอประกาศ",
+    notes_zh: "详情待公布",
+    hashtags: ["#LMSY", "#SonyaSaranphat"],
+    tags: ["Sonya", "Fanmeeting"]
+  },
+  {
+    date: "2026-01-18",
+    who: "LM",
+    category: "FanMeeting",
+    title: "Lookmhee Heart Glitter (Chengdu)",
+    title_th: "Lookmhee Heart Glitter (เฉิงตู)",
+    title_zh: "LOOKMHEE 怦然心动（成都）",
+    location: "Chengdu, China",
+    location_th: "เฉิงตู ประเทศจีน",
+    location_zh: "中国·成都",
+    notes: "Details to be announced",
+    notes_th: "รายละเอียดรอประกาศ",
+    notes_zh: "详情待公布",
+    hashtags: ["#LMSY", "#LMlookmhee"],
+    tags: ["Lookmhee", "Fanmeeting"]
+  },
+  {
+    date: "2026-01-24",
+    who: "LMSY",
+    category: "FanMeeting",
+    title: "LMSY Deal With You in Taipei",
+    title_th: "LMSY Deal With You in Taipei",
+    title_zh: "LMSY 台北见面会 Deal With You",
+    location: "National Taipei University of Technology, Taipei",
+    location_th: "National Taipei University of Technology, ไทเป",
+    location_zh: "国立台北科技大学",
+    notes: "Ticket prices: VIP NT$7,800, Area A NT$6,800, Area B NT$5,600, Accessible seating NT$2,000. Ticket sales start: 21 Nov, 12:00 (Taipei time). Ticketing system: IBON. Organiser: Ten Hours Studio",
+    notes_th: "ราคาบัตร: VIP NT$7,800, Area A NT$6,800, Area B NT$5,600, ที่นั่งสำหรับผู้พิการ NT$2,000. เริ่มขายบัตร: 21 พ.ย. 12:00 (เวลาไทเป). ระบบจำหน่ายบัตร: IBON. ผู้จัด: Ten Hours Studio",
+    notes_zh: "票价：VIP NT$7,800，A区 NT$6,800，B区 NT$5,600，无障碍座位 NT$2,000。开售：11月21日 12:00（台北时间）。售票：IBON。主办：Ten Hours Studio",
+    hashtags: ["#LMSYDealWithYouInTaipei", "#LMSY"],
+    tags: ["LMSY", "Fanmeeting"]
+  }
 ];
 
 
@@ -1315,9 +1364,10 @@ function initFilters() {
   const now = new Date();
   const currentYear = now.getFullYear().toString();
 
-  // Always default to the latest year and latest month found in the dataset.
-  // This keeps the landing view showing the most recent schedule.
-  const defaultYear = years[years.length - 1];
+  // Default to the current year and month when available, otherwise fall back to the latest.
+  const currentMonth = now.getMonth() + 1;
+
+  const defaultYear = years.includes(currentYear) ? currentYear : years[years.length - 1];
   populateMonths(defaultYear);
 
   const availableMonths = [...monthSelect.options]
@@ -1325,10 +1375,12 @@ function initFilters() {
     .filter(v => v !== "all")
     .map(v => Number(v));
 
-  const defaultMonth = availableMonths.length ? String(availableMonths[availableMonths.length - 1]) : "all";
+  const defaultMonthNum = availableMonths.includes(currentMonth)
+    ? currentMonth
+    : (availableMonths.length ? availableMonths[availableMonths.length - 1] : null);
 
   yearSelect.value = defaultYear;
-  monthSelect.value = defaultMonth;
+  monthSelect.value = defaultMonthNum ? String(defaultMonthNum) : "all";
 
   yearSelect.addEventListener("change", () => {
     const y = yearSelect.value === "all" ? currentYear : yearSelect.value;
