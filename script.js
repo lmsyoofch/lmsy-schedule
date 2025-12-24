@@ -1028,7 +1028,7 @@ const events = [
     notes: "Details to be announced",
     notes_th: "รายละเอียดรอประกาศ",
     notes_zh: "详情待公布",
-    hashtags: ["#LMSY", "#SonyaSaranphat"],
+    hashtags: [],
     tags: ["Sonya", "Fanmeeting"]
   },
   {
@@ -1044,7 +1044,7 @@ const events = [
     notes: "Details to be announced",
     notes_th: "รายละเอียดรอประกาศ",
     notes_zh: "详情待公布",
-    hashtags: ["#LMSY", "#LMlookmhee"],
+    hashtags: [],
     tags: ["Lookmhee", "Fanmeeting"]
   },
   {
@@ -1057,10 +1057,10 @@ const events = [
     location: "National Taipei University of Technology, Taipei",
     location_th: "National Taipei University of Technology, ไทเป",
     location_zh: "国立台北科技大学",
-    notes: "Ticket prices: VIP NT$7,800, Area A NT$6,800, Area B NT$5,600, Accessible seating NT$2,000. Ticket sales start: 21 Nov, 12:00 (Taipei time). Ticketing system: IBON. Organiser: Ten Hours Studio",
-    notes_th: "ราคาบัตร: VIP NT$7,800, Area A NT$6,800, Area B NT$5,600, ที่นั่งสำหรับผู้พิการ NT$2,000. เริ่มขายบัตร: 21 พ.ย. 12:00 (เวลาไทเป). ระบบจำหน่ายบัตร: IBON. ผู้จัด: Ten Hours Studio",
-    notes_zh: "票价：VIP NT$7,800，A区 NT$6,800，B区 NT$5,600，无障碍座位 NT$2,000。开售：11月21日 12:00（台北时间）。售票：IBON。主办：Ten Hours Studio",
-    hashtags: ["#LMSYDealWithYouInTaipei", "#LMSY"],
+    notes: "Details to be announced",
+    notes_th: "รายละเอียดรอประกาศ",
+    notes_zh: "详情待公布",
+    hashtags: [],
     tags: ["LMSY", "Fanmeeting"]
   }
 ];
