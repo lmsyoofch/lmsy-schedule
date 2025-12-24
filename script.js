@@ -1,414 +1,492 @@
-/* LMSY Schedule app script (generated) */
-const events = [
-  {
-    date: "2024-05-23",
-    type: "Tour",
-    title_en: "MaMa OK Presents ฟีออย ฟีออด ON TOUR",
-    title_th: "มาม่า OK Presents ฟีออย ฟีออด ON TOUR",
-    title_zh: "MaMa OK Presents 巡演",
-    artists: "Lookmhee and Sonya",
-    time: "10.00 AM",
-    venue: "Not stated (see poster)",
-    hashtag: "#มาม่าOKPresentฟีออยฟีออดOnTour"
-  },
-  {
-    date: "2024-06-05",
-    type: "Tour",
-    title_en: "MaMa OK Presents ฟีออย ฟีออด ON TOUR",
-    title_th: "มาม่า OK Presents ฟีออย ฟีออด ON TOUR",
-    title_zh: "MaMa OK Presents 巡演",
-    artists: "Lookmhee and Sonya",
-    time: "10.00 AM",
-    venue: "Not stated (see poster)",
-    hashtag: "#มาม่าOKPresentฟีออยฟีออดOnTour"
-  },
-  {
-    date: "2024-06-18",
-    type: "Tour",
-    title_en: "MaMa OK Presents ฟีออย ฟีออด ON TOUR",
-    title_th: "มาม่า OK Presents ฟีออย ฟีออด ON TOUR",
-    title_zh: "MaMa OK Presents 巡演",
-    artists: "Lookmhee and Sonya",
-    time: "10.00 AM",
-    venue: "Not stated (see poster)",
-    hashtag: "#มาม่าOKPresentฟีออยฟีออดOnTour"
-  },
-  {
-    date: "2024-06-20",
-    type: "Series",
-    title_en: "Affair The Series Artist Schedule",
-    title_th: "ตารางงานนักแสดงซีรีส์ Affair",
-    title_zh: "《Affair》系列艺人行程",
-    artists: "Lookmhee, Sonya, Pop",
-    time: "10.00 AM",
-    venue: "GMM Grammy Lobby",
-    hashtag: "#Affairรักเล่นกล"
-  },
-  {
-    date: "2024-07-01",
-    type: "Tour",
-    title_en: "MaMa OK Presents ฟีออย ฟีออด ON TOUR",
-    title_th: "มาม่า OK Presents ฟีออย ฟีออด ON TOUR",
-    title_zh: "MaMa OK Presents 巡演",
-    artists: "Lookmhee and Sonya",
-    time: "11.00 AM to 03.00 PM",
-    venue: "Not stated (see poster)",
-    hashtag: "#มาม่าOKPresentฟีออยฟีออดOnTour"
-  },
-  {
-    date: "2024-07-03",
-    type: "Tour",
-    title_en: "MaMa OK Presents ฟีออย ฟีออด ON TOUR",
-    title_th: "มาม่า OK Presents ฟีออย ฟีออด ON TOUR",
-    title_zh: "MaMa OK Presents 巡演",
-    artists: "Lookmhee and Sonya",
-    time: "11.00 AM to 03.00 PM",
-    venue: "Not stated (see poster)",
-    hashtag: "#มาม่าOKPresentฟีออยฟีออดOnTour"
-  },
-  {
-    date: "2024-07-10",
-    type: "Tour",
-    title_en: "MaMa OK Presents ฟีออย ฟีออด ON TOUR",
-    title_th: "มาม่า OK Presents ฟีออย ฟีออด ON TOUR",
-    title_zh: "MaMa OK Presents 巡演",
-    artists: "Lookmhee and Sonya",
-    time: "11.00 AM to 03.00 PM",
-    venue: "Not stated (see poster)",
-    hashtag: "#มาม่าOKPresentฟีออยฟีออดOnTour"
-  },
-  {
-    date: "2024-08-30",
-    type: "Series",
-    title_en: "Affair The Series First Episode Watch Party",
-    title_th: "งานรับชมตอนแรกซีรีส์ Affair",
-    title_zh: "《Affair》第一集观影会",
-    artists: "Lookmhee, Sonya, Pop",
-    time: "06.00 PM",
-    venue: "House Samyan, 5th Floor, Samyan Mitrtown",
-    hashtag: "#Affair1stEPWatchParty"
-  },
-  {
-    date: "2024-09-06",
-    type: "Press",
-    title_en: "Affair Press Tour",
-    title_th: "Affair Press Tour",
-    title_zh: "《Affair》媒体宣传行程",
-    artists: "Lookmhee and Sonya",
-    time: "09.30 AM onwards",
-    venue: "Multiple media stations",
-    hashtag: "#AffairPressTour"
-  },
-  {
-    date: "2024-09-07",
-    type: "Awards",
-    title_en: "Praew Charity 2024",
-    title_th: "Praew Charity 2024",
-    title_zh: "Praew 慈善活动 2024",
-    artists: "Lookmhee and Sonya",
-    time: "05.00 PM",
-    venue: "Paragon Hall, Siam Paragon",
-    hashtag: "#PraewCharity2024"
-  },
-  {
-    date: "2024-09-17",
-    type: "Press",
-    title_en: "Affair Press Tour (Media Rounds)",
-    title_th: "Affair Press Tour (รอบสื่อ)",
-    title_zh: "《Affair》媒体采访",
-    artists: "Lookmhee and Sonya",
-    time: "04.30 PM and 06.00 PM",
-    venue: "Media studios",
-    hashtag: "#AffairPressTour"
-  },
-  {
-    date: "2024-09-21",
-    type: "Awards",
-    title_en: "FEED Y Awards 2024",
-    title_th: "FEED Y Awards 2024",
-    title_zh: "FEED Y 颁奖礼 2024",
-    artists: "Lookmhee and Sonya",
-    time: "05.00 PM",
-    venue: "Paragon Hall, Siam Paragon",
-    hashtag: "#FeedYAwards2024"
-  },
-  {
-    date: "2024-10-03",
-    type: "Brand",
-    title_en: "Wan Sang Suk Market x LMSY",
-    title_th: "วันสร้างสุข x LMSY",
-    title_zh: "幸福市集 × LMSY",
-    artists: "Lookmhee and Sonya",
-    time: "03.00 PM",
-    venue: "Central Westville, G Floor, Waterfall Amphitheatre",
-    hashtag: "#วันสร้างสุขxLMSY"
-  },
-  {
-    date: "2024-10-03",
-    type: "Live",
-    title_en: "EFM Fandom Live",
-    title_th: "EFM Fandom Live",
-    title_zh: "EFM 粉丝直播",
-    artists: "Lookmhee and Sonya",
-    time: "08.30 PM",
-    venue: "Online and studio",
-    hashtag: "#LMSYxEFMFandomLive"
-  },
-  {
-    date: "2024-10-10",
-    type: "Fashion",
-    title_en: "ELLE Fashion Week 2024 (Sretsis)",
-    title_th: "ELLE Fashion Week 2024 (Sretsis)",
-    title_zh: "ELLE 时装周 2024（Sretsis）",
-    artists: "Lookmhee and Sonya",
-    time: "07.30 PM",
-    venue: "True Icon Hall, ICONSIAM",
-    hashtag: "#EFW2024"
-  },
-  {
-    date: "2024-10-18",
-    type: "Series",
-    title_en: "Affair The Series Final Episode Screening",
-    title_th: "Affair The Series ตอนจบ",
-    title_zh: "《Affair》大结局放映",
-    artists: "Lookmhee and Sonya",
-    time: "07.00 PM",
-    venue: "Siam Pavalai Royal Grand Theatre, Siam Paragon",
-    hashtag: "#AffairTheSeriesFinalEP"
-  },
-  {
-    date: "2024-10-25",
-    type: "Brand",
-    title_en: "ONE Bangkok Grand Opening",
-    title_th: "งานเปิดตัว ONE Bangkok",
-    title_zh: "ONE Bangkok 开幕活动",
-    artists: "Lookmhee and Sonya",
-    time: "07.30 PM",
-    venue: "ONE Bangkok",
-    hashtag: "#OneBangkokxLMSY"
-  },
-  {
-    date: "2024-10-27",
-    type: "Brand",
-    title_en: "Destiny Clinic Event",
-    title_th: "กิจกรรม Destiny Clinic",
-    title_zh: "Destiny Clinic 活动",
-    artists: "Lookmhee and Sonya",
-    time: "05.30 PM",
-    venue: "Central Rama 3",
-    hashtag: "#DestinyclinicLookmheeSonya"
-  },
-  {
-    date: "2024-11-01",
-    type: "Brand",
-    title_en: "iQIYI iJOY TH 2025",
-    title_th: "iQIYI iJOY TH 2025",
-    title_zh: "iQIYI iJOY 泰国 2025",
-    artists: "Lookmhee (solo)",
-    time: "03.00 PM",
-    venue: "EMSPHERE",
-    hashtag: "#iQIYIiJOYTH2025"
-  },
-  {
-    date: "2024-11-02",
-    type: "Brand",
-    title_en: "MAMI Puppy Love Moment",
-    title_th: "MAMI Puppy Love Moment",
-    title_zh: "MAMI Puppy Love Moment 活动",
-    artists: "Lookmhee and Sonya",
-    time: "03.00 PM",
-    venue: "Not stated",
-    hashtag: "#MAMIxLookmheeSonya"
-  },
-  {
-    date: "2024-11-07",
-    type: "Live",
-    title_en: "Taobao Live (Pandathaihouse)",
-    title_th: "ไลฟ์ Taobao (Pandathaihouse)",
-    title_zh: "淘宝直播（Pandathaihouse）",
-    artists: "Lookmhee and Sonya",
-    time: "07.00 PM",
-    venue: "Taobao Live",
-    hashtag: "#Pandathaihouse"
-  },
-  {
-    date: "2024-11-09",
-    type: "Fan meeting",
-    title_en: "Lookmhee & Sonya 1st Fan Meeting in Macau",
-    title_th: "แฟนมีตติ้งครั้งแรกที่มาเก๊า",
-    title_zh: "澳门首场粉丝见面会",
-    artists: "Lookmhee and Sonya",
-    time: "04.00 PM",
-    venue: "The Londoner Macao, Loulé Meeting Room",
-    hashtag: "#LMSY1stFMInMacau"
-  },
-  {
-    date: "2024-11-09",
-    type: "TV",
-    title_en: "The Big Kitchen",
-    title_th: "The Big Kitchen",
-    title_zh: "大厨房节目",
-    artists: "Sonya (solo)",
-    time: "09.30 AM",
-    venue: "Workpoint 23",
-    hashtag: "#TheBigKitchenxSonya"
-  },
-  {
-    date: "2024-12-01",
-    type: "Fan meeting",
-    title_en: "Lookmhee & Sonya 1st Fan Meeting in Hong Kong",
-    title_th: "แฟนมีตติ้งครั้งแรกที่ฮ่องกง",
-    title_zh: "香港粉丝见面会",
-    artists: "Lookmhee and Sonya",
-    time: "03.00 PM to 05.00 PM",
-    venue: "Eaton HK, 2/F Ballroom",
-    hashtag: "#LMSYinHongKong"
-  },
-  {
-    date: "2024-12-08",
-    type: "Live",
-    title_en: "TheTasteTime Taobao Live",
-    title_th: "TheTasteTime ไลฟ์ Taobao",
-    title_zh: "TheTasteTime 淘宝直播",
-    artists: "Lookmhee and Sonya",
-    time: "07.00 PM",
-    venue: "Taobao Live",
-    hashtag: "#TheTasteTime"
-  },
-  {
-    date: "2024-12-14",
-    type: "Brand",
-    title_en: "Newtamins Merry X’Mas Meet and Greet",
-    title_th: "Newtamins Merry X’Mas (Meet and Greet)",
-    title_zh: "Newtamins 圣诞特别见面会",
-    artists: "Sonya (solo)",
-    time: "01.00 PM",
-    venue: "Not stated",
-    hashtag: "#NewtaminsMerryXMas"
-  },
-  {
-    date: "2024-12-21",
-    type: "Fan meeting",
-    title_en: "Lookmhee 1st Fan Meeting in Nanning",
-    title_th: "แฟนมีตติ้งเดี่ยว Lookmhee ที่หนานหนิง",
-    title_zh: "Lookmhee 南宁首场粉丝见面会",
-    artists: "Lookmhee (solo)",
-    time: "12.30 PM",
-    venue: "Baiyi Shanghecheng HOPELIVE, Nanning",
-    hashtag: "#Lookmhee1stFMInNanning"
-  },
-  {
-    date: "2024-12-21",
-    type: "Fan meeting",
-    title_en: "Sonya 1st Fan Meeting in Nanning",
-    title_th: "แฟนมีตติ้งเดี่ยว Sonya ที่หนานหนิง",
-    title_zh: "Sonya 南宁首场粉丝见面会",
-    artists: "Sonya (solo)",
-    time: "06.00 PM",
-    venue: "Baiyi Shanghecheng HOPELIVE, Nanning",
-    hashtag: "#Sonya1stFMInNanning"
-  },
-  {
-    date: "2024-12-24",
-    type: "Live",
-    title_en: "Mystbelle Taobao Live",
-    title_th: "Mystbelle ไลฟ์ Taobao",
-    title_zh: "Mystbelle 淘宝直播",
-    artists: "Lookmhee and Sonya",
-    time: "07.00 PM",
-    venue: "Taobao Live",
-    hashtag: "#Mystbelle"
-  },
-  {
-    date: "2024-12-28",
-    type: "Brand",
-    title_en: "ICONSIAM Pre Countdown Party",
-    title_th: "ICONSIAM Pre Countdown Party",
-    title_zh: "ICONSIAM 跨年前倒数派对",
-    artists: "Lookmhee and Sonya",
-    time: "07.00 PM",
-    venue: "River Park, ICONSIAM",
-    hashtag: "#ICONSIAMPreCountdown"
-  },
-  {
-    date: "2025-01-08",
-    type: "Press",
-    title_en: "Lookmhee & Sonya Press Tour",
-    title_th: "Press Tour Lookmhee & Sonya",
-    title_zh: "Lookmhee & Sonya 宣传行程",
-    artists: "Lookmhee and Sonya",
-    time: "Not stated",
-    venue: "Not stated",
-    hashtag: ""
-  },
-  {
-    date: "2025-01-10",
-    type: "Live",
-    title_en: "Arousar Studios Taobao Live",
-    title_th: "Arousar Studios ไลฟ์ Taobao",
-    title_zh: "Arousar Studios 淘宝直播",
-    artists: "Lookmhee and Sonya",
-    time: "Not stated",
-    venue: "Taobao Live",
-    hashtag: "#ArousarStudios"
-  },
-  {
-    date: "2025-01-16",
-    type: "Show",
-    title_en: "T-POP Stage Show",
-    title_th: "T-POP Stage Show",
-    title_zh: "T-POP 舞台秀",
-    artists: "Lookmhee and Sonya",
-    time: "Not stated",
-    venue: "Not stated",
-    hashtag: "#TPopStageShow"
-  },
-  {
-    date: "2025-01-18",
-    type: "Fansign",
-    title_en: "Lookmhee & Sonya 1st Fansign in Tianjin",
-    title_th: "แฟนไซน์ครั้งแรกที่เทียนจิน",
-    title_zh: "天津首场签名会",
-    artists: "Lookmhee and Sonya",
-    time: "Not stated",
-    venue: "Tianjin",
-    hashtag: "#LMSY1stFansignInTianjin"
-  },
-  {
-    date: "2025-01-23",
-    type: "Fashion",
-    title_en: "Sretsis In Store Launch (Resort 2025 Love Frontier)",
-    title_th: "Sretsis In Store Launch (Resort 2025 Love Frontier)",
-    title_zh: "Sretsis 门店活动（Resort 2025 Love Frontier）",
-    artists: "Lookmhee and Sonya",
-    time: "Not stated",
-    venue: "Sretsis store",
-    hashtag: "#SRETSIS"
-  },
-  {
-    date: "2025-01-24",
-    type: "Press",
-    title_en: "Lookmhee & Sonya Press Tour",
-    title_th: "Press Tour Lookmhee & Sonya",
-    title_zh: "Lookmhee & Sonya 宣传行程",
-    artists: "Lookmhee and Sonya",
-    time: "Not stated",
-    venue: "Not stated",
-    hashtag: ""
-  },
-  {
-    date: "2025-02-15",
-    type: "Fan meeting",
-    title_en: "LMSY 1st Fan Meeting in Thailand (Be My Valentine)",
-    title_th: "แฟนมีตติ้ง LMSY ครั้งแรกในไทย (Be My Valentine)",
-    title_zh: "LMSY 泰国首场粉丝见面会（Be My Valentine）",
-    artists: "Lookmhee and Sonya",
-    time: "Not stated",
-    venue: "TRUE ICON HALL, 7th Floor, ICONSIAM",
-    hashtag: "#LMSY1stFMInThailand"
-  },
+let currentLang = "en";
 
-  // Added schedule entries (Mar to Dec 2025)
+function toBangkokDate(dateString) {
+  return new Date(dateString + "T00:00:00+07:00");
+}
+
+
+const events = [
+{
+  date: "2024-05-23",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "OK Presents Fiew Fiew On Tour",
+  title_th: "มาม่า OK PRESENTS ฟิ้วว ฟิ้วว ON TOUR",
+  title_zh: "OK Presents 见面活动巡回（On Tour）",
+  location_en: "Bangkok (school event)",
+  location_th: "กรุงเทพฯ (กิจกรรมโรงเรียน)",
+  location_zh: "曼谷（学校活动）",
+  startTime: "10:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Special event"],
+  hashtags: ["#มาม่าOKpresentsฟิ้ววฟิ้ววOnTour"]
+},
+{
+  date: "2024-06-05",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "OK Presents Fiew Fiew On Tour",
+  title_th: "มาม่า OK PRESENTS ฟิ้วว ฟิ้วว ON TOUR",
+  title_zh: "OK Presents 见面活动巡回（On Tour）",
+  location_en: "Bangkok (school event)",
+  location_th: "กรุงเทพฯ (กิจกรรมโรงเรียน)",
+  location_zh: "曼谷（学校活动）",
+  startTime: "10:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Special event"],
+  hashtags: ["#มาม่าOKpresentsฟิ้ววฟิ้ววOnTour"]
+},
+{
+  date: "2024-06-18",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "OK Presents Fiew Fiew On Tour",
+  title_th: "มาม่า OK PRESENTS ฟิ้วว ฟิ้วว ON TOUR",
+  title_zh: "OK Presents 见面活动巡回（On Tour）",
+  location_en: "Bangkok (school event)",
+  location_th: "กรุงเทพฯ (กิจกรรมโรงเรียน)",
+  location_zh: "曼谷（学校活动）",
+  startTime: "10:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Special event"],
+  hashtags: ["#มาม่าOKpresentsฟิ้ววฟิ้ววOnTour"]
+},
+{
+  date: "2024-06-20",
+  who: "LMSY",
+  category: "Drama",
+  title_en: "Affair The Series Artist Schedule",
+  title_th: "ตารางงานนักแสดง Affair The Series",
+  title_zh: "《Affair》演员行程",
+  location_en: "GMM Grammy Lobby",
+  location_th: "GMM Grammy Lobby",
+  location_zh: "GMM Grammy 大堂",
+  startTime: "10:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Drama", "Appearance"],
+  hashtags: ["#Affairรักเล่นกล"]
+},
+{
+  date: "2024-08-30",
+  who: "LMSY",
+  category: "Drama",
+  title_en: "Affair The Series, First Episode Watch Party",
+  title_th: "Affair The Series, ดูตอนแรกพร้อมกัน (Watch Party)",
+  title_zh: "《Affair》第一集观看派对",
+  location_en: "House Samyan, 5th Floor, Samyan Mitrtown",
+  location_th: "House Samyan ชั้น 5, Samyan Mitrtown",
+  location_zh: "House Samyan, Samyan Mitrtown 5楼",
+  startTime: "18:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Drama", "WatchParty"],
+  hashtags: ["#Affair1stEPWatchParty"]
+},
+{
+  date: "2024-09-06",
+  who: "LMSY",
+  category: "Drama",
+  title_en: "Affair Press Tour",
+  title_th: "Affair Press Tour",
+  title_zh: "《Affair》宣传巡回",
+  location_en: "Multiple sessions",
+  location_th: "หลายช่วงเวลา",
+  location_zh: "多场次",
+  startTime: "09:30",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Drama", "PressTour"],
+  hashtags: ["#AffairPressTour"]
+},
+{
+  date: "2024-09-07",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "Praew Charity 2024",
+  title_th: "Praew Charity 2024",
+  title_zh: "Praew Charity 2024",
+  location_en: "Paragon Hall, Siam Paragon",
+  location_th: "Paragon Hall, Siam Paragon",
+  location_zh: "暹罗百丽宫 Paragon Hall",
+  startTime: "17:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Appearance"],
+  hashtags: ["#LMSYxPraewCharity2024"]
+},
+{
+  date: "2024-09-17",
+  who: "LMSY",
+  category: "Drama",
+  title_en: "Affair Press Tour (Media Rounds)",
+  title_th: "Affair Press Tour (สื่อรอบบ่าย)",
+  title_zh: "《Affair》宣传行程（媒体访问）",
+  location_en: "Multiple interviews",
+  location_th: "หลายสื่อสัมภาษณ์",
+  location_zh: "多家媒体采访",
+  startTime: "16:30",
+  timezone: "GMT+7",
+  tags: ["LMSY", "PressTour"],
+  hashtags: ["#AffairPressTour"]
+},
+{
+  date: "2024-09-21",
+  who: "LMSY",
+  category: "Award",
+  title_en: "FEED Y Awards 2024",
+  title_th: "FEED Y Awards 2024",
+  title_zh: "FEED Y Awards 2024",
+  location_en: "Paragon Hall, Siam Paragon",
+  location_th: "Paragon Hall, Siam Paragon",
+  location_zh: "暹罗百丽宫 Paragon Hall",
+  startTime: "17:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Award", "Appearance"],
+  hashtags: ["#FeedYAwards2024xLMSY"]
+},
+{
+  date: "2024-10-03",
+  who: "LMSY",
+  category: "Brand",
+  title_en: "Wan Sang Suk Market x LMSY",
+  title_th: "วันสร้างสุข Market x LMSY",
+  title_zh: "Wan Sang Suk 市集 x LMSY",
+  location_en: "Central Westville, G Floor, Waterfall Amphitheatre",
+  location_th: "Central Westville ชั้น G, Waterfall Amphitheatre",
+  location_zh: "Central Westville, G层 Waterfall Amphitheatre",
+  startTime: "15:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Brand", "Appearance"],
+  hashtags: ["#วันสร้างสุขxLMSY"]
+},
+{
+  date: "2024-10-03",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "EFM Fandom Live",
+  title_th: "EFM Fandom Live",
+  title_zh: "EFM Fandom Live",
+  location_en: "Facebook, TikTok (EFM), YouTube (Atime)",
+  location_th: "Facebook, TikTok (EFM), YouTube (Atime)",
+  location_zh: "Facebook, TikTok（EFM）, YouTube（Atime）",
+  startTime: "20:30",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Livestream"],
+  hashtags: ["#LMSYxEFMFandomLive"]
+},
+{
+  date: "2024-10-10",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "ELLE Fashion Week 2024 (Sretsis)",
+  title_th: "ELLE Fashion Week 2024 (Sretsis)",
+  title_zh: "ELLE Fashion Week 2024（Sretsis）",
+  location_en: "True Icon Hall, 7th Floor, ICONSIAM",
+  location_th: "True Icon Hall ชั้น 7, ICONSIAM",
+  location_zh: "ICONSIAM 7楼 True Icon Hall",
+  startTime: "19:30",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Appearance"],
+  hashtags: ["#EFW2024"]
+},
+{
+  date: "2024-10-18",
+  who: "LMSY",
+  category: "Drama",
+  title_en: "Affair The Series, Final Episode Screening",
+  title_th: "Affair The Series, งานดูตอนจบ (Final EP)",
+  title_zh: "《Affair》大结局放映活动",
+  location_en: "Siam Pavalai Royal Grand Theatre, Siam Paragon",
+  location_th: "Siam Pavalai Royal Grand Theatre, Siam Paragon",
+  location_zh: "暹罗百丽宫 Siam Pavalai Royal Grand Theatre",
+  startTime: "19:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Drama", "Screening"],
+  hashtags: ["#AffairTheSeriesFinalEP"]
+},
+{
+  date: "2024-10-25",
+  who: "LMSY",
+  category: "Brand",
+  title_en: "Grand Opening ONE Bangkok",
+  title_th: "Grand Opening ONE Bangkok",
+  title_zh: "ONE Bangkok 盛大开幕",
+  location_en: "ONE Bangkok",
+  location_th: "ONE Bangkok",
+  location_zh: "ONE Bangkok",
+  startTime: "19:30",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Brand", "Appearance"],
+  hashtags: ["#OneBangkokxLMSY"]
+},
+{
+  date: "2024-10-27",
+  who: "LMSY",
+  category: "Brand",
+  title_en: "Destiny Clinic",
+  title_th: "Destiny Clinic",
+  title_zh: "Destiny Clinic 活动",
+  location_en: "Central Rama 3",
+  location_th: "Central Rama 3",
+  location_zh: "Central Rama 3",
+  startTime: "17:30",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Brand", "Appearance"],
+  hashtags: ["#DestinyclinicLookmheeSonya"]
+},
+{
+  date: "2024-11-02",
+  who: "LMSY",
+  category: "Brand",
+  title_en: "MAMI Puppy Love Moment with Lookmhee & Sonya",
+  title_th: "MAMI Puppy Love Moment กับ Lookmhee และ Sonya",
+  title_zh: "MAMI Puppy Love Moment（Lookmhee & Sonya）",
+  location_en: "",
+  location_th: "",
+  location_zh: "",
+  startTime: "15:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Brand"],
+  hashtags: ["#MAMIxLookmheeSonya"]
+},
+{
+  date: "2024-11-09",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "Lookmhee & Sonya 1st Fan Meeting in Macau",
+  title_th: "Lookmhee และ Sonya 1st Fan Meeting in Macau",
+  title_zh: "Lookmhee & Sonya 澳门首场粉丝见面会",
+  location_en: "The Londoner Macao, Loulé Meeting Room",
+  location_th: "The Londoner Macao, Loulé Meeting Room",
+  location_zh: "伦敦人澳门 Loulé Meeting Room",
+  startTime: "16:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "FanMeeting"],
+  hashtags: ["#LMSY1stFMInMacau"]
+},
+{
+  date: "2024-11-09",
+  who: "Sonya",
+  category: "Special event",
+  title_en: "The Big Kitchen",
+  title_th: "The Big Kitchen",
+  title_zh: "The Big Kitchen",
+  location_en: "Workpoint 23",
+  location_th: "Workpoint 23",
+  location_zh: "Workpoint 23",
+  startTime: "09:30",
+  timezone: "GMT+7",
+  tags: ["Sonya", "TV"],
+  hashtags: ["#TheBigKitchenxSonya"]
+},
+{
+  date: "2024-12-01",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "Lookmhee & Sonya 1st Fan Meeting in Hong Kong",
+  title_th: "Lookmhee และ Sonya 1st Fan Meeting in Hong Kong",
+  title_zh: "Lookmhee & Sonya 香港粉丝见面会",
+  location_en: "Sheraton Hong Kong Tung Chung Hotel, 2F Ballroom 1-3",
+  location_th: "Sheraton Hong Kong Tung Chung Hotel, 2F Ballroom 1-3",
+  location_zh: "香港东涌世茂喜来登酒店 2F 宴会厅 1-3",
+  startTime: "15:00",
+  timezone: "GMT+8",
+  tags: ["LMSY", "FanMeeting"],
+  hashtags: []
+},
+{
+  date: "2024-12-08",
+  who: "LMSY",
+  category: "Livestream",
+  title_en: "TheTasteTime Taobao Live",
+  title_th: "TheTasteTime Taobao Live",
+  title_zh: "TheTasteTime 淘宝直播",
+  location_en: "Taobao",
+  location_th: "Taobao",
+  location_zh: "淘宝",
+  startTime: "19:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Livestream"],
+  hashtags: []
+},
+{
+  date: "2024-12-14",
+  who: "Sonya",
+  category: "Special event",
+  title_en: "Newtamins Merry X’Mas with Sonya (Special Meet & Greet)",
+  title_th: "Newtamins Merry X’Mas with Sonya (Meet & Greet)",
+  title_zh: "Newtamins 圣诞活动（Sonya 见面会）",
+  location_en: "",
+  location_th: "",
+  location_zh: "",
+  startTime: "13:00",
+  timezone: "GMT+7",
+  tags: ["Sonya", "Special event"],
+  hashtags: []
+},
+{
+  date: "2024-12-21",
+  who: "Lookmhee",
+  category: "FanMeeting",
+  title_en: "Lookmhee 1st Fan Meeting in Nanning",
+  title_th: "Lookmhee 1st Fan Meeting in Nanning",
+  title_zh: "Lookmhee 南宁首场粉丝见面会",
+  location_en: "Baiyi Shanghecheng HOPELIVE, Nanning",
+  location_th: "Baiyi Shanghecheng HOPELIVE, Nanning",
+  location_zh: "南宁百益上河城 HOPELIVE",
+  startTime: "12:30",
+  timezone: "GMT+7",
+  tags: ["Lookmhee", "FanMeeting"],
+  hashtags: []
+},
+{
+  date: "2024-12-21",
+  who: "Sonya",
+  category: "FanMeeting",
+  title_en: "Sonya 1st Fan Meeting in Nanning",
+  title_th: "Sonya 1st Fan Meeting in Nanning",
+  title_zh: "Sonya 南宁首场粉丝见面会",
+  location_en: "Baiyi Shanghecheng HOPELIVE, Nanning",
+  location_th: "Baiyi Shanghecheng HOPELIVE, Nanning",
+  location_zh: "南宁百益上河城 HOPELIVE",
+  startTime: "18:00",
+  timezone: "GMT+7",
+  tags: ["Sonya", "FanMeeting"],
+  hashtags: []
+},
+{
+  date: "2024-12-24",
+  who: "LMSY",
+  category: "Livestream",
+  title_en: "Mystbelle Taobao Live",
+  title_th: "Mystbelle Taobao Live",
+  title_zh: "Mystbelle 淘宝直播",
+  location_en: "Taobao",
+  location_th: "Taobao",
+  location_zh: "淘宝",
+  startTime: "19:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Livestream"],
+  hashtags: []
+},
+{
+  date: "2024-12-28",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "ICONSIAM Pre Countdown Party",
+  title_th: "ICONSIAM Pre Countdown Party",
+  title_zh: "ICONSIAM 倒数派对（Pre Countdown）",
+  location_en: "River Park, ICONSIAM",
+  location_th: "River Park, ICONSIAM",
+  location_zh: "ICONSIAM River Park",
+  startTime: "19:00",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Special event"],
+  hashtags: []
+},
+{
+  date: "2025-01-08",
+  who: "LMSY",
+  category: "Drama",
+  title_en: "Press Tour",
+  title_th: "Press Tour",
+  title_zh: "宣传行程",
+  location_en: "",
+  location_th: "",
+  location_zh: "",
+  startTime: "",
+  timezone: "GMT+7",
+  tags: ["LMSY", "PressTour"],
+  hashtags: []
+},
+{
+  date: "2025-01-10",
+  who: "LMSY",
+  category: "Livestream",
+  title_en: "Arousar Studios Taobao Live",
+  title_th: "Arousar Studios Taobao Live",
+  title_zh: "Arousar Studios 淘宝直播",
+  location_en: "Arousar Studios",
+  location_th: "Arousar Studios",
+  location_zh: "Arousar Studios",
+  startTime: "",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Livestream"],
+  hashtags: []
+},
+{
+  date: "2025-01-16",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "T-POP Stage Show",
+  title_th: "T-POP Stage Show",
+  title_zh: "T-POP 舞台秀",
+  location_en: "",
+  location_th: "",
+  location_zh: "",
+  startTime: "",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Show"],
+  hashtags: []
+},
+{
+  date: "2025-01-18",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "1st Fansign in Tianjin",
+  title_th: "1st Fansign in Tianjin",
+  title_zh: "天津首场签售",
+  location_en: "Tianjin",
+  location_th: "Tianjin",
+  location_zh: "天津",
+  startTime: "",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Fansign"],
+  hashtags: []
+},
+{
+  date: "2025-01-23",
+  who: "LMSY",
+  category: "Brand",
+  title_en: "Sretsis In-store (Lance)",
+  title_th: "Sretsis In-store (Lance)",
+  title_zh: "Sretsis 门店活动",
+  location_en: "",
+  location_th: "",
+  location_zh: "",
+  startTime: "",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Brand"],
+  hashtags: []
+},
+{
+  date: "2025-01-24",
+  who: "LMSY",
+  category: "Drama",
+  title_en: "Press Tour",
+  title_th: "Press Tour",
+  title_zh: "宣传行程",
+  location_en: "",
+  location_th: "",
+  location_zh: "",
+  startTime: "",
+  timezone: "GMT+7",
+  tags: ["LMSY", "PressTour"],
+  hashtags: []
+},
+{
+  date: "2025-02-15",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "LMSY 1st Fan Meeting in Thailand, Be My Valentine",
+  title_th: "LMSY 1st Fan Meeting in Thailand, Be My Valentine",
+  title_zh: "LMSY 泰国首场粉丝见面会《Be My Valentine》",
+  location_en: "True Icon Hall, 7th Floor, ICONSIAM",
+  location_th: "True Icon Hall ชั้น 7, ICONSIAM",
+  location_zh: "ICONSIAM 7楼 True Icon Hall",
+  startTime: "",
+  timezone: "GMT+7",
+  tags: ["LMSY", "FanMeeting"],
+  hashtags: []
+},
+
   // MARCH 2025
   {
     date: "2025-03-01",
@@ -899,9 +977,10 @@ const events = [
     location: "Fuzhou, China",
     location_th: "ฝูโจว ประเทศจีน",
     location_zh: "中国福州",
-    notes: "Time to be announced · MOLI Jasmine Space, Fuzhou, China",
-    notes_th: "เวลาจะแจ้งอีกครั้ง · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
-    notes_zh: "时间待定 · 中国福州 MOLI茉莉空间",
+    notes: "Start time 10:00 (GMT+7) · MOLI Jasmine Space, Fuzhou, China",
+    notes_th: "เริ่ม 10:00 น. (GMT+7) · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
+    notes_zh: "开始时间 10:00（GMT+7) · 中国福州 MOLI茉莉空间",
+    hashtags: ["#LOOKMHEExFirstFanMeetinFuzhou"],
     tags: ["Lookmhee", "Fanmeeting"]
   },
   {
@@ -914,9 +993,10 @@ const events = [
     location: "Fuzhou, China",
     location_th: "ฝูโจว ประเทศจีน",
     location_zh: "中国福州",
-    notes: "Time to be announced · MOLI Jasmine Space, Fuzhou, China",
-    notes_th: "เวลาจะแจ้งอีกครั้ง · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
-    notes_zh: "时间待定 · 中国福州 MOLI茉莉空间",
+    notes: "Start time 10:00 (GMT+7) · MOLI Jasmine Space, Fuzhou, China",
+    notes_th: "เริ่ม 10:00 น. (GMT+7) · MOLI Jasmine Space เมืองฝูโจว ประเทศจีน",
+    notes_zh: "开始时间 10:00（GMT+7) · 中国福州 MOLI茉莉空间",
+    hashtags: ["#SONYAxFirstFanMeetinFuzhou"],
     tags: ["Sonya", "Fanmeeting"]
   },
   {
@@ -934,156 +1014,312 @@ const events = [
     notes_zh: "详情待公布",
     tags: ["Lookmhee", "Christmas Event"]
   }
-
-  {
-    date: "2025-12-20",
-    who: "Lookmhee",
-    category: "FanMeeting",
-    title: "Lookmhee 1st Fanmeet in Fuzhou",
-    location: "Fuzhou, China",
-    notes: "10:00 (GMT+7)",
-    tags: ["LOOKMHEE", "LookmheePunyapat", "LOOKMHEExFirstFanMeetinFuzhou"]
-  },
-  {
-    date: "2025-12-21",
-    who: "Sonya",
-    category: "FanMeeting",
-    title: "Sonya 1st Fanmeet in Fuzhou",
-    location: "Fuzhou, China",
-    notes: "10:00 (GMT+7)",
-    tags: ["SONYA", "SonyaSaranphat", "SONYAxFirstFanMeetinFuzhou"]
-  },
 ];
 
-function parseISODate(iso) {
-  const [y,m,d] = iso.split('-').map(Number);
-  return new Date(Date.UTC(y, m-1, d));
+
+function pickLang(ev, baseKey) {
+  if (currentLang === "en") return ev[baseKey] || "";
+  const key = baseKey + "_" + currentLang;
+  return ev[key] || ev[baseKey] || "";
 }
 
-function formatDay(dt) {
-  return dt.getUTCDate().toString().padStart(2,'0');
+function getEventIcon(ev) {
+  const tags = (ev.tags || []).map(t => t.toLowerCase());
+  if (tags.some(t => t.includes("christmas"))) return "🎄";
+  if (ev.category === "Award") return "🏆";
+  if (ev.category === "Drama") return "🎬";
+  if (ev.category === "Brand") return "💼";
+  if (ev.category === "Livestream") return "📺";
+  if (ev.category === "Special event") return "✨";
+  if (ev.category === "FanMeeting") {
+    if (ev.who === "LM") return "💛";
+    if (ev.who === "SY") return "🩵";
+    if (ev.who === "LMSY") return "💛🩵";
+    return "⭐";
+  }
+  return "⭐";
 }
 
-function formatMonthShort(dt) {
-  return dt.toLocaleString('en-GB', { month: 'short', timeZone: 'UTC' });
+function getMonthInfo(dateObj) {
+  const monthIndex = dateObj.getMonth();
+  const monthLabel = dateObj.toLocaleString("en-GB", { month: "short" });
+  const yearLabel = dateObj.getFullYear().toString();
+  return { monthIndex, monthLabel, yearLabel };
 }
 
-function formatMonthHeader(dt) {
-  return dt.toLocaleString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+function formatDay(dateObj) {
+  return dateObj.getDate().toString().padStart(2, "0");
 }
 
-function uniqueSorted(arr) {
-  return Array.from(new Set(arr)).sort();
+function formatWeekday(dateObj) {
+  return dateObj.toLocaleDateString("en-GB", { weekday: "short" }).toUpperCase();
 }
 
-function xSearchLink(tag) {
-  const clean = tag.startsWith('#') ? tag : ('#' + tag);
-  return 'https://x.com/search?q=' + encodeURIComponent(clean);
+function getTagClasses(tag) {
+  const t = tag.toLowerCase();
+  const classes = ["tag"];
+  if (t.includes("lookmhee")) classes.push("tag-lm");
+  if (t.includes("sonya")) classes.push("tag-sy");
+  if (t === "lmsy") classes.push("tag-lmsy");
+  if (t.includes("fan")) classes.push("tag-fm");
+  if (t.includes("award")) classes.push("tag-award");
+  if (t.includes("christmas") || t.includes("event")) classes.push("tag-event");
+  return classes.join(" ");
 }
 
-function buildFilters() {
-  const yearSelect = document.getElementById('filter-year');
-  const monthSelect = document.getElementById('filter-month');
-  const typeSelect = document.getElementById('filter-type');
+function renderSchedule(selectedYear, selectedType, selectedMonth) {
+  const container = document.getElementById("schedule");
+  container.innerHTML = "";
 
-  const years = uniqueSorted(events.map(e => parseISODate(e.date).getUTCFullYear())).sort((a,b)=>b-a);
-  yearSelect.innerHTML = years.map(y => `<option value="${y}">${y}</option>`).join('');
-  yearSelect.insertAdjacentHTML('beforeend', `<option value="all">All</option>`);
-  yearSelect.value = "all";
+  const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
 
-  const types = uniqueSorted(events.map(e => e.type)).filter(Boolean);
-  typeSelect.innerHTML = `<option value="all">All</option>` + types.map(t => `<option value="${t}">${t}</option>`).join('');
+  const filtered = sorted.filter(ev => {
+    const d = toBangkokDate(ev.date);
+    const year = d.getFullYear().toString();
+    const monthIndex = d.getMonth();
+    const matchYear = selectedYear === "all" || year === selectedYear;
+    const matchType = selectedType === "all" || ev.category === selectedType;
+    const matchMonth = selectedMonth === "all" || monthIndex === Number(selectedMonth);
+    return matchYear && matchType && matchMonth;
+  });
 
-  const months = [
-    'January','February','March','April','May','June','July','August','September','October','November','December'
-  ];
-  monthSelect.innerHTML = `<option value="all">All</option>` + months.map((m,i)=>`<option value="${i+1}">${m}</option>`).join('');
-
-  const rerender = () => render();
-  yearSelect.addEventListener('change', rerender);
-  monthSelect.addEventListener('change', rerender);
-  typeSelect.addEventListener('change', rerender);
-}
-
-function eventMatchesFilters(e, filters) {
-  const dt = parseISODate(e.date);
-  const y = dt.getUTCFullYear();
-  const m = dt.getUTCMonth()+1;
-
-  if (filters.year !== 'all' && Number(filters.year) !== y) return false;
-  if (filters.month !== 'all' && Number(filters.month) !== m) return false;
-  if (filters.type !== 'all' && filters.type !== e.type) return false;
-  return true;
-}
-
-function render() {
-  const schedule = document.getElementById('schedule');
-  const year = document.getElementById('filter-year').value;
-  const month = document.getElementById('filter-month').value;
-  const type = document.getElementById('filter-type').value;
-
-  const filters = { year, month, type };
-
-  const filtered = events
-    .slice()
-    .sort((a,b)=>parseISODate(a.date)-parseISODate(b.date))
-    .filter(e => eventMatchesFilters(e, filters));
-
-  if (!filtered.length) {
-    schedule.innerHTML = `<p class="empty">No events found for the selected filters.</p>`;
+  if (filtered.length === 0) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = "No events yet for this filter.";
+    container.appendChild(p);
     return;
   }
 
-  let html = '';
-  let currentHeader = '';
+  let currentMonthKey = "";
 
-  for (const e of filtered) {
-    const dt = parseISODate(e.date);
-    const header = formatMonthHeader(dt);
-    if (header !== currentHeader) {
-      currentHeader = header;
-      html += `<h3 class="month-header">${header}</h3>`;
+  filtered.forEach(ev => {
+    const dateObj = toBangkokDate(ev.date);
+    const info = getMonthInfo(dateObj);
+    const monthKey = info.monthLabel + " " + info.yearLabel;
+
+    if (monthKey !== currentMonthKey) {
+      currentMonthKey = monthKey;
+
+      const group = document.createElement("div");
+      group.className = "month-group";
+
+      const header = document.createElement("div");
+      header.className = "month-header";
+
+      const box = document.createElement("div");
+      box.className = "month-label-box";
+      box.textContent = "SCHEDULE";
+
+      const title = document.createElement("div");
+      title.className = "month-title";
+      title.textContent = info.monthLabel;
+
+      header.appendChild(box);
+      header.appendChild(title);
+      group.appendChild(header);
+      container.appendChild(group);
     }
 
-    const day = formatDay(dt);
-    const mon = formatMonthShort(dt);
+    const groupEl = container.lastElementChild;
 
-    const metaParts = [];
-    if (e.time && e.time.trim()) metaParts.push(`Time: ${e.time}`);
-    if (e.venue && e.venue.trim()) metaParts.push(`Venue: ${e.venue}`);
-    if (e.artists && e.artists.trim()) metaParts.push(`Artists: ${e.artists}`);
-    const meta = metaParts.join(' | ');
+    const card = document.createElement("article");
+    card.className = "event-card";
 
-    const langs = [];
-    if (e.title_th) langs.push(`TH: ${e.title_th}`);
-    if (e.title_zh) langs.push(`CN: ${e.title_zh}`);
+    const dateEl = document.createElement("div");
+    dateEl.className = "event-date";
 
-    let hashtagHtml = '';
-    if (e.hashtag && e.hashtag.trim()) {
-      hashtagHtml = `<div class="event-hashtags"><a href="${xSearchLink(e.hashtag)}" target="_blank" rel="noopener noreferrer">${e.hashtag}</a></div>`;
-    }
+    const weekdayLabel = formatWeekday(dateObj);
+    const monthLabel = getMonthInfo(dateObj).monthLabel.toUpperCase();
 
-    html += `
-      <div class="event-card">
-        <div class="event-date">
-          <div class="event-day">${day}</div>
-          <div class="event-month">${mon}</div>
-        </div>
-        <div class="event-main">
-          <div class="event-title">${e.title_en}</div>
-          <div class="event-meta">${meta}</div>
-          <div class="event-meta event-meta-secondary">${langs.join(' | ')}</div>
-          <div class="event-meta event-meta-secondary">Type: ${e.type}</div>
-          ${hashtagHtml}
-        </div>
-      </div>
+    dateEl.innerHTML = `
+      <div class="event-date-circle">${formatDay(dateObj)}</div>
+      <div class="event-date-month">${monthLabel}</div>
+      <div class="event-date-weekday">${weekdayLabel}</div>
     `;
-  }
 
-  schedule.innerHTML = html;
+    const main = document.createElement("div");
+    main.className = "event-main";
+
+    const titleRow = document.createElement("div");
+    titleRow.className = "event-title-row";
+
+    const iconSpan = document.createElement("span");
+    iconSpan.className = "event-icon";
+    iconSpan.textContent = getEventIcon(ev);
+
+    const titleEl = document.createElement("div");
+    titleEl.className = "event-title";
+    titleEl.textContent = pickLang(ev, "title");
+
+    titleRow.appendChild(iconSpan);
+    titleRow.appendChild(titleEl);
+
+    const metaEl = document.createElement("div");
+    metaEl.className = "event-meta";
+    metaEl.textContent = `${ev.category} · ${pickLang(ev, "location")}`;
+
+    const notesEl = document.createElement("div");
+    notesEl.className = "event-notes";
+    notesEl.textContent = pickLang(ev, "notes");
+
+    const tagsEl = document.createElement("div");
+    tagsEl.className = "event-tags";
+    (ev.tags || []).forEach(tag => {
+      const span = document.createElement("span");
+      span.className = getTagClasses(tag);
+      span.textContent = tag;
+      tagsEl.appendChild(span);
+    });
+
+    const hashtagsEl = document.createElement("div");
+    hashtagsEl.className = "event-hashtags";
+    if (ev.hashtags && ev.hashtags.length) {
+      const link = document.createElement("a");
+      const text = ev.hashtags.join(" ");
+      const encoded = encodeURIComponent(text);
+      link.href = "https://x.com/intent/tweet?text=" + encoded;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = text;
+      hashtagsEl.appendChild(link);
+    }
+
+    main.appendChild(titleRow);
+    main.appendChild(metaEl);
+    if (ev.notes) main.appendChild(notesEl);
+    if (ev.tags && ev.tags.length) main.appendChild(tagsEl);
+    if (ev.hashtags && ev.hashtags.length) main.appendChild(hashtagsEl);
+
+    card.appendChild(dateEl);
+    card.appendChild(main);
+    groupEl.appendChild(card);
+  });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  buildFilters();
-  render();
+function initFilters() {
+  const yearSelect = document.getElementById("filter-year");
+  const typeSelect = document.getElementById("filter-type");
+  const monthSelect = document.getElementById("filter-month");
+
+  const years = [...new Set(events.map(ev => ev.date.substring(0, 4)))].sort();
+
+  yearSelect.innerHTML = "";
+  const allOption = document.createElement("option");
+  allOption.value = "all";
+  allOption.textContent = "All";
+  yearSelect.appendChild(allOption);
+
+  years.forEach(y => {
+    const opt = document.createElement("option");
+    opt.value = y;
+    opt.textContent = y;
+    yearSelect.appendChild(opt);
+  });
+
+  const categories = [...new Set(events.map(ev => ev.category))];
+
+  const typeOrder = ["FanMeeting", "Brand", "Livestream", "Drama", "Award", "Special event"];
+  const labelMap = {
+    "FanMeeting": "Fan meeting",
+    "Brand": "Brand",
+    "Livestream": "Livestream",
+    "Drama": "Drama",
+    "Award": "Award",
+    "Special event": "Special event"
+  };
+
+  typeOrder.forEach(cat => {
+    if (categories.includes(cat)) {
+      const opt = document.createElement("option");
+      opt.value = cat;
+      opt.textContent = labelMap[cat] || cat;
+      typeSelect.appendChild(opt);
+    }
+  });
+
+  function populateMonths(year) {
+    monthSelect.innerHTML = "";
+    const allM = document.createElement("option");
+    allM.value = "all";
+    allM.textContent = "All";
+    monthSelect.appendChild(allM);
+
+    const monthsForYear = [...new Set(
+      events
+        .filter(ev => ev.date.substring(0,4) === year)
+        .map(ev => {
+          const d = toBangkokDate(ev.date);
+          return d.getMonth();
+        })
+    )].sort((a,b)=>a-b);
+
+    monthsForYear.forEach(mIdx => {
+      const d = new Date(Number(year), mIdx, 1);
+      const label = d.toLocaleString("en-GB", { month: "short" });
+      const opt = document.createElement("option");
+      opt.value = String(mIdx);
+      opt.textContent = label;
+      monthSelect.appendChild(opt);
+    });
+  }
+
+  const now = new Date();
+  const currentYear = now.getFullYear().toString();
+  const currentMonthIndex = now.getMonth();
+
+  let defaultYear = years.includes(currentYear) ? currentYear : years[years.length - 1];
+  populateMonths(defaultYear);
+
+  let availableMonths = [...monthSelect.options].map(o => o.value).filter(v => v !== "all").map(v => Number(v));
+  let defaultMonth = "all";
+  if (availableMonths.includes(currentMonthIndex) && defaultYear === currentYear) {
+    defaultMonth = String(currentMonthIndex);
+  } else if (availableMonths.length) {
+    defaultMonth = String(availableMonths[availableMonths.length - 1]);
+  }
+
+  yearSelect.value = defaultYear;
+  monthSelect.value = defaultMonth;
+
+  yearSelect.addEventListener("change", () => {
+    const y = yearSelect.value === "all" ? currentYear : yearSelect.value;
+    populateMonths(y);
+    monthSelect.value = "all";
+    renderSchedule(yearSelect.value, typeSelect.value, monthSelect.value);
+  });
+
+  typeSelect.addEventListener("change", () => {
+    renderSchedule(yearSelect.value, typeSelect.value, monthSelect.value);
+  });
+
+  monthSelect.addEventListener("change", () => {
+    renderSchedule(yearSelect.value, typeSelect.value, monthSelect.value);
+  });
+
+  renderSchedule(yearSelect.value, typeSelect.value, monthSelect.value);
+}
+
+function initLanguageToggle() {
+  const buttons = document.querySelectorAll(".lang-toggle button");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const lang = btn.getAttribute("data-lang");
+      if (!lang || lang === currentLang) return;
+      currentLang = lang;
+
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const yearSelect = document.getElementById("filter-year");
+      const typeSelect = document.getElementById("filter-type");
+      const monthSelect = document.getElementById("filter-month");
+      renderSchedule(yearSelect.value, typeSelect.value, monthSelect.value);
+    });
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initFilters();
+  initLanguageToggle();
 });
