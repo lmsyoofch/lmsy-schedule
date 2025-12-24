@@ -1018,9 +1018,41 @@ const events = [
 
 
 function pickLang(ev, baseKey) {
-  if (currentLang === "en") return ev[baseKey] || "";
-  const key = baseKey + "_" + currentLang;
-  return ev[key] || ev[baseKey] || "";
+  // Prefer explicit language keys like title_th, location_zh.
+  // Backwards compatible with older datasets that used eventName_* and fields
+  // like venue_* and description_*.
+
+  const directKey = baseKey + "_" + currentLang;
+  let v = ev[directKey] || ev[baseKey];
+
+  // Older data uses eventName_* instead of title_*.
+  if (!v && baseKey === "title") {
+    v = ev["eventName_" + currentLang] || ev.eventName_en || ev.eventName_th || ev.eventName_zh || ev.eventName;
+  }
+
+  // Helpful fallbacks if a specific language value is missing.
+  if (!v) {
+    v = ev[baseKey + "_en"] || ev[baseKey + "_th"] || ev[baseKey + "_zh"];
+  }
+
+  return v || "";
+}
+
+function buildLegacyNotes(ev) {
+  // For legacy events that have startTime / venue_* but no notes.
+  const startTime = ev.startTime || "";
+  const venue = ev["venue_" + currentLang] || ev.venue_en || ev.venue_th || ev.venue_zh || "";
+  const desc = ev["description_" + currentLang] || ev.description_en || ev.description_th || ev.description_zh || "";
+
+  const parts = [];
+  if (startTime) {
+    if (currentLang === "th") parts.push(`เวลาเริ่ม ${startTime}`);
+    else if (currentLang === "zh") parts.push(`开始时间 ${startTime}`);
+    else parts.push(`Start time ${startTime}`);
+  }
+  if (venue) parts.push(venue);
+  if (desc) parts.push(desc);
+  return parts.join(" · ");
 }
 
 function getEventIcon(ev) {
@@ -1161,7 +1193,23 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
 
     const notesEl = document.createElement("div");
     notesEl.className = "event-notes";
-    notesEl.textContent = pickLang(ev, "notes");
+    // Legacy events (May 2024–Feb 2025) store details in startTime and venue_*.
+    // Build a notes line so they render consistently with newer entries.
+    let notesText = pickLang(ev, "notes");
+    if (!notesText) {
+      const venue = pickLang(ev, "venue");
+      const startTime = ev.startTime || "";
+      if (startTime || venue) {
+        if (currentLang === "th") {
+          notesText = `${startTime ? "เวลาเริ่ม " + startTime : ""}${startTime && venue ? " · " : ""}${venue || ""}`.trim();
+        } else if (currentLang === "zh") {
+          notesText = `${startTime ? "开始时间 " + startTime : ""}${startTime && venue ? " · " : ""}${venue || ""}`.trim();
+        } else {
+          notesText = `${startTime ? "Start time " + startTime : ""}${startTime && venue ? " · " : ""}${venue || ""}`.trim();
+        }
+      }
+    }
+    notesEl.textContent = notesText;
 
     const tagsEl = document.createElement("div");
     tagsEl.className = "event-tags";
@@ -1187,7 +1235,7 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
 
     main.appendChild(titleRow);
     main.appendChild(metaEl);
-    if (ev.notes) main.appendChild(notesEl);
+    if (notesText) main.appendChild(notesEl);
     if (ev.tags && ev.tags.length) main.appendChild(tagsEl);
     if (ev.hashtags && ev.hashtags.length) main.appendChild(hashtagsEl);
 
@@ -1266,18 +1314,18 @@ function initFilters() {
 
   const now = new Date();
   const currentYear = now.getFullYear().toString();
-  const currentMonthIndex = now.getMonth();
 
-  let defaultYear = years.includes(currentYear) ? currentYear : years[years.length - 1];
+  // Always default to the latest year and latest month found in the dataset.
+  // This keeps the landing view showing the most recent schedule.
+  const defaultYear = years[years.length - 1];
   populateMonths(defaultYear);
 
-  let availableMonths = [...monthSelect.options].map(o => o.value).filter(v => v !== "all").map(v => Number(v));
-  let defaultMonth = "all";
-  if (availableMonths.includes(currentMonthIndex) && defaultYear === currentYear) {
-    defaultMonth = String(currentMonthIndex);
-  } else if (availableMonths.length) {
-    defaultMonth = String(availableMonths[availableMonths.length - 1]);
-  }
+  const availableMonths = [...monthSelect.options]
+    .map(o => o.value)
+    .filter(v => v !== "all")
+    .map(v => Number(v));
+
+  const defaultMonth = availableMonths.length ? String(availableMonths[availableMonths.length - 1]) : "all";
 
   yearSelect.value = defaultYear;
   monthSelect.value = defaultMonth;
