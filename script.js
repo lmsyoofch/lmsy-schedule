@@ -1101,7 +1101,26 @@ const events = [
     notes_zh: "详情待公布",
     hashtags: [],
     tags: ["LMSY", "Fanmeeting"]
-  }
+  },
+   {
+  date: "2026-02-06",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "Japan Expo Thailand 2026 (World of T-Pop)",
+  title_th: "JAPAN EXPO THAILAND 2026 (WORLD OF T-POP!)",
+  title_zh: "日本博览会泰国 2026（World of T-Pop）",
+  location_en: "centralwOrld, Bangkok",
+  location_th: "centralwOrld, กรุงเทพฯ",
+  location_zh: "曼谷 centralwOrld",
+  notes_en: "6 to 8 Feb 2026",
+  notes_th: "6 ถึง 8 ก.พ. 2026",
+  notes_zh: "2026年2月6日到8日",
+  startTime: "",
+  timezone: "GMT+7",
+  tags: ["LMSY", "Special event"],
+  hashtags: []
+}
+
 ];
 
 /* =========================
