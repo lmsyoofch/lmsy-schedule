@@ -1101,7 +1101,7 @@ const events = [
     notes_zh: "详情待公布",
     hashtags: [],
     tags: ["LMSY", "Fanmeeting"]
-  },
+  }
    {
   date: "2026-02-06",
   who: "LMSY",
