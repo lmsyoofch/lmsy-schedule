@@ -1369,24 +1369,7 @@ function initFilters() {
 
   const defaultYear = years.includes(currentYear) ? currentYear : years[years.length - 1
 ,
-{
-  date: "2026-01-07",
-  who: "LMSY",
-  category: "FanEvent",
-  title_en: "LMSY Say Hi 2026",
-  title_th: "LMSY Say Hi 2026",
-  title_zh: "LMSY Say Hi 2026",
-  location_en: "Lobby G Floor, GMM Grammy Place, Bangkok",
-  location_th: "Lobby ชั้น G, GMM Grammy Place, กรุงเทพฯ",
-  location_zh: "GMM Grammy Place G层大厅，曼谷",
-  startTime: "20:00",
-  timezone: "GMT+7",
-  details_en: "Special fan appearance event",
-  details_th: "กิจกรรมพิเศษพบปะแฟน ๆ",
-  details_zh: "特别粉丝见面活动",
-  tags: ["LMSY", "FanEvent"],
-  hashtags: []
-}
+
 ];
   populateMonths(defaultYear);
 
