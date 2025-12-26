@@ -804,6 +804,7 @@ const events = [
     title: "LMSY Fan Meeting in Macau",
     location: "Macau",
     notes: "14:00 (GMT+7)",
+    hashtags: ["#LMSYFANMEETINGINMACAU"],
     tags: ["LMSY", "Fanmeeting"]
   },
 
@@ -833,6 +834,7 @@ const events = [
     title: "LMSY in Hong Kong 2025",
     location: "Hong Kong, AXA Dreamland",
     notes: "15:00 (GMT+7)",
+    hashtags: ["#LMSYFANMEETINGINHONGKONG2025"],
     tags: ["LMSY", "Fanmeeting"]
   },
   {
@@ -842,6 +844,7 @@ const events = [
     title: "Candy Kiss Halloween with Sonya",
     location: "To be announced",
     notes: "Details to be announced",
+    hashtags: ["#CandyKissHalloweenwithSonya"],
     tags: ["Sonya", "Event", "Halloween"]
   },
 
@@ -853,6 +856,7 @@ const events = [
     title: "FOAMDREAM Party",
     location: "Hangzhou, China",
     notes: "11:00–18:00 (GMT+7)",
+    hashtags: ["#FoamDreamxLMSY"],
     tags: ["LMSY", "Event"]
   },
   {
@@ -862,6 +866,7 @@ const events = [
     title: "iQIYI 2026 Event",
     location: "Sphere Hall, 5M Floor, EmSphere, Bangkok",
     notes: "Details to be announced",
+    hashtags: ["#IQIYIiJOYTH2026xLMSY"],
     tags: ["LMSY", "Event"]
   },
   {
@@ -871,6 +876,7 @@ const events = [
     title: "LMSY × BuddyBesties2DSY1Night (Day 1)",
     location: "Kanchanaburi Province, Thailand",
     notes: "Details to be announced",
+    hashtags: ["#BUddyBestiesLoveMeLoveYouxLMSY"],
     tags: ["LMSY", "BuddyBesties"]
   },
   {
@@ -880,6 +886,7 @@ const events = [
     title: "LMSY × BuddyBesties2DSY1Night (Day 2)",
     location: "Kanchanaburi Province, Thailand",
     notes: "Details to be announced",
+    hashtags: ["#BUddyBestiesLoveMeLoveYouxLMSY"],
     tags: ["LMSY", "BuddyBesties"]
   },
   {
@@ -889,6 +896,7 @@ const events = [
     title: "HOWE Awards 2025",
     location: "BITEC Bangna 2F Grand Hall 201–203, Bangkok",
     notes: "Details to be announced",
+    hashtags: ["#HOWEAWARDS2025XLMSY"],
     tags: ["LMSY", "Awards"]
   },
   {
@@ -902,12 +910,13 @@ const events = [
   },
   {
     date: "2025-11-29",
-    who: "LMSY",
+    who: "LM",
     category: "FanMeeting",
-    title: "LMSY / Lookmhee Fan Meeting in Wuhan",
+    title: "Lookmhee Fan Meeting in Wuhan",
     location: "Wuhan, China",
     notes: "Details to be announced",
-    tags: ["LMSY", "Fanmeeting"]
+    hashtags: ["#LOOKMHEExFirstFansignWuHan"],
+    tags: ["Lookmhee", "Fanmeeting"]
   },
   {
     date: "2025-11-30",
@@ -916,6 +925,7 @@ const events = [
     title: "Sonya Fan Meeting in Wuhan",
     location: "Wuhan, China",
     notes: "Details to be announced",
+    hashtags: ["#SonyaxFirstFansignWuHan"],
     tags: ["Sonya", "Fanmeeting"]
   },
 
@@ -1012,9 +1022,28 @@ const events = [
     notes: "Details to be announced",
     notes_th: "รายละเอียดรอประกาศ",
     notes_zh: "详情待公布",
+    hashtags: ["#HIKARUxLOOKMHEE", "#LookmheeInASecretChristmasNight"],
     tags: ["Lookmhee", "Christmas Event"]
   }
   ,
+  {
+  date: "2026-01-07",
+  who: "LMSY",
+  category: "FanEvent",
+  title_en: "LMSY Say Hi 2026",
+  title_th: "LMSY Say Hi 2026",
+  title_zh: "LMSY Say Hi 2026",
+  location_en: "Lobby G Floor, GMM Grammy Place, Bangkok",
+  location_th: "Lobby ชั้น G, GMM Grammy Place, กรุงเทพฯ",
+  location_zh: "GMM Grammy Place G层大厅，曼谷",
+  startTime: "20:00",
+  timezone: "GMT+7",
+  details_en: "Special fan appearance event",
+  details_th: "กิจกรรมพิเศษพบปะแฟน ๆ",
+  details_zh: "特别粉丝见面活动",
+  tags: ["LMSY", "FanEvent"],
+  hashtags: []
+},
   {
     date: "2026-01-17",
     who: "SY",
