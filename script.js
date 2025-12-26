@@ -1036,6 +1036,7 @@ const events = [
     tags: ["Lookmhee", "Christmas Event"]
   },
 
+    // JANUARY 2026
   {
     date: "2026-01-07",
     who: "LMSY",
@@ -1102,6 +1103,26 @@ const events = [
     hashtags: [],
     tags: ["LMSY", "Fanmeeting"]
   },
+   {
+  date: "2026-01-28",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "CHANGE VERSE 2026",
+  title_th: "CHANGE VERSE 2026",
+  title_zh: "CHANGE VERSE 2026",
+  location_en: "True Icon Hall, 7th Floor, ICONSIAM, Bangkok",
+  location_th: "True Icon Hall ชั้น 7, ICONSIAM กรุงเทพฯ",
+  location_zh: "曼谷 ICONSIAM 7楼 True Icon Hall",
+  notes_en: "28 January 2026",
+  notes_th: "28 มกราคม 2026",
+  notes_zh: "2026年1月28日",
+  startTime: "",
+  timezone: "GMT+7",
+  hashtags: ["#CHANGEVERSE2026"],
+  tags: ["LMSY", "Special event"]
+},
+
+    // FEBRUARY 2026
    {
   date: "2026-02-06",
   who: "LMSY",
