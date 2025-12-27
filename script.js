@@ -1029,9 +1029,9 @@ const events = [
     location: "To be announced",
     location_th: "สถานที่รอประกาศ",
     location_zh: "地点待公布",
-    notes: "Details to be announced",
-    notes_th: "รายละเอียดรอประกาศ",
-    notes_zh: "详情待公布",
+    notes: "Start time 18:00 (GMT+7)",
+    notes_th: "เริ่ม 18:00 น. (GMT+7)",
+    notes_zh: "开始时间 18:00（GMT+7)",
     hashtags: ["#HIKARUxLOOKMHEE", "#LookmheeInASecretChristmasNight"],
     tags: ["Lookmhee", "Christmas Event"]
   },
