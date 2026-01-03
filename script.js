@@ -1131,9 +1131,9 @@ const events = [
   location_en: "To be announced",
   location_th: "สถานที่รอประกาศ",
   location_zh: "地点待公布",
-  notes_en: "30 to 31 Jan 2026",
-  notes_th: "30 ถึง 31 ม.ค. 2026",
-  notes_zh: "2026年1月30日至31日",
+  notes_en: "30 Jan to 1 Feb 2026",
+  notes_th: "30 ม.ค. ถึง 1 ก.พ. 2026",
+  notes_zh: "2026年1月30日至2月1日",
   timezone: "GMT+7",
   hashtags: [],
   tags: ["LMSY", "Special event"]
@@ -1148,15 +1148,32 @@ const events = [
   location_en: "To be announced",
   location_th: "สถานที่รอประกาศ",
   location_zh: "地点待公布",
-  notes_en: "30 to 31 Jan 2026",
-  notes_th: "30 ถึง 31 ม.ค. 2026",
-  notes_zh: "2026年1月30日至31日",
+  notes_en: "30 Jan to 1 Feb 2026",
+  notes_th: "30 ม.ค. ถึง 1 ก.พ. 2026",
+  notes_zh: "2026年1月30日至2月1日",
   timezone: "GMT+7",
   hashtags: [],
   tags: ["LMSY", "Special event"]
 },
 
     // FEBRUARY 2026
+   {
+  date: "2026-02-01",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "Foamdream x LMSY",
+  title_th: "Foamdream x LMSY",
+  title_zh: "Foamdream x LMSY",
+  location_en: "To be announced",
+  location_th: "สถานที่รอประกาศ",
+  location_zh: "地点待公布",
+  notes_en: "30 Jan to 1 Feb 2026",
+  notes_th: "30 ม.ค. ถึง 1 ก.พ. 2026",
+  notes_zh: "2026年1月30日至2月1日",
+  timezone: "GMT+7",
+  hashtags: [],
+  tags: ["LMSY", "Special event"]
+},
    {
   date: "2026-02-06",
   who: "LMSY",
