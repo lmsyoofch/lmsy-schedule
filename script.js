@@ -1175,7 +1175,7 @@ const events = [
   tags: ["LMSY", "Special event"]
 },
    {
-  date: "2026-02-06",
+  date: "2026-02-08",
   who: "LMSY",
   category: "Special event",
   title_en: "Japan Expo Thailand 2026 (World of T-Pop)",
@@ -1184,11 +1184,12 @@ const events = [
   location_en: "centralwOrld, Bangkok",
   location_th: "centralwOrld, กรุงเทพฯ",
   location_zh: "曼谷 centralwOrld",
-  notes_en: "6 to 8 Feb 2026",
-  notes_th: "6 ถึง 8 ก.พ. 2026",
-  notes_zh: "2026年2月6日到8日",
-  startTime: "",
-  timezone: "GMT+7",
+  notes_en: "8 Feb 2026",
+  notes_th: "8 ก.พ. 2026",
+  notes_zh: "2026年2月8日",
+  notes: "Start time 18:35 (GMT+7) · Taiyo Stage",
+  notes_th: "เริ่ม 18:35 น. (GMT+7) · Taiyo Stage",
+  notes_zh: "开始时间 18:35（GMT+7) · Taiyo Stage",
   tags: ["LMSY", "Special event"],
   hashtags: []
 }
