@@ -1184,12 +1184,9 @@ const events = [
   location_en: "centralwOrld, Bangkok",
   location_th: "centralwOrld, กรุงเทพฯ",
   location_zh: "曼谷 centralwOrld",
-  notes_en: "8 Feb 2026",
-  notes_th: "8 ก.พ. 2026",
-  notes_zh: "2026年2月8日",
-  notes: "Start time 18:35 (GMT+7) · Taiyo Stage",
-  notes_th: "เริ่ม 18:35 น. (GMT+7) · Taiyo Stage",
-  notes_zh: "开始时间 18:35（GMT+7) · Taiyo Stage",
+  notes_en: "8 Feb 2026 · Start time 18:35 (GMT+7) · Taiyo Stage",
+  notes_th: "8 ก.พ. 2026 · เริ่ม 18:35 น. (GMT+7) · Taiyo Stage",
+  notes_zh: "2026年2月8日 · 开始时间 18:35（GMT+7) · Taiyo Stage",
   tags: ["LMSY", "Special event"],
   hashtags: []
 }
