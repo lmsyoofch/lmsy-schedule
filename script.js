@@ -1053,7 +1053,7 @@ const events = [
     details_th: "กิจกรรมพิเศษพบปะแฟน ๆ",
     details_zh: "特别粉丝见面活动",
     tags: ["LMSY", "FanEvent"],
-    hashtags: []
+    hashtags: ["#ลูกหมีซอนญ่ารวมพลปีใหม่"],
   },
   {
     date: "2026-01-17",
