@@ -1205,7 +1205,7 @@ const events = [
   notes_zh: "情人节与生日特别活动。门票将于 2026 年 1 月 19 日 13:14（GMT+8）通过微店·星测文化开售。",
   hashtags: ["#lookmhee2026生日签售", "#情人节重庆见"],
   tags: ["Lookmhee", "Birthday Event", "Fan Sign"]
-},
+}
 
 ];
 
