@@ -1201,11 +1201,11 @@ const events = [
   location_th: "ฉงชิ่ง ประเทศจีน",
   location_zh: "中国·重庆",
   startTime: "",
-  timezone: "GMT+8",
-  notes_en: "Valentine’s Day + birthday party fansign. Ticket app: Weidian (Xingce Culture). On sale: 19 Jan 2026 13:14 (China time). Time and venue TBA.",
-  notes_th: "งานแฟนไซน์วันเกิดตรงกับวาเลนไทน์ ขายบัตรใน Weidian (Xingce Culture) เริ่มขาย 19 ม.ค. 2026 เวลา 13:14 (เวลาจีน) เวลาและสถานที่รอประกาศ",
-  notes_zh: "情人节加生日签售。售票 APP: 微店（星测文化）。开售: 2026年1月19日 13:14（中国时间）。时间与场地待公布。",
-  hashtags: ["#lookmhee2026生日签售", "#情人节重庆见", "#马年新春宠粉企划"],
+  timezone: "GMT+7",
+  notes_en: "To be announced",
+  notes_th: "สถานที่รอประกาศ",
+  notes_zh: "地点待公布",
+  hashtags: [""],
   tags: ["Lookmhee", "Fanmeeting", "Birthday"]
 }
 ];
