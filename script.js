@@ -1190,22 +1190,6 @@ const events = [
   tags: ["LMSY", "Special event"],
   hashtags: []
 }
-{
-  date: "2026-02-14",
-  who: "LM",
-  category: "Fan sign / Birthday event",
-  title: "Lookmhee Birthday Fan Sign in Chongqing",
-  title_th: "งานแฟนไซน์วันเกิดลูกหมี ที่ฉงชิ่ง",
-  title_zh: "Lookmhee 重庆生日签售会",
-  location: "Chongqing, China",
-  location_th: "เมืองฉงชิ่ง ประเทศจีน",
-  location_zh: "中国·重庆",
-  notes: "Valentine’s Day and Lookmhee’s birthday special event. Ticket sales open on 19 January 2026 at 13:14 (GMT+8) via Weidian – Xingce Culture.",
-  notes_th: "งานพิเศษวันวาเลนไทน์และวันเกิดลูกหมี เปิดขายบัตรวันที่ 19 มกราคม 2026 เวลา 13:14 น. (GMT+8) ผ่าน Weidian – Xingce Culture",
-  notes_zh: "情人节与生日特别活动。门票将于 2026 年 1 月 19 日 13:14（GMT+8）通过微店·星测文化开售。",
-  hashtags: ["#lookmhee2026生日签售", "#情人节重庆见"],
-  tags: ["Lookmhee", "Birthday Event", "Fan Sign"]
-}
 
 ];
 
