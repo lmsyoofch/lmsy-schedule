@@ -1190,7 +1190,24 @@ const events = [
   tags: ["LMSY", "Special event"],
   hashtags: []
 }
-
+   {
+  date: "2026-02-14",
+  who: "LM",
+  category: "Fansign",
+  title_en: "Lookmhee Birthday Party Fansign in Chongqing",
+  title_th: "งานแฟนไซน์วันเกิด Lookmhee ที่ฉงชิ่ง",
+  title_zh: "Lookmhee 重庆生日签售",
+  location_en: "Chongqing, China",
+  location_th: "ฉงชิ่ง ประเทศจีน",
+  location_zh: "中国·重庆",
+  startTime: "",
+  timezone: "GMT+8",
+  notes_en: "Valentine’s Day + birthday party fansign. Ticket app: Weidian (Xingce Culture). On sale: 19 Jan 2026 13:14 (China time). Time and venue TBA.",
+  notes_th: "งานแฟนไซน์วันเกิดตรงกับวาเลนไทน์ ขายบัตรใน Weidian (Xingce Culture) เริ่มขาย 19 ม.ค. 2026 เวลา 13:14 (เวลาจีน) เวลาและสถานที่รอประกาศ",
+  notes_zh: "情人节加生日签售。售票 APP: 微店（星测文化）。开售: 2026年1月19日 13:14（中国时间）。时间与场地待公布。",
+  hashtags: ["#lookmhee2026生日签售", "#情人节重庆见", "#马年新春宠粉企划"],
+  tags: ["Lookmhee", "Fansign", "Birthday"]
+}
 ];
 
 /* =========================
