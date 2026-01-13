@@ -1189,8 +1189,26 @@ const events = [
   notes_zh: "2026年2月8日 · 开始时间 18:35（GMT+7) · Taiyo Stage",
   tags: ["LMSY", "Special event"],
   hashtags: []
-}
-
+},
+   {
+  date: "2026-02-14",
+  who: "Lookmhee",
+  category: "FanMeeting",
+  title_en: "Lookmhee Birthday Party Fansign in Chongqing",
+  title_th: "งานแฟนไซน์วันเกิด Lookmhee ที่ฉงชิ่ง",
+  title_zh: "Lookmhee 重庆生日签售",
+  location_en: "Chongqing, China",
+  location_th: "ฉงชิ่ง ประเทศจีน",
+  location_zh: "中国·重庆",
+  startTime: "",
+  timezone: "GMT+7",
+  notes_en: "To be announced",
+  notes_th: "สถานที่รอประกาศ",
+  notes_zh: "地点待公布",
+  hashtags: [""],
+  tags: ["Lookmhee", "Fanmeeting", "Birthday"]
+  },
+   
 ];
 
 /* =========================
