@@ -1305,7 +1305,7 @@ const events = [
   notes_zh: "地点待公布",
   hashtags: [""],
   tags: ["Lookmhee", "Fansign", "Birthday"]
-}
+},
    
 ];
 
