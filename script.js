@@ -1306,7 +1306,6 @@ const events = [
   hashtags: [""],
   tags: ["Lookmhee", "Fansign", "Birthday"]
   },
-   
 ];
 
 /* =========================
