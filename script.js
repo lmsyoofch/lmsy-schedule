@@ -9,6 +9,104 @@ function toBangkokDate(dateString) {
   return new Date(dateString + "T00:00:00+07:00");
 }
 
+
+function getGmt7DateKey(dateObj) {
+  // Create a YYYY-MM-DD key based on GMT+7, regardless of the user's local timezone
+  const utcMs = dateObj.getTime() + dateObj.getTimezoneOffset() * 60000;
+  const gmt7 = new Date(utcMs + 7 * 60 * 60000);
+  return gmt7.toISOString().slice(0, 10);
+}
+
+function getTodayTomorrowKeysGmt7() {
+  const now = new Date();
+  const todayKey = getGmt7DateKey(now);
+  const tomorrowKey = getGmt7DateKey(new Date(now.getTime() + 24 * 60 * 60000));
+  return { todayKey, tomorrowKey };
+}
+
+function getTodayTomorrowLabel(dateKey, todayKey, tomorrowKey) {
+  if (dateKey !== todayKey && dateKey !== tomorrowKey) return "";
+
+  const isToday = dateKey === todayKey;
+
+  if (currentLang === "th") return isToday ? "วันนี้" : "พรุ่งนี้";
+  if (currentLang === "zh") return isToday ? "今天" : "明天";
+  return isToday ? "TODAY" : "TOMORROW";
+}
+
+function pad2(n) {
+  return String(n).padStart(2, "0");
+}
+
+function extractTimeRangeFromNotes(notesText) {
+  if (!notesText) return { start: "", end: "" };
+
+  // Match: 19:00–20:00 or 19:00-20:00 or 19:00–20:00 (GMT+7)
+  const range = notesText.match(/(\d{1,2}:\d{2})\s*[–-]\s*(\d{1,2}:\d{2})/);
+  if (range) return { start: range[1], end: range[2] };
+
+  // Match first single time like 19:00
+  const single = notesText.match(/\b(\d{1,2}:\d{2})\b/);
+  if (single) return { start: single[1], end: "" };
+
+  return { start: "", end: "" };
+}
+
+function buildGoogleCalendarUrl(ev) {
+  const title = pickLang(ev, "title") || "Event";
+  const location = pickLang(ev, "location") || "";
+  const details = (pickLang(ev, "notes") || buildLegacyNotes(ev) || "").trim();
+
+  const dateKey = ev.date; // YYYY-MM-DD
+  const notesText = pickLang(ev, "notes") || "";
+  const extracted = extractTimeRangeFromNotes(notesText);
+  const startTime = (ev.startTime || extracted.start || "").trim();
+  const endTime = (extracted.end || "").trim();
+
+  function ymdCompact(ymd) {
+    return ymd.replaceAll("-", "");
+  }
+
+  let datesParam = "";
+
+  if (startTime) {
+    const [sh, sm] = startTime.split(":").map(Number);
+    let eh = sh;
+    let em = sm;
+
+    if (endTime) {
+      [eh, em] = endTime.split(":").map(Number);
+    } else {
+      // Default duration: 1 hour
+      eh = sh + 1;
+      em = sm;
+      if (eh >= 24) eh = 23; // safety
+    }
+
+    const start = `${ymdCompact(dateKey)}T${pad2(sh)}${pad2(sm)}00`;
+    const end = `${ymdCompact(dateKey)}T${pad2(eh)}${pad2(em)}00`;
+    datesParam = `${start}/${end}`;
+  } else {
+    // All day event (end date must be next day)
+    const d = toBangkokDate(dateKey);
+    const next = new Date(d.getTime() + 24 * 60 * 60000);
+    const endKey = getGmt7DateKey(next);
+    datesParam = `${ymdCompact(dateKey)}/${ymdCompact(endKey)}`;
+  }
+
+  const params = new URLSearchParams({
+    action: "TEMPLATE",
+    text: title,
+    dates: datesParam,
+    details,
+    location,
+    ctz: "Asia/Bangkok"
+  });
+
+  return "https://calendar.google.com/calendar/render?" + params.toString();
+}
+
+
 /* =========================
    EVENTS DATA
    Keep your full events array exactly.
@@ -1266,8 +1364,20 @@ function buildLegacyNotes(ev) {
   return parts.join(" · ");
 }
 
+function hasTag(ev, needle) {
+  const n = String(needle).toLowerCase();
+  return (ev.tags || []).some(t => String(t).toLowerCase().includes(n));
+}
+
+function getDisplayType(ev) {
+  if (hasTag(ev, "fansign")) return "Fansign";
+  return ev.category || "";
+}
+
 function getEventIcon(ev) {
   const tags = (ev.tags || []).map(t => String(t).toLowerCase());
+
+  if (tags.some(t => t.includes("fansign"))) return "✍️";
 
   if (tags.some(t => t.includes("christmas"))) return "🎄";
   if (ev.category === "Award") return "🏆";
@@ -1334,7 +1444,10 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
     const monthIndex = d.getMonth(); // 0–11
 
     const matchYear = selectedYear === "all" || year === selectedYear;
-    const matchType = selectedType === "all" || ev.category === selectedType;
+    const matchType =
+      selectedType === "all" ||
+      ev.category === selectedType ||
+      (selectedType === "Fansign" && (ev.tags || []).some(t => String(t).toLowerCase().includes("fansign")));
     const matchMonth = selectedMonth === "all" || monthIndex === Number(selectedMonth);
 
     return matchYear && matchType && matchMonth;
@@ -1412,9 +1525,19 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
     titleRow.appendChild(iconSpan);
     titleRow.appendChild(titleEl);
 
+    const badgeLabel = getTodayTomorrowLabel(ev.date, todayKey, tomorrowKey);
+    if (badgeLabel) {
+      const badge = document.createElement("span");
+      badge.className = "event-badge " + (ev.date === todayKey ? "event-badge-today" : "event-badge-tomorrow");
+      badge.textContent = badgeLabel;
+      titleRow.appendChild(badge);
+
+      card.classList.add(ev.date === todayKey ? "is-today" : "is-tomorrow");
+    }
+
     const metaEl = document.createElement("div");
     metaEl.className = "event-meta";
-    metaEl.textContent = `${ev.category} · ${pickLang(ev, "location")}`;
+    metaEl.textContent = `${getDisplayType(ev)} · ${pickLang(ev, "location")}`;
 
     const notesEl = document.createElement("div");
     notesEl.className = "event-notes";
@@ -1456,6 +1579,17 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
     if (ev.tags && ev.tags.length) main.appendChild(tagsEl);
     if (ev.hashtags && ev.hashtags.length) main.appendChild(hashtagsEl);
 
+    const gcalEl = document.createElement("div");
+    gcalEl.className = "event-gcal";
+    const gcalLink = document.createElement("a");
+    gcalLink.className = "gcal-btn";
+    gcalLink.href = buildGoogleCalendarUrl(ev);
+    gcalLink.target = "_blank";
+    gcalLink.rel = "noopener noreferrer";
+    gcalLink.textContent = "Add to Google Calendar";
+    gcalEl.appendChild(gcalLink);
+    main.appendChild(gcalEl);
+
     card.appendChild(dateEl);
     card.appendChild(main);
     groupEl.appendChild(card);
@@ -1495,8 +1629,11 @@ function initFilters() {
   typeSelect.appendChild(allType);
 
   const categories = [...new Set(events.map(ev => ev.category))];
-  const typeOrder = [
+  const hasFansign = events.some(ev => (ev.tags || []).some(t => String(t).toLowerCase().includes("fansign")));
+  if (hasFansign && !categories.includes("Fansign")) categories.push("Fansign");
+    const typeOrder = [
     "FanMeeting",
+    "Fansign",
     "FanEvent",
     "Brand",
     "Livestream",
@@ -1508,6 +1645,7 @@ function initFilters() {
   const labelMap = {
     "FanMeeting": "Fan meeting",
     "FanEvent": "Fan event",
+    "Fansign": "Fansign",
     "Brand": "Brand",
     "Livestream": "Livestream",
     "Drama": "Drama",
@@ -1515,14 +1653,18 @@ function initFilters() {
     "Special event": "Special event"
   };
 
-  typeOrder.forEach(cat => {
-    if (categories.includes(cat)) {
-      const opt = document.createElement("option");
-      opt.value = cat;
-      opt.textContent = labelMap[cat] || cat;
-      typeSelect.appendChild(opt);
-    }
-  });
+typeOrder.forEach(cat => {
+  const includeCat =
+    categories.includes(cat) ||
+    (cat === "Fansign" && hasFansign);
+
+  if (includeCat) {
+    const opt = document.createElement("option");
+    opt.value = cat;
+    opt.textContent = labelMap[cat] || cat;
+    typeSelect.appendChild(opt);
+  }
+});
 
   function populateMonths(year) {
     monthSelect.innerHTML = "";
