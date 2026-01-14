@@ -1273,6 +1273,22 @@ const events = [
   tags: ["LMSY", "Special event"]
 },
    {
+  date: "2026-02-07",
+  who: "Lookmhee",
+  category: "FanEvent",
+  title_en: "Hug Lai Mai Lookmhee 27th Birthday",
+  title_th: "ฮักหลายมายลูกหมี 27th Birthday",
+  title_zh: "Lookmhee 27岁生日应援活动",
+  location_en: "Thailand (venue to be announced)",
+  location_th: "ประเทศไทย (สถานที่รอประกาศ)",
+  location_zh: "泰国（地点待公布）",
+  notes_en: "Event time 12:00–17:00 (GMT+7)",
+  notes_th: "ระยะเวลากิจกรรม 12:00–17:00 น. (GMT+7)",
+  notes_zh: "活动时间 12:00–17:00（GMT+7）",
+  tags: ["Lookmhee", "FanEvent", "Birthday"],
+  hashtags: ["#LMBD27TH_Project"]
+},
+   {
   date: "2026-02-08",
   who: "LMSY",
   category: "Award",
