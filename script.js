@@ -1410,7 +1410,7 @@ function getEventIcon(ev) {
   const tags = (ev.tags || []).map(t => String(t).toLowerCase());
 
   if (tags.some(t => t.includes("fansign"))) return "✍️";
-
+  if (tags.includes("birthday")) return "🎂";
   if (tags.some(t => t.includes("christmas"))) return "🎄";
   if (ev.category === "Award") return "🏆";
   if (ev.category === "Drama") return "🎬";
