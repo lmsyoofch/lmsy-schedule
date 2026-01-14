@@ -538,7 +538,7 @@ const events = [
   {
     date: "2025-01-18",
     who: "LMSY",
-    category: "FanMeeting",
+    category: "Fansign",
     title_en: "1st Fansign in Tianjin",
     title_th: "1st Fansign in Tianjin",
     title_zh: "天津首场签售",
@@ -710,11 +710,11 @@ const events = [
   {
     date: "2025-04-26",
     who: "LMSY",
-    category: "FanMeeting",
-    title: "LMSY 1st Fan Sing in Chongqing",
+    category: "Fansign",
+    title: "LMSY 1st Fansign in Chongqing",
     location: "Chongqing, China",
     notes: "12:00 (GMT+7)",
-    tags: ["LMSY", "Fanmeeting", "Concert"]
+    tags: ["LMSY", "Fansign"]
   },
 
   // MAY 2025
