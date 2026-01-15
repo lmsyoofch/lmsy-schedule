@@ -1166,7 +1166,7 @@ const events = [
     notes: "Details to be announced",
     notes_th: "รายละเอียดรอประกาศ",
     notes_zh: "详情待公布",
-    hashtags: [],
+    hashtags: ["Sonyaxchengdu"],
     tags: ["Sonya", "Fanmeeting"]
   },
   {
@@ -1182,7 +1182,7 @@ const events = [
     notes: "Details to be announced",
     notes_th: "รายละเอียดรอประกาศ",
     notes_zh: "详情待公布",
-    hashtags: [],
+    hashtags: ["Lookmheexchengdu"],
     tags: ["Lookmhee", "Fanmeeting"]
   },
   {
