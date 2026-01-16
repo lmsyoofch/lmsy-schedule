@@ -456,3 +456,6 @@ h2 {
 .footer-hashtags a:active {
   color: inherit;
 }
+.hashtag-title {
+  margin-bottom: 2px;
+}
