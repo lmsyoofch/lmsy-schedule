@@ -1799,5 +1799,4 @@ function initLanguageToggle() {
 document.addEventListener("DOMContentLoaded", () => {
   initFilters();
   initLanguageToggle();
-  renderSchedule("all", "all", "all");
 });
