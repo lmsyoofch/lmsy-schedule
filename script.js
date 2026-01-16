@@ -1731,27 +1731,29 @@ typeOrder.forEach(cat => {
     });
   }
 
-  const now = new Date();
-  const currentYear = now.getFullYear().toString();
+const now = new Date();
+const bangkokKey = getBangkokDateKey(now); // YYYY-MM-DD in Asia/Bangkok
+const currentYear = bangkokKey.slice(0, 4);
 
-  // FIX 1: valid syntax
-  const defaultYear = years.includes(currentYear)
-    ? currentYear
-    : years[years.length - 1];
+// FIX 1: valid syntax
+const defaultYear = years.includes(currentYear)
+  ? currentYear
+  : years[years.length - 1];
 
-  populateMonths(defaultYear);
+populateMonths(defaultYear);
 
-  // FIX 2: month index must be 0–11
-  const currentMonth = now.getMonth();
+// FIX 2: month index must be 0–11
+const currentMonth = Number(bangkokKey.slice(5, 7)) - 1;
 
-  const availableMonths = [...monthSelect.options]
-    .map(o => o.value)
-    .filter(v => v !== "all")
-    .map(v => Number(v));
+const availableMonths = [...monthSelect.options]
+  .map(o => o.value)
+  .filter(v => v !== "all")
+  .map(v => Number(v));
 
-  const defaultMonthNum = availableMonths.includes(currentMonth)
-    ? currentMonth
-    : (availableMonths.length ? availableMonths[availableMonths.length - 1] : null);
+const defaultMonthNum = availableMonths.includes(currentMonth)
+  ? currentMonth
+  : (availableMonths.length ? availableMonths[availableMonths.length - 1] : null);
+
 
   yearSelect.value = defaultYear;
   monthSelect.value = defaultMonthNum !== null ? String(defaultMonthNum) : "all";
