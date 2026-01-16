@@ -459,3 +459,11 @@ h2 {
 .hashtag-title {
   margin-bottom: 2px;
 }
+.hashtag-title {
+  margin-bottom: 3px;
+  font-weight: 500;
+}
+
+.footer-hashtags {
+  margin-top: 0;
+}
