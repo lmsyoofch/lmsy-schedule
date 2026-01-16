@@ -441,3 +441,18 @@ h2 {
 .gcal-btn:hover {
   background: rgba(0, 0, 0, 0.35);
 }
+/* Footer hashtag link styling */
+.footer-hashtags a,
+.footer-hashtags a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-hashtags a:hover,
+.footer-hashtags a:focus {
+  text-decoration: underline;
+}
+
+.footer-hashtags a:active {
+  color: inherit;
+}
