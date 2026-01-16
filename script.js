@@ -1800,14 +1800,4 @@ document.addEventListener("DOMContentLoaded", () => {
   initFilters();
   initLanguageToggle();
   renderSchedule("all", "all", "all");
-
-  // 🔁 Re-render every minute so TODAY / TOMORROW updates after midnight (GMT+7)
-  setInterval(() => {
-    const year = document.getElementById("filter-year")?.value || "all";
-    const type = document.getElementById("filter-type")?.value || "all";
-    const month = document.getElementById("filter-month")?.value || "all";
-
-    renderSchedule(year, type, month);
-  }, 60 * 1000);
 });
-
