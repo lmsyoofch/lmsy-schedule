@@ -10,17 +10,24 @@ function toBangkokDate(dateString) {
 }
 
 
-function getGmt7DateKey(dateObj) {
-  // Create a YYYY-MM-DD key based on GMT+7, regardless of the user's local timezone
-  const utcMs = dateObj.getTime() + dateObj.getTimezoneOffset() * 60000;
-  const gmt7 = new Date(utcMs + 7 * 60 * 60000);
-  return gmt7.toISOString().slice(0, 10);
+function getBangkokDateKey(dateObj = new Date()) {
+  // Returns YYYY-MM-DD in Asia/Bangkok
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Bangkok",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(dateObj);
 }
 
 function getTodayTomorrowKeysGmt7() {
   const now = new Date();
-  const todayKey = getGmt7DateKey(now);
-  const tomorrowKey = getGmt7DateKey(new Date(now.getTime() + 24 * 60 * 60000));
+  const todayKey = getBangkokDateKey(now);
+
+  const tomorrow = new Date(now);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const tomorrowKey = getBangkokDateKey(tomorrow);
+
   return { todayKey, tomorrowKey };
 }
 
@@ -90,7 +97,7 @@ function buildGoogleCalendarUrl(ev) {
     // All day event (end date must be next day)
     const d = toBangkokDate(dateKey);
     const next = new Date(d.getTime() + 24 * 60 * 60000);
-    const endKey = getGmt7DateKey(next);
+const endKey = getBangkokDateKey(next);
     datesParam = `${ymdCompact(dateKey)}/${ymdCompact(endKey)}`;
   }
 
@@ -1795,8 +1802,31 @@ function initLanguageToggle() {
     });
   });
 }
+let lastBangkokKey = "";
+
+function startBangkokAutoRefresh() {
+  setInterval(() => {
+    const keyNow = getBangkokDateKey(new Date());
+    if (keyNow === lastBangkokKey) return;
+
+    lastBangkokKey = keyNow;
+
+    const yearSelect = document.getElementById("filter-year");
+    const typeSelect = document.getElementById("filter-type");
+    const monthSelect = document.getElementById("filter-month");
+
+    renderSchedule(
+      yearSelect ? yearSelect.value : "all",
+      typeSelect ? typeSelect.value : "all",
+      monthSelect ? monthSelect.value : "all"
+    );
+  }, 30000);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   initFilters();
   initLanguageToggle();
+
+  lastBangkokKey = getBangkokDateKey(new Date());
+  startBangkokAutoRefresh();
 });
