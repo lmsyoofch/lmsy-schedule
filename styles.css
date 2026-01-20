@@ -481,4 +481,10 @@ a:active {
   transform: scale(0.98);
   opacity: 0.9;
 }
+@supports (-webkit-touch-callout: none) {
+  button:focus,
+  a:focus {
+    outline: none;
+  }
+}
 
