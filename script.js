@@ -1829,7 +1829,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   lastBangkokKey = getBangkokDateKey(new Date());
   startBangkokAutoRefresh();
-}
+},
 });
 
 
