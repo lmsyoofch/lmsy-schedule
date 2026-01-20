@@ -1830,22 +1830,8 @@ document.addEventListener("DOMContentLoaded", () => {
   lastBangkokKey = getBangkokDateKey(new Date());
   startBangkokAutoRefresh();
 
-   document.addEventListener("click", (e) => {
-  const target = e.target.closest("button, a");
-
-  if (!target) return;
-
-  // Avoid double vibration for disabled elements
-  if (target.disabled) return;
-
-  hapticTap(20);
-});
 
 });
 
-function hapticTap(duration = 20) {
-  if ("vibrate" in navigator) {
-    navigator.vibrate(duration);
-  }
-}
+});
 
