@@ -1221,8 +1221,9 @@ const events = [
   notes_en: "28 January 2026",
   notes_th: "28 มกราคม 2026",
   notes_zh: "2026年1月28日",
-  startTime: "",
-  timezone: "GMT+7",
+  notes: "Start time 18:00 (GMT+7)",
+  notes_th: "เริ่ม 18:00 น. (GMT+7)",
+  notes_zh: "开始时间 18:00（GMT+7)",
   hashtags: ["#CHANGEVERSE2026"],
   tags: ["LMSY", "Special event"]
 },
