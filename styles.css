@@ -463,3 +463,22 @@ h2 {
   margin-bottom: 3px;
   font-weight: 500;
 }
+/* Remove mobile tap flash */
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Keep focus for keyboard, remove for touch/mouse */
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Soft press feedback */
+button:active,
+a:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
