@@ -469,10 +469,18 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Keep focus for keyboard, remove for touch/mouse */
+/* Remove focus outline for mouse and touch, keep keyboard */
 button:focus:not(:focus-visible),
 a:focus:not(:focus-visible) {
   outline: none;
+}
+
+/* iOS Safari fix */
+@supports (-webkit-touch-callout: none) {
+  button:focus,
+  a:focus {
+    outline: none;
+  }
 }
 
 /* Soft press feedback */
@@ -481,10 +489,3 @@ a:active {
   transform: scale(0.98);
   opacity: 0.9;
 }
-@supports (-webkit-touch-callout: none) {
-  button:focus,
-  a:focus {
-    outline: none;
-  }
-}
-
