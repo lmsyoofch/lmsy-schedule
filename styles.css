@@ -489,3 +489,16 @@ a:active {
   transform: scale(0.98);
   opacity: 0.9;
 }
+/* Final iOS Safari tap highlight kill */
+button,
+a {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+
