@@ -4,6 +4,22 @@
 */
 
 let currentLang = "en";
+function getBangkokTodayTomorrowKeys() {
+  const fmt = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Bangkok",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  });
+
+  const todayKey = fmt.format(new Date());
+
+  const [y, m, d] = todayKey.split("-").map(Number);
+  const tomorrowUTC = new Date(Date.UTC(y, m - 1, d + 1));
+  const tomorrowKey = fmt.format(tomorrowUTC);
+
+  return { todayKey, tomorrowKey };
+}
 
 function toBangkokDate(dateString) {
   return new Date(dateString + "T00:00:00+07:00");
@@ -1467,7 +1483,7 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
   container.innerHTML = "";
 
   // Used for the TODAY / TOMORROW badge (all dates are treated as GMT+7).
-  const { todayKey, tomorrowKey } = getTodayTomorrowKeysGmt7();
+  const { todayKey, tomorrowKey } = getBangkokTodayTomorrowKeys();
 
   const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
 
