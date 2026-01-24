@@ -5,6 +5,33 @@
 
 let currentLang = "en";
 
+function getBangkokDateKey(dateObj = new Date()) {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Bangkok",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).format(dateObj);
+}
+
+// Parse YYYY-MM-DD safely (no UTC shift surprises)
+function parseYmd(dateKey) {
+  const [y, m, d] = dateKey.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d, 0, 0, 0));
+}
+
+function getTodayTomorrowKeysBangkok() {
+  const now = new Date();
+  const todayKey = getBangkokDateKey(now);
+
+  const tomorrow = new Date(now);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const tomorrowKey = getBangkokDateKey(tomorrow);
+
+  return { todayKey, tomorrowKey };
+}
+
+
 function toBangkokDate(dateString) {
   return new Date(dateString + "T00:00:00+07:00");
 }
@@ -88,9 +115,9 @@ function buildGoogleCalendarUrl(ev) {
     datesParam = `${start}/${end}`;
   } else {
     // All day event (end date must be next day)
-    const d = toBangkokDate(dateKey);
-    const next = new Date(d.getTime() + 24 * 60 * 60000);
-    const endKey = getGmt7DateKey(next);
+   const d = parseYmd(dateKey);
+   const next = new Date(d.getTime() + 24 * 60 * 60000);
+   const endKey = getBangkokDateKey(next);
     datesParam = `${ymdCompact(dateKey)}/${ymdCompact(endKey)}`;
   }
 
@@ -1467,7 +1494,7 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
   container.innerHTML = "";
 
   // Used for the TODAY / TOMORROW badge (all dates are treated as GMT+7).
-  const { todayKey, tomorrowKey } = getTodayTomorrowKeysGmt7();
+  const { todayKey, tomorrowKey } = getTodayTomorrowKeysBangkok();
 
   const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
 
@@ -1558,14 +1585,14 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
     titleRow.appendChild(iconSpan);
     titleRow.appendChild(titleEl);
 
-    const badgeLabel = getTodayTomorrowLabel(ev.date, todayKey, tomorrowKey);
+    const eventKey = getBangkokDateKey(parseYmd(ev.date));
+    const badgeLabel = getTodayTomorrowLabel(eventKey, todayKey, tomorrowKey);
+
     if (badgeLabel) {
       const badge = document.createElement("span");
-      badge.className = "event-badge " + (ev.date === todayKey ? "event-badge-today" : "event-badge-tomorrow");
-      badge.textContent = badgeLabel;
-      titleRow.appendChild(badge);
+    badge.className = "event-badge " + (eventKey === todayKey ? "event-badge-today" : "event-badge-tomorrow");
+    card.classList.add(eventKey === todayKey ? "is-today" : "is-tomorrow");
 
-      card.classList.add(ev.date === todayKey ? "is-today" : "is-tomorrow");
     }
 
     const metaEl = document.createElement("div");
@@ -1723,7 +1750,9 @@ typeOrder.forEach(cat => {
   }
 
   const now = new Date();
-  const currentYear = now.getFullYear().toString();
+  const bangkokKey = getBangkokDateKey(now);
+  const currentYear = bangkokKey.slice(0, 4);
+  const currentMonth = Number(bangkokKey.slice(5, 7)) - 1;
 
   // FIX 1: valid syntax
   const defaultYear = years.includes(currentYear)
