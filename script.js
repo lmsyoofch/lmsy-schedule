@@ -643,7 +643,7 @@ const events = [
   {
     date: "2025-03-13",
     who: "LMSY",
-    category: ["Brand", "Livestream"],
+    category: "Brand",
     title: "LMSY × Taixiaoxiang Live",
     location: "Taobao Live",
     notes: "19:00 (GMT+7)",
