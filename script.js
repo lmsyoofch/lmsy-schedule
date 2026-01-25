@@ -1348,7 +1348,25 @@ const events = [
   hashtags: [],
   tags: ["Lookmhee", "Fansign", "Birthday"]
 },
-   
+   {
+  date: "2026-02-21",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "Buddybesties x LMSY Meet & Greet",
+  title_th: "Buddybesties x LMSY Meet & Greet",
+  title_zh: "Buddybesties x LMSY Meet & Greet",
+  location_en: "To be announced",
+  location_th: "สถานที่รอประกาศ",
+  location_zh: "地点待公布",
+  startTime: "",
+  notes_en: "To be announced",
+  notes_th: "สถานที่รอประกาศ",
+  notes_zh: "地点待公布",
+  hashtags: [],
+  tags: ["LMSY", "BuddyBesties"]
+},
+
+
 ];
 
 /* =========================
