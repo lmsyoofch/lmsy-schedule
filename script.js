@@ -292,7 +292,7 @@ const events = [
     location_zh: "Facebook, TikTok（EFM）, YouTube（Atime）",
     startTime: "20:30",
     timezone: "GMT+7",
-    tags: ["LMSY", "Livestream"],
+    tags: ["LMSY", "Live"],
     hashtags: ["#LMSYxEFMFandomLive"]
   },
   {
@@ -427,7 +427,7 @@ const events = [
     location_zh: "淘宝",
     startTime: "19:00",
     timezone: "GMT+7",
-    tags: ["LMSY", "Livestream"],
+    tags: ["LMSY", "Live", "Brand"],
     hashtags: []
   },
   {
@@ -487,7 +487,7 @@ const events = [
     location_zh: "淘宝",
     startTime: "19:00",
     timezone: "GMT+7",
-    tags: ["LMSY", "Livestream"],
+    tags: ["LMSY", "Live", "Brand"],
     hashtags: []
   },
   {
@@ -533,7 +533,7 @@ const events = [
     location_zh: "淘宝直播（Arousar Studios）",
     startTime: "",
     timezone: "GMT+7",
-    tags: ["LMSY", "Livestream"],
+    tags: ["LMSY", "Live", "Brand"],
     hashtags: []
   },
   {
@@ -643,7 +643,7 @@ const events = [
   {
     date: "2025-03-13",
     who: "LMSY",
-    category: "Brand",
+    category: "Livestream",
     title: "LMSY × Taixiaoxiang Live",
     location: "Taobao Live",
     notes: "19:00 (GMT+7)",
@@ -690,7 +690,7 @@ const events = [
   {
     date: "2025-04-03",
     who: "LMSY",
-    category: "Brand",
+    category: "Livestream",
     title: "LMSY PandaThaiHouse Live",
     location: "Taobao Live",
     notes: "19:00–20:00 (GMT+7)",
@@ -737,7 +737,7 @@ const events = [
   {
     date: "2025-05-02",
     who: "LMSY",
-    category: "Brand",
+    category: "Livestream",
     title: "LMSY Taixiaoxiang Live",
     location: "Taobao Live",
     notes: "19:00–20:00 (GMT+7)",
@@ -802,7 +802,7 @@ const events = [
   {
     date: "2025-06-13",
     who: "LMSY",
-    category: "Brand",
+    category: "Livestream",
     title: "MIDATO × LMSY Live",
     location: "Weidian Live",
     notes: "19:00 (GMT+7)",
@@ -822,7 +822,7 @@ const events = [
   {
     date: "2025-07-05",
     who: "LMSY",
-    category: "Brand",
+    category: "Livestream",
     title: "LMSY × Coconut Live",
     location: "Weidian Live",
     notes: "19:00 (GMT+7)",
@@ -831,7 +831,7 @@ const events = [
   {
     date: "2025-07-25",
     who: "LMSY",
-    category: "Brand",
+    category: "Livestream",
     title: "LMSY × Clouvia Live",
     location: "Taobao Live",
     notes: "19:00 (GMT+7)",
@@ -1027,7 +1027,7 @@ const events = [
   {
     date: "2025-11-23",
     who: "LMSY",
-    category: "Brand",
+    category: "Livestream",
     title: "Chun Xiangji Weidian Live",
     location: "Weidian Live",
     notes: "19:00 (GMT+7)",
