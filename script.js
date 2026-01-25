@@ -1246,7 +1246,6 @@ const events = [
   notes: "Start time 12:00 (GMT+7)",
   notes_th: "เริ่ม 12:00 น. (GMT+7)",
   notes_zh: "开始时间 12:00（GMT+7)",
-  timezone: "GMT+7",
   hashtags: ["#JourneywithFoamDreamxLMSY"],
   tags: ["LMSY", "Special event"]
 },
@@ -1263,7 +1262,6 @@ const events = [
   notes_en: "30 Jan to 1 Feb 2026",
   notes_th: "30 ม.ค. ถึง 1 ก.พ. 2026",
   notes_zh: "2026年1月30日至2月1日",
-  timezone: "GMT+7",
   hashtags: ["#JourneywithFoamDreamxLMSY"],
   tags: ["LMSY", "Special event"]
 },
@@ -1282,7 +1280,6 @@ const events = [
   notes_en: "30 Jan to 1 Feb 2026",
   notes_th: "30 ม.ค. ถึง 1 ก.พ. 2026",
   notes_zh: "2026年1月30日至2月1日",
-  timezone: "GMT+7",
   hashtags: ["#JourneywithFoamDreamxLMSY"],
   tags: ["LMSY", "Special event"]
 },
@@ -1345,7 +1342,6 @@ const events = [
   location_th: "ฉงชิ่ง ประเทศจีน",
   location_zh: "中国·重庆",
   startTime: "",
-  timezone: "GMT+7",
   notes_en: "To be announced",
   notes_th: "สถานที่รอประกาศ",
   notes_zh: "地点待公布",
