@@ -1242,7 +1242,7 @@ const events = [
   title_zh: "A Journey of Falling In Love with LMSY",
   location_en: "Chiang Mai",
   location_th: "เชียงใหม่",
-  location_zh: "清迈"
+  location_zh: "清迈",
   notes: "Start time 12:00 (GMT+7)",
   notes_th: "เริ่ม 12:00 น. (GMT+7)",
   notes_zh: "开始时间 12:00（GMT+7)",
@@ -1258,7 +1258,7 @@ const events = [
   title_zh: "A Journey of Falling In Love with LMSY",
   location_en: "Chiang Mai",
   location_th: "เชียงใหม่",
-  location_zh: "清迈"
+  location_zh: "清迈",
   notes_en: "30 Jan to 1 Feb 2026",
   notes_th: "30 ม.ค. ถึง 1 ก.พ. 2026",
   notes_zh: "2026年1月30日至2月1日",
@@ -1276,7 +1276,7 @@ const events = [
   title_zh: "A Journey of Falling In Love with LMSY",
   location_en: "Chiang Mai",
   location_th: "เชียงใหม่",
-  location_zh: "清迈"
+  location_zh: "清迈",
   notes_en: "30 Jan to 1 Feb 2026",
   notes_th: "30 ม.ค. ถึง 1 ก.พ. 2026",
   notes_zh: "2026年1月30日至2月1日",
