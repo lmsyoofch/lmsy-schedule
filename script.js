@@ -1368,7 +1368,7 @@ const events = [
  {
   date: "2026-06-06",
   who: "LMSY",
-  category: "Special event",
+  category: "FanMeeting",
   title_en: "LMSY Be My Romance Fancon",
   title_th: "LMSY Be My Romance Fancon",
   title_zh: "LMSY Be My Romance Fancon",
@@ -1380,7 +1380,7 @@ const events = [
   notes_th: "สถานที่รอประกาศ",
   notes_zh: "地点待公布",
   hashtags: [],
-  tags: ["LMSY", "BuddyBesties"]
+  tags: ["LMSY", "Fanmeeting"]
 },
 
 ];
