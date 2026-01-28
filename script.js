@@ -1346,7 +1346,7 @@ const events = [
   notes_th: "สถานที่รอประกาศ",
   notes_zh: "地点待公布",
   hashtags: [],
-  tags: ["Lookmhee", "Fansign", "Birthday"]
+  tags: ["LMSY","Fanmeeting"]
 },
    {
   date: "2026-02-21",
@@ -1365,7 +1365,23 @@ const events = [
   hashtags: [],
   tags: ["LMSY", "BuddyBesties"]
 },
-
+ {
+  date: "2026-06-06",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "LMSY Be My Romance Fancon",
+  title_th: "LMSY Be My Romance Fancon",
+  title_zh: "LMSY Be My Romance Fancon",
+  location_en: "ICONSIAM Hall @ ICONSIAM",
+  location_th: "ICONSIAM Hall @ ICONSIAM",
+  location_zh: "ICONSIAM Hall @ ICONSIAM",
+  startTime: "",
+  notes_en: "To be announced",
+  notes_th: "สถานที่รอประกาศ",
+  notes_zh: "地点待公布",
+  hashtags: [],
+  tags: ["LMSY", "BuddyBesties"]
+},
 
 ];
 
