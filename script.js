@@ -1332,6 +1332,22 @@ const events = [
   hashtags: ["#JapanExpoThailand2026xLMSY"]
 },
    {
+  date: "2026-02-08",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "Post event gathering activity",
+  title_th: "กิจกรรมรวมพลหลังเลิกงาน",
+  title_zh: "活动结束后见面会",
+  location_en: "centralwOrld, Bangkok",
+  location_th: "centralwOrld, กรุงเทพฯ",
+  location_zh: "曼谷 centralwOrld",
+  notes_en: "8 Feb 2026 · Start time 19:30 (GMT+7) · Taiyo Stage",
+  notes_th: "8 ก.พ. 2026 · เริ่ม 19:30 น. (GMT+7) · Taiyo Stage",
+  notes_zh: "2026年2月8日 · 开始时间 19:30（GMT+7) · Taiyo Stage",
+  tags: ["LMSY", "Special event"],
+  hashtags: ["#JapanExpoThailand2026xLMSY"]
+},
+   {
   date: "2026-02-14",
   who: "Lookmhee",
   category: "FanMeeting",
