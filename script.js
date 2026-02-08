@@ -1297,7 +1297,7 @@ const events = [
   notes_th: "ระยะเวลากิจกรรม 12:00–17:00 น. (GMT+7)",
   notes_zh: "活动时间 12:00–17:00（GMT+7）",
   tags: ["Lookmhee", "FanEvent", "Birthday"],
-  hashtags: ["#LMBD27TH_Project"]
+  hashtags: ["LM BDAY LUV UNLIMIT\n\n#ฮักหลายมายลูกหมี"]
 },
    {
   date: "2026-02-08",
