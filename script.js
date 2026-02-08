@@ -1313,7 +1313,7 @@ const events = [
   notes_th: "8 ก.พ. 2026 · เวลา 14:00 น. (GMT+7)",
   notes_zh: "2026年2月8日 · 时间 14:00（GMT+7)",
   tags: ["LMSY", "Award"],
-  hashtags: ["LMSY AT JAPAN EXPO 2026\n#JapanExpoThailand2026xLMSY"]
+  hashtags: ["LMSY AT JAPAN EXPO 2026\n\n#JapanExpoThailand2026xLMSY"]
 },
    {
   date: "2026-02-08",
@@ -1329,7 +1329,7 @@ const events = [
   notes_th: "8 ก.พ. 2026 · เริ่ม 18:35 น. (GMT+7) · Taiyo Stage",
   notes_zh: "2026年2月8日 · 开始时间 18:35（GMT+7) · Taiyo Stage",
   tags: ["LMSY", "Special event"],
-  hashtags: ["LMSY AT JAPAN EXPO 2026\n#JapanExpoThailand2026xLMSY"]
+  hashtags: ["LMSY AT JAPAN EXPO 2026\n\n#JapanExpoThailand2026xLMSY"]
 },
    {
   date: "2026-02-08",
@@ -1345,7 +1345,7 @@ const events = [
   notes_th: "8 ก.พ. 2026 · เริ่ม 19:30 น. (GMT+7) · Taiyo Stage",
   notes_zh: "2026年2月8日 · 开始时间 19:30（GMT+7) · Taiyo Stage",
   tags: ["LMSY", "Special event"],
-  hashtags: ["LMSY AT JAPAN EXPO 2026\n#JapanExpoThailand2026xLMSY"]
+  hashtags: ["LMSY AT JAPAN EXPO 2026\n\n#JapanExpoThailand2026xLMSY"]
 },
    {
   date: "2026-02-14",
