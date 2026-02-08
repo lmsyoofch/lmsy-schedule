@@ -1306,14 +1306,14 @@ const events = [
   title_en: "Japan Expo Thailand Award 2026 (Japan Expo Relationship Award)",
   title_th: "JAPAN EXPO THAILAND AWARD 2026 (JAPAN EXPO RELATIONSHIP AWARD)",
   title_zh: "日本博览会泰国 2026 颁奖典礼（Japan Expo Relationship Award）",
-  location_en: "KAZE Stage (Outdoor), centralwOrld, Bangkok",
-  location_th: "เวที KAZE (กลางแจ้ง) ศูนย์การค้าเซ็นทรัลเวิลด์ กรุงเทพฯ",
-  location_zh: "曼谷 centralwOrld · KAZE 户外舞台",
+  location_en: "KAZE Stage (Outdoor), Square B, centralwOrld, Bangkok",
+  location_th: "เวที KAZE (กลางแจ้ง), Square B, ศูนย์การค้าเซ็นทรัลเวิลด์ กรุงเทพฯ",
+  location_zh: " Square B, 曼谷 centralwOrld · KAZE 户外舞台",
   notes_en: "8 Feb 2026 · Time 14:00 (GMT+7)",
   notes_th: "8 ก.พ. 2026 · เวลา 14:00 น. (GMT+7)",
   notes_zh: "2026年2月8日 · 时间 14:00（GMT+7)",
   tags: ["LMSY", "Award"],
-  hashtags: ["#JapanExpoThailand2026xLMSY"]
+  hashtags: ["LMSY AT JAPAN EXPO 2026\n#JapanExpoThailand2026xLMSY"]
 },
    {
   date: "2026-02-08",
@@ -1322,14 +1322,14 @@ const events = [
   title_en: "Japan Expo Thailand 2026 (World of T-Pop)",
   title_th: "JAPAN EXPO THAILAND 2026 (WORLD OF T-POP!)",
   title_zh: "日本博览会泰国 2026（World of T-Pop)",
-  location_en: "centralwOrld, Bangkok",
-  location_th: "centralwOrld, กรุงเทพฯ",
-  location_zh: "曼谷 centralwOrld",
+  location_en: "Central Court, 1F, centralwOrld, Bangkok",
+  location_th: "Central Court, 1F, centralwOrld, กรุงเทพฯ",
+  location_zh: "Central Court, 1F, 曼谷 centralwOrld",
   notes_en: "8 Feb 2026 · Start time 18:35 (GMT+7) · Taiyo Stage",
   notes_th: "8 ก.พ. 2026 · เริ่ม 18:35 น. (GMT+7) · Taiyo Stage",
   notes_zh: "2026年2月8日 · 开始时间 18:35（GMT+7) · Taiyo Stage",
   tags: ["LMSY", "Special event"],
-  hashtags: ["#JapanExpoThailand2026xLMSY"]
+  hashtags: ["LMSY AT JAPAN EXPO 2026\n#JapanExpoThailand2026xLMSY"]
 },
    {
   date: "2026-02-08",
@@ -1338,14 +1338,14 @@ const events = [
   title_en: "Japan Expo Thailand 2026 (Post event gathering activity)",
   title_th: "JAPAN EXPO THAILAND 2026 (กิจกรรมรวมพลหลังเลิกงาน)",
   title_zh: "日本博览会泰国 2026（活动结束后见面会)",
-  location_en: "centralwOrld, Bangkok",
-  location_th: "centralwOrld, กรุงเทพฯ",
-  location_zh: "曼谷 centralwOrld",
+  location_en: "Central Court, 1F, centralwOrld, Bangkok",
+  location_th: "Central Court, 1F, centralwOrld, กรุงเทพฯ",
+  location_zh: "Central Court, 1F, 曼谷 centralwOrld",
   notes_en: "8 Feb 2026 · Start time 19:30 (GMT+7) · Taiyo Stage",
   notes_th: "8 ก.พ. 2026 · เริ่ม 19:30 น. (GMT+7) · Taiyo Stage",
   notes_zh: "2026年2月8日 · 开始时间 19:30（GMT+7) · Taiyo Stage",
   tags: ["LMSY", "Special event"],
-  hashtags: ["#JapanExpoThailand2026xLMSY"]
+  hashtags: ["LMSY AT JAPAN EXPO 2026\n#JapanExpoThailand2026xLMSY"]
 },
    {
   date: "2026-02-14",
