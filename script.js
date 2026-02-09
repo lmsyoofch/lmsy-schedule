@@ -1381,6 +1381,22 @@ const events = [
   hashtags: [],
   tags: ["LMSY", "BuddyBesties"]
 },
+      {
+  date: "2026-04-26",
+  who: "Sonya",
+  category: "FanEvent",
+  title_en: "The Country Daughter-in-Law, Village Sports Style Sonya 27th Birthday",
+  title_th: "สะใภ้บ้านนา กีฬาบ้านทุ่ง Sonya 27th Birthday",
+  title_zh: "Sonya 27岁生日应援活动",
+  location_en: "To be announced",
+  location_th: "สถานที่รอประกาศ",
+  location_zh: "地点待公布",
+  notes_en: "Event time 12:00–17:00 (GMT+7)",
+  notes_th: "ระยะเวลากิจกรรม 12:00–17:00 น. (GMT+7)",
+  notes_zh: "活动时间 12:00–17:00 (GMT+7)",
+  tags: ["Sonya", "FanEvent", "Birthday"],
+  hashtags: [""]
+},
  {
   date: "2026-06-06",
   who: "LMSY",
