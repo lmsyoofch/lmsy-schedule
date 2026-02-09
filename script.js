@@ -1391,9 +1391,9 @@ const events = [
   location_en: "To be announced",
   location_th: "สถานที่รอประกาศ",
   location_zh: "地点待公布",
-  notes_en: "Event time 12:00–17:00 (GMT+7)",
-  notes_th: "ระยะเวลากิจกรรม 12:00–17:00 น. (GMT+7)",
-  notes_zh: "活动时间 12:00–17:00 (GMT+7)",
+  notes_en: "Event time to be announced",
+  notes_th: "ระยะเวลากิจกรรม รอประกาศ",
+  notes_zh: "活动时间 待公布",
   tags: ["Sonya", "FanEvent", "Birthday"],
   hashtags: [""]
 },
