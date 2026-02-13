@@ -1357,11 +1357,10 @@ const events = [
   location_en: "Chongqing, China",
   location_th: "ฉงชิ่ง ประเทศจีน",
   location_zh: "中国·重庆",
-  startTime: "",
-  notes_en: "To be announced",
-  notes_th: "สถานที่รอประกาศ",
-  notes_zh: "地点待公布",
-  hashtags: [],
+  notes: "Start time 11:30 (GMT+7)",
+  notes_th: "เริ่ม 11:30 น. (GMT+7)",
+  notes_zh: "开始时间 11:30（GMT+7)",
+  hashtags: ["LM BD IN CHONGQING\n\n#Lookmheebirthdaypartychongqing"],
   tags: ["LMSY","Fanmeeting"]
 },
    {
