@@ -1361,7 +1361,7 @@ const events = [
   notes_th: "เริ่ม 11:30 น. (GMT+7)",
   notes_zh: "开始时间 11:30（GMT+7)",
   hashtags: ["LM BD IN CHONGQING\n\n#Lookmheebirthdaypartychongqing"],
-  tags: ["LMSY","Fanmeeting"]
+  tags: ["Lookmhee","Fanmeeting"]
 },
    {
   date: "2026-02-21",
@@ -1379,6 +1379,38 @@ const events = [
   notes_zh: "地点待公布",
   hashtags: [],
   tags: ["LMSY", "BuddyBesties"]
+},
+      {
+  date: "2026-03-21",
+  who: "Sonya",
+  category: "Fansign",
+  title_en: "Spring Note Rendezvous · Sonya Shanghai Fansign Event",
+  title_th: "งานแฟนไซน์ Sonya ที่เซี่ยงไฮ้",
+  title_zh: "春日音符之约 · Sonya 上海签售会",
+  location_en: "Shanghai, China",
+  location_th: "เซี่ยงไฮ้ ประเทศจีน",
+  location_zh: "中国·上海",
+  notes_en: "Event time to be announced",
+  notes_th: "ระยะเวลากิจกรรม รอประกาศ",
+  notes_zh: "活动时间 待公布",
+  hashtags: [""],
+  tags: ["Sonya","Fansign"]
+},
+      {
+  date: "2026-03-22",
+  who: "Lookmhee",
+  category: "Fansign",
+  title_en: "Whispered Spring Tales · Lookmhee Shanghai Fansign Event",
+  title_th: "งานแฟนไซน์ Lookmhee ที่เซี่ยงไฮ้",
+  title_zh: "低语春日故事 · Lookmhee 上海签售会",
+  location_en: "Shanghai, China",
+  location_th: "เซี่ยงไฮ้ ประเทศจีน",
+  location_zh: "中国·上海",
+  notes_en: "Event time to be announced",
+  notes_th: "ระยะเวลากิจกรรม รอประกาศ",
+  notes_zh: "活动时间 待公布",
+  hashtags: [""],
+  tags: ["Lookmhee","Fansign"]
 },
       {
   date: "2026-04-26",
