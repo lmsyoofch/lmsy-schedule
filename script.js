@@ -1373,9 +1373,9 @@ const events = [
   location_en: "Lancaster Bangkok",
   location_th: "Lancaster Bangkok",
   location_zh: "Lancaster Bangkok",
-  notes_en: "21 February, 10.00 AM (GMT+7)",
-  notes_th: "21 กุมภาพันธ์ เวลา 10.00 น. (GMT+7)",
-  notes_zh: "2月21日 上午10:00 (GMT+7)",
+  notes_en: "Start time 10.00 AM (GMT+7)",
+  notes_th: "เริ่ม 10.00 น. (GMT+7)",
+  notes_zh: "开始时间 上午10:00 (GMT+7)",
   hashtags: ["#BDBTxMeetandGreetLMSY"],
   tags: ["LMSY", "BuddyBesties"]
 },
