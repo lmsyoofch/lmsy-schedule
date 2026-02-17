@@ -1377,7 +1377,7 @@ const events = [
   notes_th: "เริ่ม 10.00 น. (GMT+7)",
   notes_zh: "开始时间 上午10:00 (GMT+7)",
   hashtags: ["#BDBTxMeetandGreetLMSY"],
-  tags: ["LMSY", "BuddyBesties"]
+  tags: ["LMSY", "Special event"]
 },
       {
   date: "2026-03-21",
