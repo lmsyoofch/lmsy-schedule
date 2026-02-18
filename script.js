@@ -1376,7 +1376,7 @@ const events = [
   notes_en: "Start time 10.00 AM (GMT+7)",
   notes_th: "เริ่ม 10.00 น. (GMT+7)",
   notes_zh: "开始时间 上午10:00 (GMT+7)",
-  hashtags: ["#BDBTxMeetandGreetLMSY"],
+  hashtags: ["LMSY FANS DAY X BUDDY BESTIES\n\n#BDBTxMeetandGreetLMSY"],
   tags: ["LMSY", "Special event"]
 },
       {
