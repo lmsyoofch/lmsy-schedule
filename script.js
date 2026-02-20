@@ -1395,6 +1395,22 @@ const events = [
   hashtags: [""],
   tags: ["Sonya","Fansign"]
 },
+{
+  date: "2026-03-01",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "LMSY & Banksorn Special Appearance · Likay Sornam Nam Phet",
+  title_th: "LMSY และ Banksorn ร่วมแสดงพิเศษกับลิเกคณะศรรามน้ำเพชร",
+  title_zh: "LMSY 与 Banksorn 特别出演 · ศรรามน้ำเพชร 戏剧团",
+  location_en: "Wat Samrong Tai, Phra Pradaeng, Samut Prakan, Thailand",
+  location_th: "วัดสำโรงใต้ อ.พระประแดง จ.สมุทรปราการ",
+  location_zh: "泰国·北榄府 帕巴登县 三隆泰寺",
+  notes_en: "Free live streaming available on Facebook via Banksorn page and on YouTube channel ลิเกคณะศรรามน้ำเพชร at 20:00 BKK time.",
+  notes_th: "มีไลฟ์สดฟรีทาง Facebook เพจ Banksorn และ YouTube ช่อง ลิเกคณะศรรามน้ำเพชร เวลา 20.00 น. ตามเวลา กรุงเทพฯ",
+  notes_zh: "可通过 Facebook Banksorn 页面及 YouTube 频道 ลิเกคณะศรรามน้ำเพชร 免费观看直播，时间为泰国时间晚上 8 点。",
+  hashtags: [""],
+  tags: ["LMSY","Special event"]
+},
       {
   date: "2026-03-22",
   who: "Lookmhee",
