@@ -1395,6 +1395,22 @@ const events = [
   hashtags: ["#คุณแฟนบ้านนอกศรรามน้ำเพชร"],
   tags: ["LMSY","Special event"]
 },
+{
+  date: "2026-03-13",
+  who: "LMSY",
+  category: "Livestream",
+  title: "Foam Dream Live Streaming",
+  title_th: "Foam Dream Live Streaming",
+  title_zh: "Foam Dream 直播活动",
+  location: "Taobao Live (Foam Dream)",
+  location_th: "Taobao Live (Foam Dream)",
+  location_zh: "淘宝直播（Foam Dream）",
+  notes: "Start time 19:00 (GMT+7)",
+  notes_th: "เริ่ม 19:00 น. (GMT+7)",
+  notes_zh: "开始时间 19:00（GMT+7）",
+  hashtags: ["#FoamdreammomentwithLMSY"],
+  tags: ["LMSY", "Livestream"]
+},
       {
   date: "2026-03-21",
   who: "Sonya",
