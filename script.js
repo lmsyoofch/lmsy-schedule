@@ -1389,10 +1389,10 @@ const events = [
   location_en: "Wat Samrong Tai, Phra Pradaeng, Samut Prakan, Thailand",
   location_th: "วัดสำโรงใต้ อ.พระประแดง จ.สมุทรปราการ",
   location_zh: "泰国·北榄府 帕巴登县 三隆泰寺",
-  notes_en: "Live stream available on Facebook via Banksorn page and on YouTube channel ลิเกคณะศรรามน้ำเพชร at 20:00 (BKK time).",
-  notes_th: "มีไลฟ์สดทาง Facebook เพจ Banksorn และช่อง YouTube ลิเกคณะศรรามน้ำเพชร เวลา 20.00 น. (ตามเวลา กรุงเทพฯ)",
-  notes_zh: "可通过 Facebook Banksorn 页面及 YouTube 频道 ลิเกคณะศรรามน้ำเพชร 观看直播，时间为 20:00（泰国时间）。",
-  hashtags: [""],
+  notes_en: "Start time 21:00 (GMT+7). Live stream available on Facebook via Banksorn page and on YouTube channel ลิเกคณะศรรามน้ำเพชร at 20:00 (BKK time).",
+  notes_th: "เริ่ม 21:00 น. (GMT+7). มีไลฟ์สดทาง Facebook เพจ Banksorn และช่อง YouTube ลิเกคณะศรรามน้ำเพชร เวลา 20.00 น. (ตามเวลา กรุงเทพฯ)",
+  notes_zh: "开始时间 21:00（GMT+7). 可通过 Facebook Banksorn 页面及 YouTube 频道 ลิเกคณะศรรามน้ำเพชร 观看直播，时间为 20:00（泰国时间）。",
+  hashtags: ["#คุณแฟนบ้านนอกศรรามน้ำเพชร"],
   tags: ["LMSY","Special event"]
 },
       {
