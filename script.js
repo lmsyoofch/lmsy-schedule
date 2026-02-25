@@ -1411,6 +1411,22 @@ const events = [
   hashtags: ["#FoamdreammomentwithLMSY"],
   tags: ["LMSY", "Livestream"]
 },
+{
+  date: "2026-03-15",
+  who: "LMSY",
+  category: "Brand",
+  title: "Lucky Moment with LMSY",
+  title_th: "Lucky Moment with LMSY",
+  title_zh: "LMSY 幸运时刻活动",
+  location: "Big C Ratchadamri, Bangkok",
+  location_th: "บิ๊กซี ราชดำริ กรุงเทพฯ",
+  location_zh: "曼谷 Big C Ratchadamri",
+  notes: "Start time 14:00 (GMT+7)",
+  notes_th: "เริ่ม 14:00 น. (GMT+7)",
+  notes_zh: "开始时间 14:00（GMT+7）",
+  hashtags: ["#LMSYLuckyMoment"],
+  tags: ["LMSY", "Brand"]
+},
       {
   date: "2026-03-21",
   who: "Sonya",
