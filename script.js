@@ -1392,7 +1392,7 @@ const events = [
   notes_en: "Start time 21:00 (GMT+7). Live stream available on Facebook via Banksorn page and on YouTube channel ลิเกคณะศรรามน้ำเพชร.",
   notes_th: "เริ่ม 21:00 น. (GMT+7). มีไลฟ์สดทาง Facebook เพจ Banksorn และช่อง YouTube ลิเกคณะศรรามน้ำเพชร",
   notes_zh: "开始时间 21:00（GMT+7). 可通过 Facebook Banksorn 页面及 YouTube 频道 ลิเกคณะศรรามน้ำเพชร",
-  hashtags: ["#คุณแฟนบ้านนอกศรรามน้ำเพชร"],
+  hashtags: ["LMSY SHOW ON STAGE\n\n#คุณแฟนบ้านนอกศรรามน้ำเพชร"],
   tags: ["LMSY","Special event"]
 },
 {
