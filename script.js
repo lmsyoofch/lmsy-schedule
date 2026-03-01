@@ -1392,7 +1392,7 @@ const events = [
   notes_en: "Start time 20:30 (GMT+7). Live stream available on Facebook via Banksorn page and on YouTube channel ลิเกคณะศรรามน้ำเพชร.",
   notes_th: "เริ่ม 20:30 น. (GMT+7). มีไลฟ์สดทาง Facebook เพจ Banksorn และช่อง YouTube ลิเกคณะศรรามน้ำเพชร",
   notes_zh: "开始时间 20:30（GMT+7). 可通过 Facebook Banksorn 页面及 YouTube 频道 ลิเกคณะศรรามน้ำเพชร",
-  hashtags: ["Hometown Romance Fun Joy SornramNamphet\n\n#คุณแฟนบ้านนอกจอยม่วนศรรามน้ำเพชร"],
+  hashtags: ["Hometown Romance Fun Joy Sornram Namphet\n\n#คุณแฟนบ้านนอกจอยม่วนศรรามน้ำเพชร"],
   tags: ["LMSY","Special event"]
 },
 {
