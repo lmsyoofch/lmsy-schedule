@@ -1459,6 +1459,15 @@ const events = [
   hashtags: [""],
   tags: ["Lookmhee","Fansign"]
 },
+  {
+    date: "2026-04-03",
+    who: "LMSY",
+    category: "Drama",
+    title: "Hometown Romance First Premiere",
+    location: "Siam Paragon 6F, Bangkok",
+    notes: "Details to be announced",
+    tags: ["LMSY", "Hometown Romance"]
+  },
       {
   date: "2026-04-26",
   who: "Sonya",
