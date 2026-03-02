@@ -1396,6 +1396,22 @@ const events = [
   tags: ["LMSY","Special event"]
 },
 {
+  date: "2026-03-07",
+  who: "LMSY",
+  category: "Special Event",
+  title_en: "Khun Fan Baan Nok X Ann Oradee Special Event",
+  title_th: "คุณแฟนบ้านนอก X แอน อรดี งานพิเศษ",
+  title_zh: "乡村甜心 X Ann Oradee 特别活动",
+  location_en: "Wat Khom Phuttharangsri (Phutthamonthon Sai 3), Thawee Watthana, Bangkok",
+  location_th: "วัดโคมพุทธรังสี (พุทธมณฑล สาย 3), เขตทวีวัฒนา กรุงเทพฯ",
+  location_zh: "曼谷 他威瓦他那区 · Wat Khom Phuttharangsri（Phutthamonthon Sai 3）",
+  notes_en: "7 Mar 2026 · Show Time 22:00 (GMT+7) · Tickets available at venue",
+  notes_th: "7 มี.ค. 2026 · เวลา 22:00 น. (GMT+7) · บัตรซื้อได้ที่หน้างาน",
+  notes_zh: "2026年3月7日 · 演出时间 22:00（GMT+7）· 现场购票",
+  tags: ["LMSY", "Special Event"],
+  hashtags: ["HTRM X AnnOradee\n\n#คุณแฟนบ้านนอกXแอนอรดี"]
+},
+{
   date: "2026-03-13",
   who: "LMSY",
   category: "Livestream",
