@@ -1480,7 +1480,7 @@ const events = [
     who: "LMSY",
     category: "Drama",
     title: "Hometown Romance First Premiere",
-    location: "Siam Paragon 6F, Bangkok",
+    location: "Siam Pavalai, Siam Paragon 6F, Bangkok",
     notes: "Details to be announced",
     tags: ["LMSY", "Hometown Romance"]
   },
