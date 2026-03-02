@@ -1405,9 +1405,9 @@ const events = [
   location_en: "Wat Khom Phuttharangsri (Phutthamonthon Sai 3), Thawee Watthana, Bangkok",
   location_th: "วัดโคมพุทธรังสี (พุทธมณฑล สาย 3), เขตทวีวัฒนา กรุงเทพฯ",
   location_zh: "曼谷 他威瓦他那区 · Wat Khom Phuttharangsri（Phutthamonthon Sai 3）",
-  notes_en: "7 Mar 2026 · Show Time 22:00 (GMT+7) · Tickets available at venue",
-  notes_th: "7 มี.ค. 2026 · เวลา 22:00 น. (GMT+7) · บัตรซื้อได้ที่หน้างาน",
-  notes_zh: "2026年3月7日 · 演出时间 22:00（GMT+7）· 现场购票",
+  notes_en: "Show Time 22:00 (GMT+7) · Tickets available at venue",
+  notes_th: "เวลา 22:00 น. (GMT+7) · บัตรซื้อได้ที่หน้างาน",
+  notes_zh: "演出时间 22:00（GMT+7）· 现场购票",
   tags: ["LMSY", "Special Event"],
   hashtags: ["HTRM X AnnOradee\n\n#คุณแฟนบ้านนอกXแอนอรดี"]
 },
