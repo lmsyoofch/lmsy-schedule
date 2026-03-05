@@ -1411,6 +1411,15 @@ const events = [
   tags: ["LMSY", "Special Event"],
   hashtags: ["HTRM X AnnOradee\n\n#คุณแฟนบ้านนอกXแอนอรดี"]
 },
+    {
+    date: "2026-03-12",
+    who: "LMSY",
+    category: "Drama",
+    title: "Hometown Romance special event",
+    location: "GMM Grammy Place, Bangkok",
+    notes: "09:09 (GMT+7)",
+    tags: ["LMSY", "Drama"]
+  },
 {
   date: "2026-03-13",
   who: "LMSY",
