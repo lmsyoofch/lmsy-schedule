@@ -1415,7 +1415,7 @@ const events = [
     date: "2026-03-12",
     who: "LMSY",
     category: "Drama",
-    title: "Hometown Romance Blessing Ceremony Special event",
+    title: "Hometown Romance Blessing Ceremony",
     location: "GMM Grammy Place, Bangkok",
     notes: "09:09 (GMT+7)",
     tags: ["LMSY", "Drama"]
