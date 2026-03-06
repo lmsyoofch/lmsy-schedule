@@ -1417,7 +1417,11 @@ const events = [
     category: "Drama",
     title: "Worship Hometown Romance Special Ceremony",
     location: "GMM Grammy Place, Bangkok",
-    notes: "09:09 (GMT+7)",
+    location_th: "งานปิด สามารถให้กำลังใจศิลปินบริเวณรอบๆงานได้",
+    location_zh: "GMM Grammy Place，曼谷",
+    notes: "Start time 9:09 (GMT+7)",
+    notes_th: "เริ่ม 9:09 น. (GMT+7)",
+    notes_zh: "开始时间 9:09（GMT+7)",
     tags: ["LMSY", "Drama"],
     hashtags: ["Worship Hometown Romance\n\n#บวงสรวงคุณแฟนบ้านนอก"]
   },
