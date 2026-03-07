@@ -1409,7 +1409,7 @@ const events = [
   notes_th: "เวลา 22:00 น. (GMT+7) · บัตรซื้อได้ที่หน้างาน",
   notes_zh: "演出时间 22:00（GMT+7）· 现场购票",
   tags: ["LMSY", "Special Event"],
-  hashtags: ["HTRM X AnnOradee\n\n#คุณแฟนบ้านนอกXแอนอรดี"]
+  hashtags: ["HTRM X AnnOradee\n\n#คุณแฟนบ้านนอกXแอนอรดี "]
 },
     {
     date: "2026-03-12",
