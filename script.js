@@ -1498,6 +1498,28 @@ const events = [
     notes: "Details to be announced",
     tags: ["LMSY", "Hometown Romance"]
   },
+    {
+    date: "2026-04-05",
+    who: "LMSY",
+    category: "Special event",
+    title: "Fan Gathering at Bookfair",
+    location: "Queen Sirikit National Convention Center (QSNCC), Loading area at the “National Book Fair Bangkok",
+    notes: "Start time 17:00 (GMT+7)",
+    notes_th: "เริ่ม 17:00 น. (GMT+7)",
+    notes_zh: "开始时间 17:00（GMT+7）",
+    tags: ["LMSY", "Special event"]
+  },
+    {
+    date: "2026-04-05",
+    who: "LMSY",
+    category: "Special event",
+    title: "My Rustic Wife x lilyhouse Stage Interview & Autograph Signing",
+    location: "Queen Sirikit National Convention Center (QSNCC), LG Floor, Halls 5-7, Main Stage area at the “National Book Fair Bangkok",
+    notes: "Start time 20:00 (GMT+7)",
+    notes_th: "เริ่ม 20:00 น. (GMT+7)",
+    notes_zh: "开始时间 20:00（GMT+7）",
+    tags: ["LMSY", "Special event"]
+  },
       {
   date: "2026-04-26",
   who: "Sonya",
