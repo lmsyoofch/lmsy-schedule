@@ -1425,6 +1425,22 @@ const events = [
     tags: ["LMSY", "Drama"],
     hashtags: ["Worship Hometown Romance\n\n#บวงสรวงคุณแฟนบ้านนอก"]
   },
+  {
+  date: "2026-03-12",
+  who: "LMSY",
+  category: "Award",
+  title: "9Entertain Awards 2026",
+  title_th: "งานประกาศรางวัล 9Entertain Awards 2026",
+  title_zh: "9Entertain Awards 2026 颁奖典礼",
+  location: "Paragon Hall, Bangkok",
+  location_th: "พารากอน ฮอลล์ กรุงเทพฯ",
+  location_zh: "曼谷 Paragon Hall",
+  notes: "Start time 17:00 (GMT+7). Closing event, fans can support around the venue.",
+  notes_th: "เริ่มเวลา 17:00 น. (GMT+7) งานปิด สามารถให้กำลังใจบริเวณรอบงานได้",
+  notes_zh: "开始时间 17:00（GMT+7），为闭幕活动，粉丝可在场馆周边应援",
+  hashtags: ["#9entertainawards2026"],
+  tags: ["Awards", "Appearance"]
+},
 {
   date: "2026-03-13",
   who: "LMSY",
