@@ -1428,6 +1428,20 @@ const events = [
   {
   date: "2026-03-12",
   who: "LMSY",
+  category: "Drama",
+  title: "Hometown Romance Official Teaser Release",
+  location: "YouTube – CHANGE2561",
+  location_th: "YouTube : CHANGE2561",
+  location_zh: "YouTube：CHANGE2561",
+  notes: "Official teaser premiere at 20:00 (GMT+7)",
+  notes_th: "ปล่อยทีเซอร์อย่างเป็นทางการ เวลา 20:00 น. (GMT+7)",
+  notes_zh: "官方预告发布，时间 20:00（GMT+7）",
+  tags: ["LMSY", "Drama", "Teaser"],
+  hashtags: ["Hometown Romance Teaser\n\n#HometownRomanceTeaser"]
+}
+  {
+  date: "2026-03-12",
+  who: "LMSY",
   category: "Award",
   title: "9Entertain Awards 2026",
   title_th: "งานประกาศรางวัล 9Entertain Awards 2026",
