@@ -1453,8 +1453,8 @@ const events = [
   notes: "Official teaser premiere at 20:00 (GMT+7)",
   notes_th: "ปล่อยทีเซอร์อย่างเป็นทางการ เวลา 20:00 น. (GMT+7)",
   notes_zh: "官方预告发布，时间 20:00（GMT+7）",
-  hashtags: ["Hometown Romance Teaser\n\n#HometownRomanceTeaser"]
-  tags: ["LMSY", "Drama", "Teaser"],
+  hashtags: ["Hometown Romance Teaser\n\n#HometownRomanceTeaser"],
+  tags: ["LMSY", "Drama", "Teaser"]
 },
 {
   date: "2026-03-13",
