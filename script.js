@@ -1425,21 +1425,7 @@ const events = [
     tags: ["LMSY", "Drama"],
     hashtags: ["Worship Hometown Romance\n\n#บวงสรวงคุณแฟนบ้านนอก"]
   },
-  {
-  date: "2026-03-12",
-  who: "LMSY",
-  category: "Drama",
-  title: "Hometown Romance Official Teaser Release",
-  location: "YouTube – CHANGE2561",
-  location_th: "YouTube : CHANGE2561",
-  location_zh: "YouTube：CHANGE2561",
-  notes: "Official teaser premiere at 20:00 (GMT+7)",
-  notes_th: "ปล่อยทีเซอร์อย่างเป็นทางการ เวลา 20:00 น. (GMT+7)",
-  notes_zh: "官方预告发布，时间 20:00（GMT+7）",
-  tags: ["LMSY", "Drama", "Teaser"],
-  hashtags: ["Hometown Romance Teaser\n\n#HometownRomanceTeaser"]
-}
-  {
+    {
   date: "2026-03-12",
   who: "LMSY",
   category: "Award",
@@ -1455,6 +1441,20 @@ const events = [
   hashtags: ["LMSY 9ENT X SIAM PARAGON\n\n#9entertainawards2026", "#9entawards2026xLMSY",
 "#9entawards2026xSIAMPARAGON"],
   tags: ["Awards", "Appearance"]
+},
+  {
+  date: "2026-03-12",
+  who: "LMSY",
+  category: "Drama",
+  title: "Hometown Romance Official Teaser Release",
+  location: "YouTube – CHANGE2561",
+  location_th: "YouTube : CHANGE2561",
+  location_zh: "YouTube：CHANGE2561",
+  notes: "Official teaser premiere at 20:00 (GMT+7)",
+  notes_th: "ปล่อยทีเซอร์อย่างเป็นทางการ เวลา 20:00 น. (GMT+7)",
+  notes_zh: "官方预告发布，时间 20:00（GMT+7）",
+  hashtags: ["Hometown Romance Teaser\n\n#HometownRomanceTeaser"]
+  tags: ["LMSY", "Drama", "Teaser"],
 },
 {
   date: "2026-03-13",
