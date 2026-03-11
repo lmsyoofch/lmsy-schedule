@@ -1438,7 +1438,7 @@ const events = [
   notes: "Start time 17:00 (GMT+7). Closing event, fans can support around the venue.",
   notes_th: "เริ่มเวลา 17:00 น. (GMT+7) งานปิด สามารถให้กำลังใจบริเวณรอบงานได้",
   notes_zh: "开始时间 17:00（GMT+7），为闭幕活动，粉丝可在场馆周边应援",
-  hashtags: ["LMSY AT 9ENTERTAIN AWARDS\n\n#9EntertainAwards2026xLMSY"],
+  hashtags: ["LMSY 9ENT X SIAM PARAGON\n\n#9EntertainAwards2026xLMSY", "#9entawards2026xSIAMPARAGON"],
   tags: ["Awards", "Appearance"]
 },
   {
