@@ -1468,7 +1468,7 @@ const events = [
   notes: "Start time 19:00 (GMT+7)",
   notes_th: "เริ่ม 19:00 น. (GMT+7)",
   notes_zh: "开始时间 19:00（GMT+7）",
-  hashtags: ["#FoamdreammomentwithLMSY"],
+  hashtags: ["LMSY X FOAM DREAM MOMENT\n\n#FoamdreammomentwithLMSY"],
   tags: ["LMSY", "Livestream"]
 },
 {
