@@ -1472,6 +1472,20 @@ const events = [
   tags: ["LMSY", "Livestream"]
 },
 {
+  date: "2026-03-13",
+  who: "LMSY",
+  category: "Drama",
+  title: "Hometown Romance Reaction Teaser",
+  location: "YouTube – CHANGE2561",
+  location_th: "YouTube : CHANGE2561",
+  location_zh: "YouTube：CHANGE2561",
+  notes: "Reaction teaser premiere at 19:00 (GMT+7)",
+  notes_th: "ปล่อย Reaction Teaser เวลา 19:00 น. (GMT+7)",
+  notes_zh: "Reaction 预告发布，时间 19:00（GMT+7）",
+  hashtags: ["#HometownRomance_ReactionTeaser"],
+  tags: ["LMSY", "Drama", "Reaction", "Teaser"]
+},
+{
   date: "2026-03-15",
   who: "LMSY",
   category: "Brand",
