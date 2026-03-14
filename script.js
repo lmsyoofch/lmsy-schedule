@@ -1564,6 +1564,22 @@ const events = [
     notes_zh: "开始时间 20:00（GMT+7）",
     tags: ["LMSY", "Special event"]
   },
+{
+  date: "2026-04-18",
+  who: "Sonya",
+  category: "FanMeeting",
+  title_en: "Sonya’s 1st Birthday Party in Chongqing",
+  title_th: "งานวันเกิดครั้งที่ 1 ของ Sonya ที่ฉงชิ่ง",
+  title_zh: "Sonya重庆生日见面会",
+  location_en: "Chongqing, China",
+  location_th: "ฉงชิ่ง ประเทศจีน",
+  location_zh: "中国·重庆",
+  notes: "Birthday fan event",
+  notes_th: "งานแฟนมีตวันเกิด",
+  notes_zh: "生日粉丝见面会",
+  hashtags: ["SONYA BD IN CHONGQING\n\n#sonyasarann #LMSY"],
+  tags: ["Sonya","Fanmeeting"]
+},
       {
   date: "2026-04-26",
   who: "Sonya",
