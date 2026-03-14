@@ -1498,7 +1498,7 @@ const events = [
   notes: "Start time 14:00 (GMT+7)",
   notes_th: "เริ่ม 14:00 น. (GMT+7)",
   notes_zh: "开始时间 14:00（GMT+7）",
-  hashtags: ["#LMSYLuckyMoment", "#Downy", "#DownyThailand", "#BigC"],
+  hashtags: ["LUCKY MOMENT WITH LMSY\n\n#LMSYLUCKYMOMENT"],
   tags: ["LMSY", "Brand"]
 },
       {
