@@ -1577,7 +1577,7 @@ const events = [
   notes: "Start time 19:00 (GMT+7), sales open on 2026-03-16 at 11:30 (GMT+7)",
   notes_th: "เริ่ม 19:00 น. (GMT+7), เปิดขายวันที่ 16 มี.ค. 2026 เวลา 11:30 น. (GMT+7)",
   notes_zh: "开始时间 19:00（GMT+7），开售时间为2026年3月16日11:30（GMT+7）",
-  hashtags: ["],
+  hashtags: [""],
   tags: ["LMSY", "Livestream"]
 },
 {
