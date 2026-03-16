@@ -1565,6 +1565,22 @@ const events = [
     tags: ["LMSY", "Special event"]
   },
 {
+  date: "2026-04-11",
+  who: "LMSY",
+  category: "Livestream",
+  title: "Kelana Live Streaming",
+  title_th: "Kelana Live Streaming",
+  title_zh: "可拉娜直播活动",
+  location: "Weidian (Search: Kelana)",
+  location_th: "Weidian (ค้นหา: Kelana)",
+  location_zh: "微店（搜索：可拉娜）",
+  notes: "Start time 19:00 (GMT+7), sales open on 2026-03-16 at 11:30 (GMT+7)",
+  notes_th: "เริ่ม 19:00 น. (GMT+7), เปิดขายวันที่ 16 มี.ค. 2026 เวลา 11:30 น. (GMT+7)",
+  notes_zh: "开始时间 19:00（GMT+7），开售时间为2026年3月16日11:30（GMT+7）",
+  hashtags: ["],
+  tags: ["LMSY", "Livestream"]
+},
+{
   date: "2026-04-18",
   who: "Sonya",
   category: "FanMeeting",
