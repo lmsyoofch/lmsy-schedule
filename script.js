@@ -1533,6 +1533,22 @@ const events = [
   hashtags: [""],
   tags: ["Lookmhee","Fansign"]
 },
+{
+  date: "2026-03-25",
+  who: "LMSY",
+  category: "Special Event",
+  title_en: "Hometown Romance X Rabiab Wathasilp Special Event",
+  title_th: "คุณแฟนบ้านนอก X ระเบียบวาทะศิลป์ งานพิเศษ",
+  title_zh: "Hometown Romance X Rabiab Wathasilp 特别活动",
+  location_en: "Lan Khang PTT Pump, Nava Nakorn Industrial Estate, Khlong Luang, Pathum Thani",
+  location_th: "ลานข้างปั้ม ปตท. นิคมอุตสาหกรรมนวนคร อ.คลองหลวง จ.ปทุมธานี",
+  location_zh: "巴吞他尼府 Khlong Luang · Nava Nakorn 工业园区 PTT 加油站旁广场",
+  notes_en: "Festival: Khom Fai Festival 2026 · Show Time 20:30 (GMT+7) · Tickets available at venue",
+  notes_th: "เทศกาลโคมไฟ เฟสติวัล 2026 · เวลาแสดง 20:30 น. (GMT+7) · บัตรซื้อได้ที่หน้างาน",
+  notes_zh: "2026 灯节活动 · 演出时间 20:30（GMT+7）· 现场购票",
+  hashtags: ["HTRM X Rabiab Wathasilp\n\n#คุณแฟนบ้านนอกXระเบียบวาทะศิลป์"],
+  tags: ["LMSY", "Special Event"]
+},
   {
     date: "2026-04-03",
     who: "LMSY",
