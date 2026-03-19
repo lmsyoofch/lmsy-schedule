@@ -1581,6 +1581,7 @@ const events = [
     notes: "Start time 17:00 (GMT+7)",
     notes_th: "เริ่ม 17:00 น. (GMT+7)",
     notes_zh: "开始时间 17:00（GMT+7）",
+    hashtags: ["HTRM BOOK FAIR 2026\n\n#lilyhousexคุณแฟนบ้านนอก"],
     tags: ["LMSY", "Special event"]
   },
     {
@@ -1592,6 +1593,7 @@ const events = [
     notes: "Start time 20:00 (GMT+7)",
     notes_th: "เริ่ม 20:00 น. (GMT+7)",
     notes_zh: "开始时间 20:00（GMT+7）",
+    hashtags: ["HTRM BOOK FAIR 2026\n\n#lilyhousexคุณแฟนบ้านนอก"],
     tags: ["LMSY", "Special event"]
   },
 {
