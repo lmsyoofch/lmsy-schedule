@@ -1501,6 +1501,20 @@ const events = [
   hashtags: ["LUCKY MOMENT WITH LMSY\n\n#LMSYLUCKYMOMENT"],
   tags: ["LMSY", "Brand"]
 },
+{
+  date: "2026-03-20",
+  who: "LMSY",
+  category: "Drama",
+  title: "Hometown Romance Official Trailer Release",
+  location: "YouTube – CHANGE2561",
+  location_th: "YouTube : CHANGE2561",
+  location_zh: "YouTube：CHANGE2561",
+  notes: "Official trailer premiere at 20:00 (GMT+7)",
+  notes_th: "ปล่อยตัวอย่างอย่างเป็นทางการ เวลา 20:00 น. (GMT+7)",
+  notes_zh: "官方预告发布，时间 20:00（GMT+7）",
+  hashtags: ["HOMETOWN ROMANCE TRAILER\n\n#HometownRomanceTrailer"],
+  tags: ["LMSY", "Drama", "Trailer"]
+},
       {
   date: "2026-03-21",
   who: "Sonya",
