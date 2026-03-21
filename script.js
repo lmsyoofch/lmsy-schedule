@@ -1544,7 +1544,7 @@ const events = [
   notes: "Start time 11:00 (GMT+7)",
   notes_th: "เริ่ม 11:00 น. (GMT+7)",
   notes_zh: "开始时间 11:00（GMT+7)",
-  hashtags: ["\n\n#LookmheeFSinShanghai"],
+  hashtags: ["WHISPERS OF SPRING WT LM\n\n#LookmheeFSinShanghai"],
   tags: ["Lookmhee","Fansign"]
 },
 {
