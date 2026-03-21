@@ -1528,7 +1528,7 @@ const events = [
   notes: "Start time 11:00 (GMT+7)",
   notes_th: "เริ่ม 11:00 น. (GMT+7)",
   notes_zh: "开始时间 11:00（GMT+7)",
-  hashtags: [""],
+  hashtags: ["SPRING LETTER DATE SONYA SHANGHAI FANS\n\n##SonyaFSinShanghai"],
   tags: ["Sonya","Fansign"]
 },
       {
