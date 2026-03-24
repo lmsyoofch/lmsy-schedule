@@ -1569,7 +1569,10 @@ const events = [
     category: "Drama",
     title: "Hometown Romance First Premiere",
     location: "Siam Pavalai, Siam Paragon 6F, Bangkok",
-    notes: "Details to be announced",
+    notes: "Start time 18:00 (GMT+7)",
+    notes_th: "เริ่ม 18:00 น. (GMT+7)",
+    notes_zh: "开始时间 18:00（GMT+7）",
+    hashtags: ["HOMETOWN ROMANCE EP1\n\n#คุณแฟนบ้านนอกEP1"],
     tags: ["LMSY", "Hometown Romance"]
   },
     {
