@@ -1563,6 +1563,22 @@ const events = [
   hashtags: ["HTRM X Rabiab Wathasilp\n\n#คุณแฟนบ้านนอกXระเบียบวาทะศิลป์"],
   tags: ["LMSY", "Special Event"]
 },
+{
+  date: "2026-04-02",
+  who: "LMSY",
+  category: "Livestream",
+  title: "LMSY Be My Romance Live",
+  title_th: "LMSY Be My Romance Live",
+  title_zh: "LMSY《Be My Romance》直播活动",
+  location: "Instagram: CHANGE2561",
+  location_th: "Instagram: CHANGE2561",
+  location_zh: "Instagram：CHANGE2561",
+  notes: "Live streaming for LMSY Be My Romance Fancon Presented by หมีกรุบ. Start time 19:00 (GMT+7).",
+  notes_th: "ไลฟ์สตรีมงาน LMSY Be My Romance Fancon Presented by หมีกรุบ เริ่มเวลา 19:00 น. (GMT+7)",
+  notes_zh: "LMSY Be My Romance Fancon Presented by หมีกรุบ 直播，开始时间为 19:00（GMT+7）",
+  hashtags: ["LMSY BE MY ROMANCE LIVE\n\n#LMSY BE MY ROMANCE LIVE"],
+  tags: ["LMSY", "Livestream", "Fancon"]
+},
   {
     date: "2026-04-03",
     who: "LMSY",
