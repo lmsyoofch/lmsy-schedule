@@ -1576,7 +1576,7 @@ const events = [
   notes: "Live streaming for LMSY Be My Romance Fancon Presented by หมีกรุบ. Start time 19:00 (GMT+7).",
   notes_th: "ไลฟ์สตรีมงาน LMSY Be My Romance Fancon Presented by หมีกรุบ เริ่มเวลา 19:00 น. (GMT+7)",
   notes_zh: "LMSY Be My Romance Fancon Presented by หมีกรุบ 直播，开始时间为 19:00（GMT+7）",
-  hashtags: ["LMSY BE MY ROMANCE LIVE\n\n#LMSY BE MY ROMANCE LIVE"],
+  hashtags: ["LMSY BE MY ROMANCE LIVE\n\n#LMSYBEMYROMANCELIVE"],
   tags: ["LMSY", "Livestream", "Fancon"]
 },
   {
