@@ -1657,7 +1657,7 @@ const events = [
   notes_th: "ออกอากาศเวลา 10:00 น. (GMT+7) และย้อนหลังทาง YouTube เวลา 12:30 น. (GMT+7)",
   notes_zh: "播出时间为 10:00（GMT+7），YouTube 重播时间为 12:30（GMT+7）",
   hashtags: [],
-  tags: ["LMSY"]
+  tags: ["LMSY", "Special event"]
 },
       {
   date: "2026-04-26",
