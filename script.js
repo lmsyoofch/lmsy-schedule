@@ -1686,7 +1686,7 @@ const events = [
   notes_zh: "直播时间为 19:00（GMT+7）",
   hashtags: [],
   tags: ["LMSY", "Hometown Romance"]
-}
+},
 {
   date: "2026-05-08",
   who: "LMSY",
