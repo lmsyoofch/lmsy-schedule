@@ -1615,6 +1615,18 @@ const events = [
     hashtags: ["HTRM BOOK FAIR 2026\n\n#lilyhousexคุณแฟนบ้านนอก"],
     tags: ["LMSY", "Special event"]
   },
+  {
+  date: "2026-04-07",
+  who: "LMSY",
+  category: "Livestream",
+  title: "Popcycle Live",
+  location: "Popcycle Live",
+  notes: "Private event for eligible participants, live at 17:00 (GMT+7)",
+  notes_th: "งานปิด เฉพาะผู้มีสิทธิ์เข้าร่วม ถ่ายทอดสดเวลา 17:00 น. (GMT+7)",
+  notes_zh: "仅限受邀者参与的活动，直播时间为 17:00（GMT+7）",
+  hashtags: ["#PopcycleLivexLookmheeSonya"],
+  tags: ["LMSY", "Popcycle"]
+},
 {
   date: "2026-04-11",
   who: "LMSY",
