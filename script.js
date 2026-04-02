@@ -1647,6 +1647,18 @@ const events = [
   hashtags: ["SONYA BD IN CHONGQING\n\n#Sonyabirthdaypartychongqing"],
   tags: ["Sonya","Fanmeeting"]
 },
+{
+  date: "2026-04-18",
+  who: "LMSY",
+  category: "Special event",
+  title: "Club Friday Show",
+  location: "one31",
+  notes: "Airs at 10:00 (GMT+7), rerun on YouTube at 12:30 (GMT+7)",
+  notes_th: "ออกอากาศเวลา 10:00 น. (GMT+7) และย้อนหลังทาง YouTube เวลา 12:30 น. (GMT+7)",
+  notes_zh: "播出时间为 10:00（GMT+7），YouTube 重播时间为 12:30（GMT+7）",
+  hashtags: [],
+  tags: ["LMSY"]
+},
       {
   date: "2026-04-26",
   who: "Sonya",
@@ -1663,6 +1675,18 @@ const events = [
   tags: ["Sonya", "FanEvent", "Birthday"],
   hashtags: [""]
 },
+{
+  date: "2026-04-30",
+  who: "LMSY",
+  category: "Drama",
+  title: "Hotwave KRUB LIVE",
+  location: "ATIME LIVE, atime.live/hotwave/live",
+  notes: "Live at 19:00 (GMT+7)",
+  notes_th: "ถ่ายทอดสดเวลา 19:00 น. (GMT+7)",
+  notes_zh: "直播时间为 19:00（GMT+7）",
+  hashtags: [],
+  tags: ["LMSY", "Hometown Romance"]
+}
 {
   date: "2026-05-08",
   who: "LMSY",
