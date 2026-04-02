@@ -1659,6 +1659,18 @@ const events = [
   hashtags: [],
   tags: ["LMSY", "Special event"]
 },
+{
+  date: "2026-04-23",
+  who: "LMSY",
+  category: "Livestream",
+  title: "EFM Fandom Live",
+  location: "EFM Station, atime.live/efm",
+  notes: "Private event for eligible participants, live at 20:00 (GMT+7)",
+  notes_th: "งานปิด สำหรับผู้มีสิทธิ์เข้าร่วมงาน ถ่ายทอดสดเวลา 20:00 น. (GMT+7)",
+  notes_zh: "仅限受邀者参与的活动，直播时间为 20:00（GMT+7）",
+  hashtags: ["#LMSYxFANDOMFANFIC"],
+  tags: ["LMSY", "EFM"]
+},
       {
   date: "2026-04-26",
   who: "Sonya",
