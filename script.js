@@ -1619,6 +1619,18 @@ const events = [
   date: "2026-04-07",
   who: "LMSY",
   category: "Livestream",
+  title: "Mellow Pop",
+  location: "TikTok / Website / Application, Mellow Pop",
+  notes: "Live at 14:00 (GMT+7)",
+  notes_th: "ถ่ายทอดสดเวลา 14:00 น. (GMT+7)",
+  notes_zh: "直播时间为 14:00（GMT+7）",
+  hashtags: ["#MellowPopxคุณแฟนบ้านนอก"],
+  tags: ["LMSY", "Mellow Pop"]
+},
+  {
+  date: "2026-04-07",
+  who: "LMSY",
+  category: "Livestream",
   title: "Popcycle Live",
   location: "Popcycle Live",
   notes: "Private event for eligible participants, live at 17:00 (GMT+7)",
