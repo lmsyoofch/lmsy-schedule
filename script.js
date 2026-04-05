@@ -1625,7 +1625,7 @@ const events = [
   notes_th: "ถ่ายทอดสดเวลา 14:00 น. (GMT+7)",
   notes_zh: "直播时间为 14:00（GMT+7）",
   hashtags: ["#MellowPopxคุณแฟนบ้านนอก"],
-  tags: ["LMSY", "Mellow Pop"]
+  tags: ["LMSY", "Mellow Pop", "Hometown Romance"]
 },
   {
   date: "2026-04-07",
@@ -1637,7 +1637,19 @@ const events = [
   notes_th: "งานปิด เฉพาะผู้มีสิทธิ์เข้าร่วม ถ่ายทอดสดเวลา 17:00 น. (GMT+7)",
   notes_zh: "仅限受邀者参与的活动，直播时间为 17:00（GMT+7）",
   hashtags: ["#PopcycleLivexLookmheeSonya"],
-  tags: ["LMSY", "Popcycle"]
+  tags: ["LMSY", "Popcycle", "Hometown Romance"]
+},
+{
+  date: "2026-04-09",
+  who: "LMSY",
+  category: "Drama",
+  title: "Media Interview",
+  location: "TBA",
+  notes: "All-day media interviews",
+  notes_th: "สัมภาษณ์สื่อทั้งวัน",
+  notes_zh: "全天媒体采访",
+  hashtags: [],
+  tags: ["LMSY", "Hometown Romance"]
 },
 {
   date: "2026-04-11",
@@ -1684,6 +1696,30 @@ const events = [
   tags: ["LMSY", "Special event"]
 },
 {
+  date: "2026-04-22",
+  who: "LMSY",
+  category: "Drama",
+  title: "Goodbye หมอไม่รู้ตัว",
+  location: "TBA",
+  notes: "Recording at 16:00 (GMT+7)",
+  notes_th: "ถ่ายรายการเวลา 16:00 น. (GMT+7)",
+  notes_zh: "录制时间为 16:00（GMT+7）",
+  hashtags: [],
+  tags: ["LMSY", "Hometown Romance"]
+},
+{
+  date: "2026-04-23",
+  who: "LMSY",
+  category: "Drama",
+  title: "FIVE ME",
+  location: "TBA",
+  notes: "Recording at 13:00 (GMT+7)",
+  notes_th: "ถ่ายรายการเวลา 13:00 น. (GMT+7)",
+  notes_zh: "录制时间为 13:00（GMT+7）",
+  hashtags: [],
+  tags: ["LMSY", "Hometown Romance"]
+},
+{
   date: "2026-04-23",
   who: "LMSY",
   category: "Livestream",
@@ -1693,7 +1729,31 @@ const events = [
   notes_th: "งานปิด สำหรับผู้มีสิทธิ์เข้าร่วมงาน ถ่ายทอดสดเวลา 20:00 น. (GMT+7)",
   notes_zh: "仅限受邀者参与的活动，直播时间为 20:00（GMT+7）",
   hashtags: ["#LMSYxFANDOMFANFIC"],
-  tags: ["LMSY", "EFM"]
+  tags: ["LMSY", "EFM", "Hometown Romance"]
+},
+{
+  date: "2026-04-24",
+  who: "LMSY",
+  category: "Drama",
+  title: "ข่าวที่ยิ่งรอบวัน",
+  location: "ONE31",
+  notes: "Live at 11:30 (GMT+7)",
+  notes_th: "ถ่ายทอดสดเวลา 11:30 น. (GMT+7)",
+  notes_zh: "直播时间为 11:30（GMT+7）",
+  hashtags: [],
+  tags: ["LMSY", "ONE31", "Hometown Romance"]
+},
+{
+  date: "2026-04-24",
+  who: "LMSY",
+  category: "Drama",
+  title: "ถก",
+  location: "YouTube / Facebook, GMM25 Thailand",
+  notes: "Live at 22:30 (GMT+7)",
+  notes_th: "ถ่ายทอดสดเวลา 22:30 น. (GMT+7)",
+  notes_zh: "直播时间为 22:30（GMT+7）",
+  hashtags: [],
+  tags: ["LMSY", "GMM25", "Hometown Romance"]
 },
       {
   date: "2026-04-26",
