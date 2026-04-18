@@ -1680,7 +1680,7 @@ const events = [
   notes: "Birthday fan event",
   notes_th: "งานแฟนมีตวันเกิด",
   notes_zh: "生日粉丝见面会",
-  hashtags: ["SONYA BD IN CHONGQING\n\n#Sonyabirthdaypartychongqing"],
+  hashtags: ["SONYA BD 2026 IN CHONGQING\n\n#Sonyabirthdaypartychongqing"],
   tags: ["Sonya","Fanmeeting"]
 },
 {
