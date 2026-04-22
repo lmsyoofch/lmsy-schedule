@@ -1732,6 +1732,18 @@ const events = [
   tags: ["LMSY", "EFM", "Hometown Romance"]
 },
 {
+  date: "2026-04-23",
+  who: "LMSY",
+  category: "Livestream",
+  title: "T-POP STAGE",
+  location: "T-POP STAGE Facebook & YouTube",
+  notes: "Stream live at 9:45 PM (GMT+7)",
+  notes_th: "งานปิด ถ่ายทอดสดเวลา 21:45 น. (GMT+7)",
+  notes_zh: "闭门活动，直播时间为晚上 9:45（GMT+7）",
+  hashtags: ["#TpopStagexLookmheeSonya"],
+  tags: ["LMSY", "T-POP STAGE"]
+},
+{
   date: "2026-04-24",
   who: "LMSY",
   category: "Drama",
