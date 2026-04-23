@@ -1752,7 +1752,7 @@ const events = [
   notes: "Live at 11:30 (GMT+7)",
   notes_th: "ถ่ายทอดสดเวลา 11:30 น. (GMT+7)",
   notes_zh: "直播时间为 11:30（GMT+7）",
-  hashtags: [],
+  hashtags: ["#LMSY", "#ลูกหมีซอนญ่า", "#HometownRomance"],
   tags: ["LMSY", "ONE31", "Hometown Romance"]
 },
 {
@@ -1764,8 +1764,20 @@ const events = [
   notes: "Live at 22:30 (GMT+7)",
   notes_th: "ถ่ายทอดสดเวลา 22:30 น. (GMT+7)",
   notes_zh: "直播时间为 22:30（GMT+7）",
-  hashtags: [],
+  hashtags: ["#LMSY", "#ลูกหมีซอนญ่า", "#HometownRomance"],
   tags: ["LMSY", "GMM25", "Hometown Romance"]
+},
+{
+  date: "2026-04-24",
+  who: "LMSY",
+  category: "Drama",
+  title: "KhaosodArea Live Interview",
+  location: "Facebook / TikTok, Khaosod",
+  notes: "Live at 15:30 (GMT+7)",
+  notes_th: "ไลฟ์สดเวลา 15:30 น. (GMT+7)",
+  notes_zh: "直播时间为 15:30（GMT+7）",
+  hashtags: ["#LMSY", "#ลูกหมีซอนญ่า", "#HometownRomance"],
+  tags: ["LMSY", "Khaosod", "Hometown Romance"]
 },
       {
   date: "2026-04-26",
