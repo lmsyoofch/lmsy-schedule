@@ -1728,7 +1728,7 @@ const events = [
   notes: "Private event for eligible participants, live at 20:00 (GMT+7)",
   notes_th: "งานปิด สำหรับผู้มีสิทธิ์เข้าร่วมงาน ถ่ายทอดสดเวลา 20:00 น. (GMT+7)",
   notes_zh: "仅限受邀者参与的活动，直播时间为 20:00（GMT+7）",
-  hashtags: ["#LMSYxFANDOMFANFIC"],
+  hashtags: ["HOMETOWN ROMANCE PRESS TOUR\n\n #LMSYxFANDOMFANFIC"],
   tags: ["LMSY", "EFM", "Hometown Romance"]
 },
 {
@@ -1740,7 +1740,7 @@ const events = [
   notes: "Stream live at 21:45 (GMT+7)",
   notes_th: "งานปิด ถ่ายทอดสดเวลา 21:45 น. (GMT+7)",
   notes_zh: "闭门活动，直播时间为晚上 21:45（GMT+7）",
-  hashtags: ["#TpopStagexLookmheeSonya"],
+  hashtags: ["HOMETOWN ROMANCE PRESS TOUR\n\n #TpopStagexLookmheeSonya"],
   tags: ["LMSY", "T-POP STAGE"]
 },
 {
@@ -1752,7 +1752,7 @@ const events = [
   notes: "Live at 11:30 (GMT+7)",
   notes_th: "ถ่ายทอดสดเวลา 11:30 น. (GMT+7)",
   notes_zh: "直播时间为 11:30（GMT+7）",
-  hashtags: ["#LMSY", "#ลูกหมีซอนญ่า", "#HometownRomance"],
+  hashtags: [""HOMETOWN ROMANCE PRESS TOUR\n\n #ช่วงรอบวันxคุณแฟนบ้านนอก"],
   tags: ["LMSY", "ONE31", "Hometown Romance"]
 },
 {
@@ -1764,7 +1764,7 @@ const events = [
   notes: "Live at 22:30 (GMT+7)",
   notes_th: "ถ่ายทอดสดเวลา 22:30 น. (GMT+7)",
   notes_zh: "直播时间为 22:30（GMT+7）",
-  hashtags: ["#LMSY", "#ลูกหมีซอนญ่า", "#HometownRomance"],
+  hashtags: [""HOMETOWN ROMANCE PRESS TOUR\n\n #แฉxคุณแฟนบ้านนอก""],
   tags: ["LMSY", "GMM25", "Hometown Romance"]
 },
 {
