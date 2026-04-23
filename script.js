@@ -1764,7 +1764,7 @@ const events = [
   notes: "Live at 22:30 (GMT+7)",
   notes_th: "ถ่ายทอดสดเวลา 22:30 น. (GMT+7)",
   notes_zh: "直播时间为 22:30（GMT+7）",
-  hashtags: [""HOMETOWN ROMANCE PRESS TOUR\n\n #แฉxคุณแฟนบ้านนอก""],
+  hashtags: ["HOMETOWN ROMANCE PRESS TOUR\n\n #แฉxคุณแฟนบ้านนอก"],
   tags: ["LMSY", "GMM25", "Hometown Romance"]
 },
 {
