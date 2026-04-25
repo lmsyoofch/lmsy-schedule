@@ -1793,7 +1793,7 @@ const events = [
   notes_th: "ระยะเวลากิจกรรม รอประกาศ",
   notes_zh: "活动时间 待公布",
   tags: ["Sonya", "FanEvent", "Birthday"],
-  hashtags: [""]
+  hashtags: ["BABY SONYA 27 YRS\n\n#Sonya27thCelebration"]
 },
 {
   date: "2026-04-30",
