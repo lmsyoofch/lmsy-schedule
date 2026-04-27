@@ -1796,6 +1796,18 @@ const events = [
   hashtags: ["BABY SONYA 27 YRS\n\n#Sonya27thCelebration"]
 },
 {
+  date: "2026-04-29",
+  who: "LMSY",
+  category: "Special event",
+  title: "4โพดำ ลูกหมีซอนญ่า",
+  location: "YouTube, อโศกมนตรี (@AsokMontri)",
+  notes: "Special guest appearance on 4โพดำ, airs at 18:00 (GMT+7)",
+  notes_th: "แขกรับเชิญพิเศษในรายการ 4โพดำ ออกอากาศเวลา 18:00 น. (GMT+7)",
+  notes_zh: "特别嘉宾出演《4โพดำ》，播出时间为 18:00（GMT+7）",
+  hashtags: ["#4โพดำลูกหมีซอนญ่า", "#4โพดำ", "#อโศกมนตรี", "#LMSY", "#ลูกหมีซอนญ่า", "#LMlookmhee", "#SonyaSaranphat"],
+  tags: ["LMSY", "4โพดำ", "อโศกมนตรี"]
+},
+{
   date: "2026-04-30",
   who: "LMSY",
   category: "Drama",
