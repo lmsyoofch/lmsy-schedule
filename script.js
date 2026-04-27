@@ -1808,6 +1808,18 @@ const events = [
   tags: ["LMSY", "4โพดำ", "อโศกมนตรี"]
 },
 {
+  date: "2026-04-29",
+  who: "LMSY",
+  category: "Livestream",
+  title: "4 โพดำ",
+  location: "YouTube: อโศกมนตรี",
+  notes: "Live at 18:00 (GMT+7)",
+  notes_th: "ถ่ายทอดสดเวลา 18:00 น. (GMT+7)",
+  notes_zh: "直播时间为 18:00（GMT+7）",
+  hashtags: ["#4โพดำxลูกหมีซอนญ่า"],
+  tags: ["LMSY"]
+},
+{
   date: "2026-04-30",
   who: "LMSY",
   category: "Drama",
@@ -1818,6 +1830,18 @@ const events = [
   notes_zh: "直播时间为 19:00（GMT+7）",
   hashtags: [],
   tags: ["LMSY", "Hometown Romance"]
+},
+{
+  date: "2026-04-30",
+  who: "LMSY",
+  category: "Livestream",
+  title: "ร้องข้ามกำแพง",
+  location: "Facebook & YouTube: Workpoint 23",
+  notes: "Live at 20:05 (GMT+7)",
+  notes_th: "ถ่ายทอดสดเวลา 20:05 น. (GMT+7)",
+  notes_zh: "直播时间为 20:05（GMT+7）",
+  hashtags: ["#TheWallSongxLookmheeSonya"],
+  tags: ["LMSY"]
 },
 {
   date: "2026-05-03",
