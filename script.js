@@ -1841,7 +1841,7 @@ const events = [
   notes_th: "กิจกรรมกับลูกหมี ซอนญ่า เวลา 11:00 - 11:45 น. (GMT+7) ลงทะเบียนรับสายรัดข้อมือได้เวลา 10:15 - 12:30 น. (GMT+7) และเปิดลงทะเบียนล่วงหน้าทาง Google Form วันที่ 19 เมษายน 2026 ทาง X @change2561",
   notes_zh: "Lookmhee 与 Sonya 活动时间为 11:00 - 11:45（GMT+7），手环注册时间为 10:15 - 12:30（GMT+7），预注册已于 2026年4月19日 通过 X @change2561 开放",
   hashtags: ["CHANGEFANDAY", "CHANGEFANDAY2026", "CHANGE2561"],
-  tags: ["LMSY", "Fan event", "CHANGE2561"]
+  tags: ["LMSY", "Fan event", "CHANGE2561", " #CHANGEFANDAY2026"]
 },
 {
   date: "2026-05-08",
