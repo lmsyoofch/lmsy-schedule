@@ -1908,6 +1908,22 @@ const events = [
   hashtags: [],
   tags: ["LMSY", "Fanmeeting"]
 },
+{
+  date: "2026-06-13",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "2026 LMSY Sweet Whispers: Pastoral Romance Macau Fan Meeting",
+  title_th: "งานแฟนมีตติ้ง 2026 LMSY Sweet Whispers: Pastoral Romance ที่มาเก๊า",
+  title_zh: "2026 LMSY 田言蜜语・田园罗曼 澳门双人见面会",
+  location_en: "H853 Entertainment Place, Lisboeta Macau",
+  location_th: "H853 Entertainment Place, Lisboeta Macau",
+  location_zh: "澳门葡京人 H853 娱乐馆",
+  notes: "Tickets on sale at 16:00, 5 May. Exclusive bundle available at 19:00 on the same day. Purchase platform: Xiaomang App.",
+  notes_th: "เปิดขายบัตรวันที่ 5 พฤษภาคม เวลา 16:00 น. แพ็กเกจพิเศษเปิดขายเวลา 19:00 น. ในวันเดียวกัน ผ่านแอป Xiaomang",
+  notes_zh: "门票｜5月5日 16:00 正式开售。叠加包｜5月5日 19:00 准时开启。购买渠道：小芒 APP。",
+  hashtags: [""],
+  tags: ["LMSY","Fanmeeting", "Macau"]
+},
 
 ];
 
