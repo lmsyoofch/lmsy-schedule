@@ -1908,6 +1908,38 @@ const events = [
   tags: ["Awards", "Appearance", "LMSY"]
 },
 {
+  date: "2026-05-21",
+  who: "LMSY",
+  category: "Livestream",
+  title_en: "JOOX Live Chat Chit Tid Tom",
+  title_th: "JOOX Live Chat ชิดติดอ่อม",
+  title_zh: "JOOX Live Chat ชิดติดอ่อม 直播",
+  location_en: "JOOX Music Application",
+  location_th: "แอปพลิเคชัน JOOX Music",
+  location_zh: "JOOX Music 应用程序",
+  notes: "Live starts at 19:00 (GMT+7) via JOOX Music Application.",
+  notes_th: "ไลฟ์เริ่มเวลา 19:00 น. (GMT+7) ผ่านแอปพลิเคชัน JOOX Music",
+  notes_zh: "直播于19:00 (GMT+7) 开始，通过 JOOX Music 应用程序观看。",
+  hashtags: ["#JOOXLiveChatชิดติดอ่อมxLMSY", "#ChangeArtist"],
+  tags: ["LMSY", "Livestream", "JOOX"]
+},
+{
+  date: "2026-05-22",
+  who: "LMSY",
+  category: "Special event",
+  title_en: "Hometown Romance Final Episode",
+  title_th: "คุณแฟนบ้านนอก Final Episode",
+  title_zh: "Hometown Romance 最终集特别活动",
+  location_en: "Siam Pavalai Royal Grand Theatre, 6F, Siam Paragon",
+  location_th: "Siam Pavalai Royal Grand Theatre ชั้น 6, Siam Paragon",
+  location_zh: "Siam Paragon 6楼 Siam Pavalai Royal Grand Theatre",
+  notes: "Event starts at 18:00 (GMT+7). Entry is for eligible participants only.",
+  notes_th: "งานเริ่มเวลา 18:00 น. (GMT+7) เฉพาะผู้มีสิทธิ์เข้าร่วมงานเท่านั้น",
+  notes_zh: "活动于18:00 (GMT+7) 开始。仅限符合资格者入场。",
+  hashtags: ["#คุณแฟนบ้านนอกFinalEP", "#ChangeArtist"],
+  tags: ["LMSY", "Hometown Romance", "Special event"]
+},
+{
   date: "2026-05-30",
   who: "Lookmhee",
   category: "FanMeeting",
