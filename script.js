@@ -1904,7 +1904,7 @@ const events = [
   notes: "Special guest appearance. Start time 17:00 onwards (GMT+7). Live streaming via KAZZ Magazine, KAZZ Channel and LINE TODAY POP.",
   notes_th: "แขกรับเชิญพิเศษ เริ่มเวลา 17:00 น. เป็นต้นไป (GMT+7) ถ่ายทอดสดทาง KAZZ Magazine, KAZZ Channel และ LINE TODAY POP",
   notes_zh: "特别嘉宾出席。开始时间 17:00 起（GMT+7）。通过 KAZZ Magazine、KAZZ Channel 和 LINE TODAY POP 直播",
-  hashtags: ["#KAZZAWARDS2026"],
+  hashtags: ["#KAZZAWARDS2026xLookmheeSonya"],
   tags: ["Awards", "Appearance", "LMSY"]
 },
 {
