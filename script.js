@@ -1936,7 +1936,7 @@ const events = [
   notes: "Event starts at 18:00 (GMT+7). Entry is for eligible participants only.",
   notes_th: "งานเริ่มเวลา 18:00 น. (GMT+7) เฉพาะผู้มีสิทธิ์เข้าร่วมงานเท่านั้น",
   notes_zh: "活动于18:00 (GMT+7) 开始。仅限符合资格者入场。",
-  hashtags: ["#คุณแฟนบ้านนอกFinalEP", "#ChangeArtist"],
+  hashtags: ["#คุณแฟนบ้านนอกFinalEP"],
   tags: ["LMSY", "Hometown Romance", "Special event"]
 },
 {
