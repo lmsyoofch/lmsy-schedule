@@ -1938,7 +1938,7 @@ const events = [
   notes_zh: "公告日期：2026年5月2日。购票平台：小芒 APP。",
   hashtags: ["#SonyaSaranphat"],
   tags: ["Sonya", "FanMeeting", "Hangzhou"]
-}
+},
  {
   date: "2026-06-06",
   who: "LMSY",
