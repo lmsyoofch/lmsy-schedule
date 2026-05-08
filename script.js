@@ -1907,6 +1907,38 @@ const events = [
   hashtags: ["#KAZZAWARDS2026"],
   tags: ["Awards", "Appearance", "LMSY"]
 },
+{
+  date: "2026-05-30",
+  who: "Lookmhee",
+  category: "FanMeeting",
+  title_en: "Lookmhee Love in Full Bloom Hangzhou Fansign",
+  title_th: "งานแฟนไซน์ Lookmhee Love in Full Bloom ที่หางโจว",
+  title_zh: "LOOKMHEE 爱逢其时 杭州签售会",
+  location_en: "Hangzhou, China",
+  location_th: "หางโจว ประเทศจีน",
+  location_zh: "中国，杭州",
+  notes: "Tickets on sale from 2 May via Xiaomang App.",
+  notes_th: "เปิดขายบัตรวันที่ 2 พฤษภาคม ผ่านแอป Xiaomang",
+  notes_zh: "公告日期：2026年5月2日。购票平台：小芒 APP。",
+  hashtags: ["#LMlookmhee"],
+  tags: ["Lookmhee", "FanMeeting", "Hangzhou"]
+},
+{
+  date: "2026-05-30",
+  who: "Sonya",
+  category: "FanMeeting",
+  title_en: "Sonya Happiness Arrives Hangzhou Fansign",
+  title_th: "งานแฟนไซน์ Sonya Happiness Arrives ที่หางโจว",
+  title_zh: "Sonya 幸福降临 杭州签售会",
+  location_en: "Hangzhou, China",
+  location_th: "หางโจว ประเทศจีน",
+  location_zh: "中国，杭州",
+  notes: "Tickets on sale from 2 May via Xiaomang App.",
+  notes_th: "เปิดขายบัตรวันที่ 2 พฤษภาคม ผ่านแอป Xiaomang",
+  notes_zh: "公告日期：2026年5月2日。购票平台：小芒 APP。",
+  hashtags: ["#SonyaSaranphat"],
+  tags: ["Sonya", "FanMeeting", "Hangzhou"]
+}
  {
   date: "2026-06-06",
   who: "LMSY",
