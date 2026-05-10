@@ -1856,7 +1856,7 @@ const events = [
   notes: "8 to 10 May 2026 (GMT+7)",
   notes_th: "วันที่ 8 ถึง 10 พฤษภาคม 2026 (GMT+7)",
   notes_zh: "2026年5月8日至10日（GMT+7）",
-  hashtags: [""],
+  hashtags: ["foamdreamxlmsy\n\n#FOAMDREAMingWithLMSY"],
   tags: ["LMSY", "Special event", "FoamDream"]
 },
 {
@@ -1872,7 +1872,7 @@ const events = [
   notes: "8 to 10 May 2026 (GMT+7)",
   notes_th: "วันที่ 8 ถึง 10 พฤษภาคม 2026 (GMT+7)",
   notes_zh: "2026年5月8日至10日（GMT+7）",
-  hashtags: [""],
+  hashtags: ["foamdreamxlmsy\n\n#FOAMDREAMingWithLMSY"],
   tags: ["LMSY", "Special event", "FoamDream"]
 },
 {
@@ -1888,7 +1888,7 @@ const events = [
   notes: "8 to 10 May 2026 (GMT+7)",
   notes_th: "วันที่ 8 ถึง 10 พฤษภาคม 2026 (GMT+7)",
   notes_zh: "2026年5月8日至10日（GMT+7）",
-  hashtags: [""],
+  hashtags: ["foamdreamxlmsy\n\n#FOAMDREAMingWithLMSY"],
   tags: ["LMSY", "Special event", "FoamDream"]
 },
 {
@@ -1920,7 +1920,7 @@ const events = [
   notes: "Live starts at 19:00 (GMT+7) via JOOX Music Application.",
   notes_th: "ไลฟ์เริ่มเวลา 19:00 น. (GMT+7) ผ่านแอปพลิเคชัน JOOX Music",
   notes_zh: "直播于19:00 (GMT+7) 开始，通过 JOOX Music 应用程序观看。",
-  hashtags: ["#JOOXLiveChatชิดติดอ่อมxLMSY", "#ChangeArtist"],
+  hashtags: ["#JOOXLiveChatชิดติดอ่อมxLMSY"],
   tags: ["LMSY", "Livestream", "JOOX"]
 },
 {
