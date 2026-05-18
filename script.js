@@ -1940,6 +1940,18 @@ const events = [
   tags: ["LMSY", "Hometown Romance", "Special event"]
 },
 {
+  date: "2026-05-25",
+  who: "LMSY",
+  category: "Livestream",
+  title: "goodbye ตายไม่รู้ตัว",
+  location: "Facebook & YouTube: Workpoint",
+  notes: "Live at 20:05 (GMT+7)",
+  notes_th: "ถ่ายทอดสดเวลา 20:05 น. (GMT+7)",
+  notes_zh: "直播时间为 20:05（GMT+7）",
+  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
+  tags: ["LMSY"]
+},
+{
   date: "2026-05-30",
   who: "LMSY",
   category: "FanMeeting",
