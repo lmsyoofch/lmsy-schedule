@@ -1964,7 +1964,7 @@ const events = [
   notes: "Lookmhee x Sonya duo fansign in Shanghai. Venue is open only to ticket holders and invited guests.",
   notes_th: "งานแฟนไซน์คู่ Lookmhee x Sonya ที่เซี่ยงไฮ้ สถานที่จัดงานเปิดให้เฉพาะผู้ถือบัตรและผู้ที่ได้รับเชิญเท่านั้น",
   notes_zh: "Lookmhee x Sonya 上海双人签售会。活动场地仅限持票者及受邀嘉宾入场。",
-  hashtags: ["#LMSYMay30SHANGHAIDUOFansign", "#LMSY2026FirstChinaDuoF"],
+  hashtags: ["#LMSYMay30SHANGHAIDUOFansign", "#LMSY2026FirstChinaDuoFansign"],
   tags: ["LMSY", "FanMeeting", "Shanghai"]
 },
  {
