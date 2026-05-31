@@ -2003,18 +2003,18 @@ const events = [
 {
   date: "2026-06-27",
   who: "LMSY",
-  category: "AutographSession",
+  category: "FanMeeting",
   title_en: "LMSY Summer Autograph Session",
-  title_th: "งานแจกลายเซ็น LMSY Summer",
+  title_th: "งานแฟนมีตติ้งและแจกลายเซ็น LMSY Summer",
   title_zh: "LMSY Summer 夏日签售会",
   location_en: "China",
   location_th: "ประเทศจีน",
   location_zh: "中国",
   notes: "Theme: 星莓入梦 × 屿山赴夏. Ticket tiers: SVIP ¥1588, VIP ¥1188, Zone A ¥888, Zone B ¥488. Add-on packages available: 2v1 Talk 60s + 2v1 selfie, ¥2188, 30 slots; 2v1 wide-angle group photo + Hitouch, ¥1288, 30 slots.",
   notes_th: "ธีม: 星莓入梦 × 屿山赴夏 ระดับบัตร: SVIP ¥1588, VIP ¥1188, Zone A ¥888, Zone B ¥488 มีแพ็กเกจเสริม: 2v1 Talk 60 วินาที + 2v1 selfie ราคา ¥2188 จำนวน 30 สิทธิ์ และ 2v1 wide-angle group photo + Hitouch ราคา ¥1288 จำนวน 30 สิทธิ์",
-  notes_zh: "主题：星莓入梦 × 屿山赴夏。票档：SVIP ¥1588，VIP ¥1188，Zone A ¥888，Zone B ¥488。叠加包：2v1 talk 60s + 2v1 自拍，¥2188，30份；2v1 宽幅亲签独立得合影 + Hitouch，¥1288，30份。",
+  notes_zh: "主题：星莓入梦 × 屿山赴夏。票档：SVIP ¥1588，VIP ¥1188，Zone A ¥888，Zone B ¥488。叠加包：2v1 Talk 60秒 + 2v1自拍，¥2188，限30份；2v1宽幅合影 + HiTouch，¥1288，限30份。",
   hashtags: [""],
-  tags: ["LMSY", "AutographSession", "China"]
+  tags: ["LMSY", "Fanmeeting", "China"]
 },
 
 ];
