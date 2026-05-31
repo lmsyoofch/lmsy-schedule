@@ -2002,19 +2002,20 @@ const events = [
 },
 {
   date: "2026-06-27",
+  time: "14:00",
   who: "LMSY",
   category: "FanMeeting",
-  title_en: "LMSY Summer Autograph Session",
-  title_th: "งานแฟนมีตติ้งและแจกลายเซ็น LMSY Summer",
-  title_zh: "LMSY Summer 夏日签售会",
+  title_en: "LOOKMHEE & SONYA Summer Signing Event",
+  title_th: "งานแฟนมีตติ้งและแจกลายเซ็น LOOKMHEE & SONYA Summer",
+  title_zh: "LOOKMHEE & SONYA 夏日签售会",
   location_en: "China",
   location_th: "ประเทศจีน",
   location_zh: "中国",
-  notes: "Theme: 星莓入梦 × 屿山赴夏. Ticket tiers: SVIP ¥1588, VIP ¥1188, Zone A ¥888, Zone B ¥488. Add-on packages available: 2v1 Talk 60s + 2v1 selfie, ¥2188, 30 slots; 2v1 wide-angle group photo + Hitouch, ¥1288, 30 slots.",
-  notes_th: "ธีม: 星莓入梦 × 屿山赴夏 ระดับบัตร: SVIP ¥1588, VIP ¥1188, Zone A ¥888, Zone B ¥488 มีแพ็กเกจเสริม: 2v1 Talk 60 วินาที + 2v1 selfie ราคา ¥2188 จำนวน 30 สิทธิ์ และ 2v1 wide-angle group photo + Hitouch ราคา ¥1288 จำนวน 30 สิทธิ์",
-  notes_zh: "主题：星莓入梦 × 屿山赴夏。票档：SVIP ¥1588，VIP ¥1188，Zone A ¥888，Zone B ¥488。叠加包：2v1 Talk 60秒 + 2v1自拍，¥2188，限30份；2v1宽幅合影 + HiTouch，¥1288，限30份。",
+  notes: "Theme: 星莓入梦 × 屿山赴夏. Event starts at 14:00 on 27 June 2026. Ticket sales begin on 29 May 2026 at 11:00. Purchase details will be announced via the official Weibo account.",
+  notes_th: "ธีม: 星莓入梦 × 屿山赴夏 งานเริ่มเวลา 14:00 น. วันที่ 27 มิถุนายน 2026 เปิดจำหน่ายบัตรวันที่ 29 พฤษภาคม 2026 เวลา 11:00 น. รายละเอียดการซื้อจะประกาศผ่าน Weibo อย่างเป็นทางการ",
+  notes_zh: "主题：星莓入梦 × 屿山赴夏。活动时间为2026年6月27日14:00。门票将于2026年5月29日11:00开售。购买详情请留意官方微博后续发布。",
   hashtags: [""],
-  tags: ["LMSY", "Fanmeeting", "China"]
+  tags: ["LMSY", "Fanmeeting"]
 },
 
 ];
