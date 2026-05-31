@@ -1977,11 +1977,10 @@ const events = [
   location_en: "ICONSIAM Hall @ ICONSIAM",
   location_th: "ICONSIAM Hall @ ICONSIAM",
   location_zh: "ICONSIAM Hall @ ICONSIAM",
-  startTime: "",
-  notes_en: "To be announced",
-  notes_th: "สถานที่รอประกาศ",
-  notes_zh: "地点待公布",
-  hashtags: [],
+  notes: "15:00 (GMT+7)",
+  notes_th: "15:00 น. (GMT+7)",
+  notes_zh: "15:00（GMT+7）",
+  hashtags: ["LMSY FANCON DDAY\n\n#LMSYBeMyRomanceFanConPresentedbyหมึกกรุป"],
   tags: ["LMSY", "Fanmeeting"]
 },
 {
