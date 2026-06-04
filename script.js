@@ -1967,6 +1967,25 @@ const events = [
   hashtags: ["#LMSYMay30SHANGHAIDUOFansign", "#LMSY2026FirstChinaDuoFansign"],
   tags: ["LMSY", "FanMeeting", "Shanghai"]
 },
+{
+  date: "2026-06-04",
+  who: "LMSY",
+  category: "Livestream",
+  title: "นิยมคุย (Niyom Kuy) – แม่นี่ที่มีทุกบ้าน",
+  location: "Facebook & Instagram: Ch7HD Entertainment",
+  notes: "Live at 18:00 (GMT+7)",
+  notes_th: "ถ่ายทอดสดเวลา 18:00 น. (GMT+7)",
+  notes_zh: "直播时间为 18:00（GMT+7）",
+  hashtags: [
+    "#นิยมคุย",
+    "#นิยมคุยลูกหมีซอนญ่า",
+    "#ลูกหมีซอนญ่า",
+    "#LMSY",
+    "#LMlookmhee",
+    "#SonyaSaranphat"
+  ],
+  tags: ["LMSY", "Lookmhee", "Sonya"]
+},
  {
   date: "2026-06-06",
   who: "LMSY",
