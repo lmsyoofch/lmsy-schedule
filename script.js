@@ -2019,6 +2019,21 @@ const events = [
   tags: ["LMSY","Fanmeeting", "Macau"]
 },
 {
+  date: "2026-07-18",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "Heart Moved by Her, Year After Year Together",
+  title_zh: "心动于她 岁岁相依",
+  location_en: "Regal Airport Hotel, 1/F Grand Ballroom, Hong Kong",
+  location_th: "โรงแรม Regal Airport Hotel ฮ่องกง ห้องจัดเลี้ยงชั้น 1",
+  location_zh: "中国香港富豪机场酒店一楼宴会大厅",
+  notes: "Event date: 18 July 2026, China time. Ticket sales begin on 10 June 2026 at 18:00, China time. Add-on package sales begin on 10 June 2026 at 19:00, China time. Ticketing channels: 小芒 and 大麦.",
+  notes_th: "วันจัดงาน: 18 กรกฎาคม 2026 ตามเวลาจีน เปิดจำหน่ายบัตรวันที่ 10 มิถุนายน 2026 เวลา 18:00 น. และเปิดจำหน่ายแพ็กเกจเสริมเวลา 19:00 น. ช่องทางจำหน่ายบัตร: 小芒 และ 大麦",
+  notes_zh: "活动时间：2026年7月18日（中国时间）。开售时间：2026年6月10日18:00（中国时间）。叠加包开售时间：2026年6月10日19:00（中国时间）。购票渠道：小芒 / 大麦。",
+  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
+  tags: ["LMSY", "Fanmeeting"]
+},
+{
   date: "2026-06-27",
   time: "14:00",
   who: "LMSY",
