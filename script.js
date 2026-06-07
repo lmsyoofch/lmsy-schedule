@@ -2050,6 +2050,21 @@ const events = [
   hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
   tags: ["LMSY", "Fanmeeting"]
 },
+{
+  date: "2026-07-25",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "Love in Our Sweet Yard Fan Meeting in Kaohsiung",
+  title_zh: "Love in Our Sweet Yard 高雄粉絲見面會",
+  location_en: "Kaohsiung, Taiwan, Crystal Banquet, TAILU Hall, Galaxy Hall",
+  location_th: "เกาสง ไต้หวัน, Crystal Banquet, TAILU Hall, Galaxy Hall",
+  location_zh: "台灣高雄 晶綺盛宴 台鋁館 銀河廳",
+  notes: "Event date: 25 July 2026. Venue: Crystal Banquet, TAILU Hall, Galaxy Hall, Kaohsiung. Ticket tiers: VIP TWD 9,280, A Area TWD 8,080, B Area TWD 6,880 and Love Seat TWD 2,500. Purchasers who complete payment via iBON before 23:59 on 16 July 2026 and do not refund their tickets will be eligible for the raffle. Winners will be announced on the organiser’s social media platforms on 17 July 2026.",
+  notes_th: "วันจัดงาน: 25 กรกฎาคม 2026 สถานที่: Crystal Banquet, TAILU Hall, Galaxy Hall เมืองเกาสง ไต้หวัน ราคาบัตร: VIP TWD 9,280, โซน A TWD 8,080, โซน B TWD 6,880 และ Love Seat TWD 2,500 ผู้ที่ชำระเงินผ่านระบบ iBON ภายในวันที่ 16 กรกฎาคม 2026 เวลา 23:59 น. และไม่ได้คืนบัตร จะมีสิทธิ์ร่วมลุ้นรางวัล รายชื่อผู้โชคดีจะประกาศผ่านช่องทางโซเชียลของผู้จัดในวันที่ 17 กรกฎาคม 2026",
+  notes_zh: "活動日期：2026年7月25日。地點：台灣高雄 晶綺盛宴 台鋁館 銀河廳。票價：VIP區 TWD 9,280、A區 TWD 8,080、B區 TWD 6,880、愛心席 TWD 2,500。凡於2026年7月16日23:59前於 iBON 系統完成購票且未退票者，可參與抽選。中獎名單將於2026年7月17日公布於主辦單位社群平台。",
+  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
+  tags: ["LMSY", "Fanmeeting"]
+},
 
 ];
 
