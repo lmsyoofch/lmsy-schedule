@@ -2078,9 +2078,9 @@ const events = [
   location_en: "Regal Airport Hotel, 1/F Grand Ballroom, Hong Kong",
   location_th: "โรงแรม Regal Airport Hotel ฮ่องกง ห้องจัดเลี้ยงชั้น 1",
   location_zh: "中国香港富豪机场酒店一楼宴会大厅",
-  notes: "Event date: 18 July 2026. Ticket sales begin at 17:00 (GMT+7, Bangkok time) on 10 June 2026. Add-on package sales begin at 18:00 (GMT+7, Bangkok time) on 10 June 2026. Ticketing channels: 小芒 and 大麦.",
-  notes_th: "วันจัดงาน: 18 กรกฎาคม 2026 เปิดจำหน่ายบัตรวันที่ 10 มิถุนายน 2026 เวลา 17:00 น. (เวลาไทย GMT+7) และเปิดจำหน่ายแพ็กเกจเสริมเวลา 18:00 น. (เวลาไทย GMT+7) ช่องทางจำหน่ายบัตร: 小芒 และ 大麦",
-  notes_zh: "活动时间：2026年7月18日。门票将于2026年6月10日17:00（曼谷时间 GMT+7）开售。叠加包将于2026年6月10日18:00（曼谷时间 GMT+7）开售。购票渠道：小芒 / 大麦。",
+  notes: "Event date: 18 July 2026. Ticket sales begin at 17:00 (GMT+7, Bangkok time) on 10 June 2026. Add-on package sales begin at 18:00 (GMT+7, Bangkok time) on 10 June 2026.",
+  notes_th: "วันจัดงาน: 18 กรกฎาคม 2026 เปิดจำหน่ายบัตรวันที่ 10 มิถุนายน 2026 เวลา 17:00 น. (เวลาไทย GMT+7) และเปิดจำหน่ายแพ็กเกจเสริมเวลา 18:00 น. (เวลาไทย GMT+7)",
+  notes_zh: "活动时间：2026年7月18日。门票将于2026年6月10日17:00（曼谷时间 GMT+7）开售。叠加包将于2026年6月10日18:00（曼谷时间 GMT+7）开售",
   hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
   tags: ["LMSY", "Fanmeeting"]
 },
