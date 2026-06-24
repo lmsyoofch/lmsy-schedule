@@ -1949,7 +1949,7 @@ const events = [
   notes_th: "ถ่ายทอดสดเวลา 20:05 น. (GMT+7)",
   notes_zh: "直播时间为 20:05（GMT+7）",
   hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
-  tags: ["LMSY"]
+  tags: ["LMSY","Livestream"]
 },
 {
   date: "2026-05-30",
@@ -1984,7 +1984,7 @@ const events = [
     "#LMlookmhee",
     "#SonyaSaranphat"
   ],
-  tags: ["LMSY"]
+  tags: ["LMSY","Livestream"]
 },
  {
   date: "2026-06-06",
