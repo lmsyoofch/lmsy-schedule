@@ -2070,6 +2070,26 @@ const events = [
   tags: ["LMSY", "Fanmeeting"]
 },
 {
+  date: "2026-07-08",
+  who: "LMSY",
+  category: "Livestream",
+  title: "GrabFood ถูกกว่าเซเวอร์* – ลูกหมี-ซอนญ่า",
+  location: "Instagram: GrabTH",
+  notes: "Exclusive Live at 19:00 (GMT+7)",
+  notes_th: "ไลฟ์พิเศษเวลา 19:00 น. (GMT+7)",
+  notes_zh: "Exclusive Live 直播时间为 19:00（GMT+7）",
+  hashtags: [
+    "#GrabFoodถูกกว่าเซเวอร์",
+    "#GrabFoodxLookmheeSonya",
+    "#GrabTH",
+    "#LMSY",
+    "#ลูกหมีซอนญ่า",
+    "#LMlookmhee",
+    "#SonyaSaranphat"
+  ],
+  tags: ["LMSY", "Livestream", "GrabFood"]
+},
+{
   date: "2026-07-18",
   who: "LMSY",
   category: "FanMeeting",
