@@ -1984,7 +1984,7 @@ const events = [
     "#LMlookmhee",
     "#SonyaSaranphat"
   ],
-  tags: ["LMSY", "Lookmhee", "Sonya"]
+  tags: ["LMSY"]
 },
  {
   date: "2026-06-06",
