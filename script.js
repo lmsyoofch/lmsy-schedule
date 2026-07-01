@@ -2120,6 +2120,31 @@ const events = [
   tags: ["LMSY", "Fanmeeting"]
 },
 {
+  date: "2026-08-08",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "Sweet Honeymoon Party",
+  title_zh: "甜蜜蜜月派对",
+  location_en: "Cube Convention Center, Seoul, South Korea",
+  location_th: "ศูนย์ประชุม CUBE กรุงโซล ประเทศเกาหลีใต้",
+  location_zh: "韩国首尔 CUBE Convention Center",
+  notes: "Event date: 8 August 2026. Ticket sales begin on 6 July 2026 at 17:00 (GMT+7, Bangkok time). Add-on package sales begin on 7 July 2026 at 17:00 (GMT+7, Bangkok time). Ticketing platforms: Damai and MaiSeat.",
+  notes_th: "วันจัดงาน: 8 สิงหาคม 2569 เปิดจำหน่ายบัตรวันที่ 6 กรกฎาคม 2569 เวลา 17:00 น. (เวลาไทย GMT+7) เปิดจำหน่ายแพ็กเกจเสริมวันที่ 7 กรกฎาคม 2569 เวลา 17:00 น. (เวลาไทย GMT+7) ช่องทางจำหน่ายบัตร: Damai และ MaiSeat",
+  notes_zh: "活动日期：2026年8月8日。门票将于2026年7月6日17:00（泰国时间 GMT+7）开售，附加礼包将于2026年7月7日17:00（泰国时间 GMT+7）开售。购票平台：大麦、MaiSeat。",
+  hashtags: [
+    "#SweetHoneymoonParty",
+    "#LMSY",
+    "#Lookmhee",
+    "#Sonya",
+    "#ลูกหมีซอนญ่า"
+  ],
+  tags: [
+    "LMSY",
+    "FanMeeting",
+    "South Korea"
+  ]
+},
+{
   date: "2026-09-01",
   who: "LMSY",
   category: "FanMeeting",
