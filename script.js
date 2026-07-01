@@ -2086,8 +2086,7 @@ const events = [
     "#ลูกหมีซอนญ่า",
     "#LMlookmhee",
     "#SonyaSaranphat"
-  ]
-},
+  ],
   tags: ["LMSY", "Livestream", "GrabFood"]
 },
 {
@@ -2179,7 +2178,7 @@ const events = [
   notes_zh: "预计于2026年11月举行，具体日期、地点及售票详情待公布。",
   hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
   tags: ["LMSY", "Fanmeeting"]
-}
+},
 
 ];
 
