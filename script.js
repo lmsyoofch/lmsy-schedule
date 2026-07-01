@@ -2087,7 +2087,7 @@ const events = [
     "#LMlookmhee",
     "#SonyaSaranphat"
   ]
-}
+},
   tags: ["LMSY", "Livestream", "GrabFood"]
 },
 {
