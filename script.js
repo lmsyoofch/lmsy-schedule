@@ -2978,35 +2978,47 @@ function renderDonutChart(containerId, entries, total) {
   const topShare = Math.round((topType[1] / total) * 100);
 
   const hero = document.createElement("div");
-  hero.className = "dashboard-mix-hero";
+  hero.className = "dashboard-mix-hero type-mix-summary";
   hero.innerHTML = `
-    <span class="mix-hero-label">Top event type</span>
+    <span class="mix-hero-label">Event mix by type</span>
     <strong>${getTypeLabel(topType[0])}</strong>
-    <span>${topType[1]} events · ${topShare}% of this view</span>
+    <span>Leading type with ${topType[1]} event${topType[1] === 1 ? "" : "s"}, ${topShare}% of this view</span>
   `;
   container.appendChild(hero);
 
-  const list = document.createElement("div");
-  list.className = "dashboard-readable-list";
+  const table = document.createElement("div");
+  table.className = "type-mix-table";
 
-  rows.slice(0, 8).forEach(([label, value], index) => {
+  const header = document.createElement("div");
+  header.className = "type-mix-header";
+  header.innerHTML = `
+    <span>Type</span>
+    <span>Events</span>
+    <span>Share</span>
+  `;
+  table.appendChild(header);
+
+  rows.forEach(([label, value]) => {
     const percentage = Math.round((value / total) * 100);
     const row = document.createElement("div");
-    row.className = "readable-row";
+    row.className = "type-mix-row";
     row.innerHTML = `
-      <div class="readable-row-top">
-        <span class="readable-rank">${String(index + 1).padStart(2, "0")}</span>
-        <span class="readable-label">${getTypeLabel(label)}</span>
-        <span class="readable-value">${value} · ${percentage}%</span>
+      <div class="type-mix-name">
+        <span class="type-mix-dot" aria-hidden="true"></span>
+        <span>${getTypeLabel(label)}</span>
       </div>
-      <div class="readable-track" aria-hidden="true">
-        <span class="readable-bar" style="width: ${Math.max(percentage, 4)}%"></span>
+      <div class="type-mix-count">${value}</div>
+      <div class="type-mix-share">
+        <span>${percentage}%</span>
+        <div class="type-mix-track" aria-hidden="true">
+          <span class="type-mix-bar" style="width: ${Math.max(percentage, 5)}%"></span>
+        </div>
       </div>
     `;
-    list.appendChild(row);
+    table.appendChild(row);
   });
 
-  container.appendChild(list);
+  container.appendChild(table);
 }
 
 function renderMonthHeatmap(containerId, monthCounts) {
@@ -3210,8 +3222,6 @@ function renderDashboard() {
 
   renderDonutChart("dashboard-mix-donut", typeEntries, filtered.length);
   renderMonthHeatmap("dashboard-month-heatmap", monthCounts);
-  renderBarChart("dashboard-type-chart", typeEntries, { labelFormatter: getTypeLabel });
-  renderBarChart("dashboard-month-chart", monthEntries, { labelFormatter: monthNameFromIndex });
   renderBarChart("dashboard-year-chart", yearEntries);
   renderList("dashboard-region-list", regionEntries);
   renderUpcomingList(filtered);
