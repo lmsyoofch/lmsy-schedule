@@ -1706,30 +1706,39 @@ h2 {
 }
 
 
-/* Subtle moving light version
-   Keeps the moving background light, but removes the large dashboard blobs. */
+/* Balanced background fix
+   Removes the big visible blue/yellow circles, but keeps a soft moving glow. */
+
 body {
   background:
-    radial-gradient(circle at 18% 0%, rgba(167, 216, 255, 0.18), transparent 28rem),
-    radial-gradient(circle at 86% 8%, rgba(255, 232, 156, 0.08), transparent 24rem),
-    linear-gradient(180deg, #06111F 0%, #071827 46%, #07121F 100%) !important;
+    linear-gradient(180deg, #06111F 0%, #071827 44%, #07121F 100%) !important;
 }
 
+/* Replace circular aurora blobs with a very soft moving diagonal glow */
 body::before {
   display: block !important;
   content: "" !important;
   position: fixed !important;
-  inset: -18% -16% !important;
+  inset: -35% -35% !important;
   z-index: 0 !important;
   pointer-events: none !important;
   background:
-    radial-gradient(circle at 28% 18%, rgba(167, 216, 255, 0.10), transparent 18rem),
-    radial-gradient(circle at 72% 16%, rgba(255, 232, 156, 0.06), transparent 16rem) !important;
-  filter: blur(8px) !important;
-  opacity: 0.34 !important;
-  animation: lmsyAurora 34s ease-in-out infinite alternate !important;
+    linear-gradient(
+      115deg,
+      transparent 0%,
+      transparent 34%,
+      rgba(167, 216, 255, 0.10) 46%,
+      rgba(255, 232, 156, 0.07) 52%,
+      transparent 66%,
+      transparent 100%
+    ) !important;
+  filter: blur(34px) !important;
+  opacity: 0.55 !important;
+  animation: lmsySoftGlowMove 26s ease-in-out infinite alternate !important;
+  transform: translate3d(-8%, -5%, 0) rotate(-8deg) !important;
 }
 
+/* Keep only a bottom fade, no extra circle */
 body::after {
   display: block !important;
   content: "" !important;
@@ -1737,13 +1746,32 @@ body::after {
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  height: 18vh !important;
+  height: 16vh !important;
   z-index: 0 !important;
   pointer-events: none !important;
-  background: linear-gradient(0deg, rgba(7, 18, 31, 0.72), rgba(7, 18, 31, 0)) !important;
+  background: linear-gradient(0deg, rgba(7, 18, 31, 0.70), rgba(7, 18, 31, 0)) !important;
 }
 
-/* Remove decorative dashboard-only blobs */
+@keyframes lmsySoftGlowMove {
+  0% {
+    transform: translate3d(-10%, -6%, 0) rotate(-8deg);
+    opacity: 0.38;
+  }
+  50% {
+    transform: translate3d(4%, 3%, 0) rotate(-6deg);
+    opacity: 0.58;
+  }
+  100% {
+    transform: translate3d(12%, 7%, 0) rotate(-9deg);
+    opacity: 0.42;
+  }
+}
+
+/* Remove dashboard and header decorative circle patches */
+.header::before,
+.header::after,
+.view-tabs::before,
+.view-tabs::after,
 .dashboard-top::before,
 .dashboard-top::after,
 .dashboard-story-card::before,
@@ -1755,27 +1783,25 @@ body::after {
   background: none !important;
 }
 
-/* Keep dashboard cards readable above the subtle movement */
+/* Clean readable glass cards */
+.header,
+.view-tabs,
+.filters,
 .dashboard-top,
+.dashboard-filters,
 .dashboard-story-card,
 .dashboard-spotlight-card,
 .dashboard-panel,
-.insight-card {
-  background: rgba(7, 18, 31, 0.92) !important;
-  border-color: rgba(167, 216, 255, 0.36) !important;
+.insight-card,
+.event-card {
+  background-color: rgba(7, 18, 31, 0.86) !important;
 }
 
-.dashboard-top > *,
-.dashboard-story-card > *,
-.dashboard-spotlight-card > * {
-  position: relative;
-  z-index: 1;
-}
-
+/* Mobile tuning, keep the movement but make it less obvious */
 @media (max-width: 700px) {
   body::before {
-    opacity: 0.24 !important;
-    filter: blur(10px) !important;
+    opacity: 0.42 !important;
+    filter: blur(42px) !important;
   }
 
   .insight-card:hover,
