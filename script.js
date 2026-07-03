@@ -1399,7 +1399,7 @@ const events = [
 {
   date: "2026-03-07",
   who: "LMSY",
-  category: "Special Event",
+  category: "Special event",
   title_en: "Hometown Romance X Ann Oradee Special Event",
   title_th: "คุณแฟนบ้านนอก X แอน อรดี งานพิเศษ",
   title_zh: "Hometown Romance X Ann Oradee 特别活动",
@@ -1409,7 +1409,7 @@ const events = [
   notes_en: "Show Time 22:00 (GMT+7) · Tickets available at venue",
   notes_th: "เวลา 22:00 น. (GMT+7) · บัตรซื้อได้ที่หน้างาน",
   notes_zh: "演出时间 22:00（GMT+7）· 现场购票",
-  tags: ["LMSY", "Special Event"],
+  tags: ["LMSY", "Special event"],
   hashtags: ["HTRM X AnnOradee\n\n#คุณแฟนบ้านนอกXแอนอรดี "]
 },
     {
@@ -1551,7 +1551,7 @@ const events = [
 {
   date: "2026-03-25",
   who: "LMSY",
-  category: "Special Event",
+  category: "Special event",
   title_en: "Hometown Romance X Rabiab Wathasilp Special Event",
   title_th: "คุณแฟนบ้านนอก X ระเบียบวาทะศิลป์ งานพิเศษ",
   title_zh: "Hometown Romance X Rabiab Wathasilp 特别活动",
@@ -1562,7 +1562,7 @@ const events = [
   notes_th: "เทศกาลโคมไฟ เฟสติวัล 2026 · เวลาแสดง 20:30 น. (GMT+7) · บัตรซื้อได้ที่หน้างาน",
   notes_zh: "2026 灯节活动 · 演出时间 20:30（GMT+7）· 现场购票",
   hashtags: ["HTRM X Rabiab Wathasilp\n\n#คุณแฟนบ้านนอกXระเบียบวาทะศิลป์"],
-  tags: ["LMSY", "Special Event"]
+  tags: ["LMSY", "Special event"]
 },
 {
   date: "2026-04-02",
@@ -1835,14 +1835,14 @@ const events = [
 {
   date: "2026-05-03",
   who: "LMSY",
-  category: "Fan event",
+  category: "FanEvent",
   title: "CHANGE FANDAY 2026",
   location: "SCBX Next Tech, 4th Floor, Siam Paragon, Bangkok",
   notes: "Event session with Lookmhee and Sonya starts 11:00 - 11:45 (GMT+7). Wristband registration available 10:15 - 12:30 (GMT+7). Pre-registration via Google Form opened on 19 April 2026 via X @change2561.",
   notes_th: "กิจกรรมกับลูกหมี ซอนญ่า เวลา 11:00 - 11:45 น. (GMT+7) ลงทะเบียนรับสายรัดข้อมือได้เวลา 10:15 - 12:30 น. (GMT+7) และเปิดลงทะเบียนล่วงหน้าทาง Google Form วันที่ 19 เมษายน 2026 ทาง X @change2561",
   notes_zh: "Lookmhee 与 Sonya 活动时间为 11:00 - 11:45（GMT+7），手环注册时间为 10:15 - 12:30（GMT+7），预注册已于 2026年4月19日 通过 X @change2561 开放",
   hashtags: ["1ST FANDAY WT LMSY", "#CHANGEFANDAY2026"],
-  tags: ["LMSY", "Fan event", "CHANGE2561", " #CHANGEFANDAY2026"]
+  tags: ["LMSY", "FanEvent", "CHANGE2561", " #CHANGEFANDAY2026"]
 },
 {
   date: "2026-05-08",
