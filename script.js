@@ -2976,51 +2976,159 @@ function renderDonutChart(containerId, entries, total) {
 
   const topType = rows[0];
   const topShare = Math.round((topType[1] / total) * 100);
+  const palette = [
+    "#FFE89C",
+    "#A7D8FF",
+    "#B9F6CA",
+    "#FFB7D5",
+    "#D7C7FF",
+    "#FFC68A",
+    "#9FE7FF",
+    "#F6F9FF"
+  ];
 
-  const hero = document.createElement("div");
-  hero.className = "dashboard-mix-hero type-mix-summary";
-  hero.innerHTML = `
-    <span class="mix-hero-label">Event mix by type</span>
-    <strong>${getTypeLabel(topType[0])}</strong>
-    <span>Leading type with ${topType[1]} event${topType[1] === 1 ? "" : "s"}, ${topShare}% of this view</span>
+  const chartWrap = document.createElement("div");
+  chartWrap.className = "dashboard-pie-wrap";
+
+  const pieBox = document.createElement("div");
+  pieBox.className = "dashboard-pie-box";
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 220 220");
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Event mix by type pie chart");
+  svg.classList.add("dashboard-pie");
+
+  const centre = document.createElement("div");
+  centre.className = "dashboard-pie-centre";
+  centre.innerHTML = `
+    <span class="pie-centre-number">${total}</span>
+    <span class="pie-centre-label">Events</span>
   `;
-  container.appendChild(hero);
 
-  const table = document.createElement("div");
-  table.className = "type-mix-table";
+  const tooltip = document.createElement("div");
+  tooltip.className = "pie-tooltip";
+  tooltip.setAttribute("role", "status");
+  tooltip.hidden = true;
 
-  const header = document.createElement("div");
-  header.className = "type-mix-header";
-  header.innerHTML = `
-    <span>Type</span>
-    <span>Events</span>
-    <span>Share</span>
+  const selectedLabel = document.createElement("div");
+  selectedLabel.className = "pie-selected-label";
+  selectedLabel.innerHTML = `
+    <span>Tap or hover a slice</span>
+    <strong>${getTypeLabel(topType[0])}: ${topType[1]} event${topType[1] === 1 ? "" : "s"} (${topShare}%)</strong>
   `;
-  table.appendChild(header);
 
-  rows.forEach(([label, value]) => {
-    const percentage = Math.round((value / total) * 100);
-    const row = document.createElement("div");
-    row.className = "type-mix-row";
-    row.innerHTML = `
-      <div class="type-mix-name">
-        <span class="type-mix-dot" aria-hidden="true"></span>
-        <span>${getTypeLabel(label)}</span>
-      </div>
-      <div class="type-mix-count">${value}</div>
-      <div class="type-mix-share">
-        <span>${percentage}%</span>
-        <div class="type-mix-track" aria-hidden="true">
-          <span class="type-mix-bar" style="width: ${Math.max(percentage, 5)}%"></span>
-        </div>
-      </div>
+  function polarToCartesian(cx, cy, radius, angleInDegrees) {
+    const angleInRadians = (angleInDegrees - 90) * Math.PI / 180.0;
+    return {
+      x: cx + (radius * Math.cos(angleInRadians)),
+      y: cy + (radius * Math.sin(angleInRadians))
+    };
+  }
+
+  function describeArc(cx, cy, radius, startAngle, endAngle) {
+    const start = polarToCartesian(cx, cy, radius, endAngle);
+    const end = polarToCartesian(cx, cy, radius, startAngle);
+    const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+    return [
+      "M", cx, cy,
+      "L", start.x, start.y,
+      "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y,
+      "Z"
+    ].join(" ");
+  }
+
+  function setSelected(slice, label, value, percentage) {
+    svg.querySelectorAll(".pie-slice").forEach(el => el.classList.remove("is-selected"));
+    slice.classList.add("is-selected");
+    centre.innerHTML = `
+      <span class="pie-centre-number">${percentage}%</span>
+      <span class="pie-centre-label">${getTypeLabel(label)}</span>
     `;
-    table.appendChild(row);
+    selectedLabel.innerHTML = `
+      <span>Selected type</span>
+      <strong>${getTypeLabel(label)}: ${value} event${value === 1 ? "" : "s"} (${percentage}%)</strong>
+    `;
+  }
+
+  function showTooltip(event, label, value, percentage) {
+    tooltip.innerHTML = `<strong>${getTypeLabel(label)}</strong><span>${value} event${value === 1 ? "" : "s"} · ${percentage}% of this view</span>`;
+    tooltip.hidden = false;
+
+    const box = pieBox.getBoundingClientRect();
+    const clientX = event.clientX || (box.left + box.width / 2);
+    const clientY = event.clientY || (box.top + box.height / 2);
+    const left = Math.min(Math.max(clientX - box.left, 64), box.width - 64);
+    const top = Math.min(Math.max(clientY - box.top, 48), box.height - 24);
+    tooltip.style.left = `${left}px`;
+    tooltip.style.top = `${top}px`;
+  }
+
+  function hideTooltip() {
+    tooltip.hidden = true;
+  }
+
+  let currentAngle = 0;
+  rows.forEach(([label, value], index) => {
+    const angle = (value / total) * 360;
+    const endAngle = currentAngle + angle;
+    const percentage = Math.round((value / total) * 100);
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", describeArc(110, 110, 98, currentAngle, endAngle));
+    path.setAttribute("fill", palette[index % palette.length]);
+    path.setAttribute("tabindex", "0");
+    path.setAttribute("role", "button");
+    path.setAttribute("aria-label", `${getTypeLabel(label)}, ${value} event${value === 1 ? "" : "s"}, ${percentage}%`);
+    path.classList.add("pie-slice");
+    if (index === 0) path.classList.add("is-selected");
+
+    path.addEventListener("mouseenter", event => showTooltip(event, label, value, percentage));
+    path.addEventListener("mousemove", event => showTooltip(event, label, value, percentage));
+    path.addEventListener("mouseleave", hideTooltip);
+    path.addEventListener("focus", event => {
+      setSelected(path, label, value, percentage);
+      showTooltip(event, label, value, percentage);
+    });
+    path.addEventListener("blur", hideTooltip);
+    path.addEventListener("click", event => {
+      setSelected(path, label, value, percentage);
+      showTooltip(event, label, value, percentage);
+    });
+
+    svg.appendChild(path);
+    currentAngle = endAngle;
   });
 
-  container.appendChild(table);
-}
+  const legend = document.createElement("div");
+  legend.className = "pie-legend";
 
+  rows.forEach(([label, value], index) => {
+    const percentage = Math.round((value / total) * 100);
+    const item = document.createElement("button");
+    item.type = "button";
+    item.className = "pie-legend-item";
+    item.innerHTML = `
+      <span class="pie-legend-dot" style="--pie-dot:${palette[index % palette.length]}"></span>
+      <span class="pie-legend-name">${getTypeLabel(label)}</span>
+      <strong>${value}</strong>
+      <span>${percentage}%</span>
+    `;
+    item.addEventListener("click", () => {
+      const slice = svg.querySelectorAll(".pie-slice")[index];
+      setSelected(slice, label, value, percentage);
+    });
+    legend.appendChild(item);
+  });
+
+  pieBox.appendChild(svg);
+  pieBox.appendChild(centre);
+  pieBox.appendChild(tooltip);
+  chartWrap.appendChild(pieBox);
+  chartWrap.appendChild(legend);
+  container.appendChild(chartWrap);
+  container.appendChild(selectedLabel);
+}
 function renderMonthHeatmap(containerId, monthCounts) {
   const container = document.getElementById(containerId);
   if (!container) return;
