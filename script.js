@@ -2600,7 +2600,7 @@ function getEventRegion(ev) {
   // entries that already have a country, for example Spain, Mexico or Brazil.
   const regionText = [titleText, locationText].join(" ").toLowerCase();
 
-  if (/bangkok|thailand|chiang mai|kanchanaburi|qsncc|iconsiam|emsphere|emquartier|samyam|samyan|siam|paragon|central|grammy|bitec|กรุงเทพ|ไทย|曼谷|泰国|泰國|清迈|清邁/.test(regionText)) {
+  if (/bangkok|thailand|chiang mai|kanchanaburi|pathum thani|khlong luang|nava nakorn|workpoint|ptt pump|qsncc|iconsiam|emsphere|emquartier|samyam|samyan|siam|paragon|central|grammy|bitec|กรุงเทพ|ไทย|ปทุมธานี|曼谷|泰国|泰國|清迈|清邁/.test(regionText)) {
     return "Thailand";
   }
 
@@ -2624,7 +2624,7 @@ function getEventRegion(ev) {
     return "Online";
   }
 
-  if (!text || /to be announced|tba|รอประกาศ|待公布|แจ้งภายหลัง/.test(text)) return "TBA";
+  if (!locationText.trim() || !regionText.trim() || /multiple sessions|multiple interviews|to be announced|tba|รอประกาศ|待公布|แจ้งภายหลัง|หลายช่วงเวลา|หลายสื่อสัมภาษณ์|多场次|多家媒体采访/.test(text)) return "TBA";
 
   return "Other";
 }
