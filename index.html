@@ -40,45 +40,128 @@
       </header>
 
       <main>
-        <section class="filters" aria-label="Filters">
-          <div class="filter-group">
-            <label for="filter-year">Year</label>
-            <select id="filter-year"></select>
-          </div>
+        <nav class="view-tabs" aria-label="Page tabs">
+          <button type="button" class="view-tab active" data-view="schedule" aria-controls="schedule-view" aria-selected="true">
+            Schedule
+          </button>
+          <button type="button" class="view-tab" data-view="dashboard" aria-controls="dashboard-view" aria-selected="false">
+            Dashboard
+          </button>
+        </nav>
 
-          <div class="filter-group">
-            <label for="filter-type">Type</label>
-            <select id="filter-type">
-              <option value="all">All</option>
-            </select>
-          </div>
+        <section id="schedule-view" class="view-panel active" aria-label="Schedule view">
+          <section class="filters" aria-label="Filters">
+            <div class="filter-group">
+              <label for="filter-year">Year</label>
+              <select id="filter-year"></select>
+            </div>
 
-          <div class="filter-group">
-            <label for="filter-month">Month</label>
-            <select id="filter-month">
-              <option value="all">All</option>
-            </select>
-          </div>
+            <div class="filter-group">
+              <label for="filter-type">Type</label>
+              <select id="filter-type">
+                <option value="all">All</option>
+              </select>
+            </div>
+
+            <div class="filter-group">
+              <label for="filter-month">Month</label>
+              <select id="filter-month">
+                <option value="all">All</option>
+              </select>
+            </div>
+          </section>
+
+          <section id="schedule" aria-live="polite"></section>
         </section>
 
-        <section id="schedule" aria-live="polite"></section>
+        <section id="dashboard-view" class="view-panel" aria-label="Dashboard view" hidden>
+          <section class="dashboard-top">
+            <div>
+              <p class="dashboard-kicker">Insights</p>
+              <h2 class="dashboard-title">LMSY Event Dashboard</h2>
+              <p class="dashboard-description">
+                Explore event patterns by year, type, month, person and region.
+              </p>
+            </div>
+            <button type="button" id="dashboard-filter-toggle" class="dashboard-filter-toggle" aria-expanded="false" aria-controls="dashboard-filter-panel">
+              Filter
+            </button>
+          </section>
+
+          <section id="dashboard-filter-panel" class="dashboard-filters" aria-label="Dashboard filters" hidden>
+            <div class="filter-group">
+              <label for="dashboard-year">Year</label>
+              <select id="dashboard-year"></select>
+            </div>
+
+            <div class="filter-group">
+              <label for="dashboard-type">Type</label>
+              <select id="dashboard-type"></select>
+            </div>
+
+            <div class="filter-group">
+              <label for="dashboard-month">Month</label>
+              <select id="dashboard-month"></select>
+            </div>
+
+            <div class="filter-group">
+              <label for="dashboard-who">Person</label>
+              <select id="dashboard-who"></select>
+            </div>
+
+            <div class="filter-group">
+              <label for="dashboard-region">Region</label>
+              <select id="dashboard-region"></select>
+            </div>
+
+            <button type="button" id="dashboard-reset" class="dashboard-reset">Reset</button>
+          </section>
+
+          <section id="dashboard-summary" class="dashboard-summary" aria-live="polite"></section>
+
+          <section class="dashboard-grid" aria-label="Dashboard charts">
+            <article class="dashboard-panel">
+              <h3>Events by type</h3>
+              <div id="dashboard-type-chart" class="mini-chart"></div>
+            </article>
+
+            <article class="dashboard-panel">
+              <h3>Events by month</h3>
+              <div id="dashboard-month-chart" class="mini-chart"></div>
+            </article>
+
+            <article class="dashboard-panel">
+              <h3>Events by year</h3>
+              <div id="dashboard-year-chart" class="mini-chart"></div>
+            </article>
+
+            <article class="dashboard-panel">
+              <h3>Top regions</h3>
+              <div id="dashboard-region-list" class="dashboard-list"></div>
+            </article>
+          </section>
+
+          <section class="dashboard-panel dashboard-wide-panel">
+            <h3>Next upcoming events in this view</h3>
+            <div id="dashboard-upcoming" class="dashboard-list"></div>
+          </section>
+        </section>
       </main>
 
       <footer class="footer">
         <p>Fan project built with 💛🩵 for the LMSY family.</p>
-       <p class="hashtag-title">Search hashtags:</p>
-<div class="footer-hashtags">
-  <div class="hashtag-row">
-    <a href="https://x.com/search?q=%23ลูกหมีซอนญ่า&src=hashtag_click" target="_blank">#ลูกหมีซอนญ่า</a>
-    <a href="https://x.com/hashtag/LMSY" target="_blank">#LMSY</a>
-  </div>
-  <div class="hashtag-row">
-    <a href="https://x.com/hashtag/LMlookmhee" target="_blank">#LMlookmhee</a>
-    <a href="https://x.com/hashtag/SonyaSaranphat" target="_blank">#SonyaSaranphat</a>
-    <a href="https://x.com/hashtag/Sonyasarann" target="_blank">#Sonyasarann</a>
-  </div>
-</div>
-</div>
+        <p class="hashtag-title">Search hashtags:</p>
+        <div class="footer-hashtags">
+          <div class="hashtag-row">
+            <a href="https://x.com/search?q=%23ลูกหมีซอนญ่า&amp;src=hashtag_click" target="_blank" rel="noopener noreferrer">#ลูกหมีซอนญ่า</a>
+            <a href="https://x.com/hashtag/LMSY" target="_blank" rel="noopener noreferrer">#LMSY</a>
+          </div>
+          <div class="hashtag-row">
+            <a href="https://x.com/hashtag/LMlookmhee" target="_blank" rel="noopener noreferrer">#LMlookmhee</a>
+            <a href="https://x.com/hashtag/SonyaSaranphat" target="_blank" rel="noopener noreferrer">#SonyaSaranphat</a>
+            <a href="https://x.com/hashtag/Sonyasarann" target="_blank" rel="noopener noreferrer">#Sonyasarann</a>
+          </div>
+        </div>
       </footer>
     </div>
 

@@ -4,6 +4,7 @@
 */
 
 let currentLang = "en";
+let currentView = "schedule";
 function getBangkokTodayTomorrowKeys() {
   const fmt = new Intl.DateTimeFormat("en-CA", {
     timeZone: "Asia/Bangkok",
@@ -2512,6 +2513,525 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
   });
 }
 
+
+
+/* =========================
+   DASHBOARD HELPERS
+   ========================= */
+
+const dashboardTypeOrder = [
+  "FanMeeting",
+  "Fansign",
+  "FanEvent",
+  "Brand",
+  "Livestream",
+  "Drama",
+  "Award",
+  "Special event"
+];
+
+const dashboardTypeLabels = {
+  FanMeeting: "Fan meeting",
+  FanEvent: "Fan event",
+  Fansign: "Fansign",
+  Brand: "Brand",
+  Livestream: "Livestream",
+  Drama: "Drama",
+  Award: "Award",
+  "Special event": "Special event"
+};
+
+function getTypeLabel(type) {
+  return dashboardTypeLabels[type] || type || "Unknown";
+}
+
+function matchesEventType(ev, selectedType) {
+  if (selectedType === "all") return true;
+  return (
+    ev.category === selectedType ||
+    (selectedType === "Fansign" && hasTag(ev, "fansign"))
+  );
+}
+
+function getEventPerson(ev) {
+  const who = String(ev.who || "").trim();
+  if (who === "LM") return "Lookmhee";
+  if (who === "SY") return "Sonya";
+  if (who === "LMSY") return "LMSY";
+  if (who.toLowerCase().includes("lookmhee")) return "Lookmhee";
+  if (who.toLowerCase().includes("sonya")) return "Sonya";
+  return who || "Unknown";
+}
+
+function getStableText(ev, key) {
+  return (
+    ev[key + "_en"] ||
+    ev[key] ||
+    ev[key + "_th"] ||
+    ev[key + "_zh"] ||
+    ""
+  );
+}
+
+function getEventRegion(ev) {
+  const text = [
+    getStableText(ev, "title"),
+    getStableText(ev, "location"),
+    getStableText(ev, "notes"),
+    getStableText(ev, "details")
+  ].join(" ").toLowerCase();
+
+  if (!text || /to be announced|tba|รอประกาศ|待公布/.test(text)) return "TBA";
+
+  if (/taobao|weidian|iqiyi|instagram|youtube|facebook|tiktok|online|live broadcast|live/.test(text)) {
+    if (!/bangkok|thailand|china|hong kong|macau|macao|taipei|taiwan|vietnam|philippines|singapore|cambodia|korea|seoul/.test(text)) {
+      return "Online";
+    }
+  }
+
+  if (/hong kong|香港/.test(text)) return "Hong Kong";
+  if (/macau|macao|澳门|澳門/.test(text)) return "Macau";
+  if (/taipei|taiwan|台湾|台灣/.test(text)) return "Taiwan";
+  if (/vietnam|เวียดนาม|越南/.test(text)) return "Vietnam";
+  if (/philippines|manila|ฟิลิปปินส์|菲律宾/.test(text)) return "Philippines";
+  if (/singapore|สิงคโปร์|新加坡/.test(text)) return "Singapore";
+  if (/cambodia|phnom penh|กัมพูชา|柬埔寨/.test(text)) return "Cambodia";
+  if (/korea|seoul|เกาหลี|韩国|韓國/.test(text)) return "Korea";
+
+  if (/china|guangzhou|shanghai|chongqing|chengdu|nanning|wuhan|fuzhou|hangzhou|tianjin|beijing|中国|中國|广州|上海|重庆|成都|南宁|武汉|福州|杭州|天津|北京/.test(text)) {
+    return "China";
+  }
+
+  if (/bangkok|thailand|chiang mai|kanchanaburi|qsncc|iconsiam|emsphere|emquartier|samyam|samyan|siam|paragon|central|grammy|bitec|กรุงเทพ|ไทย|曼谷|泰国|泰國|清迈|清邁/.test(text)) {
+    return "Thailand";
+  }
+
+  return "Other";
+}
+
+function countBy(items, getKey) {
+  return items.reduce((acc, item) => {
+    const key = getKey(item) || "Unknown";
+    acc[key] = (acc[key] || 0) + 1;
+    return acc;
+  }, {});
+}
+
+function topEntry(counts) {
+  const entries = Object.entries(counts);
+  if (!entries.length) return ["None", 0];
+  return entries.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0];
+}
+
+function monthNameFromIndex(monthIndex) {
+  const d = new Date(2026, Number(monthIndex), 1);
+  return d.toLocaleString("en-GB", { month: "short" });
+}
+
+function formatDashboardMonthKey(monthKey) {
+  if (!monthKey || monthKey === "None") return "None";
+  const [year, month] = monthKey.split("-");
+  return `${monthNameFromIndex(Number(month) - 1)} ${year}`;
+}
+
+function formatDashboardDate(dateString) {
+  return toBangkokDate(dateString).toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric"
+  });
+}
+
+function getDashboardFilters() {
+  return {
+    year: document.getElementById("dashboard-year")?.value || "all",
+    type: document.getElementById("dashboard-type")?.value || "all",
+    month: document.getElementById("dashboard-month")?.value || "all",
+    who: document.getElementById("dashboard-who")?.value || "all",
+    region: document.getElementById("dashboard-region")?.value || "all"
+  };
+}
+
+function getFilteredDashboardEvents() {
+  const filters = getDashboardFilters();
+
+  return [...events]
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .filter(ev => {
+      const dateObj = toBangkokDate(ev.date);
+      const year = dateObj.getFullYear().toString();
+      const month = String(dateObj.getMonth());
+      const who = getEventPerson(ev);
+      const region = getEventRegion(ev);
+
+      return (
+        (filters.year === "all" || year === filters.year) &&
+        matchesEventType(ev, filters.type) &&
+        (filters.month === "all" || month === filters.month) &&
+        (filters.who === "all" || who === filters.who) &&
+        (filters.region === "all" || region === filters.region)
+      );
+    });
+}
+
+function clearElement(el) {
+  if (el) el.innerHTML = "";
+}
+
+function createInsightCard(label, value, note) {
+  const card = document.createElement("article");
+  card.className = "insight-card";
+
+  const labelEl = document.createElement("p");
+  labelEl.className = "insight-label";
+  labelEl.textContent = label;
+
+  const valueEl = document.createElement("p");
+  valueEl.className = "insight-value";
+  valueEl.textContent = value;
+
+  const noteEl = document.createElement("p");
+  noteEl.className = "insight-note";
+  noteEl.textContent = note;
+
+  card.appendChild(labelEl);
+  card.appendChild(valueEl);
+  card.appendChild(noteEl);
+  return card;
+}
+
+function renderInsightCards(items) {
+  const summary = document.getElementById("dashboard-summary");
+  if (!summary) return;
+  clearElement(summary);
+
+  items.forEach(item => {
+    summary.appendChild(createInsightCard(item.label, item.value, item.note));
+  });
+}
+
+function renderBarChart(containerId, entries, options = {}) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  clearElement(container);
+
+  const rows = entries.filter(([, value]) => value > 0);
+  if (!rows.length) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = "No data for this filter.";
+    container.appendChild(p);
+    return;
+  }
+
+  const max = Math.max(...rows.map(([, value]) => value));
+
+  rows.forEach(([label, value]) => {
+    const row = document.createElement("div");
+    row.className = "chart-row";
+
+    const labelEl = document.createElement("div");
+    labelEl.className = "chart-label";
+    labelEl.textContent = options.labelFormatter ? options.labelFormatter(label) : label;
+
+    const track = document.createElement("div");
+    track.className = "chart-track";
+
+    const bar = document.createElement("div");
+    bar.className = "chart-bar";
+    bar.style.width = `${Math.max((value / max) * 100, 4)}%`;
+    track.appendChild(bar);
+
+    const valueEl = document.createElement("div");
+    valueEl.className = "chart-value";
+    valueEl.textContent = value;
+
+    row.appendChild(labelEl);
+    row.appendChild(track);
+    row.appendChild(valueEl);
+    container.appendChild(row);
+  });
+}
+
+function renderList(containerId, entries, options = {}) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  clearElement(container);
+
+  const rows = entries.filter(([, value]) => value > 0);
+  if (!rows.length) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = "No data for this filter.";
+    container.appendChild(p);
+    return;
+  }
+
+  rows.forEach(([label, value]) => {
+    const row = document.createElement("div");
+    row.className = "list-row";
+
+    const labelEl = document.createElement("div");
+    labelEl.className = "list-label";
+    labelEl.textContent = options.labelFormatter ? options.labelFormatter(label) : label;
+
+    const spacer = document.createElement("div");
+    spacer.className = "chart-track";
+    const bar = document.createElement("div");
+    bar.className = "chart-bar";
+    const max = options.max || Math.max(...rows.map(([, v]) => v));
+    bar.style.width = `${Math.max((value / max) * 100, 4)}%`;
+    spacer.appendChild(bar);
+
+    const valueEl = document.createElement("div");
+    valueEl.className = "list-value";
+    valueEl.textContent = value;
+
+    row.appendChild(labelEl);
+    row.appendChild(spacer);
+    row.appendChild(valueEl);
+    container.appendChild(row);
+  });
+}
+
+function renderUpcomingList(filtered) {
+  const container = document.getElementById("dashboard-upcoming");
+  if (!container) return;
+  clearElement(container);
+
+  const { todayKey } = getBangkokTodayTomorrowKeys();
+  const upcoming = filtered
+    .filter(ev => ev.date >= todayKey)
+    .sort((a, b) => a.date.localeCompare(b.date))
+    .slice(0, 5);
+
+  if (!upcoming.length) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = "No upcoming events in this view.";
+    container.appendChild(p);
+    return;
+  }
+
+  upcoming.forEach(ev => {
+    const row = document.createElement("div");
+    row.className = "upcoming-row";
+
+    const dateEl = document.createElement("div");
+    dateEl.className = "upcoming-date";
+    dateEl.textContent = formatDashboardDate(ev.date);
+
+    const middle = document.createElement("div");
+    const title = document.createElement("div");
+    title.className = "upcoming-title";
+    title.textContent = pickLang(ev, "title");
+
+    const meta = document.createElement("div");
+    meta.className = "upcoming-meta";
+    const location = pickLang(ev, "location") || getEventRegion(ev);
+    meta.textContent = location;
+
+    middle.appendChild(title);
+    middle.appendChild(meta);
+
+    const typeEl = document.createElement("div");
+    typeEl.className = "upcoming-type";
+    typeEl.textContent = getTypeLabel(getDisplayType(ev));
+
+    row.appendChild(dateEl);
+    row.appendChild(middle);
+    row.appendChild(typeEl);
+    container.appendChild(row);
+  });
+}
+
+function renderDashboard() {
+  const dashboardView = document.getElementById("dashboard-view");
+  if (!dashboardView) return;
+
+  const filtered = getFilteredDashboardEvents();
+  const { todayKey } = getBangkokTodayTomorrowKeys();
+
+  const upcomingCount = filtered.filter(ev => ev.date >= todayKey).length;
+  const typeCounts = countBy(filtered, ev => getDisplayType(ev));
+  const regionCounts = countBy(filtered, ev => getEventRegion(ev));
+  const regionCountsForInsight = Object.fromEntries(
+    Object.entries(regionCounts).filter(([region]) => region !== "TBA")
+  );
+  const yearCounts = countBy(filtered, ev => toBangkokDate(ev.date).getFullYear().toString());
+  const monthCounts = countBy(filtered, ev => String(toBangkokDate(ev.date).getMonth()));
+  const yearMonthCounts = countBy(filtered, ev => ev.date.slice(0, 7));
+
+  const [topTypeName, topTypeCount] = topEntry(typeCounts);
+  const [topRegionName, topRegionCount] = topEntry(regionCountsForInsight);
+  const [busiestMonthKey, busiestMonthCount] = topEntry(yearMonthCounts);
+
+  const regionsCovered = Object.keys(regionCountsForInsight).length;
+
+  renderInsightCards([
+    {
+      label: "Total events",
+      value: String(filtered.length),
+      note: "Matching current dashboard filters"
+    },
+    {
+      label: "Upcoming",
+      value: String(upcomingCount),
+      note: "From today onwards, Bangkok time"
+    },
+    {
+      label: "Top type",
+      value: topTypeCount ? getTypeLabel(topTypeName) : "None",
+      note: topTypeCount ? `${topTypeCount} event${topTypeCount === 1 ? "" : "s"}` : "No matching events"
+    },
+    {
+      label: "Busiest month",
+      value: busiestMonthCount ? formatDashboardMonthKey(busiestMonthKey) : "None",
+      note: busiestMonthCount ? `${busiestMonthCount} event${busiestMonthCount === 1 ? "" : "s"}` : "No matching events"
+    },
+    {
+      label: "Top region",
+      value: topRegionCount ? topRegionName : "None",
+      note: topRegionCount ? `${topRegionCount} event${topRegionCount === 1 ? "" : "s"}` : "No matching events"
+    },
+    {
+      label: "Regions covered",
+      value: String(regionsCovered),
+      note: "Excluding TBA entries"
+    }
+  ]);
+
+  const typeEntries = dashboardTypeOrder
+    .filter(type => Object.prototype.hasOwnProperty.call(typeCounts, type))
+    .map(type => [type, typeCounts[type]])
+    .concat(
+      Object.entries(typeCounts).filter(([type]) => !dashboardTypeOrder.includes(type))
+    );
+
+  const monthEntries = Array.from({ length: 12 }, (_, index) => [String(index), monthCounts[String(index)] || 0]);
+  const yearEntries = Object.entries(yearCounts).sort((a, b) => a[0].localeCompare(b[0]));
+  const regionEntries = Object.entries(regionCounts)
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .slice(0, 8);
+
+  renderBarChart("dashboard-type-chart", typeEntries, { labelFormatter: getTypeLabel });
+  renderBarChart("dashboard-month-chart", monthEntries, { labelFormatter: monthNameFromIndex });
+  renderBarChart("dashboard-year-chart", yearEntries);
+  renderList("dashboard-region-list", regionEntries);
+  renderUpcomingList(filtered);
+}
+
+function addSelectOption(select, value, label) {
+  const opt = document.createElement("option");
+  opt.value = value;
+  opt.textContent = label;
+  select.appendChild(opt);
+}
+
+function populateDashboardFilters() {
+  const yearSelect = document.getElementById("dashboard-year");
+  const typeSelect = document.getElementById("dashboard-type");
+  const monthSelect = document.getElementById("dashboard-month");
+  const whoSelect = document.getElementById("dashboard-who");
+  const regionSelect = document.getElementById("dashboard-region");
+
+  if (!yearSelect || !typeSelect || !monthSelect || !whoSelect || !regionSelect) return;
+
+  [yearSelect, typeSelect, monthSelect, whoSelect, regionSelect].forEach(select => {
+    select.innerHTML = "";
+  });
+
+  addSelectOption(yearSelect, "all", "All");
+  [...new Set(events.map(ev => ev.date.substring(0, 4)))].sort().forEach(year => {
+    addSelectOption(yearSelect, year, year);
+  });
+
+  addSelectOption(typeSelect, "all", "All");
+  const availableTypes = [...new Set(events.map(ev => getDisplayType(ev)))];
+  dashboardTypeOrder.forEach(type => {
+    if (availableTypes.includes(type)) addSelectOption(typeSelect, type, getTypeLabel(type));
+  });
+  availableTypes
+    .filter(type => !dashboardTypeOrder.includes(type))
+    .sort()
+    .forEach(type => addSelectOption(typeSelect, type, getTypeLabel(type)));
+
+  addSelectOption(monthSelect, "all", "All");
+  Array.from({ length: 12 }, (_, index) => {
+    addSelectOption(monthSelect, String(index), monthNameFromIndex(index));
+  });
+
+  addSelectOption(whoSelect, "all", "All");
+  ["LMSY", "Lookmhee", "Sonya"]
+    .filter(person => events.some(ev => getEventPerson(ev) === person))
+    .forEach(person => addSelectOption(whoSelect, person, person));
+
+  addSelectOption(regionSelect, "all", "All");
+  [...new Set(events.map(ev => getEventRegion(ev)))]
+    .sort((a, b) => a.localeCompare(b))
+    .forEach(region => addSelectOption(regionSelect, region, region));
+}
+
+function initDashboard() {
+  const dashboardView = document.getElementById("dashboard-view");
+  if (!dashboardView) return;
+
+  populateDashboardFilters();
+
+  const filterPanel = document.getElementById("dashboard-filter-panel");
+  const filterToggle = document.getElementById("dashboard-filter-toggle");
+  const resetBtn = document.getElementById("dashboard-reset");
+  const filterSelects = dashboardView.querySelectorAll("select");
+
+  filterToggle?.addEventListener("click", () => {
+    if (!filterPanel) return;
+    const isOpen = !filterPanel.hasAttribute("hidden");
+    filterPanel.toggleAttribute("hidden", isOpen);
+    filterToggle.setAttribute("aria-expanded", String(!isOpen));
+  });
+
+  filterSelects.forEach(select => {
+    select.addEventListener("change", renderDashboard);
+  });
+
+  resetBtn?.addEventListener("click", () => {
+    filterSelects.forEach(select => {
+      select.value = "all";
+    });
+    renderDashboard();
+  });
+
+  renderDashboard();
+}
+
+function initViewTabs() {
+  const tabs = document.querySelectorAll(".view-tab");
+  const panels = document.querySelectorAll(".view-panel");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const targetView = tab.getAttribute("data-view");
+      if (!targetView) return;
+
+      currentView = targetView;
+
+      tabs.forEach(btn => {
+        const isActive = btn === tab;
+        btn.classList.toggle("active", isActive);
+        btn.setAttribute("aria-selected", String(isActive));
+      });
+
+      panels.forEach(panel => {
+        const shouldShow = panel.id === `${targetView}-view`;
+        panel.classList.toggle("active", shouldShow);
+        panel.toggleAttribute("hidden", !shouldShow);
+      });
+
+      if (currentView === "dashboard") renderDashboard();
+    });
+  });
+}
+
 /* =========================
    FILTERS
    ========================= */
@@ -2673,11 +3193,14 @@ function initLanguageToggle() {
         typeSelect ? typeSelect.value : "all",
         monthSelect ? monthSelect.value : "all"
       );
+      renderDashboard();
     });
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  initViewTabs();
   initFilters();
+  initDashboard();
   initLanguageToggle();
 });
