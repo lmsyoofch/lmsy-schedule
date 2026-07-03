@@ -2204,6 +2204,21 @@ const events = [
   hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
   tags: ["LMSY", "Fanmeeting"]
 },
+{
+  date: "2026-12-01",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "LMSY Vietnam FanMeeting",
+  title_zh: "LMSY 越南粉丝见面会",
+  location_en: "Vietnam",
+  location_th: "ประเทศเวียดนาม",
+  location_zh: "越南",
+  notes: "Expected to take place in December 2026. Exact date, venue and ticketing details to be announced.",
+  notes_th: "คาดว่าจะจัดขึ้นในเดือนธันวาคม 2569 วันจัดงาน สถานที่ และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
+  notes_zh: "预计于2026年12月举行，具体日期、地点及售票详情待公布。",
+  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
+  tags: ["LMSY", "Fanmeeting"]
+},
 
 ];
 
