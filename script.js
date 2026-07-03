@@ -2673,8 +2673,7 @@ function getDashboardFilters() {
   };
 }
 
-function getFilteredDashboardEvents() {
-  const filters = getDashboardFilters();
+function getFilteredDashboardEventsFromFilters(filters) {
   const { todayKey } = getBangkokTodayTomorrowKeys();
 
   return [...events]
@@ -2699,6 +2698,10 @@ function getFilteredDashboardEvents() {
         inScope
       );
     });
+}
+
+function getFilteredDashboardEvents() {
+  return getFilteredDashboardEventsFromFilters(getDashboardFilters());
 }
 
 function clearElement(el) {
@@ -3351,6 +3354,85 @@ function addSelectOption(select, value, label) {
   select.appendChild(opt);
 }
 
+function setDashboardSelectOptions(select, options, preferredValue) {
+  if (!select) return;
+  const safePreferred = preferredValue || "all";
+  select.innerHTML = "";
+
+  options.forEach(([value, label]) => {
+    addSelectOption(select, value, label);
+  });
+
+  const values = options.map(([value]) => value);
+  select.value = values.includes(safePreferred) ? safePreferred : "all";
+}
+
+function getDashboardFiltersWithOverride(key, value) {
+  return {
+    ...getDashboardFilters(),
+    [key]: value
+  };
+}
+
+function refreshDashboardDependentFilters(changedSelectId = "") {
+  const typeSelect = document.getElementById("dashboard-type");
+  const monthSelect = document.getElementById("dashboard-month");
+  const whoSelect = document.getElementById("dashboard-who");
+  const regionSelect = document.getElementById("dashboard-region");
+  const scopeSelect = document.getElementById("dashboard-scope");
+
+  if (!typeSelect || !monthSelect || !whoSelect || !regionSelect || !scopeSelect) return;
+
+  // A year switch should feel like a fresh yearly view. Otherwise an old month
+  // or "Upcoming only" selection can quietly hide past events, for example
+  // Singapore 2025.
+  if (changedSelectId === "dashboard-year") {
+    monthSelect.value = "all";
+    scopeSelect.value = "all";
+  }
+
+  let typeFilters = getDashboardFiltersWithOverride("type", "all");
+  let availableTypes = [...new Set(getFilteredDashboardEventsFromFilters(typeFilters).map(ev => getDisplayType(ev)))];
+  const orderedTypeOptions = [["all", "All"]];
+  dashboardTypeOrder.forEach(type => {
+    if (availableTypes.includes(type)) orderedTypeOptions.push([type, getTypeLabel(type)]);
+  });
+  availableTypes
+    .filter(type => !dashboardTypeOrder.includes(type))
+    .sort()
+    .forEach(type => orderedTypeOptions.push([type, getTypeLabel(type)]));
+  setDashboardSelectOptions(typeSelect, orderedTypeOptions, typeSelect.value);
+
+  let whoFilters = getDashboardFiltersWithOverride("who", "all");
+  let availablePeople = [...new Set(getFilteredDashboardEventsFromFilters(whoFilters).map(ev => getEventPerson(ev)))];
+  const whoOptions = [["all", "All"]];
+  ["LMSY", "Lookmhee", "Sonya"]
+    .filter(person => availablePeople.includes(person))
+    .forEach(person => whoOptions.push([person, person]));
+  availablePeople
+    .filter(person => !["LMSY", "Lookmhee", "Sonya"].includes(person))
+    .sort()
+    .forEach(person => whoOptions.push([person, person]));
+  setDashboardSelectOptions(whoSelect, whoOptions, whoSelect.value);
+
+  let monthFilters = getDashboardFiltersWithOverride("month", "all");
+  let availableMonths = [...new Set(getFilteredDashboardEventsFromFilters(monthFilters).map(ev => String(toBangkokDate(ev.date).getMonth())))];
+  const monthOptions = [["all", "All"]];
+  availableMonths
+    .sort((a, b) => Number(a) - Number(b))
+    .forEach(month => monthOptions.push([month, monthNameFromIndex(month)]));
+  setDashboardSelectOptions(monthSelect, monthOptions, monthSelect.value);
+
+  let regionFilters = getDashboardFiltersWithOverride("region", "all");
+  let availableRegions = [...new Set(getFilteredDashboardEventsFromFilters(regionFilters).map(ev => getEventRegion(ev)))];
+  const regionOptions = [["all", "All"]];
+  availableRegions
+    .filter(region => region !== "TBA")
+    .sort((a, b) => a.localeCompare(b))
+    .forEach(region => regionOptions.push([region, region]));
+  setDashboardSelectOptions(regionSelect, regionOptions, regionSelect.value);
+}
+
 function populateDashboardFilters() {
   const yearSelect = document.getElementById("dashboard-year");
   const typeSelect = document.getElementById("dashboard-type");
@@ -3406,6 +3488,7 @@ function initDashboard() {
   if (!dashboardView) return;
 
   populateDashboardFilters();
+  refreshDashboardDependentFilters();
 
   const filterPanel = document.getElementById("dashboard-filter-panel");
   const filterToggle = document.getElementById("dashboard-filter-toggle");
@@ -3420,7 +3503,10 @@ function initDashboard() {
   });
 
   filterSelects.forEach(select => {
-    select.addEventListener("change", renderDashboard);
+    select.addEventListener("change", () => {
+      refreshDashboardDependentFilters(select.id);
+      renderDashboard();
+    });
   });
 
   resetBtn?.addEventListener("click", () => {
