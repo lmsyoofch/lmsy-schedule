@@ -1706,70 +1706,90 @@ h2 {
 }
 
 
-/* HC fix v2, visibly darker lower schedule area
-   This keeps the soft moving glow but makes the bottom and event cards much darker. */
+/* Smooth gradient, no visible circular blob
+   This keeps the old soft blue look but avoids radial circles with hard edges. */
 
 body {
   background:
-    radial-gradient(circle at 18% 0%, rgba(167, 216, 255, 0.24), transparent 32rem),
-    radial-gradient(circle at 86% 10%, rgba(255, 232, 156, 0.12), transparent 28rem),
     linear-gradient(
       180deg,
-      #0A1930 0%,
-      #1F3A5B 38%,
-      #15263C 62%,
-      #07121F 100%
+      #071827 0%,
+      #112A44 28%,
+      #294762 58%,
+      #58748E 100%
     ) !important;
-  background-attachment: fixed !important;
+  background-attachment: fixed;
 }
 
-/* Keep movement, but make it gentle instead of washing out the cards */
+/* Moving glow, but made from very large blurred ellipses so it feels radiant, not round */
 body::before {
   content: "" !important;
   position: fixed !important;
-  inset: -24% -18% !important;
+  inset: -40% -35% !important;
   z-index: 0 !important;
   pointer-events: none !important;
   background:
-    radial-gradient(circle at 30% 20%, rgba(167, 216, 255, 0.16), transparent 18rem),
-    radial-gradient(circle at 72% 14%, rgba(255, 232, 156, 0.08), transparent 16rem) !important;
-  filter: blur(8px) !important;
-  opacity: 0.42 !important;
-  animation: lmsyAurora 28s ease-in-out infinite alternate !important;
+    radial-gradient(ellipse 120% 80% at 18% 4%, rgba(167, 216, 255, 0.18), rgba(167, 216, 255, 0.00) 62%),
+    radial-gradient(ellipse 110% 72% at 92% 6%, rgba(255, 232, 156, 0.08), rgba(255, 232, 156, 0.00) 58%),
+    linear-gradient(165deg, rgba(167, 216, 255, 0.06), rgba(255, 232, 156, 0.04), rgba(7, 18, 31, 0.00)) !important;
+  filter: blur(60px) !important;
+  opacity: 0.52 !important;
+  transform: translate3d(0, 0, 0) scale(1.08) !important;
+  animation: lmsySmoothRadiance 34s ease-in-out infinite alternate !important;
 }
 
-/* Stronger bottom dark layer, this is the main visible fix */
+/* Darken only the lower part for text readability */
 body::after {
   content: "" !important;
   position: fixed !important;
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  height: 68vh !important;
+  height: 46vh !important;
   z-index: 0 !important;
   pointer-events: none !important;
   background:
     linear-gradient(
       0deg,
-      rgba(3, 10, 20, 0.98) 0%,
-      rgba(5, 14, 26, 0.94) 32%,
-      rgba(7, 18, 31, 0.72) 66%,
-      rgba(7, 18, 31, 0.04) 100%
+      rgba(7, 18, 31, 0.88) 0%,
+      rgba(7, 18, 31, 0.70) 34%,
+      rgba(7, 18, 31, 0.28) 72%,
+      rgba(7, 18, 31, 0.00) 100%
     ) !important;
 }
 
-/* Make the schedule/event section readable even over the moving glow */
-.event-card {
-  background: rgba(5, 14, 26, 0.92) !important;
-  border: 1px solid rgba(214, 219, 235, 0.88) !important;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28) !important;
+@keyframes lmsySmoothRadiance {
+  0% {
+    transform: translate3d(-2%, -1%, 0) scale(1.08);
+    opacity: 0.42;
+  }
+  50% {
+    transform: translate3d(2%, 1%, 0) scale(1.11);
+    opacity: 0.56;
+  }
+  100% {
+    transform: translate3d(-1%, 2.5%, 0) scale(1.09);
+    opacity: 0.46;
+  }
 }
 
-.footer {
-  background: rgba(5, 14, 26, 0.92) !important;
-  border-color: rgba(167, 216, 255, 0.36) !important;
+/* Remove extra dashboard/card decorative blobs */
+.header::before,
+.header::after,
+.view-tabs::before,
+.view-tabs::after,
+.dashboard-top::before,
+.dashboard-top::after,
+.dashboard-story-card::before,
+.dashboard-story-card::after,
+.dashboard-spotlight-card::before,
+.dashboard-spotlight-card::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
 }
 
+/* Keep the glass feel but reduce background interference */
 .header,
 .view-tabs,
 .filters,
@@ -1778,53 +1798,54 @@ body::after {
 .dashboard-story-card,
 .dashboard-spotlight-card,
 .dashboard-panel,
-.insight-card {
+.insight-card,
+.footer {
   background: rgba(7, 18, 31, 0.84) !important;
+  border-color: rgba(167, 216, 255, 0.36) !important;
 }
 
-/* Keep text crisp on lighter glow areas */
+.event-card {
+  background: rgba(12, 24, 40, 0.80) !important;
+  border: 1px solid rgba(214, 219, 235, 0.88) !important;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.12) !important;
+}
+
 .event-title,
 .event-meta,
 .event-notes,
 .event-hashtags,
 .footer {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.34) !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.14);
 }
 
-/* Mobile specific, make the lower half darker than the previous file */
 @media (max-width: 700px) {
   body {
     background:
-      radial-gradient(circle at 18% 0%, rgba(167, 216, 255, 0.22), transparent 25rem),
-      radial-gradient(circle at 86% 10%, rgba(255, 232, 156, 0.10), transparent 22rem),
       linear-gradient(
         180deg,
-        #0A1930 0%,
-        #1E3959 34%,
-        #112239 58%,
-        #050E1A 100%
+        #071827 0%,
+        #112A44 26%,
+        #2B4A66 58%,
+        #5D7893 100%
       ) !important;
   }
 
   body::before {
-    opacity: 0.34 !important;
-    filter: blur(10px) !important;
+    inset: -45% -42% !important;
+    filter: blur(72px) !important;
+    opacity: 0.46 !important;
   }
 
   body::after {
-    height: 76vh !important;
+    height: 52vh !important;
     background:
       linear-gradient(
         0deg,
-        rgba(3, 10, 20, 0.99) 0%,
-        rgba(5, 14, 26, 0.96) 38%,
-        rgba(7, 18, 31, 0.78) 72%,
-        rgba(7, 18, 31, 0.06) 100%
+        rgba(7, 18, 31, 0.91) 0%,
+        rgba(7, 18, 31, 0.76) 34%,
+        rgba(7, 18, 31, 0.34) 72%,
+        rgba(7, 18, 31, 0.00) 100%
       ) !important;
-  }
-
-  .event-card {
-    background: rgba(5, 14, 26, 0.94) !important;
   }
 
   .header,
@@ -1838,5 +1859,9 @@ body::after {
   .insight-card,
   .footer {
     background: rgba(7, 18, 31, 0.88) !important;
+  }
+
+  .event-card {
+    background: rgba(12, 24, 40, 0.84) !important;
   }
 }
