@@ -514,9 +514,9 @@ const events = [
     title_en: "Press Tour",
     title_th: "Press Tour",
     title_zh: "宣传行程",
-    location_en: "TBA",
-    location_th: "รอประกาศ",
-    location_zh: "待公布",
+    location_en: "Bangkok",
+    location_th: "กรุงเทพฯ",
+    location_zh: "曼谷",
     startTime: "",
     timezone: "GMT+7",
     tags: ["LMSY", "PressTour"],
@@ -544,9 +544,9 @@ const events = [
     title_en: "T-POP Stage Show",
     title_th: "T-POP Stage Show",
     title_zh: "T-POP 舞台秀",
-    location_en: "TBA",
-    location_th: "รอประกาศ",
-    location_zh: "待公布",
+    location_en: "Bangkok",
+    location_th: "กรุงเทพฯ",
+    location_zh: "曼谷",
     startTime: "",
     timezone: "GMT+7",
     tags: ["LMSY", "Show"],
@@ -574,9 +574,9 @@ const events = [
     title_en: "Sretsis In-store (Lance)",
     title_th: "Sretsis In-store (Lance)",
     title_zh: "Sretsis 门店活动",
-    location_en: "Sretsis (TBA)",
-    location_th: "Sretsis (รอประกาศ)",
-    location_zh: "Sretsis（待公布）",
+    location_en: "Sretsis (Bangkok)",
+    location_th: "Sretsis (กรุงเทพฯ)",
+    location_zh: "Sretsis（曼谷）",
     startTime: "",
     timezone: "GMT+7",
     tags: ["LMSY", "Brand"],
@@ -589,9 +589,9 @@ const events = [
     title_en: "Press Tour",
     title_th: "Press Tour",
     title_zh: "宣传行程",
-    location_en: "TBA",
-    location_th: "รอประกาศ",
-    location_zh: "待公布",
+    location_en: "Bangkok",
+    location_th: "กรุงเทพฯ",
+    location_zh: "曼谷",
     startTime: "",
     timezone: "GMT+7",
     tags: ["LMSY", "PressTour"],
@@ -1645,7 +1645,9 @@ const events = [
   who: "LMSY",
   category: "Drama",
   title: "Media Interview",
-  location: "TBA",
+  location_en: "Bangkok",
+  location_th: "กรุงเทพฯ",
+  location_zh: "曼谷",
   notes: "All-day media interviews",
   notes_th: "สัมภาษณ์สื่อทั้งวัน",
   notes_zh: "全天媒体采访",
@@ -1701,7 +1703,9 @@ const events = [
   who: "LMSY",
   category: "Drama",
   title: "Goodbye หมอไม่รู้ตัว",
-  location: "TBA",
+  location_en: "Bangkok",
+  location_th: "กรุงเทพฯ",
+  location_zh: "曼谷",
   notes: "Recording at 16:00 (GMT+7)",
   notes_th: "ถ่ายรายการเวลา 16:00 น. (GMT+7)",
   notes_zh: "录制时间为 16:00（GMT+7）",
@@ -1713,7 +1717,9 @@ const events = [
   who: "LMSY",
   category: "Drama",
   title: "FIVE ME",
-  location: "TBA",
+  location_en: "Bangkok",
+  location_th: "กรุงเทพฯ",
+  location_zh: "曼谷",
   notes: "Recording at 13:00 (GMT+7)",
   notes_th: "ถ่ายรายการเวลา 13:00 น. (GMT+7)",
   notes_zh: "录制时间为 13:00（GMT+7）",
@@ -1906,7 +1912,7 @@ const events = [
   notes_th: "แขกรับเชิญพิเศษ เริ่มเวลา 17:00 น. เป็นต้นไป (GMT+7) ถ่ายทอดสดทาง KAZZ Magazine, KAZZ Channel และ LINE TODAY POP",
   notes_zh: "特别嘉宾出席。开始时间 17:00 起（GMT+7）。通过 KAZZ Magazine、KAZZ Channel 和 LINE TODAY POP 直播",
   hashtags: ["#KAZZAWARDS2026xLookmheeSonya"],
-  tags: ["Awards", "Appearance", "LMSY"]
+  tags: ["LMSY", "Awards", "Appearance"]
 },
 {
   date: "2026-05-21",
@@ -1922,7 +1928,7 @@ const events = [
   notes_th: "ไลฟ์เริ่มเวลา 19:00 น. (GMT+7) ผ่านแอปพลิเคชัน JOOX Music",
   notes_zh: "直播于19:00 (GMT+7) 开始，通过 JOOX Music 应用程序观看。",
   hashtags: ["#JOOXLiveChatชิดติดอ่อมxLMSY"],
-  tags: ["LMSY", "Livestream", "JOOX"]
+  tags: ["LMSY", "Livestream"]
 },
 {
   date: "2026-05-22",
@@ -1966,7 +1972,7 @@ const events = [
   notes_th: "งานแฟนไซน์คู่ Lookmhee x Sonya ที่เซี่ยงไฮ้ สถานที่จัดงานเปิดให้เฉพาะผู้ถือบัตรและผู้ที่ได้รับเชิญเท่านั้น",
   notes_zh: "Lookmhee x Sonya 上海双人签售会。活动场地仅限持票者及受邀嘉宾入场。",
   hashtags: ["#LMSYMay30SHANGHAIDUOFansign", "#LMSY2026FirstChinaDuoFansign"],
-  tags: ["LMSY", "FanMeeting", "Shanghai"]
+  tags: ["LMSY", "FanMeeting"]
 },
 {
   date: "2026-06-04",
@@ -2017,7 +2023,7 @@ const events = [
   notes_th: "เปิดขายบัตรวันที่ 5 พฤษภาคม เวลา 16:00 น. แพ็กเกจพิเศษเปิดขายเวลา 19:00 น. ในวันเดียวกัน ผ่านแอป Xiaomang",
   notes_zh: "门票｜5月5日 16:00 正式开售。叠加包｜5月5日 19:00 准时开启。购买渠道：小芒 APP。",
   hashtags: [""],
-  tags: ["LMSY","Fanmeeting", "Macau"]
+  tags: ["LMSY","Fanmeeting"]
 },
 {
   date: "2026-06-26",
@@ -2088,7 +2094,7 @@ const events = [
     "#LMlookmhee",
     "#SonyaSaranphat"
   ],
-  tags: ["LMSY", "Livestream", "GrabFood"]
+  tags: ["LMSY", "Livestream"]
 },
 {
   date: "2026-07-18",
@@ -2137,13 +2143,8 @@ const events = [
     "#LMSY",
     "#Lookmhee",
     "#Sonya",
-    "#ลูกหมีซอนญ่า"
-  ],
-  tags: [
-    "LMSY",
-    "FanMeeting",
-    "South Korea"
-  ]
+    "#ลูกหมีซอนญ่า"],
+  tags: ["LMSY", "Fanmeeting"]
 },
 {
   date: "2026-09-01",
