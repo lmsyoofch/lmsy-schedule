@@ -2283,9 +2283,25 @@ function hasTag(ev, needle) {
   return (ev.tags || []).some(t => String(t).toLowerCase().includes(n));
 }
 
+function normaliseEventType(type) {
+  const raw = String(type || "").trim();
+  const compact = raw.toLowerCase().replace(/\s+/g, "");
+
+  if (compact === "fanmeeting" || compact === "fanmeet") return "FanMeeting";
+  if (compact === "fanevent") return "FanEvent";
+  if (compact === "specialevent") return "Special event";
+  if (compact === "fansign") return "Fansign";
+  if (compact === "livestream" || compact === "live") return "Livestream";
+  if (compact === "brand") return "Brand";
+  if (compact === "drama") return "Drama";
+  if (compact === "award" || compact === "awards") return "Award";
+
+  return raw || "Unknown";
+}
+
 function getDisplayType(ev) {
   if (hasTag(ev, "fansign")) return "Fansign";
-  return ev.category || "";
+  return normaliseEventType(ev.category);
 }
 
 function getEventIcon(ev) {
@@ -2294,14 +2310,16 @@ function getEventIcon(ev) {
   if (tags.some(t => t.includes("fansign"))) return "✍️";
   if (tags.includes("birthday")) return "🎂";
   if (tags.some(t => t.includes("christmas"))) return "🎄";
-  if (ev.category === "Award") return "🏆";
-  if (ev.category === "Drama") return "🎬";
-  if (ev.category === "Brand") return "💼";
-  if (ev.category === "Livestream") return "📺";
-  if (ev.category === "Special event") return "✨";
+  const type = getDisplayType(ev);
+
+  if (type === "Award") return "🏆";
+  if (type === "Drama") return "🎬";
+  if (type === "Brand") return "💼";
+  if (type === "Livestream") return "📺";
+  if (type === "Special event") return "✨";
 
   // Support both FanMeeting and FanEvent
-  if (ev.category === "FanMeeting" || ev.category === "FanEvent") {
+  if (type === "FanMeeting" || type === "FanEvent") {
     if (ev.who === "LM" || ev.who === "Lookmhee") return "💛";
     if (ev.who === "SY" || ev.who === "Sonya") return "🩵";
     if (ev.who === "LMSY") return "💛🩵";
@@ -2361,10 +2379,7 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
     const monthIndex = d.getMonth(); // 0–11
 
     const matchYear = selectedYear === "all" || year === selectedYear;
-    const matchType =
-      selectedType === "all" ||
-      ev.category === selectedType ||
-      (selectedType === "Fansign" && (ev.tags || []).some(t => String(t).toLowerCase().includes("fansign")));
+    const matchType = matchesEventType(ev, selectedType);
     const matchMonth = selectedMonth === "all" || monthIndex === Number(selectedMonth);
 
     return matchYear && matchType && matchMonth;
@@ -2547,10 +2562,7 @@ function getTypeLabel(type) {
 
 function matchesEventType(ev, selectedType) {
   if (selectedType === "all") return true;
-  return (
-    ev.category === selectedType ||
-    (selectedType === "Fansign" && hasTag(ev, "fansign"))
-  );
+  return getDisplayType(ev) === normaliseEventType(selectedType);
 }
 
 function getEventPerson(ev) {
@@ -2962,30 +2974,39 @@ function renderDonutChart(containerId, entries, total) {
     return;
   }
 
-  const palette = ["#A7D8FF", "#FFE89C", "#DCEBFF", "#FFF3C2", "#87BFFF", "#F7D774", "#BFD7FF", "#FFFFFF"];
-  let current = 0;
-  const gradientParts = rows.map(([label, value], index) => {
-    const start = current;
-    current += (value / total) * 100;
-    return `${palette[index % palette.length]} ${start}% ${current}%`;
-  });
+  const topType = rows[0];
+  const topShare = Math.round((topType[1] / total) * 100);
 
-  const donut = document.createElement("div");
-  donut.className = "dashboard-donut";
-  donut.style.background = `conic-gradient(${gradientParts.join(", ")})`;
-  donut.innerHTML = `<div class="dashboard-donut-centre"><span class="dashboard-donut-number">${total}</span><span class="dashboard-donut-label">events</span></div>`;
+  const hero = document.createElement("div");
+  hero.className = "dashboard-mix-hero";
+  hero.innerHTML = `
+    <span class="mix-hero-label">Top event type</span>
+    <strong>${getTypeLabel(topType[0])}</strong>
+    <span>${topType[1]} events · ${topShare}% of this view</span>
+  `;
+  container.appendChild(hero);
 
-  const legend = document.createElement("div");
-  legend.className = "dashboard-donut-legend";
-  rows.slice(0, 6).forEach(([label, value], index) => {
+  const list = document.createElement("div");
+  list.className = "dashboard-readable-list";
+
+  rows.slice(0, 8).forEach(([label, value], index) => {
+    const percentage = Math.round((value / total) * 100);
     const row = document.createElement("div");
-    row.className = "donut-legend-row";
-    row.innerHTML = `<span class="donut-dot" style="--dot-colour: ${palette[index % palette.length]}"></span><span class="donut-legend-label">${getTypeLabel(label)}</span><span class="donut-legend-value">${value}</span>`;
-    legend.appendChild(row);
+    row.className = "readable-row";
+    row.innerHTML = `
+      <div class="readable-row-top">
+        <span class="readable-rank">${String(index + 1).padStart(2, "0")}</span>
+        <span class="readable-label">${getTypeLabel(label)}</span>
+        <span class="readable-value">${value} · ${percentage}%</span>
+      </div>
+      <div class="readable-track" aria-hidden="true">
+        <span class="readable-bar" style="width: ${Math.max(percentage, 4)}%"></span>
+      </div>
+    `;
+    list.appendChild(row);
   });
 
-  container.appendChild(donut);
-  container.appendChild(legend);
+  container.appendChild(list);
 }
 
 function renderMonthHeatmap(containerId, monthCounts) {
@@ -2996,14 +3017,43 @@ function renderMonthHeatmap(containerId, monthCounts) {
   const values = Array.from({ length: 12 }, (_, index) => monthCounts[String(index)] || 0);
   const max = Math.max(...values, 0);
 
+  if (max === 0) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = "No monthly data for this filter.";
+    container.appendChild(p);
+    return;
+  }
+
+  const busiestIndex = values.indexOf(max);
+  const summary = document.createElement("div");
+  summary.className = "dashboard-month-summary";
+  summary.innerHTML = `
+    <span class="month-summary-label">Busiest month</span>
+    <strong>${monthNameFromIndex(busiestIndex)}</strong>
+    <span>${max} event${max === 1 ? "" : "s"}</span>
+  `;
+  container.appendChild(summary);
+
+  const list = document.createElement("div");
+  list.className = "dashboard-month-list";
+
   values.forEach((value, index) => {
-    const tile = document.createElement("div");
-    tile.className = "heatmap-tile";
-    const level = value === 0 || max === 0 ? 0 : Math.ceil((value / max) * 4);
-    tile.dataset.level = String(level);
-    tile.innerHTML = `<span class="heatmap-month">${monthNameFromIndex(index)}</span><span class="heatmap-value">${value}</span>`;
-    container.appendChild(tile);
+    const percentage = max ? Math.round((value / max) * 100) : 0;
+    const row = document.createElement("div");
+    row.className = "month-pulse-row";
+    if (value === max) row.classList.add("is-busiest");
+    row.innerHTML = `
+      <span class="month-pulse-name">${monthNameFromIndex(index)}</span>
+      <div class="month-pulse-track" aria-hidden="true">
+        <span class="month-pulse-bar" style="width: ${value ? Math.max(percentage, 6) : 0}%"></span>
+      </div>
+      <span class="month-pulse-value">${value}</span>
+    `;
+    list.appendChild(row);
   });
+
+  container.appendChild(list);
 }
 
 function renderUpcomingList(filtered) {
@@ -3315,9 +3365,8 @@ function initFilters() {
   allType.textContent = "All";
   typeSelect.appendChild(allType);
 
-  const categories = [...new Set(events.map(ev => ev.category))];
-  const hasFansign = events.some(ev => (ev.tags || []).some(t => String(t).toLowerCase().includes("fansign")));
-  if (hasFansign && !categories.includes("Fansign")) categories.push("Fansign");
+  const categories = [...new Set(events.map(ev => getDisplayType(ev)))];
+  const hasFansign = categories.includes("Fansign");
     const typeOrder = [
     "FanMeeting",
     "Fansign",
