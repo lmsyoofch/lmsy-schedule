@@ -3712,6 +3712,981 @@ function initLanguageToggle() {
   });
 }
 
+
+/* =========================
+   DASHBOARD I18N OVERRIDES
+   ========================= */
+
+const dashboardI18n = {
+  en: {
+    scheduleTab: "Schedule",
+    dashboardTab: "Dashboard",
+    insightKicker: "Insights",
+    dashboardTitle: "LMSY Event Dashboard",
+    dashboardDesc: "Explore event patterns by year, type, month, person and region.",
+    filterBtn: "Filter",
+    reset: "Reset",
+    year: "Year",
+    type: "Type",
+    month: "Month",
+    person: "Person",
+    region: "Region",
+    time: "Time",
+    all: "All",
+    allDates: "All dates",
+    upcomingOnly: "Upcoming only",
+    pastArchive: "Past archive",
+    quickRead: "Quick read",
+    noEventsTitle: "No events match this view yet",
+    noEventsText: "Try widening the filters to bring the full LMSY schedule story back into view.",
+    leading: "{type} is leading this view",
+    storyText: "{type} has the highest count with {count}. {region} is the strongest region and {share}% of entries are outside Thailand.",
+    noFixedRegion: "No fixed region",
+    eventsInView: "events in view",
+    yearSpan: "year span",
+    outsideThailand: "outside Thailand",
+    nextSpotlight: "Next spotlight",
+    latestSpotlight: "Latest spotlight",
+    nothingSpotlight: "Nothing to spotlight",
+    noEventFilters: "No event matches the selected filters.",
+    today: "Today",
+    tomorrow: "Tomorrow",
+    inDays: "In {days} days",
+    totalEvents: "Total events",
+    matchingFilters: "Matching current dashboard filters",
+    upcoming: "Upcoming",
+    fromToday: "From today onwards, Bangkok time",
+    past: "Past archive",
+    completed: "Completed or previous schedule items",
+    topType: "Top type",
+    noMatching: "No matching events",
+    busiestMonth: "Busiest month",
+    topRegion: "Top region",
+    regionsCovered: "Regions covered",
+    excludingTba: "Excluding TBA entries",
+    fanMomentMix: "Fan moment mix",
+    fanMomentNote: "Fan meetings, fan events and fansigns",
+    noData: "No data for this filter.",
+    noMonthly: "No monthly data for this filter.",
+    noUpcoming: "No upcoming events in this view.",
+    eventMixAria: "Event mix by type pie chart",
+    events: "Events",
+    tapHover: "Tap or hover a slice",
+    selectedType: "Selected type",
+    ofThisView: "of this view",
+    panelEventMix: "Event mix by type",
+    panelEventMixNote: "Tap or hover each slice to see the label, count and share.",
+    panelMonthly: "Monthly pulse by count",
+    panelYear: "Events by year",
+    panelRegions: "Top regions",
+    panelUpcoming: "Next upcoming events in this view",
+    view: "View",
+    allEvents: "All events"
+  },
+  th: {
+    scheduleTab: "ตารางงาน",
+    dashboardTab: "แดชบอร์ด",
+    insightKicker: "ข้อมูลเชิงลึก",
+    dashboardTitle: "แดชบอร์ดงาน LMSY",
+    dashboardDesc: "ดูภาพรวมงานตามปี ประเภท เดือน บุคคล และภูมิภาค",
+    filterBtn: "ตัวกรอง",
+    reset: "รีเซ็ต",
+    year: "ปี",
+    type: "ประเภท",
+    month: "เดือน",
+    person: "บุคคล",
+    region: "ภูมิภาค",
+    time: "ช่วงเวลา",
+    all: "ทั้งหมด",
+    allDates: "ทุกวัน",
+    upcomingOnly: "เฉพาะงานที่จะมาถึง",
+    pastArchive: "งานที่ผ่านมา",
+    quickRead: "สรุปเร็ว",
+    noEventsTitle: "ยังไม่มีงานที่ตรงกับตัวกรองนี้",
+    noEventsText: "ลองขยายตัวกรองเพื่อดูภาพรวมตารางงาน LMSY ทั้งหมด",
+    leading: "{type} นำอยู่ในมุมมองนี้",
+    storyText: "{type} มีจำนวนมากที่สุดที่ {count} {region} เป็นภูมิภาคที่เด่นที่สุด และ {share}% ของรายการอยู่นอกประเทศไทย",
+    noFixedRegion: "ยังไม่มีภูมิภาคชัดเจน",
+    eventsInView: "งานในมุมมองนี้",
+    yearSpan: "ช่วงปี",
+    outsideThailand: "นอกประเทศไทย",
+    nextSpotlight: "งานเด่นถัดไป",
+    latestSpotlight: "งานเด่นล่าสุด",
+    nothingSpotlight: "ยังไม่มีงานเด่น",
+    noEventFilters: "ไม่มีงานที่ตรงกับตัวกรองที่เลือก",
+    today: "วันนี้",
+    tomorrow: "พรุ่งนี้",
+    inDays: "อีก {days} วัน",
+    totalEvents: "งานทั้งหมด",
+    matchingFilters: "ตรงกับตัวกรองแดชบอร์ดปัจจุบัน",
+    upcoming: "กำลังจะมาถึง",
+    fromToday: "นับจากวันนี้เป็นต้นไป ตามเวลา Bangkok",
+    past: "งานที่ผ่านมา",
+    completed: "งานที่เสร็จแล้วหรือรายการก่อนหน้า",
+    topType: "ประเภทสูงสุด",
+    noMatching: "ไม่มีงานที่ตรงกัน",
+    busiestMonth: "เดือนที่คึกคักที่สุด",
+    topRegion: "ภูมิภาคสูงสุด",
+    regionsCovered: "ภูมิภาคที่ครอบคลุม",
+    excludingTba: "ไม่นับรายการ TBA",
+    fanMomentMix: "สัดส่วนแฟนโมเมนต์",
+    fanMomentNote: "แฟนมีตติ้ง แฟนอีเวนต์ และแฟนไซน์",
+    noData: "ไม่มีข้อมูลสำหรับตัวกรองนี้",
+    noMonthly: "ไม่มีข้อมูลรายเดือนสำหรับตัวกรองนี้",
+    noUpcoming: "ไม่มีงานที่จะมาถึงในมุมมองนี้",
+    eventMixAria: "แผนภูมิวงกลมสัดส่วนประเภทงาน",
+    events: "งาน",
+    tapHover: "แตะหรือวางเมาส์บนชิ้นกราฟ",
+    selectedType: "ประเภทที่เลือก",
+    ofThisView: "ของมุมมองนี้",
+    panelEventMix: "สัดส่วนประเภทงาน",
+    panelEventMixNote: "แตะหรือวางเมาส์บนแต่ละชิ้นเพื่อดูชื่อ จำนวน และสัดส่วน",
+    panelMonthly: "จังหวะรายเดือนตามจำนวน",
+    panelYear: "งานตามปี",
+    panelRegions: "ภูมิภาคยอดนิยม",
+    panelUpcoming: "งานถัดไปในมุมมองนี้",
+    view: "มุมมอง",
+    allEvents: "งานทั้งหมด"
+  },
+  zh: {
+    scheduleTab: "日程",
+    dashboardTab: "仪表板",
+    insightKicker: "洞察",
+    dashboardTitle: "LMSY 活动仪表板",
+    dashboardDesc: "按年份、类型、月份、人物和地区查看活动趋势。",
+    filterBtn: "筛选",
+    reset: "重置",
+    year: "年份",
+    type: "类型",
+    month: "月份",
+    person: "人物",
+    region: "地区",
+    time: "时间",
+    all: "全部",
+    allDates: "全部日期",
+    upcomingOnly: "仅即将举行",
+    pastArchive: "过往归档",
+    quickRead: "快速解读",
+    noEventsTitle: "当前视图暂无匹配活动",
+    noEventsText: "可以放宽筛选条件，查看完整的 LMSY 日程。",
+    leading: "{type} 是当前视图最多的类型",
+    storyText: "{type} 数量最多，共 {count}。{region} 是最主要的地区，{share}% 的活动在泰国以外。",
+    noFixedRegion: "暂无明确地区",
+    eventsInView: "当前视图活动",
+    yearSpan: "年份跨度",
+    outsideThailand: "泰国以外",
+    nextSpotlight: "下一个重点活动",
+    latestSpotlight: "最近重点活动",
+    nothingSpotlight: "暂无重点活动",
+    noEventFilters: "没有活动符合当前筛选条件。",
+    today: "今天",
+    tomorrow: "明天",
+    inDays: "{days} 天后",
+    totalEvents: "活动总数",
+    matchingFilters: "符合当前仪表板筛选条件",
+    upcoming: "即将举行",
+    fromToday: "从今天起，按曼谷时间",
+    past: "过往归档",
+    completed: "已完成或过往日程",
+    topType: "最多类型",
+    noMatching: "暂无匹配活动",
+    busiestMonth: "最繁忙月份",
+    topRegion: "最多地区",
+    regionsCovered: "覆盖地区",
+    excludingTba: "不含 TBA 项目",
+    fanMomentMix: "粉丝活动占比",
+    fanMomentNote: "粉丝见面会、粉丝活动和签售",
+    noData: "此筛选条件暂无数据。",
+    noMonthly: "此筛选条件暂无月度数据。",
+    noUpcoming: "当前视图暂无即将举行的活动。",
+    eventMixAria: "按活动类型显示的饼图",
+    events: "活动",
+    tapHover: "点击或悬停查看分区",
+    selectedType: "已选类型",
+    ofThisView: "占当前视图",
+    panelEventMix: "活动类型占比",
+    panelEventMixNote: "点击或悬停每个分区查看标签、数量和占比。",
+    panelMonthly: "月度活动量",
+    panelYear: "按年份统计",
+    panelRegions: "热门地区",
+    panelUpcoming: "当前视图的下一个活动",
+    view: "视图",
+    allEvents: "全部活动"
+  }
+};
+
+const dashboardTypeLabelsI18n = {
+  en: {
+    FanMeeting: "Fan meeting",
+    FanEvent: "Fan event",
+    Fansign: "Fansign",
+    Brand: "Brand",
+    Livestream: "Livestream",
+    Drama: "Drama",
+    Award: "Award",
+    "Special event": "Special event"
+  },
+  th: {
+    FanMeeting: "แฟนมีตติ้ง",
+    FanEvent: "แฟนอีเวนต์",
+    Fansign: "แฟนไซน์",
+    Brand: "แบรนด์",
+    Livestream: "ไลฟ์สตรีม",
+    Drama: "ซีรีส์",
+    Award: "รางวัล",
+    "Special event": "อีเวนต์พิเศษ"
+  },
+  zh: {
+    FanMeeting: "粉丝见面会",
+    FanEvent: "粉丝活动",
+    Fansign: "签售",
+    Brand: "品牌活动",
+    Livestream: "直播",
+    Drama: "剧集",
+    Award: "奖项",
+    "Special event": "特别活动"
+  }
+};
+
+const monthNamesI18n = {
+  en: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  th: ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."],
+  zh: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"]
+};
+
+function dt(key, vars = {}) {
+  const langPack = dashboardI18n[currentLang] || dashboardI18n.en;
+  let text = langPack[key] || dashboardI18n.en[key] || key;
+  Object.entries(vars).forEach(([name, value]) => {
+    text = text.replaceAll(`{${name}}`, value);
+  });
+  return text;
+}
+
+function getTypeLabel(type) {
+  const labels = dashboardTypeLabelsI18n[currentLang] || dashboardTypeLabelsI18n.en;
+  return labels[type] || dashboardTypeLabelsI18n.en[type] || type || "Unknown";
+}
+
+function formatEventCount(count) {
+  if (currentLang === "th") return `${count} งาน`;
+  if (currentLang === "zh") return `${count} 个活动`;
+  return `${count} event${count === 1 ? "" : "s"}`;
+}
+
+function monthNameFromIndex(monthIndex) {
+  const names = monthNamesI18n[currentLang] || monthNamesI18n.en;
+  return names[Number(monthIndex)] || monthNamesI18n.en[Number(monthIndex)] || "";
+}
+
+function formatDashboardMonthKey(monthKey) {
+  if (!monthKey || monthKey === "None") return currentLang === "en" ? "None" : currentLang === "th" ? "ไม่มี" : "无";
+  const [year, month] = monthKey.split("-");
+  return `${monthNameFromIndex(Number(month) - 1)} ${year}`;
+}
+
+function formatDashboardDate(dateString) {
+  const locale = currentLang === "th" ? "th-TH" : currentLang === "zh" ? "zh-CN" : "en-GB";
+  return toBangkokDate(dateString).toLocaleDateString(locale, {
+    day: "2-digit",
+    month: "short",
+    year: "numeric"
+  });
+}
+
+function getScopeLabel(scope) {
+  if (scope === "upcoming") return dt("upcomingOnly");
+  if (scope === "past") return dt("pastArchive");
+  return dt("allDates");
+}
+
+function updateDashboardStaticText() {
+  const scheduleTab = document.querySelector('.view-tab[data-view="schedule"]');
+  const dashboardTab = document.querySelector('.view-tab[data-view="dashboard"]');
+  if (scheduleTab) scheduleTab.textContent = dt("scheduleTab");
+  if (dashboardTab) dashboardTab.textContent = dt("dashboardTab");
+
+  const kicker = document.querySelector(".dashboard-kicker");
+  const title = document.querySelector(".dashboard-title");
+  const desc = document.querySelector(".dashboard-description");
+  const filterToggle = document.getElementById("dashboard-filter-toggle");
+  const resetBtn = document.getElementById("dashboard-reset");
+
+  if (kicker) kicker.textContent = dt("insightKicker");
+  if (title) title.textContent = dt("dashboardTitle");
+  if (desc) desc.textContent = dt("dashboardDesc");
+  if (filterToggle) filterToggle.textContent = dt("filterBtn");
+  if (resetBtn) resetBtn.textContent = dt("reset");
+
+  const labels = [
+    ["dashboard-year", "year"],
+    ["dashboard-type", "type"],
+    ["dashboard-month", "month"],
+    ["dashboard-who", "person"],
+    ["dashboard-region", "region"],
+    ["dashboard-scope", "time"]
+  ];
+
+  labels.forEach(([id, key]) => {
+    const label = document.querySelector(`label[for="${id}"]`);
+    if (label) label.textContent = dt(key);
+  });
+
+  const headings = {
+    "dashboard-mix-donut": [dt("panelEventMix"), dt("panelEventMixNote")],
+    "dashboard-month-heatmap": [dt("panelMonthly"), ""],
+    "dashboard-year-chart": [dt("panelYear"), ""],
+    "dashboard-region-list": [dt("panelRegions"), ""],
+    "dashboard-upcoming": [dt("panelUpcoming"), ""]
+  };
+
+  Object.entries(headings).forEach(([id, [heading, note]]) => {
+    const panel = document.getElementById(id)?.closest(".dashboard-panel");
+    const h3 = panel?.querySelector("h3");
+    const p = panel?.querySelector(".dashboard-panel-note");
+    if (h3) h3.textContent = heading;
+    if (p && note) p.textContent = note;
+  });
+}
+
+function renderActiveFilterChips(filters) {
+  const container = document.getElementById("dashboard-active-filters");
+  if (!container) return;
+  clearElement(container);
+
+  const chips = [];
+  if (filters.year !== "all") chips.push([dt("year"), filters.year]);
+  if (filters.type !== "all") chips.push([dt("type"), getTypeLabel(filters.type)]);
+  if (filters.month !== "all") chips.push([dt("month"), monthNameFromIndex(filters.month)]);
+  if (filters.who !== "all") chips.push([dt("person"), filters.who]);
+  if (filters.region !== "all") chips.push([dt("region"), filters.region]);
+  if (filters.scope !== "all") chips.push([dt("time"), getScopeLabel(filters.scope)]);
+
+  if (!chips.length) chips.push([dt("view"), dt("allEvents")]);
+
+  chips.forEach(([label, value]) => {
+    const chip = document.createElement("span");
+    chip.className = "dashboard-chip";
+    chip.innerHTML = `<strong>${label}</strong> ${value}`;
+    container.appendChild(chip);
+  });
+}
+
+function renderDashboardStory(filtered, insight) {
+  const container = document.getElementById("dashboard-story");
+  if (!container) return;
+  clearElement(container);
+
+  const title = document.createElement("h3");
+  title.className = "dashboard-story-title";
+
+  const eyebrow = document.createElement("p");
+  eyebrow.className = "dashboard-story-eyebrow";
+  eyebrow.textContent = dt("quickRead");
+
+  const text = document.createElement("p");
+  text.className = "dashboard-story-text";
+
+  const uniqueYears = new Set(filtered.map(ev => ev.date.slice(0, 4))).size;
+  const internationalCount = filtered.filter(ev => {
+    const region = getEventRegion(ev);
+    return !["Thailand", "TBA", "Online"].includes(region);
+  }).length;
+  const internationalShare = filtered.length ? Math.round((internationalCount / filtered.length) * 100) : 0;
+
+  if (!filtered.length) {
+    title.textContent = dt("noEventsTitle");
+    text.textContent = dt("noEventsText");
+  } else {
+    title.textContent = dt("leading", { type: getTypeLabel(insight.topTypeName) });
+    text.textContent = dt("storyText", {
+      type: getTypeLabel(insight.topTypeName),
+      count: formatEventCount(insight.topTypeCount),
+      region: insight.topRegionCount ? insight.topRegionName : dt("noFixedRegion"),
+      share: internationalShare
+    });
+  }
+
+  const stats = document.createElement("div");
+  stats.className = "dashboard-story-stats";
+
+  [
+    [filtered.length, dt("eventsInView")],
+    [uniqueYears, dt("yearSpan")],
+    [`${internationalShare}%`, dt("outsideThailand")]
+  ].forEach(([value, label]) => {
+    const card = document.createElement("div");
+    card.className = "story-stat";
+    card.innerHTML = `<span class="story-stat-value">${value}</span><span class="story-stat-label">${label}</span>`;
+    stats.appendChild(card);
+  });
+
+  container.appendChild(eyebrow);
+  container.appendChild(title);
+  container.appendChild(text);
+  container.appendChild(stats);
+}
+
+function renderDashboardSpotlight(filtered) {
+  const container = document.getElementById("dashboard-spotlight");
+  if (!container) return;
+  clearElement(container);
+
+  const { todayKey } = getBangkokTodayTomorrowKeys();
+  const upcoming = filtered.filter(ev => ev.date >= todayKey).sort((a, b) => a.date.localeCompare(b.date));
+  const past = filtered.filter(ev => ev.date < todayKey).sort((a, b) => b.date.localeCompare(a.date));
+  const ev = upcoming[0] || past[0];
+  const isUpcoming = Boolean(upcoming[0]);
+
+  const eyebrow = document.createElement("p");
+  eyebrow.className = "spotlight-eyebrow";
+  eyebrow.textContent = isUpcoming ? dt("nextSpotlight") : dt("latestSpotlight");
+  container.appendChild(eyebrow);
+
+  if (!ev) {
+    const title = document.createElement("h3");
+    title.className = "spotlight-title";
+    title.textContent = dt("nothingSpotlight");
+    const meta = document.createElement("p");
+    meta.className = "spotlight-meta";
+    meta.textContent = dt("noEventFilters");
+    container.appendChild(title);
+    container.appendChild(meta);
+    return;
+  }
+
+  const diff = getDateDiffFromToday(ev.date, todayKey);
+  const datePill = document.createElement("div");
+  datePill.className = "spotlight-date-pill";
+  if (isUpcoming) {
+    datePill.textContent = diff === 0 ? dt("today") : diff === 1 ? dt("tomorrow") : dt("inDays", { days: diff });
+  } else {
+    datePill.textContent = formatDashboardDate(ev.date);
+  }
+
+  const title = document.createElement("h3");
+  title.className = "spotlight-title";
+  title.textContent = pickLang(ev, "title") || "Untitled event";
+
+  const meta = document.createElement("p");
+  meta.className = "spotlight-meta";
+  const location = pickLang(ev, "location") || getEventRegion(ev);
+  const note = pickLang(ev, "notes") || buildLegacyNotes(ev);
+  meta.textContent = [formatDashboardDate(ev.date), location, note].filter(Boolean).join(" · ");
+
+  const type = document.createElement("span");
+  type.className = "spotlight-type";
+  type.textContent = getTypeLabel(getDisplayType(ev));
+
+  container.appendChild(datePill);
+  container.appendChild(title);
+  container.appendChild(meta);
+  container.appendChild(type);
+}
+
+function createInsightCard(label, value, note, icon = "") {
+  const card = document.createElement("article");
+  card.className = "insight-card";
+  if (icon) card.dataset.icon = icon;
+
+  const labelEl = document.createElement("p");
+  labelEl.className = "insight-label";
+  labelEl.textContent = label;
+
+  const valueEl = document.createElement("p");
+  valueEl.className = "insight-value";
+  valueEl.textContent = value;
+
+  const noteEl = document.createElement("p");
+  noteEl.className = "insight-note";
+  noteEl.textContent = note;
+
+  card.appendChild(labelEl);
+  card.appendChild(valueEl);
+  card.appendChild(noteEl);
+  return card;
+}
+
+function renderBarChart(containerId, entries, options = {}) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  clearElement(container);
+
+  const rows = entries.filter(([, value]) => value > 0);
+  if (!rows.length) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = dt("noData");
+    container.appendChild(p);
+    return;
+  }
+
+  const max = Math.max(...rows.map(([, value]) => value));
+
+  rows.forEach(([label, value]) => {
+    const row = document.createElement("div");
+    row.className = "chart-row";
+
+    const labelEl = document.createElement("div");
+    labelEl.className = "chart-label";
+    labelEl.textContent = options.labelFormatter ? options.labelFormatter(label) : label;
+
+    const track = document.createElement("div");
+    track.className = "chart-track";
+
+    const bar = document.createElement("div");
+    bar.className = "chart-bar";
+    bar.style.width = `${Math.max((value / max) * 100, 4)}%`;
+    track.appendChild(bar);
+
+    const valueEl = document.createElement("div");
+    valueEl.className = "chart-value";
+    valueEl.textContent = value;
+
+    row.appendChild(labelEl);
+    row.appendChild(track);
+    row.appendChild(valueEl);
+    container.appendChild(row);
+  });
+}
+
+function renderList(containerId, entries, options = {}) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  clearElement(container);
+
+  const rows = entries.filter(([, value]) => value > 0);
+  if (!rows.length) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = dt("noData");
+    container.appendChild(p);
+    return;
+  }
+
+  rows.forEach(([label, value]) => {
+    const row = document.createElement("div");
+    row.className = "list-row";
+
+    const labelEl = document.createElement("div");
+    labelEl.className = "list-label";
+    labelEl.textContent = options.labelFormatter ? options.labelFormatter(label) : label;
+
+    const spacer = document.createElement("div");
+    spacer.className = "chart-track";
+    const bar = document.createElement("div");
+    bar.className = "chart-bar";
+    const max = options.max || Math.max(...rows.map(([, v]) => v));
+    bar.style.width = `${Math.max((value / max) * 100, 4)}%`;
+    spacer.appendChild(bar);
+
+    const valueEl = document.createElement("div");
+    valueEl.className = "list-value";
+    valueEl.textContent = value;
+
+    row.appendChild(labelEl);
+    row.appendChild(spacer);
+    row.appendChild(valueEl);
+    container.appendChild(row);
+  });
+}
+
+function renderDonutChart(containerId, entries, total) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  clearElement(container);
+
+  const rows = entries.filter(([, value]) => value > 0);
+  if (!rows.length || !total) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = dt("noData");
+    container.appendChild(p);
+    return;
+  }
+
+  const topType = rows[0];
+  const topShare = Math.round((topType[1] / total) * 100);
+  const palette = ["#FFE89C", "#A7D8FF", "#B9F6CA", "#FFB7D5", "#D7C7FF", "#FFC68A", "#9FE7FF", "#F6F9FF"];
+  const chartWrap = document.createElement("div");
+  chartWrap.className = "dashboard-pie-wrap";
+  const pieBox = document.createElement("div");
+  pieBox.className = "dashboard-pie-box";
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 220 220");
+  svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", dt("eventMixAria"));
+  svg.classList.add("dashboard-pie");
+
+  const centre = document.createElement("div");
+  centre.className = "dashboard-pie-centre";
+  centre.innerHTML = `<span class="pie-centre-number">${total}</span><span class="pie-centre-label">${dt("events")}</span>`;
+
+  const tooltip = document.createElement("div");
+  tooltip.className = "pie-tooltip";
+  tooltip.setAttribute("role", "status");
+  tooltip.hidden = true;
+
+  const selectedLabel = document.createElement("div");
+  selectedLabel.className = "pie-selected-label";
+  selectedLabel.innerHTML = `<span>${dt("tapHover")}</span><strong>${getTypeLabel(topType[0])}: ${formatEventCount(topType[1])} (${topShare}%)</strong>`;
+
+  function polarToCartesian(cx, cy, radius, angleInDegrees) {
+    const angleInRadians = (angleInDegrees - 90) * Math.PI / 180.0;
+    return { x: cx + (radius * Math.cos(angleInRadians)), y: cy + (radius * Math.sin(angleInRadians)) };
+  }
+
+  function describeArc(cx, cy, radius, startAngle, endAngle) {
+    const start = polarToCartesian(cx, cy, radius, endAngle);
+    const end = polarToCartesian(cx, cy, radius, startAngle);
+    const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+    return ["M", cx, cy, "L", start.x, start.y, "A", radius, radius, 0, largeArcFlag, 0, end.x, end.y, "Z"].join(" ");
+  }
+
+  function setSelected(slice, label, value, percentage) {
+    svg.querySelectorAll(".pie-slice").forEach(el => el.classList.remove("is-selected"));
+    slice.classList.add("is-selected");
+    centre.innerHTML = `<span class="pie-centre-number">${percentage}%</span><span class="pie-centre-label">${getTypeLabel(label)}</span>`;
+    selectedLabel.innerHTML = `<span>${dt("selectedType")}</span><strong>${getTypeLabel(label)}: ${formatEventCount(value)} (${percentage}%)</strong>`;
+  }
+
+  function showTooltip(event, label, value, percentage) {
+    tooltip.innerHTML = `<strong>${getTypeLabel(label)}</strong><span>${formatEventCount(value)} · ${percentage}% ${dt("ofThisView")}</span>`;
+    tooltip.hidden = false;
+    const box = pieBox.getBoundingClientRect();
+    const clientX = event.clientX || (box.left + box.width / 2);
+    const clientY = event.clientY || (box.top + box.height / 2);
+    tooltip.style.left = `${Math.min(Math.max(clientX - box.left, 64), box.width - 64)}px`;
+    tooltip.style.top = `${Math.min(Math.max(clientY - box.top, 48), box.height - 24)}px`;
+  }
+
+  function hideTooltip() {
+    tooltip.hidden = true;
+  }
+
+  let currentAngle = 0;
+  rows.forEach(([label, value], index) => {
+    const angle = (value / total) * 360;
+    const endAngle = currentAngle + angle;
+    const percentage = Math.round((value / total) * 100);
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", describeArc(110, 110, 98, currentAngle, endAngle));
+    path.setAttribute("fill", palette[index % palette.length]);
+    path.setAttribute("tabindex", "0");
+    path.setAttribute("role", "button");
+    path.setAttribute("aria-label", `${getTypeLabel(label)}, ${formatEventCount(value)}, ${percentage}%`);
+    path.classList.add("pie-slice");
+    if (index === 0) path.classList.add("is-selected");
+    path.addEventListener("mouseenter", event => showTooltip(event, label, value, percentage));
+    path.addEventListener("mousemove", event => showTooltip(event, label, value, percentage));
+    path.addEventListener("mouseleave", hideTooltip);
+    path.addEventListener("focus", event => {
+      setSelected(path, label, value, percentage);
+      showTooltip(event, label, value, percentage);
+    });
+    path.addEventListener("blur", hideTooltip);
+    path.addEventListener("click", event => {
+      setSelected(path, label, value, percentage);
+      showTooltip(event, label, value, percentage);
+    });
+    svg.appendChild(path);
+    currentAngle = endAngle;
+  });
+
+  const legend = document.createElement("div");
+  legend.className = "pie-legend";
+  rows.forEach(([label, value], index) => {
+    const percentage = Math.round((value / total) * 100);
+    const item = document.createElement("button");
+    item.type = "button";
+    item.className = "pie-legend-item";
+    item.innerHTML = `<span class="pie-legend-dot" style="--pie-dot:${palette[index % palette.length]}"></span><span class="pie-legend-name">${getTypeLabel(label)}</span><strong>${value}</strong><span>${percentage}%</span>`;
+    item.addEventListener("click", () => {
+      const slice = svg.querySelectorAll(".pie-slice")[index];
+      setSelected(slice, label, value, percentage);
+    });
+    legend.appendChild(item);
+  });
+
+  pieBox.appendChild(svg);
+  pieBox.appendChild(centre);
+  pieBox.appendChild(tooltip);
+  chartWrap.appendChild(pieBox);
+  chartWrap.appendChild(legend);
+  container.appendChild(chartWrap);
+  container.appendChild(selectedLabel);
+}
+
+function renderMonthHeatmap(containerId, monthCounts) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  clearElement(container);
+
+  const values = Array.from({ length: 12 }, (_, index) => monthCounts[String(index)] || 0);
+  const max = Math.max(...values, 0);
+
+  if (max === 0) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = dt("noMonthly");
+    container.appendChild(p);
+    return;
+  }
+
+  const busiestIndex = values.indexOf(max);
+  const summary = document.createElement("div");
+  summary.className = "dashboard-month-summary";
+  summary.innerHTML = `<span class="month-summary-label">${dt("busiestMonth")}</span><strong>${monthNameFromIndex(busiestIndex)}</strong><span>${formatEventCount(max)}</span>`;
+  container.appendChild(summary);
+
+  const list = document.createElement("div");
+  list.className = "dashboard-month-list";
+
+  values.forEach((value, index) => {
+    const percentage = max ? Math.round((value / max) * 100) : 0;
+    const row = document.createElement("div");
+    row.className = "month-pulse-row";
+    if (value === max) row.classList.add("is-busiest");
+    row.innerHTML = `<span class="month-pulse-name">${monthNameFromIndex(index)}</span><div class="month-pulse-track" aria-hidden="true"><span class="month-pulse-bar" style="width: ${value ? Math.max(percentage, 6) : 0}%"></span></div><span class="month-pulse-value">${value}</span>`;
+    list.appendChild(row);
+  });
+
+  container.appendChild(list);
+}
+
+function renderUpcomingList(filtered) {
+  const container = document.getElementById("dashboard-upcoming");
+  if (!container) return;
+  clearElement(container);
+
+  const { todayKey } = getBangkokTodayTomorrowKeys();
+  const upcoming = filtered.filter(ev => ev.date >= todayKey).sort((a, b) => a.date.localeCompare(b.date)).slice(0, 5);
+
+  if (!upcoming.length) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = dt("noUpcoming");
+    container.appendChild(p);
+    return;
+  }
+
+  upcoming.forEach(ev => {
+    const row = document.createElement("div");
+    row.className = "upcoming-row";
+    const dateEl = document.createElement("div");
+    dateEl.className = "upcoming-date";
+    dateEl.textContent = formatDashboardDate(ev.date);
+    const middle = document.createElement("div");
+    const title = document.createElement("div");
+    title.className = "upcoming-title";
+    title.textContent = pickLang(ev, "title");
+    const meta = document.createElement("div");
+    meta.className = "upcoming-meta";
+    meta.textContent = pickLang(ev, "location") || getEventRegion(ev);
+    middle.appendChild(title);
+    middle.appendChild(meta);
+    const typeEl = document.createElement("div");
+    typeEl.className = "upcoming-type";
+    typeEl.textContent = getTypeLabel(getDisplayType(ev));
+    row.appendChild(dateEl);
+    row.appendChild(middle);
+    row.appendChild(typeEl);
+    container.appendChild(row);
+  });
+}
+
+function renderDashboard() {
+  const dashboardView = document.getElementById("dashboard-view");
+  if (!dashboardView) return;
+
+  updateDashboardStaticText();
+
+  const filters = getDashboardFilters();
+  renderActiveFilterChips(filters);
+  const filtered = getFilteredDashboardEvents();
+  const { todayKey } = getBangkokTodayTomorrowKeys();
+  const upcomingCount = filtered.filter(ev => ev.date >= todayKey).length;
+  const pastCount = filtered.length - upcomingCount;
+  const typeCounts = countBy(filtered, ev => getDisplayType(ev));
+  const regionCounts = countBy(filtered, ev => getEventRegion(ev));
+  const regionCountsForInsight = Object.fromEntries(Object.entries(regionCounts).filter(([region]) => region !== "TBA"));
+  const yearCounts = countBy(filtered, ev => toBangkokDate(ev.date).getFullYear().toString());
+  const monthCounts = countBy(filtered, ev => String(toBangkokDate(ev.date).getMonth()));
+  const yearMonthCounts = countBy(filtered, ev => ev.date.slice(0, 7));
+  const fanMeetCount = filtered.filter(ev => ["FanMeeting", "Fansign", "FanEvent"].includes(getDisplayType(ev))).length;
+  const fanMeetShare = filtered.length ? Math.round((fanMeetCount / filtered.length) * 100) : 0;
+
+  const [topTypeName, topTypeCount] = topEntry(typeCounts);
+  const [topRegionName, topRegionCount] = topEntry(regionCountsForInsight);
+  const [busiestMonthKey, busiestMonthCount] = topEntry(yearMonthCounts);
+  const regionsCovered = Object.keys(regionCountsForInsight).length;
+
+  renderDashboardStory(filtered, { topTypeName, topTypeCount, topRegionName, topRegionCount });
+  renderDashboardSpotlight(filtered);
+
+  renderInsightCards([
+    { label: dt("totalEvents"), value: String(filtered.length), note: dt("matchingFilters"), icon: "✨" },
+    { label: dt("upcoming"), value: String(upcomingCount), note: dt("fromToday"), icon: "📅" },
+    { label: dt("past"), value: String(pastCount), note: dt("completed"), icon: "🗂️" },
+    { label: dt("topType"), value: topTypeCount ? getTypeLabel(topTypeName) : (currentLang === "en" ? "None" : currentLang === "th" ? "ไม่มี" : "无"), note: topTypeCount ? formatEventCount(topTypeCount) : dt("noMatching"), icon: "🏷️" },
+    { label: dt("busiestMonth"), value: busiestMonthCount ? formatDashboardMonthKey(busiestMonthKey) : (currentLang === "en" ? "None" : currentLang === "th" ? "ไม่มี" : "无"), note: busiestMonthCount ? formatEventCount(busiestMonthCount) : dt("noMatching"), icon: "🔥" },
+    { label: dt("topRegion"), value: topRegionCount ? topRegionName : (currentLang === "en" ? "None" : currentLang === "th" ? "ไม่มี" : "无"), note: topRegionCount ? formatEventCount(topRegionCount) : dt("noMatching"), icon: "🌏" },
+    { label: dt("regionsCovered"), value: String(regionsCovered), note: dt("excludingTba"), icon: "📍" },
+    { label: dt("fanMomentMix"), value: `${fanMeetShare}%`, note: dt("fanMomentNote"), icon: "💛" }
+  ]);
+
+  const typeEntries = dashboardTypeOrder.filter(type => Object.prototype.hasOwnProperty.call(typeCounts, type)).map(type => [type, typeCounts[type]]).concat(Object.entries(typeCounts).filter(([type]) => !dashboardTypeOrder.includes(type)));
+  const yearEntries = Object.entries(yearCounts).sort((a, b) => a[0].localeCompare(b[0]));
+  const regionEntries = Object.entries(regionCounts).filter(([region]) => region !== "TBA").sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 8);
+
+  renderDonutChart("dashboard-mix-donut", typeEntries, filtered.length);
+  renderMonthHeatmap("dashboard-month-heatmap", monthCounts);
+  renderBarChart("dashboard-year-chart", yearEntries);
+  renderList("dashboard-region-list", regionEntries);
+  renderUpcomingList(filtered);
+}
+
+function refreshDashboardDependentFilters(changedSelectId = "") {
+  const typeSelect = document.getElementById("dashboard-type");
+  const monthSelect = document.getElementById("dashboard-month");
+  const whoSelect = document.getElementById("dashboard-who");
+  const regionSelect = document.getElementById("dashboard-region");
+  const scopeSelect = document.getElementById("dashboard-scope");
+  if (!typeSelect || !monthSelect || !whoSelect || !regionSelect || !scopeSelect) return;
+
+  if (changedSelectId === "dashboard-year") {
+    monthSelect.value = "all";
+    scopeSelect.value = "all";
+  }
+
+  let typeFilters = getDashboardFiltersWithOverride("type", "all");
+  let availableTypes = [...new Set(getFilteredDashboardEventsFromFilters(typeFilters).map(ev => getDisplayType(ev)))];
+  const orderedTypeOptions = [["all", dt("all")]];
+  dashboardTypeOrder.forEach(type => {
+    if (availableTypes.includes(type)) orderedTypeOptions.push([type, getTypeLabel(type)]);
+  });
+  availableTypes.filter(type => !dashboardTypeOrder.includes(type)).sort().forEach(type => orderedTypeOptions.push([type, getTypeLabel(type)]));
+  setDashboardSelectOptions(typeSelect, orderedTypeOptions, typeSelect.value);
+
+  let whoFilters = getDashboardFiltersWithOverride("who", "all");
+  let availablePeople = [...new Set(getFilteredDashboardEventsFromFilters(whoFilters).map(ev => getEventPerson(ev)))];
+  const whoOptions = [["all", dt("all")]];
+  ["LMSY", "Lookmhee", "Sonya"].filter(person => availablePeople.includes(person)).forEach(person => whoOptions.push([person, person]));
+  availablePeople.filter(person => !["LMSY", "Lookmhee", "Sonya"].includes(person)).sort().forEach(person => whoOptions.push([person, person]));
+  setDashboardSelectOptions(whoSelect, whoOptions, whoSelect.value);
+
+  let monthFilters = getDashboardFiltersWithOverride("month", "all");
+  let availableMonths = [...new Set(getFilteredDashboardEventsFromFilters(monthFilters).map(ev => String(toBangkokDate(ev.date).getMonth())))];
+  const monthOptions = [["all", dt("all")]];
+  availableMonths.sort((a, b) => Number(a) - Number(b)).forEach(month => monthOptions.push([month, monthNameFromIndex(month)]));
+  setDashboardSelectOptions(monthSelect, monthOptions, monthSelect.value);
+
+  let regionFilters = getDashboardFiltersWithOverride("region", "all");
+  let availableRegions = [...new Set(getFilteredDashboardEventsFromFilters(regionFilters).map(ev => getEventRegion(ev)))];
+  const regionOptions = [["all", dt("all")]];
+  availableRegions.filter(region => region !== "TBA").sort((a, b) => a.localeCompare(b)).forEach(region => regionOptions.push([region, region]));
+  setDashboardSelectOptions(regionSelect, regionOptions, regionSelect.value);
+
+  setDashboardSelectOptions(scopeSelect, [["all", dt("allDates")], ["upcoming", dt("upcomingOnly")], ["past", dt("pastArchive")]], scopeSelect.value);
+}
+
+function populateDashboardFilters() {
+  const yearSelect = document.getElementById("dashboard-year");
+  const typeSelect = document.getElementById("dashboard-type");
+  const monthSelect = document.getElementById("dashboard-month");
+  const whoSelect = document.getElementById("dashboard-who");
+  const regionSelect = document.getElementById("dashboard-region");
+  const scopeSelect = document.getElementById("dashboard-scope");
+  if (!yearSelect || !typeSelect || !monthSelect || !whoSelect || !regionSelect || !scopeSelect) return;
+
+  [yearSelect, typeSelect, monthSelect, whoSelect, regionSelect, scopeSelect].forEach(select => { select.innerHTML = ""; });
+
+  addSelectOption(yearSelect, "all", dt("all"));
+  [...new Set(events.map(ev => ev.date.substring(0, 4)))].sort().forEach(year => addSelectOption(yearSelect, year, year));
+
+  addSelectOption(typeSelect, "all", dt("all"));
+  const availableTypes = [...new Set(events.map(ev => getDisplayType(ev)))];
+  dashboardTypeOrder.forEach(type => { if (availableTypes.includes(type)) addSelectOption(typeSelect, type, getTypeLabel(type)); });
+  availableTypes.filter(type => !dashboardTypeOrder.includes(type)).sort().forEach(type => addSelectOption(typeSelect, type, getTypeLabel(type)));
+
+  addSelectOption(monthSelect, "all", dt("all"));
+  Array.from({ length: 12 }, (_, index) => addSelectOption(monthSelect, String(index), monthNameFromIndex(index)));
+
+  addSelectOption(whoSelect, "all", dt("all"));
+  ["LMSY", "Lookmhee", "Sonya"].filter(person => events.some(ev => getEventPerson(ev) === person)).forEach(person => addSelectOption(whoSelect, person, person));
+
+  addSelectOption(regionSelect, "all", dt("all"));
+  [...new Set(events.map(ev => getEventRegion(ev)))].filter(region => region !== "TBA").sort((a, b) => a.localeCompare(b)).forEach(region => addSelectOption(regionSelect, region, region));
+
+  addSelectOption(scopeSelect, "all", dt("allDates"));
+  addSelectOption(scopeSelect, "upcoming", dt("upcomingOnly"));
+  addSelectOption(scopeSelect, "past", dt("pastArchive"));
+}
+
+function initDashboard() {
+  const dashboardView = document.getElementById("dashboard-view");
+  if (!dashboardView) return;
+
+  updateDashboardStaticText();
+  populateDashboardFilters();
+  refreshDashboardDependentFilters();
+
+  const filterPanel = document.getElementById("dashboard-filter-panel");
+  const filterToggle = document.getElementById("dashboard-filter-toggle");
+  const resetBtn = document.getElementById("dashboard-reset");
+  const filterSelects = dashboardView.querySelectorAll("select");
+
+  filterToggle?.addEventListener("click", () => {
+    if (!filterPanel) return;
+    const isOpen = !filterPanel.hasAttribute("hidden");
+    filterPanel.toggleAttribute("hidden", isOpen);
+    filterToggle.setAttribute("aria-expanded", String(!isOpen));
+  });
+
+  filterSelects.forEach(select => {
+    select.addEventListener("change", () => {
+      refreshDashboardDependentFilters(select.id);
+      renderDashboard();
+    });
+  });
+
+  resetBtn?.addEventListener("click", () => {
+    filterSelects.forEach(select => { select.value = "all"; });
+    refreshDashboardDependentFilters();
+    renderDashboard();
+  });
+
+  renderDashboard();
+}
+
+function initLanguageToggle() {
+  const buttons = document.querySelectorAll(".lang-toggle button");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const lang = btn.getAttribute("data-lang");
+      if (!lang || lang === currentLang) return;
+      currentLang = lang;
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const yearSelect = document.getElementById("filter-year");
+      const typeSelect = document.getElementById("filter-type");
+      const monthSelect = document.getElementById("filter-month");
+
+      renderSchedule(
+        yearSelect ? yearSelect.value : "all",
+        typeSelect ? typeSelect.value : "all",
+        monthSelect ? monthSelect.value : "all"
+      );
+
+      updateDashboardStaticText();
+      refreshDashboardDependentFilters();
+      renderDashboard();
+    });
+  });
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   initViewTabs();
   initFilters();

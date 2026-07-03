@@ -1706,12 +1706,11 @@ h2 {
 }
 
 
-/* Original moving gradient, with tabs restored
-   This keeps the original animated glow, avoids circular blobs and restores the Schedule/Dashboard pill tab styling. */
-
+/* Final lighter original glow + readable dashboard
+   Restores the original animated linear gradient, removes round radial blobs, keeps tabs large. */
 body {
   background: linear-gradient(135deg, #07121F, #0B1C30, #A7D8FF, #FFE89C) !important;
-  background-size: 340% 340% !important;
+  background-size: 300% 300% !important;
   background-attachment: fixed !important;
   animation: lmsyGradient 18s ease-in-out infinite !important;
 }
@@ -1730,19 +1729,19 @@ body::after {
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  height: 38vh !important;
+  height: 34vh !important;
   z-index: 0 !important;
   pointer-events: none !important;
   background: linear-gradient(
     0deg,
-    rgba(7, 18, 31, 0.66) 0%,
-    rgba(7, 18, 31, 0.48) 34%,
-    rgba(7, 18, 31, 0.18) 72%,
+    rgba(7, 18, 31, 0.52) 0%,
+    rgba(7, 18, 31, 0.34) 38%,
+    rgba(7, 18, 31, 0.10) 76%,
     rgba(7, 18, 31, 0.00) 100%
   ) !important;
 }
 
-/* Restore the large connected Schedule/Dashboard tab bar */
+/* Keep Schedule and Dashboard as one proper pill tab bar */
 .view-tabs {
   display: flex !important;
   gap: 0.5rem !important;
@@ -1751,7 +1750,7 @@ body::after {
   margin: 1rem 0 1.25rem !important;
   padding: 0.25rem !important;
   border-radius: 999px !important;
-  background: rgba(7, 18, 31, 0.78) !important;
+  background: rgba(7, 18, 31, 0.72) !important;
   border: 1px solid rgba(167, 216, 255, 0.45) !important;
   backdrop-filter: blur(10px) !important;
   width: 100% !important;
@@ -1781,7 +1780,7 @@ body::after {
   display: none !important;
 }
 
-/* Remove only extra decorative blobs */
+/* Remove only extra decorative blobs, not the main moving gradient */
 .header::before,
 .header::after,
 .view-tabs::before,
@@ -1797,7 +1796,6 @@ body::after {
   background: none !important;
 }
 
-/* Glass panels, not too dark */
 .header,
 .filters,
 .dashboard-top,
@@ -1807,14 +1805,14 @@ body::after {
 .dashboard-panel,
 .insight-card,
 .footer {
-  background: rgba(7, 18, 31, 0.70) !important;
+  background: rgba(7, 18, 31, 0.66) !important;
   border-color: rgba(167, 216, 255, 0.42) !important;
 }
 
 .event-card {
-  background: rgba(7, 18, 31, 0.58) !important;
+  background: rgba(7, 18, 31, 0.54) !important;
   border-color: rgba(214, 219, 235, 0.86) !important;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.10) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08) !important;
 }
 
 .event-title,
@@ -1827,19 +1825,18 @@ body::after {
 
 @media (max-width: 700px) {
   body::after {
-    height: 42vh !important;
+    height: 40vh !important;
     background: linear-gradient(
       0deg,
-      rgba(7, 18, 31, 0.72) 0%,
-      rgba(7, 18, 31, 0.52) 34%,
-      rgba(7, 18, 31, 0.20) 72%,
+      rgba(7, 18, 31, 0.60) 0%,
+      rgba(7, 18, 31, 0.40) 38%,
+      rgba(7, 18, 31, 0.14) 76%,
       rgba(7, 18, 31, 0.00) 100%
     ) !important;
   }
 
   .view-tabs {
     margin: 0.95rem 0 1.25rem !important;
-    padding: 0.25rem !important;
   }
 
   .view-tab {
@@ -1856,10 +1853,10 @@ body::after {
   .dashboard-panel,
   .insight-card,
   .footer {
-    background: rgba(7, 18, 31, 0.74) !important;
+    background: rgba(7, 18, 31, 0.70) !important;
   }
 
   .event-card {
-    background: rgba(7, 18, 31, 0.62) !important;
+    background: rgba(7, 18, 31, 0.58) !important;
   }
 }
