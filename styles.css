@@ -1704,3 +1704,50 @@ h2 {
   font-size: 0.76rem;
   line-height: 1.35;
 }
+
+
+/* Dashboard clean background override
+   Reduces the moving glow and removes the large yellow/blue decorative blobs
+   that were covering the dashboard cards on mobile. */
+body {
+  background:
+    radial-gradient(circle at 18% 0%, rgba(167, 216, 255, 0.14), transparent 28rem),
+    linear-gradient(180deg, #06111F 0%, #071827 45%, #07121F 100%);
+}
+
+body::before {
+  opacity: 0.16;
+  animation: none;
+}
+
+body::after {
+  height: 22vh;
+  background: linear-gradient(0deg, rgba(7, 18, 31, 0.86), rgba(7, 18, 31, 0));
+}
+
+.dashboard-top::before,
+.dashboard-top::after,
+.dashboard-story-card::before,
+.dashboard-spotlight-card::before {
+  display: none;
+}
+
+.dashboard-top,
+.dashboard-story-card,
+.dashboard-spotlight-card,
+.dashboard-panel,
+.insight-card {
+  background: rgba(7, 18, 31, 0.9);
+}
+
+.dashboard-panel,
+.insight-card,
+.dashboard-story-card,
+.dashboard-spotlight-card {
+  border-color: rgba(167, 216, 255, 0.36);
+}
+
+.dashboard-story-card,
+.dashboard-spotlight-card {
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+}
