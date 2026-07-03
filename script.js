@@ -2587,37 +2587,44 @@ function getStableText(ev, key) {
 }
 
 function getEventRegion(ev) {
-  const text = [
-    getStableText(ev, "title"),
-    getStableText(ev, "location"),
-    getStableText(ev, "notes"),
-    getStableText(ev, "details")
-  ].join(" ").toLowerCase();
+  const titleText = getStableText(ev, "title");
+  const locationText = getStableText(ev, "location");
+  const notesText = getStableText(ev, "notes");
+  const detailsText = getStableText(ev, "details");
 
-  if (!text || /to be announced|tba|รอประกาศ|待公布/.test(text)) return "TBA";
+  const text = [titleText, locationText, notesText, detailsText]
+    .join(" ")
+    .toLowerCase();
 
-  if (/taobao|weidian|iqiyi|instagram|youtube|facebook|tiktok|online|live broadcast|live/.test(text)) {
-    if (!/bangkok|thailand|china|hong kong|macau|macao|taipei|taiwan|vietnam|philippines|singapore|cambodia|korea|seoul/.test(text)) {
-      return "Online";
-    }
+  // Use title + location first so "ticketing details to be announced" does not hide
+  // entries that already have a country, for example Spain, Mexico or Brazil.
+  const regionText = [titleText, locationText].join(" ").toLowerCase();
+
+  if (/bangkok|thailand|chiang mai|kanchanaburi|qsncc|iconsiam|emsphere|emquartier|samyam|samyan|siam|paragon|central|grammy|bitec|กรุงเทพ|ไทย|曼谷|泰国|泰國|清迈|清邁/.test(regionText)) {
+    return "Thailand";
   }
 
-  if (/hong kong|香港/.test(text)) return "Hong Kong";
-  if (/macau|macao|澳门|澳門/.test(text)) return "Macau";
-  if (/taipei|taiwan|台湾|台灣/.test(text)) return "Taiwan";
-  if (/vietnam|เวียดนาม|越南/.test(text)) return "Vietnam";
-  if (/philippines|manila|ฟิลิปปินส์|菲律宾/.test(text)) return "Philippines";
-  if (/singapore|สิงคโปร์|新加坡/.test(text)) return "Singapore";
-  if (/cambodia|phnom penh|กัมพูชา|柬埔寨/.test(text)) return "Cambodia";
-  if (/korea|seoul|เกาหลี|韩国|韓國/.test(text)) return "Korea";
+  if (/hong kong|香港/.test(regionText)) return "Hong Kong";
+  if (/macau|macao|澳门|澳門/.test(regionText)) return "Macau";
+  if (/taipei|taiwan|kaohsiung|台湾|台灣|高雄/.test(regionText)) return "Taiwan";
+  if (/vietnam|เวียดนาม|越南/.test(regionText)) return "Vietnam";
+  if (/philippines|manila|ฟิลิปปินส์|菲律宾/.test(regionText)) return "Philippines";
+  if (/singapore|สิงคโปร์|新加坡/.test(regionText)) return "Singapore";
+  if (/cambodia|phnom penh|กัมพูชา|柬埔寨/.test(regionText)) return "Cambodia";
+  if (/korea|south korea|seoul|เกาหลี|เกาหลีใต้|韩国|韓國/.test(regionText)) return "Korea";
+  if (/brazil|บราซิล|巴西/.test(regionText)) return "Brazil";
+  if (/mexico|เม็กซิโก|墨西哥/.test(regionText)) return "Mexico";
+  if (/spain|สเปน|西班牙/.test(regionText)) return "Spain";
 
-  if (/china|guangzhou|shanghai|chongqing|chengdu|nanning|wuhan|fuzhou|hangzhou|tianjin|beijing|中国|中國|广州|上海|重庆|成都|南宁|武汉|福州|杭州|天津|北京/.test(text)) {
+  if (/china|guangzhou|shanghai|chongqing|chengdu|nanning|wuhan|fuzhou|hangzhou|tianjin|beijing|中国|中國|广州|上海|重庆|成都|南宁|武汉|福州|杭州|天津|北京/.test(regionText)) {
     return "China";
   }
 
-  if (/bangkok|thailand|chiang mai|kanchanaburi|qsncc|iconsiam|emsphere|emquartier|samyam|samyan|siam|paragon|central|grammy|bitec|กรุงเทพ|ไทย|曼谷|泰国|泰國|清迈|清邁/.test(text)) {
-    return "Thailand";
+  if (/taobao|weidian|iqiyi|instagram|youtube|facebook|tiktok|online|live broadcast|live/.test(text)) {
+    return "Online";
   }
+
+  if (!text || /to be announced|tba|รอประกาศ|待公布|แจ้งภายหลัง/.test(text)) return "TBA";
 
   return "Other";
 }
@@ -3326,6 +3333,7 @@ function renderDashboard() {
   const monthEntries = Array.from({ length: 12 }, (_, index) => [String(index), monthCounts[String(index)] || 0]);
   const yearEntries = Object.entries(yearCounts).sort((a, b) => a[0].localeCompare(b[0]));
   const regionEntries = Object.entries(regionCounts)
+    .filter(([region]) => region !== "TBA")
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .slice(0, 8);
 
@@ -3384,6 +3392,7 @@ function populateDashboardFilters() {
 
   addSelectOption(regionSelect, "all", "All");
   [...new Set(events.map(ev => getEventRegion(ev)))]
+    .filter(region => region !== "TBA")
     .sort((a, b) => a.localeCompare(b))
     .forEach(region => addSelectOption(regionSelect, region, region));
 
