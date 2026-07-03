@@ -114,10 +114,34 @@
               <select id="dashboard-region"></select>
             </div>
 
+            <div class="filter-group">
+              <label for="dashboard-scope">Time</label>
+              <select id="dashboard-scope"></select>
+            </div>
+
             <button type="button" id="dashboard-reset" class="dashboard-reset">Reset</button>
           </section>
 
+          <div id="dashboard-active-filters" class="dashboard-active-filters" aria-live="polite"></div>
+
+          <section class="dashboard-hero-grid" aria-label="Dashboard highlights">
+            <article id="dashboard-story" class="dashboard-story-card"></article>
+            <article id="dashboard-spotlight" class="dashboard-spotlight-card"></article>
+          </section>
+
           <section id="dashboard-summary" class="dashboard-summary" aria-live="polite"></section>
+
+          <section class="dashboard-special-grid" aria-label="Dashboard visual insights">
+            <article class="dashboard-panel dashboard-visual-panel">
+              <h3>Event mix</h3>
+              <div id="dashboard-mix-donut" class="dashboard-donut-wrap"></div>
+            </article>
+
+            <article class="dashboard-panel dashboard-visual-panel">
+              <h3>Monthly pulse</h3>
+              <div id="dashboard-month-heatmap" class="dashboard-heatmap"></div>
+            </article>
+          </section>
 
           <section class="dashboard-grid" aria-label="Dashboard charts">
             <article class="dashboard-panel">
