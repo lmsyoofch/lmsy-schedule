@@ -1706,84 +1706,51 @@ h2 {
 }
 
 
-/* Balanced background fix
-   Removes the big visible blue/yellow circles, but keeps a soft moving glow. */
-
+/* Restore the lighter LMSY feel, but make the lower part darker for readability */
 body {
   background:
-    linear-gradient(180deg, #06111F 0%, #071827 44%, #07121F 100%) !important;
+    radial-gradient(circle at 18% 0%, rgba(167, 216, 255, 0.24), transparent 32rem),
+    radial-gradient(circle at 86% 10%, rgba(255, 232, 156, 0.12), transparent 28rem),
+    linear-gradient(180deg, #0A1930 0%, #203A5B 48%, #2F4B70 72%, #203249 100%) !important;
+  background-attachment: fixed;
 }
 
-/* Replace circular aurora blobs with a very soft moving diagonal glow */
+/* Keep the subtle moving light */
 body::before {
-  display: block !important;
   content: "" !important;
   position: fixed !important;
-  inset: -35% -35% !important;
+  inset: -22% -18% !important;
   z-index: 0 !important;
   pointer-events: none !important;
   background:
-    linear-gradient(
-      115deg,
-      transparent 0%,
-      transparent 34%,
-      rgba(167, 216, 255, 0.10) 46%,
-      rgba(255, 232, 156, 0.07) 52%,
-      transparent 66%,
-      transparent 100%
-    ) !important;
-  filter: blur(34px) !important;
-  opacity: 0.55 !important;
-  animation: lmsySoftGlowMove 26s ease-in-out infinite alternate !important;
-  transform: translate3d(-8%, -5%, 0) rotate(-8deg) !important;
+    radial-gradient(circle at 30% 24%, rgba(167, 216, 255, 0.18), transparent 20rem),
+    radial-gradient(circle at 72% 18%, rgba(255, 232, 156, 0.10), transparent 18rem) !important;
+  filter: blur(6px) !important;
+  opacity: 0.52 !important;
+  animation: lmsyAurora 26s ease-in-out infinite alternate !important;
 }
 
-/* Keep only a bottom fade, no extra circle */
+/* Stronger darkening at the bottom so text stays readable */
 body::after {
-  display: block !important;
   content: "" !important;
   position: fixed !important;
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  height: 16vh !important;
+  height: 42vh !important;
   z-index: 0 !important;
   pointer-events: none !important;
-  background: linear-gradient(0deg, rgba(7, 18, 31, 0.70), rgba(7, 18, 31, 0)) !important;
+  background:
+    linear-gradient(
+      0deg,
+      rgba(7, 18, 31, 0.92) 0%,
+      rgba(7, 18, 31, 0.80) 28%,
+      rgba(7, 18, 31, 0.42) 68%,
+      rgba(7, 18, 31, 0.00) 100%
+    ) !important;
 }
 
-@keyframes lmsySoftGlowMove {
-  0% {
-    transform: translate3d(-10%, -6%, 0) rotate(-8deg);
-    opacity: 0.38;
-  }
-  50% {
-    transform: translate3d(4%, 3%, 0) rotate(-6deg);
-    opacity: 0.58;
-  }
-  100% {
-    transform: translate3d(12%, 7%, 0) rotate(-9deg);
-    opacity: 0.42;
-  }
-}
-
-/* Remove dashboard and header decorative circle patches */
-.header::before,
-.header::after,
-.view-tabs::before,
-.view-tabs::after,
-.dashboard-top::before,
-.dashboard-top::after,
-.dashboard-story-card::before,
-.dashboard-story-card::after,
-.dashboard-spotlight-card::before,
-.dashboard-spotlight-card::after {
-  display: none !important;
-  content: none !important;
-  background: none !important;
-}
-
-/* Clean readable glass cards */
+/* Keep panels slightly more solid for contrast */
 .header,
 .view-tabs,
 .filters,
@@ -1793,21 +1760,57 @@ body::after {
 .dashboard-spotlight-card,
 .dashboard-panel,
 .insight-card,
-.event-card {
-  background-color: rgba(7, 18, 31, 0.86) !important;
+.footer {
+  background: rgba(7, 18, 31, 0.82) !important;
 }
 
-/* Mobile tuning, keep the movement but make it less obvious */
+/* Make event cards darker so white text remains readable */
+.event-card {
+  background: rgba(18, 31, 49, 0.78) !important;
+  border: 1px solid rgba(214, 219, 235, 0.82) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14) !important;
+}
+
+.event-title,
+.event-meta,
+.event-notes,
+.event-hashtags {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.18);
+}
+
+/* Slightly darker footer for legibility */
+.footer {
+  border-color: rgba(167, 216, 255, 0.30) !important;
+}
+
+/* Mobile tuning, make the lower section even easier to read */
 @media (max-width: 700px) {
-  body::before {
-    opacity: 0.42 !important;
-    filter: blur(42px) !important;
+  body::after {
+    height: 50vh !important;
+    background:
+      linear-gradient(
+        0deg,
+        rgba(7, 18, 31, 0.95) 0%,
+        rgba(7, 18, 31, 0.86) 30%,
+        rgba(7, 18, 31, 0.52) 70%,
+        rgba(7, 18, 31, 0.04) 100%
+      ) !important;
   }
 
-  .insight-card:hover,
-  .dashboard-panel:hover,
-  .dashboard-story-card:hover,
-  .dashboard-spotlight-card:hover {
-    transform: none !important;
+  .event-card {
+    background: rgba(16, 28, 44, 0.84) !important;
+  }
+
+  .header,
+  .view-tabs,
+  .filters,
+  .dashboard-top,
+  .dashboard-filters,
+  .dashboard-story-card,
+  .dashboard-spotlight-card,
+  .dashboard-panel,
+  .insight-card,
+  .footer {
+    background: rgba(7, 18, 31, 0.86) !important;
   }
 }
