@@ -1,3 +1,28 @@
+
+
+/* =========================
+   SCROLL POSITION FIX
+   Force the page to start at the top after refresh or reopen.
+   This prevents Safari/Chrome mobile from restoring the old scroll position.
+   ========================= */
+
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+function forceScrollToTop() {
+  requestAnimationFrame(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  });
+}
+
+window.addEventListener("load", forceScrollToTop);
+window.addEventListener("pageshow", forceScrollToTop);
+document.addEventListener("DOMContentLoaded", forceScrollToTop);
+
+
 /* schedule.js
    Drop-in full script. It keeps your full events array and fixes the bugs that break filtering.
    Paste this whole file into GitHub as-is.
@@ -2150,7 +2175,7 @@ const events = [
   date: "2026-09-01",
   who: "LMSY",
   category: "FanMeeting",
-  title_en: "(TBC) LMSY Philippines FanMeeting",
+  title_en: "LMSY Philippines FanMeeting",
   title_zh: "LMSY 菲律宾粉丝见面会",
   location_en: "Philippines",
   location_th: "ประเทศฟิลิปปินส์",
@@ -2165,7 +2190,7 @@ const events = [
   date: "2026-10-01",
   who: "LMSY",
   category: "FanMeeting",
-  title_en: "(TBC) LMSY Brazil FanMeeting",
+  title_en: "LMSY Brazil FanMeeting",
   title_zh: "LMSY 巴西粉丝见面会",
   location_en: "Brazil",
   location_th: "ประเทศบราซิล",
@@ -2180,7 +2205,7 @@ const events = [
   date: "2026-10-01",
   who: "LMSY",
   category: "FanMeeting",
-  title_en: "(TBC) LMSY Mexico FanMeeting",
+  title_en: "LMSY Mexico FanMeeting",
   title_zh: "LMSY 墨西哥粉丝见面会",
   location_en: "Mexico",
   location_th: "ประเทศเม็กซิโก",
@@ -2195,7 +2220,7 @@ const events = [
   date: "2026-11-01",
   who: "LMSY",
   category: "FanMeeting",
-  title_en: "(TBC) LMSY Spain FanMeeting",
+  title_en: "LMSY Spain FanMeeting",
   title_zh: "LMSY 西班牙粉丝见面会",
   location_en: "Spain",
   location_th: "ประเทศสเปน",
@@ -2210,7 +2235,7 @@ const events = [
   date: "2026-12-01",
   who: "LMSY",
   category: "FanMeeting",
-  title_en: "(TBC) LMSY Vietnam FanMeeting",
+  title_en: "LMSY Vietnam FanMeeting",
   title_zh: "LMSY 越南粉丝见面会",
   location_en: "Vietnam",
   location_th: "ประเทศเวียดนาม",
@@ -3500,6 +3525,9 @@ function initDashboard() {
     const isOpen = !filterPanel.hasAttribute("hidden");
     filterPanel.toggleAttribute("hidden", isOpen);
     filterToggle.setAttribute("aria-expanded", String(!isOpen));
+    filterToggle.textContent = isOpen
+      ? (currentLang === "th" ? "แสดงตัวกรอง" : currentLang === "zh" ? "显示筛选" : "Show filters")
+      : (currentLang === "th" ? "ซ่อนตัวกรอง" : currentLang === "zh" ? "隐藏筛选" : "Hide filters");
   });
 
   filterSelects.forEach(select => {
@@ -3724,7 +3752,7 @@ const dashboardI18n = {
     insightKicker: "Insights",
     dashboardTitle: "LMSY Event Dashboard",
     dashboardDesc: "Explore event patterns by year, type, month, person and region.",
-    filterBtn: "Filter",
+    filterBtn: "Show filters",
     reset: "Reset",
     year: "Year",
     type: "Type",
@@ -3789,7 +3817,7 @@ const dashboardI18n = {
     insightKicker: "ข้อมูลเชิงลึก",
     dashboardTitle: "แดชบอร์ดงาน LMSY",
     dashboardDesc: "ดูภาพรวมงานตามปี ประเภท เดือน บุคคล และภูมิภาค",
-    filterBtn: "ตัวกรอง",
+    filterBtn: "แสดงตัวกรอง",
     reset: "รีเซ็ต",
     year: "ปี",
     type: "ประเภท",
@@ -3854,7 +3882,7 @@ const dashboardI18n = {
     insightKicker: "洞察",
     dashboardTitle: "LMSY 活动仪表板",
     dashboardDesc: "按年份、类型、月份、人物和地区查看活动趋势。",
-    filterBtn: "筛选",
+    filterBtn: "显示筛选",
     reset: "重置",
     year: "年份",
     type: "类型",
@@ -4015,7 +4043,27 @@ function updateDashboardStaticText() {
   if (kicker) kicker.textContent = dt("insightKicker");
   if (title) title.textContent = dt("dashboardTitle");
   if (desc) desc.textContent = dt("dashboardDesc");
-  if (filterToggle) filterToggle.textContent = dt("filterBtn");
+  if (filterToggle) {
+    const isOpen = filterToggle.getAttribute("aria-expanded") === "true";
+    filterToggle.textContent = isOpen
+      ? (currentLang === "th" ? "ซ่อนตัวกรอง" : currentLang === "zh" ? "隐藏筛选" : "Hide filters")
+      : dt("filterBtn");
+  }
+
+  const dashboardTop = document.querySelector(".dashboard-top");
+  if (dashboardTop && !dashboardTop.querySelector(".dashboard-filter-hint")) {
+    const hint = document.createElement("p");
+    hint.className = "dashboard-filter-hint";
+    dashboardTop.appendChild(hint);
+  }
+  const hint = document.querySelector(".dashboard-filter-hint");
+  if (hint) {
+    hint.textContent = currentLang === "th"
+      ? "แตะปุ่มแสดงตัวกรองเพื่อเลือกปี ประเภท เดือน บุคคล ภูมิภาค และช่วงเวลา"
+      : currentLang === "zh"
+        ? "点击“显示筛选”可按年份、类型、月份、人物、地区和时间筛选。"
+        : "Tap Show filters to filter by year, type, month, person, region and time.";
+  }
   if (resetBtn) resetBtn.textContent = dt("reset");
 
   const labels = [
@@ -4641,6 +4689,9 @@ function initDashboard() {
     const isOpen = !filterPanel.hasAttribute("hidden");
     filterPanel.toggleAttribute("hidden", isOpen);
     filterToggle.setAttribute("aria-expanded", String(!isOpen));
+    filterToggle.textContent = isOpen
+      ? (currentLang === "th" ? "แสดงตัวกรอง" : currentLang === "zh" ? "显示筛选" : "Show filters")
+      : (currentLang === "th" ? "ซ่อนตัวกรอง" : currentLang === "zh" ? "隐藏筛选" : "Hide filters");
   });
 
   filterSelects.forEach(select => {

@@ -1860,3 +1860,50 @@ body::after {
     background: rgba(7, 18, 31, 0.58) !important;
   }
 }
+
+
+/* Dashboard filter visibility hint */
+.dashboard-top {
+  position: relative;
+}
+
+.dashboard-filter-hint {
+  margin: 0.65rem 0 0;
+  color: #DCEBFF;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  opacity: 0.92;
+}
+
+.dashboard-filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dashboard-filter-toggle::after {
+  content: "⌄";
+  font-size: 0.95rem;
+  line-height: 1;
+  transition: transform 0.18s ease;
+}
+
+.dashboard-filter-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 700px) {
+  .dashboard-top {
+    align-items: stretch;
+  }
+
+  .dashboard-filter-toggle {
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+
+  .dashboard-filter-hint {
+    font-size: 0.78rem;
+  }
+}
