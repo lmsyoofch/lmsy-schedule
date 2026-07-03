@@ -1706,17 +1706,17 @@ h2 {
 }
 
 
-/* Original gradient with more visible glow
-   Keeps the original linear moving gradient, no circular blob. */
+/* Original moving gradient, lighter version
+   Keeps the original animated glow, avoids round blobs and keeps the bottom readable. */
 
 body {
   background: linear-gradient(135deg, #07121F, #0B1C30, #A7D8FF, #FFE89C) !important;
-  background-size: 420% 420% !important;
+  background-size: 340% 340% !important;
   background-attachment: fixed !important;
-  animation: lmsyGradient 14s ease-in-out infinite !important;
+  animation: lmsyGradient 18s ease-in-out infinite !important;
 }
 
-/* Do not use radial glow, this avoids the round shape */
+/* No radial glow, so there is no visible round shape */
 body::before {
   display: none !important;
   content: none !important;
@@ -1724,7 +1724,7 @@ body::before {
   animation: none !important;
 }
 
-/* Keep bottom readable, but less heavy so the glow can still show */
+/* Softer bottom fade, enough for readability but not too dark */
 body::after {
   content: "" !important;
   display: block !important;
@@ -1732,19 +1732,19 @@ body::after {
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  height: 42vh !important;
+  height: 38vh !important;
   z-index: 0 !important;
   pointer-events: none !important;
   background: linear-gradient(
     0deg,
-    rgba(7, 18, 31, 0.84) 0%,
-    rgba(7, 18, 31, 0.64) 32%,
-    rgba(7, 18, 31, 0.24) 70%,
+    rgba(7, 18, 31, 0.66) 0%,
+    rgba(7, 18, 31, 0.48) 34%,
+    rgba(7, 18, 31, 0.18) 72%,
     rgba(7, 18, 31, 0.00) 100%
   ) !important;
 }
 
-/* Remove decorative dashboard/card blobs only */
+/* Remove only the extra decorative blobs */
 .header::before,
 .header::after,
 .view-tabs::before,
@@ -1760,7 +1760,7 @@ body::after {
   background: none !important;
 }
 
-/* Make glass panels a little more transparent so the moving glow is visible */
+/* Glass panels, lighter than the previous dark version */
 .header,
 .view-tabs,
 .filters,
@@ -1771,12 +1771,15 @@ body::after {
 .dashboard-panel,
 .insight-card,
 .footer {
-  background: rgba(7, 18, 31, 0.74) !important;
+  background: rgba(7, 18, 31, 0.70) !important;
+  border-color: rgba(167, 216, 255, 0.42) !important;
 }
 
+/* Schedule cards, readable but still translucent */
 .event-card {
-  background: rgba(7, 18, 31, 0.68) !important;
-  border-color: rgba(214, 219, 235, 0.88) !important;
+  background: rgba(7, 18, 31, 0.58) !important;
+  border-color: rgba(214, 219, 235, 0.86) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.10) !important;
 }
 
 .event-title,
@@ -1784,17 +1787,17 @@ body::after {
 .event-notes,
 .event-hashtags,
 .footer {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
 }
 
 @media (max-width: 700px) {
   body::after {
-    height: 48vh !important;
+    height: 42vh !important;
     background: linear-gradient(
       0deg,
-      rgba(7, 18, 31, 0.88) 0%,
-      rgba(7, 18, 31, 0.68) 32%,
-      rgba(7, 18, 31, 0.28) 70%,
+      rgba(7, 18, 31, 0.72) 0%,
+      rgba(7, 18, 31, 0.52) 34%,
+      rgba(7, 18, 31, 0.20) 72%,
       rgba(7, 18, 31, 0.00) 100%
     ) !important;
   }
@@ -1809,10 +1812,10 @@ body::after {
   .dashboard-panel,
   .insight-card,
   .footer {
-    background: rgba(7, 18, 31, 0.78) !important;
+    background: rgba(7, 18, 31, 0.74) !important;
   }
 
   .event-card {
-    background: rgba(7, 18, 31, 0.72) !important;
+    background: rgba(7, 18, 31, 0.62) !important;
   }
 }
