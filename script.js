@@ -1,3 +1,4 @@
+console.log("LMSY schedule script loaded: dashboard upcoming panel removed");
 console.log("LMSY schedule script loaded: dashboard upcoming notes fixed");
 console.log("LMSY schedule script loaded: dashboard upcoming sync fixed");
 
@@ -3397,7 +3398,8 @@ function renderDashboard() {
   renderMonthHeatmap("dashboard-month-heatmap", monthCounts);
   renderBarChart("dashboard-year-chart", yearEntries);
   renderList("dashboard-region-list", regionEntries);
-  renderUpcomingList(filtered);
+  // Upcoming events panel removed from dashboard.
+  // renderUpcomingList(filtered);
 }
 
 function addSelectOption(select, value, label) {
@@ -4112,8 +4114,7 @@ function updateDashboardStaticText() {
     "dashboard-mix-donut": [dt("panelEventMix"), dt("panelEventMixNote")],
     "dashboard-month-heatmap": [dt("panelMonthly"), ""],
     "dashboard-year-chart": [dt("panelYear"), ""],
-    "dashboard-region-list": [dt("panelRegions"), ""],
-    "dashboard-upcoming": [dt("panelUpcoming"), ""]
+    "dashboard-region-list": [dt("panelRegions"), ""]
   };
 
   Object.entries(headings).forEach(([id, [heading, note]]) => {
@@ -4619,7 +4620,8 @@ function renderDashboard() {
   renderMonthHeatmap("dashboard-month-heatmap", monthCounts);
   renderBarChart("dashboard-year-chart", yearEntries);
   renderList("dashboard-region-list", regionEntries);
-  renderUpcomingList(filtered);
+  // Upcoming events panel removed from dashboard.
+  // renderUpcomingList(filtered);
 }
 
 function refreshDashboardDependentFilters(changedSelectId = "") {

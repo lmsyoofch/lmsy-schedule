@@ -1923,3 +1923,14 @@ body::after {
     font-size: 0.78rem;
   }
 }
+
+
+/* Dashboard upcoming panel removed */
+#dashboard-upcoming,
+#dashboard-upcoming.closest-removed {
+  display: none !important;
+}
+
+.dashboard-wide-panel:has(#dashboard-upcoming) {
+  display: none !important;
+}
