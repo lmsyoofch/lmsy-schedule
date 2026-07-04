@@ -1,3 +1,4 @@
+console.log("LMSY schedule script loaded: dashboard upcoming sync fixed");
 
 
 /* =========================
@@ -2939,6 +2940,22 @@ function renderDashboardStory(filtered, insight) {
   container.appendChild(stats);
 }
 
+
+
+/* Dashboard event display helpers
+   Keeps Dashboard upcoming list in sync with the schedule cards after event title/location updates. */
+function getDashboardEventTitle(ev) {
+  return pickLang(ev, "title") || ev.title || ev.title_en || ev.title_th || ev.title_zh || "Untitled event";
+}
+
+function getDashboardEventLocation(ev) {
+  return pickLang(ev, "location") || ev.location || ev.location_en || ev.location_th || ev.location_zh || getEventRegion(ev) || "";
+}
+
+function getDashboardEventType(ev) {
+  return getTypeLabel(getDisplayType(ev));
+}
+
 function renderDashboardSpotlight(filtered) {
   const container = document.getElementById("dashboard-spotlight");
   if (!container) return;
@@ -2978,11 +2995,11 @@ function renderDashboardSpotlight(filtered) {
 
   const title = document.createElement("h3");
   title.className = "spotlight-title";
-  title.textContent = pickLang(ev, "title") || "Untitled event";
+  title.textContent = getDashboardEventTitle(ev);
 
   const meta = document.createElement("p");
   meta.className = "spotlight-meta";
-  const location = pickLang(ev, "location") || getEventRegion(ev);
+  const location = getDashboardEventLocation(ev);
   const note = pickLang(ev, "notes") || buildLegacyNotes(ev);
   meta.textContent = [formatDashboardDate(ev.date), location, note].filter(Boolean).join(" · ");
 
@@ -3242,11 +3259,11 @@ function renderUpcomingList(filtered) {
     const middle = document.createElement("div");
     const title = document.createElement("div");
     title.className = "upcoming-title";
-    title.textContent = pickLang(ev, "title");
+    title.textContent = getDashboardEventTitle(ev);
 
     const meta = document.createElement("div");
     meta.className = "upcoming-meta";
-    const location = pickLang(ev, "location") || getEventRegion(ev);
+    const location = getDashboardEventLocation(ev);
     meta.textContent = location;
 
     middle.appendChild(title);
@@ -3254,7 +3271,7 @@ function renderUpcomingList(filtered) {
 
     const typeEl = document.createElement("div");
     typeEl.className = "upcoming-type";
-    typeEl.textContent = getTypeLabel(getDisplayType(ev));
+    typeEl.textContent = getDashboardEventType(ev);
 
     row.appendChild(dateEl);
     row.appendChild(middle);
@@ -4214,11 +4231,11 @@ function renderDashboardSpotlight(filtered) {
 
   const title = document.createElement("h3");
   title.className = "spotlight-title";
-  title.textContent = pickLang(ev, "title") || "Untitled event";
+  title.textContent = getDashboardEventTitle(ev);
 
   const meta = document.createElement("p");
   meta.className = "spotlight-meta";
-  const location = pickLang(ev, "location") || getEventRegion(ev);
+  const location = getDashboardEventLocation(ev);
   const note = pickLang(ev, "notes") || buildLegacyNotes(ev);
   meta.textContent = [formatDashboardDate(ev.date), location, note].filter(Boolean).join(" · ");
 
@@ -4527,15 +4544,15 @@ function renderUpcomingList(filtered) {
     const middle = document.createElement("div");
     const title = document.createElement("div");
     title.className = "upcoming-title";
-    title.textContent = pickLang(ev, "title");
+    title.textContent = getDashboardEventTitle(ev);
     const meta = document.createElement("div");
     meta.className = "upcoming-meta";
-    meta.textContent = pickLang(ev, "location") || getEventRegion(ev);
+    meta.textContent = getDashboardEventLocation(ev);
     middle.appendChild(title);
     middle.appendChild(meta);
     const typeEl = document.createElement("div");
     typeEl.className = "upcoming-type";
-    typeEl.textContent = getTypeLabel(getDisplayType(ev));
+    typeEl.textContent = getDashboardEventType(ev);
     row.appendChild(dateEl);
     row.appendChild(middle);
     row.appendChild(typeEl);
