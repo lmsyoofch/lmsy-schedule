@@ -1925,16 +1925,6 @@ body::after {
 }
 
 
-/* Dashboard upcoming panel removed */
-#dashboard-upcoming,
-#dashboard-upcoming.closest-removed {
-  display: none !important;
-}
-
-.dashboard-wide-panel:has(#dashboard-upcoming) {
-  display: none !important;
-}
-
 /* Dashboard upcoming from schedule */
 .dashboard-upcoming-panel,
 .dashboard-wide-panel:has(#dashboard-upcoming) {
@@ -2001,4 +1991,24 @@ body::after {
   .upcoming-type {
     white-space: normal;
   }
+}
+
+/* Dashboard upcoming from schedule, exactly five items */
+.dashboard-upcoming-panel,
+.dashboard-wide-panel:has(#dashboard-upcoming) {
+  display: block !important;
+}
+
+#dashboard-upcoming {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.upcoming-note {
+  color: #E5EDFF;
+  font-size: 0.82rem;
+  margin-top: 0.22rem;
+  line-height: 1.35;
+  opacity: 0.95;
 }

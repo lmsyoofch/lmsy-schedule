@@ -1,7 +1,4 @@
-console.log("LMSY schedule script loaded: dashboard upcoming from schedule fixed");
-console.log("LMSY schedule script loaded: dashboard upcoming panel removed");
-console.log("LMSY schedule script loaded: dashboard upcoming notes fixed");
-console.log("LMSY schedule script loaded: dashboard upcoming sync fixed");
+console.log("LMSY schedule script loaded: upcoming exactly 5 fixed");
 
 
 /* =========================
@@ -2893,6 +2890,78 @@ function renderActiveFilterChips(filters) {
   });
 }
 
+
+function renderUpcomingList(filtered) {
+  const container = document.getElementById("dashboard-upcoming");
+  const titleEl = document.getElementById("dashboard-upcoming-title");
+  const noteEl = document.getElementById("dashboard-upcoming-note");
+
+  if (titleEl) titleEl.textContent = getDashboardUpcomingHeadingText();
+  if (noteEl) noteEl.textContent = getDashboardUpcomingNoteText();
+  if (!container) return;
+
+  clearElement(container);
+
+  const { todayKey } = getBangkokTodayTomorrowKeys();
+
+  const upcoming = filtered
+    .filter(ev => ev.date >= todayKey)
+    .sort((a, b) => {
+      const dateCompare = a.date.localeCompare(b.date);
+      if (dateCompare !== 0) return dateCompare;
+      return (a.startTime || a.time || "").localeCompare(b.startTime || b.time || "");
+    })
+    .slice(0, 5);
+
+  if (!upcoming.length) {
+    const p = document.createElement("p");
+    p.className = "empty";
+    p.textContent = currentLang === "th"
+      ? "ไม่มีงานที่จะมาถึงในมุมมองนี้"
+      : currentLang === "zh"
+        ? "当前视图暂无即将举行的活动。"
+        : "No upcoming events in this view.";
+    container.appendChild(p);
+    return;
+  }
+
+  upcoming.forEach(ev => {
+    const row = document.createElement("div");
+    row.className = "upcoming-row";
+
+    const dateEl = document.createElement("div");
+    dateEl.className = "upcoming-date";
+    dateEl.textContent = formatDashboardDate(ev.date);
+
+    const middle = document.createElement("div");
+
+    const title = document.createElement("div");
+    title.className = "upcoming-title";
+    title.textContent = getScheduleSourceTitle(ev);
+
+    const meta = document.createElement("div");
+    meta.className = "upcoming-meta";
+    meta.textContent = getScheduleSourceLocation(ev);
+
+    const note = document.createElement("div");
+    note.className = "upcoming-note";
+    note.textContent = getScheduleSourceNotes(ev);
+
+    middle.appendChild(title);
+    if (meta.textContent) middle.appendChild(meta);
+    if (note.textContent) middle.appendChild(note);
+
+    const typeEl = document.createElement("div");
+    typeEl.className = "upcoming-type";
+    typeEl.textContent = getTypeLabel(getDisplayType(ev));
+
+    row.appendChild(dateEl);
+    row.appendChild(middle);
+    row.appendChild(typeEl);
+    container.appendChild(row);
+  });
+}
+
 function renderDashboardStory(filtered, insight) {
   const container = document.getElementById("dashboard-story");
   if (!container) return;
@@ -3263,76 +3332,7 @@ function getDashboardUpcomingNoteText() {
 }
 
 
-function renderUpcomingList(filtered) {
-  const container = document.getElementById("dashboard-upcoming");
-  const titleEl = document.getElementById("dashboard-upcoming-title");
-  const noteEl = document.getElementById("dashboard-upcoming-note");
 
-  if (titleEl) titleEl.textContent = getDashboardUpcomingHeadingText();
-  if (noteEl) noteEl.textContent = getDashboardUpcomingNoteText();
-  if (!container) return;
-
-  clearElement(container);
-
-  const { todayKey } = getBangkokTodayTomorrowKeys();
-
-  const upcoming = filtered
-    .filter(ev => ev.date >= todayKey)
-    .sort((a, b) => {
-      const dateCompare = a.date.localeCompare(b.date);
-      if (dateCompare !== 0) return dateCompare;
-      return (a.startTime || "").localeCompare(b.startTime || "");
-    })
-    .slice(0, 5);
-
-  if (!upcoming.length) {
-    const p = document.createElement("p");
-    p.className = "empty";
-    p.textContent = currentLang === "th"
-      ? "ไม่มีงานที่จะมาถึงในมุมมองนี้"
-      : currentLang === "zh"
-        ? "当前视图暂无即将举行的活动。"
-        : "No upcoming events in this view.";
-    container.appendChild(p);
-    return;
-  }
-
-  upcoming.forEach(ev => {
-    const row = document.createElement("div");
-    row.className = "upcoming-row";
-
-    const dateEl = document.createElement("div");
-    dateEl.className = "upcoming-date";
-    dateEl.textContent = formatDashboardDate(ev.date);
-
-    const middle = document.createElement("div");
-
-    const title = document.createElement("div");
-    title.className = "upcoming-title";
-    title.textContent = getScheduleSourceTitle(ev);
-
-    const meta = document.createElement("div");
-    meta.className = "upcoming-meta";
-    meta.textContent = getScheduleSourceLocation(ev);
-
-    const note = document.createElement("div");
-    note.className = "upcoming-note";
-    note.textContent = getScheduleSourceNotes(ev);
-
-    middle.appendChild(title);
-    if (meta.textContent) middle.appendChild(meta);
-    if (note.textContent) middle.appendChild(note);
-
-    const typeEl = document.createElement("div");
-    typeEl.className = "upcoming-type";
-    typeEl.textContent = getTypeLabel(getDisplayType(ev));
-
-    row.appendChild(dateEl);
-    row.appendChild(middle);
-    row.appendChild(typeEl);
-    container.appendChild(row);
-  });
-}
 
 
 function renderDashboard() {
@@ -4573,46 +4573,7 @@ function renderMonthHeatmap(containerId, monthCounts) {
   container.appendChild(list);
 }
 
-function renderUpcomingList(filtered) {
-  const container = document.getElementById("dashboard-upcoming");
-  if (!container) return;
-  clearElement(container);
 
-  const { todayKey } = getBangkokTodayTomorrowKeys();
-  const upcoming = filtered.filter(ev => ev.date >= todayKey).sort((a, b) => a.date.localeCompare(b.date)).slice(0, 10);
-
-  if (!upcoming.length) {
-    const p = document.createElement("p");
-    p.className = "empty";
-    p.textContent = dt("noUpcoming");
-    container.appendChild(p);
-    return;
-  }
-
-  upcoming.forEach(ev => {
-    const row = document.createElement("div");
-    row.className = "upcoming-row";
-    const dateEl = document.createElement("div");
-    dateEl.className = "upcoming-date";
-    dateEl.textContent = formatDashboardDate(ev.date);
-    const middle = document.createElement("div");
-    const title = document.createElement("div");
-    title.className = "upcoming-title";
-    title.textContent = getDashboardEventTitle(ev);
-    const meta = document.createElement("div");
-    meta.className = "upcoming-meta";
-    meta.textContent = getDashboardEventLocation(ev);
-    middle.appendChild(title);
-    middle.appendChild(meta);
-    const typeEl = document.createElement("div");
-    typeEl.className = "upcoming-type";
-    typeEl.textContent = getDashboardEventType(ev);
-    row.appendChild(dateEl);
-    row.appendChild(middle);
-    row.appendChild(typeEl);
-    container.appendChild(row);
-  });
-}
 
 function renderDashboard() {
   const dashboardView = document.getElementById("dashboard-view");
