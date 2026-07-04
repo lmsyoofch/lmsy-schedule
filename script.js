@@ -1,3 +1,4 @@
+console.log("LMSY schedule script loaded: dashboard upcoming notes fixed");
 console.log("LMSY schedule script loaded: dashboard upcoming sync fixed");
 
 
@@ -2952,6 +2953,10 @@ function getDashboardEventLocation(ev) {
   return pickLang(ev, "location") || ev.location || ev.location_en || ev.location_th || ev.location_zh || getEventRegion(ev) || "";
 }
 
+function getDashboardEventNotes(ev) {
+  return pickLang(ev, "notes") || ev.notes || ev.notes_en || ev.notes_th || ev.notes_zh || buildLegacyNotes(ev) || "";
+}
+
 function getDashboardEventType(ev) {
   return getTypeLabel(getDisplayType(ev));
 }
@@ -3238,7 +3243,7 @@ function renderUpcomingList(filtered) {
   const upcoming = filtered
     .filter(ev => ev.date >= todayKey)
     .sort((a, b) => a.date.localeCompare(b.date))
-    .slice(0, 5);
+    .slice(0, 10);
 
   if (!upcoming.length) {
     const p = document.createElement("p");
@@ -3266,8 +3271,14 @@ function renderUpcomingList(filtered) {
     const location = getDashboardEventLocation(ev);
     meta.textContent = location;
 
+    const note = document.createElement("div");
+    note.className = "upcoming-note";
+    const noteText = getDashboardEventNotes(ev);
+    note.textContent = noteText;
+
     middle.appendChild(title);
     middle.appendChild(meta);
+    if (noteText) middle.appendChild(note);
 
     const typeEl = document.createElement("div");
     typeEl.className = "upcoming-type";
@@ -4525,7 +4536,7 @@ function renderUpcomingList(filtered) {
   clearElement(container);
 
   const { todayKey } = getBangkokTodayTomorrowKeys();
-  const upcoming = filtered.filter(ev => ev.date >= todayKey).sort((a, b) => a.date.localeCompare(b.date)).slice(0, 5);
+  const upcoming = filtered.filter(ev => ev.date >= todayKey).sort((a, b) => a.date.localeCompare(b.date)).slice(0, 10);
 
   if (!upcoming.length) {
     const p = document.createElement("p");

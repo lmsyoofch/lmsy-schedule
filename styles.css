@@ -1907,3 +1907,19 @@ body::after {
     font-size: 0.78rem;
   }
 }
+
+
+/* Dashboard upcoming notes/status line */
+.upcoming-note {
+  color: #E5EDFF;
+  font-size: 0.76rem;
+  margin-top: 0.18rem;
+  line-height: 1.35;
+  opacity: 0.92;
+}
+
+@media (max-width: 720px) {
+  .upcoming-note {
+    font-size: 0.78rem;
+  }
+}
