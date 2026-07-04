@@ -2891,6 +2891,7 @@ function renderActiveFilterChips(filters) {
 }
 
 
+
 function renderUpcomingList(filtered) {
   const container = document.getElementById("dashboard-upcoming");
   const titleEl = document.getElementById("dashboard-upcoming-title");
@@ -2927,7 +2928,7 @@ function renderUpcomingList(filtered) {
 
   upcoming.forEach(ev => {
     const row = document.createElement("div");
-    row.className = "upcoming-row";
+    row.className = "upcoming-row upcoming-row-simple";
 
     const dateEl = document.createElement("div");
     dateEl.className = "upcoming-date";
@@ -2943,13 +2944,8 @@ function renderUpcomingList(filtered) {
     meta.className = "upcoming-meta";
     meta.textContent = getScheduleSourceLocation(ev);
 
-    const note = document.createElement("div");
-    note.className = "upcoming-note";
-    note.textContent = getScheduleSourceNotes(ev);
-
     middle.appendChild(title);
     if (meta.textContent) middle.appendChild(meta);
-    if (note.textContent) middle.appendChild(note);
 
     const typeEl = document.createElement("div");
     typeEl.className = "upcoming-type";
@@ -2961,6 +2957,7 @@ function renderUpcomingList(filtered) {
     container.appendChild(row);
   });
 }
+
 
 function renderDashboardStory(filtered, insight) {
   const container = document.getElementById("dashboard-story");
@@ -3320,15 +3317,15 @@ function getScheduleSourceNotes(ev) {
 }
 
 function getDashboardUpcomingHeadingText() {
-  if (currentLang === "th") return "5 งานถัดไปจากตารางงาน";
-  if (currentLang === "zh") return "来自日程的下 5 个活动";
-  return "Next 5 upcoming events from schedule";
+  if (currentLang === "th") return "5 งานถัดไป";
+  if (currentLang === "zh") return "下 5 个活动";
+  return "Next 5 upcoming events";
 }
 
 function getDashboardUpcomingNoteText() {
-  if (currentLang === "th") return "ดึงข้อมูลจากตารางงานโดยตรง รวมถึงชื่อ สถานที่ และหมายเหตุที่อัปเดตแล้ว";
-  if (currentLang === "zh") return "直接来自日程数据，包括已更新的标题、地点和备注。";
-  return "Pulled directly from the schedule data, including updated titles, locations and notes.";
+  if (currentLang === "th") return "สรุปงานถัดไปแบบสั้น ๆ";
+  if (currentLang === "zh") return "快速查看接下来的活动。";
+  return "A quick look at what is coming next.";
 }
 
 
