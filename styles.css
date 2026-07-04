@@ -1934,3 +1934,71 @@ body::after {
 .dashboard-wide-panel:has(#dashboard-upcoming) {
   display: none !important;
 }
+
+/* Dashboard upcoming from schedule */
+.dashboard-upcoming-panel,
+.dashboard-wide-panel:has(#dashboard-upcoming) {
+  display: block !important;
+}
+
+#dashboard-upcoming {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.upcoming-row {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr) auto;
+  gap: 0.8rem;
+  align-items: start;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(167, 216, 255, 0.18);
+}
+
+.upcoming-row:last-child {
+  border-bottom: none;
+}
+
+.upcoming-date {
+  color: #FFE89C;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.upcoming-title {
+  color: #F6F9FF;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.upcoming-meta {
+  color: #DCEBFF;
+  margin-top: 0.16rem;
+  line-height: 1.35;
+}
+
+.upcoming-note {
+  color: #E5EDFF;
+  font-size: 0.82rem;
+  margin-top: 0.22rem;
+  line-height: 1.35;
+  opacity: 0.95;
+}
+
+.upcoming-type {
+  color: #A7D8FF;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .upcoming-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .upcoming-type {
+    white-space: normal;
+  }
+}

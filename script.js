@@ -1,3 +1,4 @@
+console.log("LMSY schedule script loaded: dashboard upcoming from schedule fixed");
 console.log("LMSY schedule script loaded: dashboard upcoming panel removed");
 console.log("LMSY schedule script loaded: dashboard upcoming notes fixed");
 console.log("LMSY schedule script loaded: dashboard upcoming sync fixed");
@@ -3235,21 +3236,63 @@ function renderMonthHeatmap(containerId, monthCounts) {
   container.appendChild(list);
 }
 
+
+/* Dashboard schedule-source helpers */
+function getScheduleSourceTitle(ev) {
+  return pickLang(ev, "title") || ev.title || ev.title_en || ev.title_th || ev.title_zh || "Untitled event";
+}
+
+function getScheduleSourceLocation(ev) {
+  return pickLang(ev, "location") || ev.location || ev.location_en || ev.location_th || ev.location_zh || getEventRegion(ev) || "";
+}
+
+function getScheduleSourceNotes(ev) {
+  return pickLang(ev, "notes") || ev.notes || ev.notes_en || ev.notes_th || ev.notes_zh || buildLegacyNotes(ev) || "";
+}
+
+function getDashboardUpcomingHeadingText() {
+  if (currentLang === "th") return "5 งานถัดไปจากตารางงาน";
+  if (currentLang === "zh") return "来自日程的下 5 个活动";
+  return "Next 5 upcoming events from schedule";
+}
+
+function getDashboardUpcomingNoteText() {
+  if (currentLang === "th") return "ดึงข้อมูลจากตารางงานโดยตรง รวมถึงชื่อ สถานที่ และหมายเหตุที่อัปเดตแล้ว";
+  if (currentLang === "zh") return "直接来自日程数据，包括已更新的标题、地点和备注。";
+  return "Pulled directly from the schedule data, including updated titles, locations and notes.";
+}
+
+
 function renderUpcomingList(filtered) {
   const container = document.getElementById("dashboard-upcoming");
+  const titleEl = document.getElementById("dashboard-upcoming-title");
+  const noteEl = document.getElementById("dashboard-upcoming-note");
+
+  if (titleEl) titleEl.textContent = getDashboardUpcomingHeadingText();
+  if (noteEl) noteEl.textContent = getDashboardUpcomingNoteText();
   if (!container) return;
+
   clearElement(container);
 
   const { todayKey } = getBangkokTodayTomorrowKeys();
+
   const upcoming = filtered
     .filter(ev => ev.date >= todayKey)
-    .sort((a, b) => a.date.localeCompare(b.date))
-    .slice(0, 10);
+    .sort((a, b) => {
+      const dateCompare = a.date.localeCompare(b.date);
+      if (dateCompare !== 0) return dateCompare;
+      return (a.startTime || "").localeCompare(b.startTime || "");
+    })
+    .slice(0, 5);
 
   if (!upcoming.length) {
     const p = document.createElement("p");
     p.className = "empty";
-    p.textContent = "No upcoming events in this view.";
+    p.textContent = currentLang === "th"
+      ? "ไม่มีงานที่จะมาถึงในมุมมองนี้"
+      : currentLang === "zh"
+        ? "当前视图暂无即将举行的活动。"
+        : "No upcoming events in this view.";
     container.appendChild(p);
     return;
   }
@@ -3263,27 +3306,26 @@ function renderUpcomingList(filtered) {
     dateEl.textContent = formatDashboardDate(ev.date);
 
     const middle = document.createElement("div");
+
     const title = document.createElement("div");
     title.className = "upcoming-title";
-    title.textContent = getDashboardEventTitle(ev);
+    title.textContent = getScheduleSourceTitle(ev);
 
     const meta = document.createElement("div");
     meta.className = "upcoming-meta";
-    const location = getDashboardEventLocation(ev);
-    meta.textContent = location;
+    meta.textContent = getScheduleSourceLocation(ev);
 
     const note = document.createElement("div");
     note.className = "upcoming-note";
-    const noteText = getDashboardEventNotes(ev);
-    note.textContent = noteText;
+    note.textContent = getScheduleSourceNotes(ev);
 
     middle.appendChild(title);
-    middle.appendChild(meta);
-    if (noteText) middle.appendChild(note);
+    if (meta.textContent) middle.appendChild(meta);
+    if (note.textContent) middle.appendChild(note);
 
     const typeEl = document.createElement("div");
     typeEl.className = "upcoming-type";
-    typeEl.textContent = getDashboardEventType(ev);
+    typeEl.textContent = getTypeLabel(getDisplayType(ev));
 
     row.appendChild(dateEl);
     row.appendChild(middle);
@@ -3291,6 +3333,7 @@ function renderUpcomingList(filtered) {
     container.appendChild(row);
   });
 }
+
 
 function renderDashboard() {
   const dashboardView = document.getElementById("dashboard-view");
@@ -3398,8 +3441,7 @@ function renderDashboard() {
   renderMonthHeatmap("dashboard-month-heatmap", monthCounts);
   renderBarChart("dashboard-year-chart", yearEntries);
   renderList("dashboard-region-list", regionEntries);
-  // Upcoming events panel removed from dashboard.
-  // renderUpcomingList(filtered);
+  renderUpcomingList(filtered);
 }
 
 function addSelectOption(select, value, label) {
@@ -4620,8 +4662,7 @@ function renderDashboard() {
   renderMonthHeatmap("dashboard-month-heatmap", monthCounts);
   renderBarChart("dashboard-year-chart", yearEntries);
   renderList("dashboard-region-list", regionEntries);
-  // Upcoming events panel removed from dashboard.
-  // renderUpcomingList(filtered);
+  renderUpcomingList(filtered);
 }
 
 function refreshDashboardDependentFilters(changedSelectId = "") {
