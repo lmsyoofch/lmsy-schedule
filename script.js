@@ -2107,19 +2107,14 @@ const events = [
   who: "LMSY",
   category: "Livestream",
   title: "Grab Food จัดจานไลฟ์ตามใจคุณ X LMSY",
-  location: "Grab Thailand Page / YouTube",
+  location: "Grab Thailand Facebook Page / YouTube",
   notes: "Live at 19:00 (GMT+7)",
   notes_th: "ไลฟ์เวลา 19:00 น. (GMT+7)",
   notes_zh: "直播时间为 19:00（GMT+7）",
   hashtags: [
+    "GRABFOOD X LookmheeSonya",
     "#GrabFoodถูกกว่าซั้วร์xลูกหมีซอนญ่า",
-    "#GrabFoodxLookmheeSonya",
-    "#ChangeArtist",
-    "#LMSY",
-    "#ลูกหมีซอนญ่า",
-    "#LMlookmhee",
-    "#SonyaSaranphat"
-  ],
+    "#GrabFoodxLookmheeSonya"],
   tags: ["LMSY", "Livestream"]
 },
 {
