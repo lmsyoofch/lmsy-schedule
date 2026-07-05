@@ -2475,7 +2475,11 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
 
     const iconSpan = document.createElement("span");
     iconSpan.className = "event-icon";
-    iconSpan.textContent = getEventIcon(ev);
+    const iconText = getEventIcon(ev);
+    iconSpan.textContent = iconText;
+    if (iconText.length > 2) {
+      iconSpan.classList.add("event-icon-pair");
+    }
 
     const titleEl = document.createElement("div");
     titleEl.className = "event-title";

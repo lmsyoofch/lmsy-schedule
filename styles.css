@@ -2054,3 +2054,22 @@ body::after {
     padding: 0.68rem 0 !important;
   }
 }
+
+
+/* Keep LMSY heart pair together */
+.event-icon {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.event-icon-pair {
+  min-width: 2.4rem;
+  letter-spacing: -0.08em;
+}
+
+.event-title-row {
+  align-items: flex-start;
+}
