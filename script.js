@@ -2107,14 +2107,19 @@ const events = [
   who: "LMSY",
   category: "Livestream",
   title: "Grab Food จัดจานไลฟ์ตามใจคุณ X LMSY",
-  location: "Grab Thailand Facebook Page / YouTube",
+  location: "Grab Thailand Page / YouTube",
   notes: "Live at 19:00 (GMT+7)",
   notes_th: "ไลฟ์เวลา 19:00 น. (GMT+7)",
   notes_zh: "直播时间为 19:00（GMT+7）",
   hashtags: [
-    "GRABFOOD X LookmheeSonya",
     "#GrabFoodถูกกว่าซั้วร์xลูกหมีซอนญ่า",
-    "#GrabFoodxLookmheeSonya"],
+    "#GrabFoodxLookmheeSonya",
+    "#ChangeArtist",
+    "#LMSY",
+    "#ลูกหมีซอนญ่า",
+    "#LMlookmhee",
+    "#SonyaSaranphat"
+  ],
   tags: ["LMSY", "Livestream"]
 },
 {
@@ -2449,6 +2454,10 @@ function renderSchedule(selectedYear, selectedType, selectedMonth) {
 
     const card = document.createElement("article");
     card.className = "event-card";
+    const isPastEvent = ev.date < todayKey;
+    if (isPastEvent) {
+      card.classList.add("is-past");
+    }
 
     const dateEl = document.createElement("div");
     dateEl.className = "event-date";

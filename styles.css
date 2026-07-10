@@ -2073,3 +2073,38 @@ body::after {
 .event-title-row {
   align-items: flex-start;
 }
+
+
+/* Past schedule styling, muted but still readable */
+.event-card.is-past {
+  opacity: 0.48;
+  filter: grayscale(0.35);
+  background: rgba(248, 249, 252, 0.045) !important;
+}
+
+.event-card.is-past .event-title,
+.event-card.is-past .event-meta,
+.event-card.is-past .event-notes,
+.event-card.is-past .event-hashtags a {
+  color: rgba(246, 249, 255, 0.72) !important;
+}
+
+.event-card.is-past .event-date-circle {
+  border-color: rgba(214, 219, 235, 0.55);
+  color: rgba(246, 249, 255, 0.75);
+}
+
+.event-card.is-past .event-date-weekday {
+  background: rgba(214, 219, 235, 0.65);
+  color: rgba(7, 18, 31, 0.78);
+}
+
+.event-card.is-past .gcal-btn {
+  opacity: 0.65;
+}
+
+@media (max-width: 700px) {
+  .event-card.is-past {
+    opacity: 0.44;
+  }
+}
