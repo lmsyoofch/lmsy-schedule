@@ -2140,7 +2140,7 @@ const events = [
 {
   date: "2026-07-20",
   who: "LMSY",
-  category: "Event",
+  category: "Special event",
   title_en: "Thailand Content Market 2026",
   title_th: "Thailand Content Market 2026",
   title_zh: "2026 泰国内容市场",
@@ -2150,7 +2150,7 @@ const events = [
   notes_en: "20 Jul 2026 · Time 17:30 (GMT+7) · Closed event for registered participants",
   notes_th: "20 ก.ค. 2026 · เวลา 17:30 น. (GMT+7) · งานปิด สำหรับผู้ที่ลงทะเบียนเข้าร่วมเท่านั้น",
   notes_zh: "2026年7月20日 · 时间 17:30（GMT+7）· 闭门活动，仅限已登记参与者",
-  tags: ["LMSY", "Event"],
+  tags: ["LMSY", "Special event"],
   hashtags: ["LMSY AT THAILAND CONTENT MARKET\n\n#TCM2026XLMSY"]
 },
 {
