@@ -2167,7 +2167,7 @@ const events = [
   notes_zh: "2026年7月25日 15:00（UTC+8）／14:00（GMT+7）。地點：台灣高雄 晶綺盛宴 台鋁館 銀河廳。票價：VIP區 TWD 9,280、A區 TWD 8,080、B區 TWD 6,880、愛心席 TWD 2,500。凡於2026年7月16日23:59前透過 iBON 完成購票且未退票者，可參與抽選。中獎名單將於2026年7月17日公布於主辦單位社群平台。",
   hashtags: ["#ลูกหมีซอนญ่า","#LMSY","#LMSY2026FanMeetingInKaohsiung"],
   tags: ["LMSY","FanMeeting"]
-}
+},
 {
   date: "2026-08-08",
   who: "LMSY",
