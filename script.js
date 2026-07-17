@@ -2150,7 +2150,7 @@ const events = [
   notes_en: "20 Jul 2026 · Opening Ceremony · Time 17:30 (GMT+7)",
   notes_th: "20 ก.ค. 2026 · พิธีเปิด · เวลา 17:30 น. (GMT+7)",
   notes_zh: "2026年7月20日 · 开幕典礼 · 时间17:30（GMT+7）",
-  tags: ["LMSY", "Special event", "Thailand Content Market"],
+  tags: ["LMSY", "Special event"],
   hashtags: ["LMSY AT THAILAND CONTENT MARKET\n\n#LMSYxTCM2026"]
 },
 {
