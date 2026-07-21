@@ -2205,19 +2205,29 @@ const events = [
   tags: ["LMSY", "Fanmeeting"]
 },
 {
-  date: "2026-09-01",
-  who: "LMSY",
-  category: "FanMeeting",
-  title_en: "(TBC) LMSY Philippines FanMeeting",
-  title_zh: "LMSY 菲律宾粉丝见面会",
-  location_en: "Philippines",
-  location_th: "ประเทศฟิลิปปินส์",
-  location_zh: "菲律宾",
-  notes: "Expected to take place in September 2026. Exact date, venue and ticketing details to be announced.",
-  notes_th: "คาดว่าจะจัดขึ้นในเดือนกันยายน 2569 วันจัดงาน สถานที่ และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
-  notes_zh: "预计于2026年9月举行，具体日期、地点及售票详情待公布。",
-  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
-  tags: ["LMSY", "Fanmeeting"]
+  "date": "2026-09-19",
+  "who": "LMSY",
+  "category": "FanMeeting",
+  "title_en": "LMSY EVERAFTER FanMeeting Manila",
+  "title_zh": "LMSY EVERAFTER 马尼拉粉丝见面会",
+  "location_en": "Manila, Philippines",
+  "location_th": "กรุงมะนิลา ประเทศฟิลิปปินส์",
+  "location_zh": "菲律宾马尼拉",
+  "notes": "Confirmed. 'LMSY EVERAFTER' Fan Meeting in Manila on 19 September 2026. Venue and ticketing details will be announced later.",
+  "notes_th": "ยืนยันแล้ว งานแฟนมีตติ้ง 'LMSY EVERAFTER' ที่กรุงมะนิลา วันที่ 19 กันยายน 2569 สถานที่และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
+  "notes_zh": "已确认，LMSY《EVERAFTER》马尼拉粉丝见面会将于2026年9月19日举行，场地及售票详情将稍后公布。",
+  "hashtags": [
+    "#ลูกหมีซอนญ่า",
+    "#LMSY",
+    "#LMSYEVERAFTER"
+  ],
+  "tags": [
+    "LMSY",
+    "FanMeeting",
+    "Philippines",
+    "Manila",
+    "EVERAFTER"
+  ]
 },
 {
   date: "2026-10-01",
