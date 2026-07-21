@@ -2223,11 +2223,7 @@ const events = [
   ],
   "tags": [
     "LMSY",
-    "FanMeeting",
-    "Philippines",
-    "Manila",
-    "EVERAFTER"
-  ]
+    "FanMeeting"]
 },
 {
   date: "2026-10-01",
