@@ -2238,6 +2238,26 @@ const events = [
   tags: ["LMSY", "Fanmeeting"]
 },
 {
+  date: "2026-10-03",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "LMSY Ever After: Unfold in Ho Chi Minh City",
+  title_th: "LMSY Ever After: Unfold in Ho Chi Minh City",
+  title_zh: "LMSY Ever After：胡志明市粉丝见面会",
+  location_en: "Ho Chi Minh City, Vietnam",
+  location_th: "นครโฮจิมินห์ ประเทศเวียดนาม",
+  location_zh: "越南胡志明市",
+  notes: "Venue and ticketing details to be announced.",
+  notes_th: "สถานที่จัดงานและรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
+  notes_zh: "活动场地及售票详情待公布。",
+  hashtags: [
+    "#LMSYEVERAFTER",
+    "#LMSYUnfoldInHCMCity",
+    "#LookmheeSonya"
+  ],
+  tags: ["LMSY", "Fanmeeting"]
+},
+{
   date: "2026-11-01",
   who: "LMSY",
   category: "FanMeeting",
@@ -2252,21 +2272,7 @@ const events = [
   hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
   tags: ["LMSY", "Fanmeeting"]
 },
-{
-  date: "2026-12-01",
-  who: "LMSY",
-  category: "FanMeeting",
-  title_en: "(TBC) LMSY Vietnam FanMeeting",
-  title_zh: "LMSY 越南粉丝见面会",
-  location_en: "Vietnam",
-  location_th: "ประเทศเวียดนาม",
-  location_zh: "越南",
-  notes: "Expected to take place in December 2026. Exact date, venue and ticketing details to be announced.",
-  notes_th: "คาดว่าจะจัดขึ้นในเดือนธันวาคม 2569 วันจัดงาน สถานที่ และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
-  notes_zh: "预计于2026年12月举行，具体日期、地点及售票详情待公布。",
-  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
-  tags: ["LMSY", "Fanmeeting"]
-},
+
 
 ];
 
