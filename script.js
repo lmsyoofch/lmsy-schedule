@@ -1009,7 +1009,7 @@ const events = [
     location: "Hangzhou, China",
     notes: "11:00–18:00 (GMT+7)",
     hashtags: ["#FoamDreamxLMSY"],
-    tags: ["LMSY", "Event"]
+    tags: ["LMSY", "Brand"]
   },
   {
     date: "2025-11-07",
@@ -1279,7 +1279,7 @@ const events = [
    {
   date: "2026-01-31",
   who: "LMSY",
-  category: "Special event",
+  category: "Brand",
   title_en: "A Journey of Falling In Love with LMSY",
   title_th: "A Journey of Falling In Love with LMSY",
   title_zh: "A Journey of Falling In Love with LMSY",
@@ -1290,14 +1290,14 @@ const events = [
   notes_th: "30 ม.ค. ถึง 1 ก.พ. 2026",
   notes_zh: "2026年1月30日至2月1日",
   hashtags: ["#JourneywithFoamDreamxLMSY"],
-  tags: ["LMSY", "Special event"]
+  tags: ["LMSY", "Brand"]
 },
 
     // FEBRUARY 2026
    {
   date: "2026-02-01",
   who: "LMSY",
-  category: "Special event",
+  category: "Brand",
   title_en: "A Journey of Falling In Love with LMSY",
   title_th: "A Journey of Falling In Love with LMSY",
   title_zh: "A Journey of Falling In Love with LMSY",
@@ -1308,7 +1308,7 @@ const events = [
   notes_th: "30 ม.ค. ถึง 1 ก.พ. 2026",
   notes_zh: "2026年1月30日至2月1日",
   hashtags: ["#JourneywithFoamDreamxLMSY"],
-  tags: ["LMSY", "Special event"]
+  tags: ["LMSY", "Brand"]
 },
    {
   date: "2026-02-07",
@@ -1879,7 +1879,7 @@ const events = [
 {
   date: "2026-05-08",
   who: "LMSY",
-  category: "Special event",
+  category: "Brand",
   title_en: "Chasing the Crystal Waves",
   title_th: "Chasing the Crystal Waves",
   title_zh: "收集风与海浪的光斑",
@@ -1890,12 +1890,12 @@ const events = [
   notes_th: "วันที่ 8 ถึง 10 พฤษภาคม 2026 (GMT+7)",
   notes_zh: "2026年5月8日至10日（GMT+7）",
   hashtags: ["foamdreamxlmsy\n\n#FOAMDREAMingWithLMSY"],
-  tags: ["LMSY", "Special event", "FoamDream"]
+  tags: ["LMSY", "Brand"]
 },
 {
   date: "2026-05-09",
   who: "LMSY",
-  category: "Special event",
+  category: "Brand",
   title_en: "Chasing the Crystal Waves",
   title_th: "Chasing the Crystal Waves",
   title_zh: "收集风与海浪的光斑",
@@ -1906,12 +1906,12 @@ const events = [
   notes_th: "วันที่ 8 ถึง 10 พฤษภาคม 2026 (GMT+7)",
   notes_zh: "2026年5月8日至10日（GMT+7）",
   hashtags: ["foamdreamxlmsy\n\n#FOAMDREAMingWithLMSY"],
-  tags: ["LMSY", "Special event", "FoamDream"]
+  tags: ["LMSY", "Brand"]
 },
 {
   date: "2026-05-10",
   who: "LMSY",
-  category: "Special event",
+  category: "Brand",
   title_en: "Chasing the Crystal Waves",
   title_th: "Chasing the Crystal Waves",
   title_zh: "收集风与海浪的光斑",
@@ -1922,7 +1922,7 @@ const events = [
   notes_th: "วันที่ 8 ถึง 10 พฤษภาคม 2026 (GMT+7)",
   notes_zh: "2026年5月8日至10日（GMT+7）",
   hashtags: ["foamdreamxlmsy\n\n#FOAMDREAMingWithLMSY"],
-  tags: ["LMSY", "Special event", "FoamDream"]
+  tags: ["LMSY", "Brand"]
 },
 {
   date: "2026-05-14",
@@ -2169,6 +2169,22 @@ const events = [
     "#Sonya",
     "#ลูกหมีซอนญ่า"],
   tags: ["LMSY", "Fanmeeting"]
+},
+{
+  date: "2026-08-22",
+  who: "LMSY",
+  category: "Brand",
+  title_en: "FoamDream x LMSY: DreamZone 8+1 x Half-Awake",
+  title_th: "FoamDream x LMSY: DreamZone 8+1 x Half-Awake",
+  title_zh: "FoamDream x LMSY：DreamZone 8+1 x 半梦 Half-Awake",
+  location_en: "China",
+  location_th: "ประเทศจีน",
+  location_zh: "中国",
+  notes_en: "Brand-exclusive private event. Further details are yet to be announced.",
+  notes_th: "อีเวนต์ส่วนตัวสุดพิเศษของแบรนด์ รายละเอียดเพิ่มเติมจะแจ้งให้ทราบภายหลัง",
+  notes_zh: "品牌专属私人活动，更多详情待公布。",
+  hashtags: ["#LMSY", "#FoamDream"],
+  tags: ["LMSY", "Brand"]
 },
 {
   "date": "2026-09-19",
