@@ -2208,36 +2208,6 @@ const events = [
     "FanMeeting"]
 },
 {
-  date: "2026-10-01",
-  who: "LMSY",
-  category: "FanMeeting",
-  title_en: "(TBC) LMSY Brazil FanMeeting",
-  title_zh: "LMSY 巴西粉丝见面会",
-  location_en: "Brazil",
-  location_th: "ประเทศบราซิล",
-  location_zh: "巴西",
-  notes: "Expected to take place in October 2026. Exact date, venue and ticketing details to be announced.",
-  notes_th: "คาดว่าจะจัดขึ้นในเดือนตุลาคม 2569 วันจัดงาน สถานที่ และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
-  notes_zh: "预计于2026年10月举行，具体日期、地点及售票详情待公布。",
-  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
-  tags: ["LMSY", "Fanmeeting"]
-},
-{
-  date: "2026-10-01",
-  who: "LMSY",
-  category: "FanMeeting",
-  title_en: "(TBC) LMSY Mexico FanMeeting",
-  title_zh: "LMSY 墨西哥粉丝见面会",
-  location_en: "Mexico",
-  location_th: "ประเทศเม็กซิโก",
-  location_zh: "墨西哥",
-  notes: "Expected to take place in October 2026. Exact date, venue and ticketing details to be announced.",
-  notes_th: "คาดว่าจะจัดขึ้นในเดือนตุลาคม 2569 วันจัดงาน สถานที่ และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
-  notes_zh: "预计于2026年10月举行，具体日期、地点及售票详情待公布。",
-  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
-  tags: ["LMSY", "Fanmeeting"]
-},
-{
   date: "2026-10-03",
   who: "LMSY",
   category: "FanMeeting",
@@ -2255,6 +2225,36 @@ const events = [
     "#LMSYUnfoldInHCMCity",
     "#LookmheeSonya"
   ],
+  tags: ["LMSY", "Fanmeeting"]
+},
+{
+  date: "2026-10-30",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "(TBC) LMSY Brazil FanMeeting",
+  title_zh: "LMSY 巴西粉丝见面会",
+  location_en: "Brazil",
+  location_th: "ประเทศบราซิล",
+  location_zh: "巴西",
+  notes: "Expected to take place in October 2026. Exact date, venue and ticketing details to be announced.",
+  notes_th: "คาดว่าจะจัดขึ้นในเดือนตุลาคม 2569 วันจัดงาน สถานที่ และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
+  notes_zh: "预计于2026年10月举行，具体日期、地点及售票详情待公布。",
+  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
+  tags: ["LMSY", "Fanmeeting"]
+},
+{
+  date: "2026-10-30",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "(TBC) LMSY Mexico FanMeeting",
+  title_zh: "LMSY 墨西哥粉丝见面会",
+  location_en: "Mexico",
+  location_th: "ประเทศเม็กซิโก",
+  location_zh: "墨西哥",
+  notes: "Expected to take place in October 2026. Exact date, venue and ticketing details to be announced.",
+  notes_th: "คาดว่าจะจัดขึ้นในเดือนตุลาคม 2569 วันจัดงาน สถานที่ และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
+  notes_zh: "预计于2026年10月举行，具体日期、地点及售票详情待公布。",
+  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
   tags: ["LMSY", "Fanmeeting"]
 },
 {
