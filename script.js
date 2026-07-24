@@ -2221,7 +2221,7 @@ const events = [
   tags: ["LMSY", "Fanmeeting"]
 },
 {
-  date: "2026-09-10",
+  date: "2026-10-09",
   who: "LMSY",
   category: "FanMeeting",
   title_en: "LMSY EVERAFTER: Bloom in São Paulo",
