@@ -2196,9 +2196,6 @@ const events = [
   location_en: "Manila, Philippines",
   location_th: "กรุงมะนิลา ประเทศฟิลิปปินส์",
   location_zh: "菲律宾马尼拉",
-  notes_en: "Venue and ticketing details to be announced.",
-  notes_th: "สถานที่และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
-  notes_zh: "场馆及售票详情待公布。",
   hashtags: [
     "#LMSYEVERAFTER",
     "#LMSYBeginInManila",
@@ -2216,9 +2213,6 @@ const events = [
   location_en: "Ho Chi Minh City, Vietnam",
   location_th: "นครโฮจิมินห์ ประเทศเวียดนาม",
   location_zh: "越南胡志明市",
-  notes: "Venue and ticketing details to be announced.",
-  notes_th: "สถานที่จัดงานและรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
-  notes_zh: "活动场地及售票详情待公布。",
   hashtags: [
     "#LMSYEVERAFTER",
     "#LMSYUnfoldInHCMCity",
