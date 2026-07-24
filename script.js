@@ -2264,9 +2264,9 @@ const events = [
   location_en: "Cines Callao, Madrid, Spain",
   location_th: "Cines Callao กรุงมาดริด ประเทศสเปน",
   location_zh: "西班牙马德里 Cines Callao",
-  notes: "Confirmed. LMSY’s first fan meeting in Europe will take place in Madrid on 28 November 2026. Ticketing details will be announced soon.",
-  notes_th: "ยืนยันแล้ว แฟนมีตติ้งครั้งแรกของ LMSY ในยุโรปจะจัดขึ้นที่กรุงมาดริด วันที่ 28 พฤศจิกายน 2569 โดยรายละเอียดการจำหน่ายบัตรจะประกาศเร็ว ๆ นี้",
-  notes_zh: "已确认，LMSY 首场欧洲粉丝见面会将于2026年11月28日在马德里举行，售票详情即将公布。",
+  notes: "Confirmed. Ticketing details will be announced soon.",
+  notes_th: "ยืนยันแล้ว รายละเอียดการจำหน่ายบัตรจะประกาศเร็ว ๆ นี้",
+  notes_zh: "已确认，售票详情即将公布。",
   hashtags: ["#LMSYMadrid", "#ลูกหมีซอนญ่า", "#LMSY"],
   tags: ["LMSY", "Fanmeeting"]
 },
