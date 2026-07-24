@@ -2256,18 +2256,18 @@ const events = [
   tags: ["LMSY", "Fanmeeting"]
 },
 {
-  date: "2026-11-01",
+  date: "2026-11-28",
   who: "LMSY",
   category: "FanMeeting",
-  title_en: "(TBC) LMSY Spain FanMeeting",
-  title_zh: "LMSY 西班牙粉丝见面会",
-  location_en: "Spain",
-  location_th: "ประเทศสเปน",
-  location_zh: "西班牙",
-  notes: "Expected to take place in November 2026. Exact date, venue and ticketing details to be announced.",
-  notes_th: "คาดว่าจะจัดขึ้นในเดือนพฤศจิกายน 2569 วันจัดงาน สถานที่ และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
-  notes_zh: "预计于2026年11月举行，具体日期、地点及售票详情待公布。",
-  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
+  title_en: "LMSY Fanmeet Madrid",
+  title_zh: "LMSY 马德里粉丝见面会",
+  location_en: "Cines Callao, Madrid, Spain",
+  location_th: "Cines Callao กรุงมาดริด ประเทศสเปน",
+  location_zh: "西班牙马德里 Cines Callao",
+  notes: "Confirmed. LMSY’s first fan meeting in Europe will take place in Madrid on 28 November 2026. Ticketing details will be announced soon.",
+  notes_th: "ยืนยันแล้ว แฟนมีตติ้งครั้งแรกของ LMSY ในยุโรปจะจัดขึ้นที่กรุงมาดริด วันที่ 28 พฤศจิกายน 2569 โดยรายละเอียดการจำหน่ายบัตรจะประกาศเร็ว ๆ นี้",
+  notes_zh: "已确认，LMSY 首场欧洲粉丝见面会将于2026年11月28日在马德里举行，售票详情即将公布。",
+  hashtags: ["#LMSYMadrid", "#ลูกหมีซอนญ่า", "#LMSY"],
   tags: ["LMSY", "Fanmeeting"]
 },
 
