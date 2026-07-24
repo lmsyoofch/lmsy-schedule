@@ -95,6 +95,17 @@ function extractTimeRangeFromNotes(notesText) {
   return { start: "", end: "" };
 }
 
+function getCalendarTimeZone(ev) {
+  const timezone = String(ev.timezone || "").trim();
+
+  const timezoneAliases = {
+    "GMT+7": "Asia/Bangkok",
+    "GMT+8": "Asia/Hong_Kong"
+  };
+
+  return timezoneAliases[timezone] || timezone || "Asia/Bangkok";
+}
+
 function buildGoogleCalendarUrl(ev) {
   const title = pickLang(ev, "title") || "Event";
   const location = pickLang(ev, "location") || "";
@@ -143,7 +154,7 @@ function buildGoogleCalendarUrl(ev) {
     dates: datesParam,
     details,
     location,
-    ctz: "Asia/Bangkok"
+    ctz: getCalendarTimeZone(ev)
   });
 
   return "https://calendar.google.com/calendar/render?" + params.toString();
@@ -2222,6 +2233,9 @@ const events = [
 },
 {
   date: "2026-10-09",
+  startTime: "12:00",
+  timezone: "America/Sao_Paulo",
+  time_confirmed: false,
   who: "LMSY",
   category: "FanMeeting",
   title_en: "LMSY EVERAFTER: Bloom in São Paulo",
@@ -2230,9 +2244,9 @@ const events = [
   location_en: "São Paulo, Brazil",
   location_th: "เซาเปาโล ประเทศบราซิล",
   location_zh: "巴西圣保罗",
-  notes_en: "Venue and ticketing details to be announced.",
-  notes_th: "สถานที่และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
-  notes_zh: "场馆及售票详情待公布。",
+  notes_en: "The event is scheduled for 9 October 2026. The exact start time will be confirmed once available. Venue and ticketing details will be announced.",
+  notes_th: "งานมีกำหนดจัดขึ้นในวันที่ 9 ตุลาคม 2569 เวลาเริ่มงานจะยืนยันอีกครั้งเมื่อมีการประกาศ สถานที่และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
+  notes_zh: "活动定于2026年10月9日举行，具体开始时间将在公布后确认。场馆及售票资讯将于稍后公布。",
   hashtags: [
     "#LMSYEVERAFTER",
     "#LMSYBloominSaoPaulo",
@@ -2257,6 +2271,9 @@ const events = [
 },
 {
   date: "2026-11-28",
+  startTime: "12:00",
+  timezone: "Europe/Madrid",
+  time_confirmed: false,
   who: "LMSY",
   category: "FanMeeting",
   title_en: "LMSY Fanmeet Madrid",
@@ -2264,9 +2281,9 @@ const events = [
   location_en: "Cines Callao, Madrid, Spain",
   location_th: "Cines Callao กรุงมาดริด ประเทศสเปน",
   location_zh: "西班牙马德里 Cines Callao",
-  notes: "Ticketing details will be announced soon.",
-  notes_th: "รายละเอียดการจำหน่ายบัตรจะประกาศเร็ว ๆ นี้",
-  notes_zh: "售票详情即将公布。",
+  notes: "The event is scheduled for 28 November 2026. The exact start time will be confirmed once available. Ticketing details will be announced soon.",
+  notes_th: "งานมีกำหนดจัดขึ้นในวันที่ 28 พฤศจิกายน 2569 เวลาเริ่มงานจะยืนยันอีกครั้งเมื่อมีการประกาศ และรายละเอียดการจำหน่ายบัตรจะประกาศเร็ว ๆ นี้",
+  notes_zh: "活动定于2026年11月28日举行，具体开始时间将在公布后确认，售票详情即将公布。",
   hashtags: ["#LMSYMadrid", "#ลูกหมีซอนญ่า", "#LMSY"],
   tags: ["LMSY", "Fanmeeting"]
 },
