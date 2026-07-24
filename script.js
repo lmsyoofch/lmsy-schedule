@@ -2264,9 +2264,9 @@ const events = [
   location_en: "Cines Callao, Madrid, Spain",
   location_th: "Cines Callao กรุงมาดริด ประเทศสเปน",
   location_zh: "西班牙马德里 Cines Callao",
-  notes: "Confirmed. Ticketing details will be announced soon.",
-  notes_th: "ยืนยันแล้ว รายละเอียดการจำหน่ายบัตรจะประกาศเร็ว ๆ นี้",
-  notes_zh: "已确认，售票详情即将公布。",
+  notes: "Ticketing details will be announced soon.",
+  notes_th: "รายละเอียดการจำหน่ายบัตรจะประกาศเร็ว ๆ นี้",
+  notes_zh: "售票详情即将公布。",
   hashtags: ["#LMSYMadrid", "#ลูกหมีซอนญ่า", "#LMSY"],
   tags: ["LMSY", "Fanmeeting"]
 },
