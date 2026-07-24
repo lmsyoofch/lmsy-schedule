@@ -2256,6 +2256,9 @@ const events = [
 },
 {
   date: "2026-10-30",
+  startTime: "12:00",
+  timezone: "America/Mexico_City",
+  time_confirmed: true,
   who: "LMSY",
   category: "FanMeeting",
   title_en: "(TBC) LMSY Mexico FanMeeting",
