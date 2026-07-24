@@ -2187,25 +2187,24 @@ const events = [
   tags: ["LMSY", "Brand"]
 },
 {
-  "date": "2026-09-19",
-  "who": "LMSY",
-  "category": "FanMeeting",
-  "title_en": "LMSY EVERAFTER FanMeeting Manila",
-  "title_zh": "LMSY EVERAFTER 马尼拉粉丝见面会",
-  "location_en": "Manila, Philippines",
-  "location_th": "กรุงมะนิลา ประเทศฟิลิปปินส์",
-  "location_zh": "菲律宾马尼拉",
-  "notes": "Confirmed. 'LMSY EVERAFTER' Fan Meeting in Manila on 19 September 2026. Venue and ticketing details will be announced later.",
-  "notes_th": "ยืนยันแล้ว งานแฟนมีตติ้ง 'LMSY EVERAFTER' ที่กรุงมะนิลา วันที่ 19 กันยายน 2569 สถานที่และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
-  "notes_zh": "已确认，LMSY《EVERAFTER》马尼拉粉丝见面会将于2026年9月19日举行，场地及售票详情将稍后公布。",
-  "hashtags": [
-    "#ลูกหมีซอนญ่า",
-    "#LMSY",
-    "#LMSYEVERAFTER"
+  date: "2026-09-19",
+  who: "LMSY",
+  category: "FanMeeting",
+  title_en: "LMSY EVERAFTER: Begin in Manila",
+  title_th: "LMSY EVERAFTER: Begin in Manila",
+  title_zh: "LMSY EVERAFTER：Begin in Manila 粉丝见面会",
+  location_en: "Manila, Philippines",
+  location_th: "กรุงมะนิลา ประเทศฟิลิปปินส์",
+  location_zh: "菲律宾马尼拉",
+  notes_en: "Venue and ticketing details to be announced.",
+  notes_th: "สถานที่และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
+  notes_zh: "场馆及售票详情待公布。",
+  hashtags: [
+    "#LMSYEVERAFTER",
+    "#LMSYBeginInManila",
+    "#LookmheeSonya"
   ],
-  "tags": [
-    "LMSY",
-    "FanMeeting"]
+  tags: ["LMSY", "Fanmeeting"]
 },
 {
   date: "2026-10-03",
@@ -2228,18 +2227,23 @@ const events = [
   tags: ["LMSY", "Fanmeeting"]
 },
 {
-  date: "2026-10-30",
+  date: "2026-09-10",
   who: "LMSY",
   category: "FanMeeting",
-  title_en: "(TBC) LMSY Brazil FanMeeting",
-  title_zh: "LMSY 巴西粉丝见面会",
-  location_en: "Brazil",
-  location_th: "ประเทศบราซิล",
-  location_zh: "巴西",
-  notes: "Expected to take place in October 2026. Exact date, venue and ticketing details to be announced.",
-  notes_th: "คาดว่าจะจัดขึ้นในเดือนตุลาคม 2569 วันจัดงาน สถานที่ และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
-  notes_zh: "预计于2026年10月举行，具体日期、地点及售票详情待公布。",
-  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
+  title_en: "LMSY EVERAFTER: Bloom in São Paulo",
+  title_th: "LMSY EVERAFTER: Bloom in São Paulo",
+  title_zh: "LMSY EVERAFTER：圣保罗 Bloom 粉丝见面会",
+  location_en: "São Paulo, Brazil",
+  location_th: "เซาเปาโล ประเทศบราซิล",
+  location_zh: "巴西圣保罗",
+  notes_en: "Venue and ticketing details to be announced.",
+  notes_th: "สถานที่และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
+  notes_zh: "场馆及售票详情待公布。",
+  hashtags: [
+    "#LMSYEVERAFTER",
+    "#LMSYBloominSaoPaulo",
+    "#LookmheeSonya"
+  ],
   tags: ["LMSY", "Fanmeeting"]
 },
 {
