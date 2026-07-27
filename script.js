@@ -2255,21 +2255,26 @@ const events = [
   tags: ["LMSY", "Fanmeeting"]
 },
 {
-  date: "2026-10-30",
+  date: "2026-10-11",
   startTime: "12:00",
   timezone: "America/Mexico_City",
-  time_confirmed: true,
+  time_confirmed: false,
   who: "LMSY",
   category: "FanMeeting",
-  title_en: "(TBC) LMSY Mexico FanMeeting",
-  title_zh: "LMSY 墨西哥粉丝见面会",
-  location_en: "Mexico",
-  location_th: "ประเทศเม็กซิโก",
-  location_zh: "墨西哥",
-  notes: "Expected to take place in October 2026. Exact date, venue and ticketing details to be announced.",
-  notes_th: "คาดว่าจะจัดขึ้นในเดือนตุลาคม 2569 วันจัดงาน สถานที่ และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
-  notes_zh: "预计于2026年10月举行，具体日期、地点及售票详情待公布。",
-  hashtags: ["#ลูกหมีซอนญ่า", "#LMSY"],
+  title_en: "LMSY EVERAFTER: Remember in Mexico City",
+  title_th: "LMSY EVERAFTER: Remember in Mexico City",
+  title_zh: "LMSY EVERAFTER：墨西哥城 Remember 粉丝见面会",
+  location_en: "Mexico City, Mexico",
+  location_th: "เม็กซิโกซิตี ประเทศเม็กซิโก",
+  location_zh: "墨西哥墨西哥城",
+  notes_en: "The event is scheduled for 11 October 2026. The exact start time will be confirmed once available. Venue and ticketing details will be announced.",
+  notes_th: "งานมีกำหนดจัดขึ้นในวันที่ 11 ตุลาคม 2569 เวลาเริ่มงานจะยืนยันอีกครั้งเมื่อมีการประกาศ สถานที่และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
+  notes_zh: "活动定于2026年10月11日举行，具体开始时间将在公布后确认。场馆及售票资讯将于稍后公布。",
+  hashtags: [
+    "#LMSYEVERAFTER",
+    "#LMSYRememberInMexicoCity",
+    "#LookmheeSonya"
+  ],
   tags: ["LMSY", "Fanmeeting"]
 },
 {
