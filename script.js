@@ -2182,6 +2182,25 @@ const events = [
   tags: ["LMSY", "Fanmeeting"]
 },
 {
+  date: "2026-08-19",
+  startTime: "20:00",
+  timezone: "Asia/Shanghai",
+  time_confirmed: true,
+  who: "LMSY",
+  category: "Livestream",
+  title_en: "KOHLOK Valentine's Day Live",
+  title_th: "KOHLOK Valentine's Day Live",
+  title_zh: "KOHLOK 七夕直播",
+  location_en: "WeiDian Live",
+  location_th: "WeiDian Live",
+  location_zh: "微店直播",
+  notes_en: "KOHLOK Valentine's Day livestream featuring Lookmhee and Sonya. Starts at 20:00 China Time (GMT+8).",
+  notes_th: "ไลฟ์ KOHLOK วันวาเลนไทน์ (เทศกาลชีซี) กับลูกหมีและซอนญ่า เริ่มเวลา 20:00 น. ตามเวลาประเทศจีน (GMT+8)",
+  notes_zh: "KOHLOK 七夕直播，由 Lookmhee 与 Sonya 出演。直播时间为北京时间 20:00（GMT+8）。",
+  hashtags: [],
+  tags: ["LMSY", "Livestream"]
+},
+{
   date: "2026-08-22",
   who: "LMSY",
   category: "Brand",
