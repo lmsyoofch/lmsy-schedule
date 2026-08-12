@@ -2217,6 +2217,60 @@ const events = [
   tags: ["LMSY", "Brand"]
 },
 {
+  date: "2026-09-03",
+  who: "LMSY",
+  category: "Fashion",
+  title_en: "LMSY at MNL Fashion Week 2026 - Day 1",
+  title_th: "LMSY ที่ MNL Fashion Week 2026 - วันที่ 1",
+  title_zh: "LMSY 出席 MNL Fashion Week 2026 - 第一天",
+  location_en: "SMX Convention Center, SM Aura Premier, Manila, Philippines",
+  location_th: "SMX Convention Center, SM Aura Premier กรุงมะนิลา ประเทศฟิลิปปินส์",
+  location_zh: "菲律宾马尼拉 SM Aura Premier，SMX Convention Center",
+  hashtags: [
+    "#MNL_FashionWeek2026",
+    "#LMSY",
+    "#LookmheePunyapat",
+    "#SonyaSaranphat"
+  ],
+  tags: ["LMSY", "FashionWeek"]
+},
+{
+  date: "2026-09-04",
+  who: "LMSY",
+  category: "Fashion",
+  title_en: "LMSY at MNL Fashion Week 2026 - Day 2",
+  title_th: "LMSY ที่ MNL Fashion Week 2026 - วันที่ 2",
+  title_zh: "LMSY 出席 MNL Fashion Week 2026 - 第二天",
+  location_en: "SMX Convention Center, SM Aura Premier, Manila, Philippines",
+  location_th: "SMX Convention Center, SM Aura Premier กรุงมะนิลา ประเทศฟิลิปปินส์",
+  location_zh: "菲律宾马尼拉 SM Aura Premier，SMX Convention Center",
+  hashtags: [
+    "#MNL_FashionWeek2026",
+    "#LMSY",
+    "#LookmheePunyapat",
+    "#SonyaSaranphat"
+  ],
+  tags: ["LMSY", "FashionWeek"]
+},
+{
+  date: "2026-09-05",
+  who: "LMSY",
+  category: "Fashion",
+  title_en: "LMSY at MNL Fashion Week 2026 - Day 3",
+  title_th: "LMSY ที่ MNL Fashion Week 2026 - วันที่ 3",
+  title_zh: "LMSY 出席 MNL Fashion Week 2026 - 第三天",
+  location_en: "SMX Convention Center, SM Aura Premier, Manila, Philippines",
+  location_th: "SMX Convention Center, SM Aura Premier กรุงมะนิลา ประเทศฟิลิปปินส์",
+  location_zh: "菲律宾马尼拉 SM Aura Premier，SMX Convention Center",
+  hashtags: [
+    "#MNL_FashionWeek2026",
+    "#LMSY",
+    "#LookmheePunyapat",
+    "#SonyaSaranphat"
+  ],
+  tags: ["LMSY", "FashionWeek"]
+},
+{
   date: "2026-09-19",
   who: "LMSY",
   category: "FanMeeting",
