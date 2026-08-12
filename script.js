@@ -2219,7 +2219,7 @@ const events = [
 {
   date: "2026-09-03",
   who: "LMSY",
-  category: "Fashion",
+  category: "Special event",
   title_en: "LMSY at MNL Fashion Week 2026 - Day 1",
   title_th: "LMSY ที่ MNL Fashion Week 2026 - วันที่ 1",
   title_zh: "LMSY 出席 MNL Fashion Week 2026 - 第一天",
@@ -2232,12 +2232,12 @@ const events = [
     "#LookmheePunyapat",
     "#SonyaSaranphat"
   ],
-  tags: ["LMSY", "FashionWeek"]
+  tags: ["LMSY", "Appearance"]
 },
 {
   date: "2026-09-04",
   who: "LMSY",
-  category: "Fashion",
+  category: "Special event",
   title_en: "LMSY at MNL Fashion Week 2026 - Day 2",
   title_th: "LMSY ที่ MNL Fashion Week 2026 - วันที่ 2",
   title_zh: "LMSY 出席 MNL Fashion Week 2026 - 第二天",
@@ -2250,12 +2250,12 @@ const events = [
     "#LookmheePunyapat",
     "#SonyaSaranphat"
   ],
-  tags: ["LMSY", "FashionWeek"]
+  tags: ["LMSY", "Appearance"]
 },
 {
   date: "2026-09-05",
   who: "LMSY",
-  category: "Fashion",
+  category: "Special event",
   title_en: "LMSY at MNL Fashion Week 2026 - Day 3",
   title_th: "LMSY ที่ MNL Fashion Week 2026 - วันที่ 3",
   title_zh: "LMSY 出席 MNL Fashion Week 2026 - 第三天",
@@ -2268,7 +2268,7 @@ const events = [
     "#LookmheePunyapat",
     "#SonyaSaranphat"
   ],
-  tags: ["LMSY", "FashionWeek"]
+  tags: ["LMSY", "Appearance"]
 },
 {
   date: "2026-09-19",
