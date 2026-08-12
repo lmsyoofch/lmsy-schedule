@@ -2304,7 +2304,6 @@ const events = [
   hashtags: [
     "#LMSYEVERAFTER",
     "#LMSYRememberInMexicoCity",
-    "#LookmheeSonya"
   ],
   tags: ["LMSY", "Fanmeeting"]
 },
