@@ -2217,7 +2217,7 @@ const events = [
   tags: ["LMSY", "Brand"]
 },
 {
-  date: "2026-09-03",
+  date: "2026-09-05",
   who: "LMSY",
   category: "Special event",
   title_en: "LMSY at MNL Fashion Week 2026",
