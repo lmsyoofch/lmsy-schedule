@@ -2228,9 +2228,6 @@ const events = [
   location_zh: "菲律宾马尼拉 SM Aura Premier，SMX Convention Center",
   hashtags: [
     "#MNL_FashionWeek2026",
-    "#LMSY",
-    "#LookmheePunyapat",
-    "#SonyaSaranphat"
   ],
   tags: ["LMSY", "Appearance"]
 },
@@ -2246,10 +2243,7 @@ const events = [
   location_zh: "菲律宾马尼拉",
   hashtags: [
     "#LMSYEVERAFTER",
-    "#LMSYBeginInManila",
-    "#LMSY",
-    "#LookmheePunyapat",
-    "#SonyaSaranphat"
+    "#LMSYBeginInManila"
   ],
   tags: ["LMSY", "Fanmeeting"]
 },
@@ -2265,8 +2259,7 @@ const events = [
   location_zh: "越南胡志明市",
   hashtags: [
     "#LMSYEVERAFTER",
-    "#LMSYUnfoldInHCMCity",
-    "#LookmheeSonya"
+    "#LMSYUnfoldInHCMCity"
   ],
   tags: ["LMSY", "Fanmeeting"]
 },
@@ -2288,8 +2281,7 @@ const events = [
   notes_zh: "活动定于2026年10月9日举行，具体开始时间将在公布后确认。场馆及售票资讯将于稍后公布。",
   hashtags: [
     "#LMSYEVERAFTER",
-    "#LMSYBloominSaoPaulo",
-    "#LookmheeSonya"
+    "#LMSYBloominSaoPaulo"
   ],
   tags: ["LMSY", "Fanmeeting"]
 },
@@ -2331,7 +2323,7 @@ const events = [
   notes: "The event is scheduled for 28 November 2026. The exact start time will be confirmed once available. Ticketing details will be announced soon.",
   notes_th: "งานมีกำหนดจัดขึ้นในวันที่ 28 พฤศจิกายน 2569 เวลาเริ่มงานจะยืนยันอีกครั้งเมื่อมีการประกาศ และรายละเอียดการจำหน่ายบัตรจะประกาศเร็ว ๆ นี้",
   notes_zh: "活动定于2026年11月28日举行，具体开始时间将在公布后确认，售票详情即将公布。",
-  hashtags: ["#LMSYMadrid", "#ลูกหมีซอนญ่า", "#LMSY"],
+  hashtags: ["#LMSYMadrid"],
   tags: ["LMSY", "Fanmeeting"]
 },
 
