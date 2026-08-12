@@ -2283,7 +2283,9 @@ const events = [
   hashtags: [
     "#LMSYEVERAFTER",
     "#LMSYBeginInManila",
-    "#LookmheeSonya"
+    "#LMSY",
+    "#LookmheePunyapat",
+    "#SonyaSaranphat"
   ],
   tags: ["LMSY", "Fanmeeting"]
 },
