@@ -2276,9 +2276,9 @@ const events = [
   location_en: "São Paulo, Brazil",
   location_th: "เซาเปาโล ประเทศบราซิล",
   location_zh: "巴西圣保罗",
-  notes_en: "The event is scheduled for 9 October 2026. The exact start time will be confirmed once available. Venue and ticketing details will be announced.",
-  notes_th: "งานมีกำหนดจัดขึ้นในวันที่ 9 ตุลาคม 2569 เวลาเริ่มงานจะยืนยันอีกครั้งเมื่อมีการประกาศ สถานที่และรายละเอียดการจำหน่ายบัตรจะแจ้งภายหลัง",
-  notes_zh: "活动定于2026年10月9日举行，具体开始时间将在公布后确认。场馆及售票资讯将于稍后公布。",
+  notes_en: "The event is scheduled for 9 October 2026.",
+  notes_th: "งานมีกำหนดจัดขึ้นในวันที่ 9 ตุลาคม 2569",
+  notes_zh: "活动定于2026年10月9日举行。",
   hashtags: [
     "#LMSYEVERAFTER",
     "#LMSYBloominSaoPaulo"
