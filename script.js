@@ -2217,6 +2217,25 @@ const events = [
   tags: ["LMSY", "Brand"]
 },
 {
+  date: "2026-08-27",
+  who: "LMSY",
+  category: "Award",
+  title_en: "The ContentAsia Awards 2026",
+  title_th: "The ContentAsia Awards 2026",
+  title_zh: "2026 ContentAsia Awards",
+  location_en: "CLOUD11, Bangkok, Thailand",
+  location_th: "CLOUD11 กรุงเทพฯ ประเทศไทย",
+  location_zh: "泰国曼谷 CLOUD11",
+  notes_en: "Red carpet live at 5:30 PM (GMT+7), followed by The ContentAsia Awards 2026 live at 6:30 PM.",
+  notes_th: "ถ่ายทอดสดพรมแดงเวลา 17.30 น. (GMT+7) และถ่ายทอดสดงาน The ContentAsia Awards 2026 เวลา 18.30 น.",
+  notes_zh: "红毯直播于下午 5:30（GMT+7）开始，The ContentAsia Awards 2026 颁奖典礼直播于下午 6:30 开始。",
+  hashtags: [
+    "#ContentAsiaAwards2026xLMSY",
+    "#ContentAsiaAwards"
+  ],
+  tags: ["LMSY", "Award"]
+},
+{
   date: "2026-09-05",
   who: "LMSY",
   category: "Special event",
