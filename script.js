@@ -2251,6 +2251,22 @@ const events = [
   tags: ["LMSY", "Appearance"]
 },
 {
+  date: "2026-09-12",
+  who: "LMSY",
+  category: "Fan Event",
+  title_en: "LMSY Sea Encounter: Dreamscape, 2-Day Private Experience",
+  title_th: "LMSY Sea Encounter: Dreamscape, ประสบการณ์ส่วนตัว 2 วัน 1 คืน",
+  title_zh: "LMSY 海遇叙梦（两日游）",
+  location_en: "Bangkok, Thailand",
+  location_th: "กรุงเทพฯ ประเทศไทย",
+  location_zh: "泰国曼谷",
+  notes_en: "Exclusive 2-day, 1-night private experience from 12–13 September 2026, limited to 30 participants. Includes a seaside resort stay, group activities, games and exclusive moments. Registration opens on 18 August 2026 at 18:00 Beijing time via email to 312875584@qq.com.",
+  notes_th: "กิจกรรมส่วนตัวสุดพิเศษ 2 วัน 1 คืน ระหว่างวันที่ 12–13 กันยายน 2026 จำกัดเพียง 30 คน รวมการเข้าพักที่รีสอร์ตริมทะเล กิจกรรมกลุ่ม เกมสนุก ๆ และช่วงเวลาพิเศษ เปิดรับสมัครวันที่ 18 สิงหาคม 2026 เวลา 18:00 น. ตามเวลาปักกิ่ง ทางอีเมล 312875584@qq.com",
+  notes_zh: "9月12日至13日举行的两天一夜专属私享体验，限30席。入住海边度假酒店，并参与团体互动、趣味游戏及专属珍贵时刻。报名将于2026年8月18日18:00（北京时间）开放，请发送邮件至 312875584@qq.com。",
+  hashtags: ["#LMSY", "#LMSY海遇叙梦"],
+  tags: ["LMSY", "Fan Event"]
+},
+{
   date: "2026-09-19",
   who: "LMSY",
   category: "FanMeeting",
