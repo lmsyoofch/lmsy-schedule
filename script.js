@@ -2236,6 +2236,28 @@ const events = [
   tags: ["LMSY", "Award"]
 },
 {
+  date: "2026-09-03",
+  who: "LMSY",
+  category: "Award",
+  title_en: "Y Entertain Awards 2026: Thai Silk Curtains & The Golden Lotus",
+  title_th: "Y Entertain Awards 2026: บุษบาบงกช ม่านไหม ลายสยาม",
+  title_zh: "Y Entertain Awards 2026：泰丝帷幕与金莲",
+  location_en: "ICONSIAM Hall, 7th Floor, ICONSIAM, Bangkok, Thailand",
+  location_th: "ICONSIAM HALL ชั้น 7 ICONSIAM กรุงเทพฯ ประเทศไทย",
+  location_zh: "泰国曼谷 ICONSIAM 7楼 ICONSIAM HALL",
+  notes_en: "Lookmhee and Sonya will attend the Y Entertain Awards 2026 on 3 September 2026.",
+  notes_th: "ลูกหมีและซอนญ่าเข้าร่วมงาน Y Entertain Awards 2026 ในวันที่ 3 กันยายน 2569",
+  notes_zh: "Lookmhee 与 Sonya 将于 2026 年 9 月 3 日出席 Y Entertain Awards 2026。",
+  hashtags: [
+    "#YEntertainAwards2026",
+    "#MCOT",
+    "#ช่อง9กด30",
+    "#Yriety",
+    "#sonixyouth1999"
+  ],
+  tags: ["LMSY", "Award"]
+},
+{
   date: "2026-09-05",
   who: "LMSY",
   category: "Special event",
