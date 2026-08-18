@@ -2250,10 +2250,6 @@ const events = [
   notes_zh: "Lookmhee 与 Sonya 将于 2026 年 9 月 3 日出席 Y Entertain Awards 2026。",
   hashtags: [
     "#YEntertainAwards2026",
-    "#MCOT",
-    "#ช่อง9กด30",
-    "#Yriety",
-    "#sonixyouth1999"
   ],
   tags: ["LMSY", "Award"]
 },
