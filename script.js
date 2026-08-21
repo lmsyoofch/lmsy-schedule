@@ -2210,9 +2210,9 @@ const events = [
   location_en: "China",
   location_th: "ประเทศจีน",
   location_zh: "中国",
-  notes_en: "Brand-exclusive private event. Further details are yet to be announced.",
-  notes_th: "อีเวนต์ส่วนตัวสุดพิเศษของแบรนด์ รายละเอียดเพิ่มเติมจะแจ้งให้ทราบภายหลัง",
-  notes_zh: "品牌专属私人活动，更多详情待公布。",
+  notes_en: "Brand-exclusive private event.",
+  notes_th: "อีเวนต์ส่วนตัวสุดพิเศษของแบรนด์",
+  notes_zh: "品牌专属私人活动",
   hashtags: ["#LMSY", "#FoamDream"],
   tags: ["LMSY", "Brand"]
 },
