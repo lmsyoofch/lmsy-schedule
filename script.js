@@ -2285,7 +2285,7 @@ const events = [
   notes_th: "ไลฟ์พิเศษ FoamDream x LMSY กับลูกหมีและซอนญ่า ในธีม 'Our Nighttime Routine' เริ่มเวลา 20:00 น. ตามเวลาประเทศจีน (GMT+8) ผ่านบัญชี WeiDian ของ FoamDream",
   notes_zh: "FoamDream x LMSY 特别直播，由 Lookmhee 与 Sonya 出演，主题为「Our Nighttime Routine」。直播于北京时间 20:00（GMT+8）开始，通过 FoamDream 微店账号进行。",
   hashtags: [],
-  tags: ["LMSY", "Livestream", "FoamDream"]
+  tags: ["LMSY", "Livestream"]
 },
 {
   date: "2026-09-12",
