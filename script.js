@@ -2259,15 +2259,19 @@ const events = [
 {
   date: "2026-09-05",
   who: "LMSY",
-  category: "Special event",
-  title_en: "LMSY at MNL Fashion Week 2026",
-  title_th: "LMSY ที่ MNL Fashion Week 2026",
-  title_zh: "LMSY 出席 MNL Fashion Week 2026",
+  category: "Brand",
+  title_en: "Charlotte Folk x LMSY at MNL Fashion Week 2026",
+  title_th: "Charlotte Folk x LMSY ที่ MNL Fashion Week 2026",
+  title_zh: "Charlotte Folk x LMSY 出席 MNL Fashion Week 2026",
   location_en: "SMX Convention Center, SM Aura Premier, Manila, Philippines",
   location_th: "SMX Convention Center, SM Aura Premier กรุงมะนิลา ประเทศฟิลิปปินส์",
   location_zh: "菲律宾马尼拉 SM Aura Premier，SMX Convention Center",
+  notes_en: "Private event with Charlotte Folk at MNL Fashion Week 2026.",
+  notes_th: "งานอีเวนต์ส่วนตัวกับ Charlotte Folk ในงาน MNL Fashion Week 2026",
+  notes_zh: "与 Charlotte Folk 一同出席 MNL Fashion Week 2026 私人活动。",
   hashtags: [
-    "#MNL_FashionWeek2026",
+    "#CHARLOTTEFOLKxMNLFW",
+    "#LMSYxCHARLOTTEFOLK"
   ],
   tags: ["LMSY", "Appearance"]
 },
