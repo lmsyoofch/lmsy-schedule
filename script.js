@@ -2327,20 +2327,20 @@ const events = [
   tags: ["LMSY", "Fanmeeting"]
 },
 {
-  date: "2026-09-25",
+  date: "2026-09-26",
   who: "LMSY",
-  category: "Fan Event",
-  title_en: "LMSY Moonlight Feast: Mid-Autumn Trip",
-  title_th: "LMSY Moonlight Feast: ทริปเทศกาลไหว้พระจันทร์",
-  title_zh: "LMSY 月宴中秋 Trip",
-  location_en: "Shanghai, China",
-  location_th: "เซี่ยงไฮ้ ประเทศจีน",
-  location_zh: "中国上海",
-  notes_en: "Two-day Mid-Autumn trip from 25–26 September 2026. The experience includes mooncake making, a Mid-Autumn reunion dinner, an evening party and other exclusive activities. SVIP packages are priced at RMB 22,888 and RMB 24,888 and include private villa accommodation, breakfast, buffet lunch, 2:1 and 1:1 talk sessions, signed instant photos, a mystery blind box, Good Night and Goodbye Hi-Touch and an exclusive Pillow Party. Additional offline and online packages are available at RMB 1,288 and RMB 2,588 respectively.",
-  notes_th: "ทริปเทศกาลไหว้พระจันทร์ 2 วัน ระหว่างวันที่ 25–26 กันยายน 2026 ภายในงานมีกิจกรรมทำขนมไหว้พระจันทร์ งานเลี้ยงรวมตัวช่วงเทศกาลไหว้พระจันทร์ ปาร์ตี้ยามค่ำคืน และกิจกรรมพิเศษอื่น ๆ แพ็กเกจ SVIP ราคา 22,888 และ 24,888 หยวน รวมที่พักวิลล่าส่วนตัว อาหารเช้า บุฟเฟต์มื้อกลางวัน ช่วงพูดคุยแบบ 2:1 และ 1:1 ภาพถ่ายพร้อมลายเซ็น กล่องสุ่มพิเศษ Good Night และ Goodbye Hi-Touch และ Pillow Party แบบเอ็กซ์คลูซีฟ นอกจากนี้ยังมีแพ็กเกจเสริมแบบออฟไลน์ราคา 1,288 หยวน และออนไลน์ราคา 2,588 หยวน",
-  notes_zh: "9月25日至26日举行的两天中秋 Trip 活动。活动包括亲手制作月饼、中秋团圆晚宴、浪漫晚间派对及其他未公开神秘福利。SVIP 套餐价格为22,888元及24,888元，包含私密别墅住宿、早餐、自助午餐、2V1及1V1 talk、亲签拍立得、手渡神秘盲盒、Good Night及Goodbye Hi-Touch和独家 Pillow Party。另设1,288元线下叠加包及2,588元线上叠加包。",
-  hashtags: ["#LMSY", "#LookmheeSonya", "#蓝莓山药中秋旅行会"],
-  tags: ["LMSY", "Fan Event"]
+  category: "Fansign",
+  title_en: "LMSY Moonlit Auspicious Evening: Blossoming Special Date Fansign",
+  title_th: "LMSY Moonlit Auspicious Evening: Blossoming Special Date Fansign",
+  title_zh: "LMSY 月满良辰·花漾佳期签售会",
+  location_en: "China (Private Location)",
+  location_th: "ประเทศจีน (สถานที่ไม่เปิดเผย)",
+  location_zh: "中国（非公开）",
+  notes_en: "LMSY fansign event in China on 26 September 2026. The specific venue has not been publicly disclosed.",
+  notes_th: "งานแฟนไซน์ของ LMSY ในประเทศจีน วันที่ 26 กันยายน 2026 โดยสถานที่จัดงานไม่ได้เปิดเผยต่อสาธารณะ",
+  notes_zh: "LMSY 将于2026年9月26日在中国举行签售会，具体活动地点不公开。",
+  hashtags: ["#LMSY", "#LookmheeSonya"],
+  tags: ["LMSY", "Fansign"]
 },
 {
   date: "2026-10-03",
