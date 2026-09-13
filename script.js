@@ -2327,22 +2327,6 @@ const events = [
   tags: ["LMSY", "Fanmeeting"]
 },
 {
-  date: "2026-09-26",
-  who: "LMSY",
-  category: "Fansign",
-  title_en: "LMSY Moonlit Auspicious Evening: Blossoming Special Date Fansign",
-  title_th: "LMSY Moonlit Auspicious Evening: Blossoming Special Date Fansign",
-  title_zh: "LMSY 月满良辰·花漾佳期签售会",
-  location_en: "China (Private Location)",
-  location_th: "ประเทศจีน (สถานที่ไม่เปิดเผย)",
-  location_zh: "中国（非公开）",
-  notes_en: "LMSY fansign event in China on 26 September 2026. The specific venue has not been publicly disclosed.",
-  notes_th: "งานแฟนไซน์ของ LMSY ในประเทศจีน วันที่ 26 กันยายน 2026 โดยสถานที่จัดงานไม่ได้เปิดเผยต่อสาธารณะ",
-  notes_zh: "LMSY 将于2026年9月26日在中国举行签售会，具体活动地点不公开。",
-  hashtags: ["#LMSY", "#LookmheeSonya"],
-  tags: ["LMSY", "Fansign"]
-},
-{
   date: "2026-10-03",
   who: "LMSY",
   category: "FanMeeting",
